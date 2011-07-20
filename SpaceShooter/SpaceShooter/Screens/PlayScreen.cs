@@ -40,8 +40,8 @@ namespace SpaceShooter
 
         public PlayScreen()
         {
-            spawnSeconds = 7;
-            maxSpawnSeconds = 7;
+            spawnSeconds = 4;
+            maxSpawnSeconds = 4;
             enemySpawnTimer = TimeSpan.FromSeconds(spawnSeconds);
 
             gameOver = false;
