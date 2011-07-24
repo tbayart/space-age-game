@@ -189,7 +189,7 @@ namespace SpaceShooter
         }
 
 
-        public void DrawStrings(SpriteBatch spriteBatch)
+        public void DrawStrings(SpriteBatch spriteBatch,GameTime gameTime)
         {
             Viewport view = ScreenManager.Viewport;
 
@@ -197,7 +197,7 @@ namespace SpaceShooter
                 enemySpawnTimer.Seconds.ToString(),
                 new Vector2(2, 50), Color.White);
             string info = "hits left : " + player.GetHits() + " kills : " +
-                player.GetKills() + " calcs : " + calcs + " aa " + alphaa + " ab " + alphab + " ap " ;
+                player.GetKills() + " calcs : " + calcs + " aa " + alphaa + " ab " + alphab + " ap " + "gameTime : " + gameTime.ElapsedGameTime.ToString() ;
 
             spriteBatch.DrawString(font, info,
                 new Vector2(view.Width - font.MeasureString(info).X, 
@@ -226,7 +226,7 @@ namespace SpaceShooter
                // spriteBatch.Draw(debugPixel, new Rectangle(gameObjects[i].Rectangle.X, gameObjects[i].Rectangle.Y, debugPixel.Width, debugPixel.Height), Color.Black);           
             }
             
-            DrawStrings(spriteBatch);
+            DrawStrings(spriteBatch,gameTime);
             spriteBatch.Draw(stars, new Vector2(0, 0),Color.WhiteSmoke);
             if (ScreenState == ScreenState.Frozen)
                 FadeScreen(spriteBatch, fadeTexture, Color.PeachPuff, 0.6f);
