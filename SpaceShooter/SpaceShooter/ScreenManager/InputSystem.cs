@@ -48,19 +48,19 @@ namespace SpaceShooter
         }
         public bool MoveUp 
         {
-            get { return IsPressedKey(Keys.Up); }
+            get { return IsPressedKey(Keys.W); }
         }
         public bool MoveDown
         {
-            get { return IsPressedKey(Keys.Down); }
+            get { return IsPressedKey(Keys.S); }
         }
         public bool MoveLeft
         {
-            get { return IsPressedKey(Keys.Left); }
+            get { return IsPressedKey(Keys.A); }
         }
         public bool MoveRight
         {
-            get { return IsPressedKey(Keys.Right); }
+            get { return IsPressedKey(Keys.D); }
         }
         public bool Shoot
         {
