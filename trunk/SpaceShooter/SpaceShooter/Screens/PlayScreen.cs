@@ -179,7 +179,7 @@ namespace SpaceShooter
                 if (ScreenManager.InputSystem.CurrentKeyboardState.IsKeyDown(Keys.B))
                     camera.Shake(0.5f, 5f, 0.005f);
 
-                camera.Update(gameTime, ScreenManager.InputSystem.CurrentKeyboardState, ScreenManager.InputSystem.PreviousKeyboardState);
+              //  camera.Update(gameTime, ScreenManager.InputSystem.CurrentKeyboardState, ScreenManager.InputSystem.PreviousKeyboardState);
               
         
 
