@@ -114,6 +114,7 @@
       <DependentUpon>Sell.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="app.config" />
+    <None Include="asd.mwb" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
