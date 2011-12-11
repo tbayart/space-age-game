@@ -75,6 +75,7 @@
             this.costDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.totalPriceDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.earningsDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.button2 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.billsBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.storeDataSet)).BeginInit();
             this.groupBox1.SuspendLayout();
@@ -149,13 +150,16 @@
             // 
             // Cmb_ItemName
             // 
+            this.Cmb_ItemName.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.Cmb_ItemName.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
             this.Cmb_ItemName.DataSource = this.itemsBindingSource;
             this.Cmb_ItemName.DisplayMember = "ItemName";
             this.Cmb_ItemName.FormattingEnabled = true;
             this.Cmb_ItemName.Location = new System.Drawing.Point(20, 42);
             this.Cmb_ItemName.Name = "Cmb_ItemName";
             this.Cmb_ItemName.Size = new System.Drawing.Size(178, 24);
-            this.Cmb_ItemName.TabIndex = 2;
+            this.Cmb_ItemName.TabIndex = 1;
+            this.Cmb_ItemName.SelectedIndexChanged += new System.EventHandler(this.Cmb_ItemName_SelectedIndexChanged);
             this.Cmb_ItemName.TextChanged += new System.EventHandler(this.Cmb_ItemName_TextChanged);
             // 
             // itemsBindingSource
@@ -241,7 +245,7 @@
             this.Txt_SellPrice.Location = new System.Drawing.Point(544, 44);
             this.Txt_SellPrice.Name = "Txt_SellPrice";
             this.Txt_SellPrice.Size = new System.Drawing.Size(61, 22);
-            this.Txt_SellPrice.TabIndex = 4;
+            this.Txt_SellPrice.TabIndex = 3;
             // 
             // label6
             // 
@@ -257,7 +261,7 @@
             this.Txt_ToSell.Location = new System.Drawing.Point(456, 44);
             this.Txt_ToSell.Name = "Txt_ToSell";
             this.Txt_ToSell.Size = new System.Drawing.Size(62, 22);
-            this.Txt_ToSell.TabIndex = 3;
+            this.Txt_ToSell.TabIndex = 2;
             // 
             // label5
             // 
@@ -279,6 +283,8 @@
             // 
             // groupBox3
             // 
+            this.groupBox3.Controls.Add(this.label3);
+            this.groupBox3.Controls.Add(this.Txt_Paid);
             this.groupBox3.Controls.Add(this.Txt_AgentID);
             this.groupBox3.Controls.Add(this.label10);
             this.groupBox3.Controls.Add(this.Cmb_AgentName);
@@ -309,13 +315,15 @@
             // 
             // Cmb_AgentName
             // 
+            this.Cmb_AgentName.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.Cmb_AgentName.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
             this.Cmb_AgentName.DataSource = this.agentsBindingSource;
             this.Cmb_AgentName.DisplayMember = "AgentName";
             this.Cmb_AgentName.FormattingEnabled = true;
             this.Cmb_AgentName.Location = new System.Drawing.Point(11, 38);
             this.Cmb_AgentName.Name = "Cmb_AgentName";
             this.Cmb_AgentName.Size = new System.Drawing.Size(178, 21);
-            this.Cmb_AgentName.TabIndex = 5;
+            this.Cmb_AgentName.TabIndex = 4;
             this.Cmb_AgentName.ValueMember = "AgentName";
             this.Cmb_AgentName.TextChanged += new System.EventHandler(this.Cmb_AgentName_TextChanged);
             // 
@@ -389,10 +397,10 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(113, 561);
+            this.button1.Location = new System.Drawing.Point(5, 561);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(90, 42);
-            this.button1.TabIndex = 7;
+            this.button1.TabIndex = 6;
             this.button1.Text = "Add To Bill";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
@@ -403,15 +411,15 @@
             // 
             // Txt_Paid
             // 
-            this.Txt_Paid.Location = new System.Drawing.Point(10, 580);
+            this.Txt_Paid.Location = new System.Drawing.Point(294, 38);
             this.Txt_Paid.Name = "Txt_Paid";
             this.Txt_Paid.Size = new System.Drawing.Size(97, 20);
-            this.Txt_Paid.TabIndex = 6;
+            this.Txt_Paid.TabIndex = 5;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(10, 561);
+            this.label3.Location = new System.Drawing.Point(293, 16);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(27, 13);
             this.label3.TabIndex = 15;
@@ -473,13 +481,22 @@
             this.earningsDataGridViewTextBoxColumn.Name = "earningsDataGridViewTextBoxColumn";
             this.earningsDataGridViewTextBoxColumn.ReadOnly = true;
             // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(108, 563);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(112, 39);
+            this.button2.TabIndex = 9;
+            this.button2.Text = "New Bill";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
             // Sell
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(888, 612);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.Txt_Paid);
+            this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.groupBox4);
             this.Controls.Add(this.groupBox3);
@@ -503,7 +520,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.salesitemsBindingSource)).EndInit();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -555,5 +571,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn costDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn totalPriceDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn earningsDataGridViewTextBoxColumn;
+        private System.Windows.Forms.Button button2;
     }
 }
