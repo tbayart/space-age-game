@@ -136,6 +136,7 @@
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "Agents";
             this.Text = "Agents";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.Agents_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.agentsBindingSource)).EndInit();
