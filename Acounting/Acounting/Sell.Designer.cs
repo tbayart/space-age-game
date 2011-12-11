@@ -504,6 +504,7 @@
             this.Controls.Add(this.groupBox1);
             this.Name = "Sell";
             this.Text = "Sell";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.Sell_Load);
             ((System.ComponentModel.ISupportInitialize)(this.billsBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.storeDataSet)).EndInit();
