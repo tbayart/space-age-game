@@ -42,6 +42,7 @@ namespace Acounting
 
         private void Cmb_ItemName_TextChanged(object sender, EventArgs e)
         {
+            errorProvider1.Clear();
             try
             {
                 DataTable items = storeDataSet.items;
@@ -219,6 +220,22 @@ namespace Acounting
             billsTableAdapter.Fill(storeDataSet.bills);
             salesitemsTableAdapter.Fill(storeDataSet.salesitems);
             itemsTableAdapter.Fill(storeDataSet.items);
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            updatedataset();
+            totalbill = 0;
+
+            billID = storeDataSet.bills.Count + 1;
+
+            Txt_BillID.Text = billID.ToString();
+            salesitemsBindingSource.Filter = "Bills_BillID='" + billID + "'";
+        }
+
+        private void Cmb_ItemName_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
  
     }
