@@ -37,6 +37,9 @@
     <StartupObject />
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Acounting, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null">
+      <ExecutableExtension>.exe</ExecutableExtension>
+    </Reference>
     <Reference Include="MySql.Data, Version=6.4.4.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL" />
     <Reference Include="System" />
     <Reference Include="System.Configuration.Install" />
@@ -89,6 +92,12 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>storeDataSet.xsd</DependentUpon>
     </Compile>
+    <Compile Include="Vault.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vault.Designer.cs">
+      <DependentUpon>Vault.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Agents.resx">
       <DependentUpon>Agents.cs</DependentUpon>
     </EmbeddedResource>
@@ -112,6 +121,9 @@
     </Compile>
     <EmbeddedResource Include="Sell.resx">
       <DependentUpon>Sell.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vault.resx">
+      <DependentUpon>Vault.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="app.config" />
     <None Include="asd.mwb" />

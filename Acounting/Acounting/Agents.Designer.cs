@@ -30,20 +30,21 @@
         {
             this.components = new System.ComponentModel.Container();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.saveToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.storeDataSet = new Acounting.storeDataSet();
+            this.agentsBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.agentsTableAdapter = new Acounting.storeDataSetTableAdapters.agentsTableAdapter();
             this.agentIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.agentNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.addressDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.telephoneDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.agentsBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.storeDataSet = new Acounting.storeDataSet();
-            this.agentsTableAdapter = new Acounting.storeDataSetTableAdapters.agentsTableAdapter();
-            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
-            this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.saveToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.debtDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.agentsBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.storeDataSet)).BeginInit();
             this.menuStrip1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.storeDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.agentsBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // dataGridView1
@@ -54,51 +55,14 @@
             this.agentIDDataGridViewTextBoxColumn,
             this.agentNameDataGridViewTextBoxColumn,
             this.addressDataGridViewTextBoxColumn,
-            this.telephoneDataGridViewTextBoxColumn});
+            this.telephoneDataGridViewTextBoxColumn,
+            this.debtDataGridViewTextBoxColumn});
             this.dataGridView1.DataSource = this.agentsBindingSource;
             this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dataGridView1.Location = new System.Drawing.Point(0, 24);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(648, 359);
             this.dataGridView1.TabIndex = 0;
-            // 
-            // agentIDDataGridViewTextBoxColumn
-            // 
-            this.agentIDDataGridViewTextBoxColumn.DataPropertyName = "AgentID";
-            this.agentIDDataGridViewTextBoxColumn.HeaderText = "AgentID";
-            this.agentIDDataGridViewTextBoxColumn.Name = "agentIDDataGridViewTextBoxColumn";
-            // 
-            // agentNameDataGridViewTextBoxColumn
-            // 
-            this.agentNameDataGridViewTextBoxColumn.DataPropertyName = "AgentName";
-            this.agentNameDataGridViewTextBoxColumn.HeaderText = "AgentName";
-            this.agentNameDataGridViewTextBoxColumn.Name = "agentNameDataGridViewTextBoxColumn";
-            // 
-            // addressDataGridViewTextBoxColumn
-            // 
-            this.addressDataGridViewTextBoxColumn.DataPropertyName = "Address";
-            this.addressDataGridViewTextBoxColumn.HeaderText = "Address";
-            this.addressDataGridViewTextBoxColumn.Name = "addressDataGridViewTextBoxColumn";
-            // 
-            // telephoneDataGridViewTextBoxColumn
-            // 
-            this.telephoneDataGridViewTextBoxColumn.DataPropertyName = "Telephone";
-            this.telephoneDataGridViewTextBoxColumn.HeaderText = "Telephone";
-            this.telephoneDataGridViewTextBoxColumn.Name = "telephoneDataGridViewTextBoxColumn";
-            // 
-            // agentsBindingSource
-            // 
-            this.agentsBindingSource.DataMember = "agents";
-            this.agentsBindingSource.DataSource = this.storeDataSet;
-            // 
-            // storeDataSet
-            // 
-            this.storeDataSet.DataSetName = "storeDataSet";
-            this.storeDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // agentsTableAdapter
-            // 
-            this.agentsTableAdapter.ClearBeforeFill = true;
             // 
             // menuStrip1
             // 
@@ -126,6 +90,50 @@
             this.saveToolStripMenuItem.Text = "Save";
             this.saveToolStripMenuItem.Click += new System.EventHandler(this.saveToolStripMenuItem_Click);
             // 
+            // storeDataSet
+            // 
+            this.storeDataSet.DataSetName = "storeDataSet";
+            this.storeDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // agentsBindingSource
+            // 
+            this.agentsBindingSource.DataMember = "agents";
+            this.agentsBindingSource.DataSource = this.storeDataSet;
+            // 
+            // agentsTableAdapter
+            // 
+            this.agentsTableAdapter.ClearBeforeFill = true;
+            // 
+            // agentIDDataGridViewTextBoxColumn
+            // 
+            this.agentIDDataGridViewTextBoxColumn.DataPropertyName = "AgentID";
+            this.agentIDDataGridViewTextBoxColumn.HeaderText = "AgentID";
+            this.agentIDDataGridViewTextBoxColumn.Name = "agentIDDataGridViewTextBoxColumn";
+            // 
+            // agentNameDataGridViewTextBoxColumn
+            // 
+            this.agentNameDataGridViewTextBoxColumn.DataPropertyName = "AgentName";
+            this.agentNameDataGridViewTextBoxColumn.HeaderText = "AgentName";
+            this.agentNameDataGridViewTextBoxColumn.Name = "agentNameDataGridViewTextBoxColumn";
+            // 
+            // addressDataGridViewTextBoxColumn
+            // 
+            this.addressDataGridViewTextBoxColumn.DataPropertyName = "Address";
+            this.addressDataGridViewTextBoxColumn.HeaderText = "Address";
+            this.addressDataGridViewTextBoxColumn.Name = "addressDataGridViewTextBoxColumn";
+            // 
+            // telephoneDataGridViewTextBoxColumn
+            // 
+            this.telephoneDataGridViewTextBoxColumn.DataPropertyName = "Telephone";
+            this.telephoneDataGridViewTextBoxColumn.HeaderText = "Telephone";
+            this.telephoneDataGridViewTextBoxColumn.Name = "telephoneDataGridViewTextBoxColumn";
+            // 
+            // debtDataGridViewTextBoxColumn
+            // 
+            this.debtDataGridViewTextBoxColumn.DataPropertyName = "Debt";
+            this.debtDataGridViewTextBoxColumn.HeaderText = "Debt";
+            this.debtDataGridViewTextBoxColumn.Name = "debtDataGridViewTextBoxColumn";
+            // 
             // Agents
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -139,10 +147,10 @@
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.Agents_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.agentsBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.storeDataSet)).EndInit();
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.storeDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.agentsBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -151,6 +159,9 @@
         #endregion
 
         private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.MenuStrip menuStrip1;
+        private System.Windows.Forms.ToolStripMenuItem exitToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem saveToolStripMenuItem;
         private storeDataSet storeDataSet;
         private System.Windows.Forms.BindingSource agentsBindingSource;
         private storeDataSetTableAdapters.agentsTableAdapter agentsTableAdapter;
@@ -158,8 +169,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn agentNameDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn addressDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn telephoneDataGridViewTextBoxColumn;
-        private System.Windows.Forms.MenuStrip menuStrip1;
-        private System.Windows.Forms.ToolStripMenuItem exitToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem saveToolStripMenuItem;
+        private System.Windows.Forms.DataGridViewTextBoxColumn debtDataGridViewTextBoxColumn;
     }
 }

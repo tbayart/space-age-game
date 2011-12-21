@@ -189,7 +189,10 @@ namespace Acounting
             billrow["TotalBill"] = totalbill;
             billrow["Paid"] = billpaid;
             billrow["Remaining"] = remaining;
-
+        
+            Txt_TotalBill.Text = totalbill.ToString();
+            Txt_Remaining.Text = remaining.ToString();
+   
             updatedataset();
     
 

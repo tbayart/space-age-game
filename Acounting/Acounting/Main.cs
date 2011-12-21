@@ -18,7 +18,7 @@ namespace Acounting
 
         private void Form1_Load(object sender, EventArgs e)
         {
- 
+            Console.WriteLine("asdasd");
         }
 
         private void agentsToolStripMenuItem_Click(object sender, EventArgs e)
@@ -49,6 +49,13 @@ namespace Acounting
             sell.MdiParent = this;
             sell.Show();
 
+        }
+
+        private void vaultToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Vault vault = new Vault();
+            vault.MdiParent = this;
+            vault.Show();
         }
     }
 }

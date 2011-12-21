@@ -51,6 +51,8 @@
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.Txt_Paid = new System.Windows.Forms.TextBox();
             this.Txt_AgentID = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
             this.Cmb_AgentName = new System.Windows.Forms.ComboBox();
@@ -61,12 +63,6 @@
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.salesitemsBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.billsTableAdapter = new Acounting.storeDataSetTableAdapters.billsTableAdapter();
-            this.button1 = new System.Windows.Forms.Button();
-            this.salesitemsTableAdapter = new Acounting.storeDataSetTableAdapters.salesitemsTableAdapter();
-            this.Txt_Paid = new System.Windows.Forms.TextBox();
-            this.label3 = new System.Windows.Forms.Label();
             this.iDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.billsBillIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.itemIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -75,7 +71,15 @@
             this.costDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.totalPriceDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.earningsDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.salesitemsBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.billsTableAdapter = new Acounting.storeDataSetTableAdapters.billsTableAdapter();
+            this.button1 = new System.Windows.Forms.Button();
+            this.salesitemsTableAdapter = new Acounting.storeDataSetTableAdapters.salesitemsTableAdapter();
             this.button2 = new System.Windows.Forms.Button();
+            this.label12 = new System.Windows.Forms.Label();
+            this.Txt_TotalBill = new System.Windows.Forms.TextBox();
+            this.label13 = new System.Windows.Forms.Label();
+            this.Txt_Remaining = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.billsBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.storeDataSet)).BeginInit();
             this.groupBox1.SuspendLayout();
@@ -268,7 +272,7 @@
             this.label5.AutoSize = true;
             this.label5.Location = new System.Drawing.Point(453, 25);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(82, 16);
+            this.label5.Size = new System.Drawing.Size(81, 16);
             this.label5.TabIndex = 6;
             this.label5.Text = "Units To Sell";
             // 
@@ -283,6 +287,10 @@
             // 
             // groupBox3
             // 
+            this.groupBox3.Controls.Add(this.Txt_Remaining);
+            this.groupBox3.Controls.Add(this.label13);
+            this.groupBox3.Controls.Add(this.Txt_TotalBill);
+            this.groupBox3.Controls.Add(this.label12);
             this.groupBox3.Controls.Add(this.label3);
             this.groupBox3.Controls.Add(this.Txt_Paid);
             this.groupBox3.Controls.Add(this.Txt_AgentID);
@@ -295,6 +303,23 @@
             this.groupBox3.TabIndex = 7;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Agent";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(293, 16);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(27, 13);
+            this.label3.TabIndex = 15;
+            this.label3.Text = "Paid";
+            // 
+            // Txt_Paid
+            // 
+            this.Txt_Paid.Location = new System.Drawing.Point(294, 38);
+            this.Txt_Paid.Name = "Txt_Paid";
+            this.Txt_Paid.Size = new System.Drawing.Size(97, 20);
+            this.Txt_Paid.TabIndex = 5;
+            this.Txt_Paid.Text = "0";
             // 
             // Txt_AgentID
             // 
@@ -386,45 +411,6 @@
             this.dataGridView1.Size = new System.Drawing.Size(868, 280);
             this.dataGridView1.TabIndex = 0;
             // 
-            // salesitemsBindingSource
-            // 
-            this.salesitemsBindingSource.DataMember = "salesitems";
-            this.salesitemsBindingSource.DataSource = this.storeDataSet;
-            // 
-            // billsTableAdapter
-            // 
-            this.billsTableAdapter.ClearBeforeFill = true;
-            // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(5, 561);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(90, 42);
-            this.button1.TabIndex = 6;
-            this.button1.Text = "Add To Bill";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // salesitemsTableAdapter
-            // 
-            this.salesitemsTableAdapter.ClearBeforeFill = true;
-            // 
-            // Txt_Paid
-            // 
-            this.Txt_Paid.Location = new System.Drawing.Point(294, 38);
-            this.Txt_Paid.Name = "Txt_Paid";
-            this.Txt_Paid.Size = new System.Drawing.Size(97, 20);
-            this.Txt_Paid.TabIndex = 5;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(293, 16);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(27, 13);
-            this.label3.TabIndex = 15;
-            this.label3.Text = "Paid";
-            // 
             // iDDataGridViewTextBoxColumn
             // 
             this.iDDataGridViewTextBoxColumn.DataPropertyName = "ID";
@@ -481,6 +467,29 @@
             this.earningsDataGridViewTextBoxColumn.Name = "earningsDataGridViewTextBoxColumn";
             this.earningsDataGridViewTextBoxColumn.ReadOnly = true;
             // 
+            // salesitemsBindingSource
+            // 
+            this.salesitemsBindingSource.DataMember = "salesitems";
+            this.salesitemsBindingSource.DataSource = this.storeDataSet;
+            // 
+            // billsTableAdapter
+            // 
+            this.billsTableAdapter.ClearBeforeFill = true;
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(5, 561);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(90, 42);
+            this.button1.TabIndex = 6;
+            this.button1.Text = "Add To Bill";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // salesitemsTableAdapter
+            // 
+            this.salesitemsTableAdapter.ClearBeforeFill = true;
+            // 
             // button2
             // 
             this.button2.Location = new System.Drawing.Point(108, 563);
@@ -490,6 +499,40 @@
             this.button2.Text = "New Bill";
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Location = new System.Drawing.Point(399, 16);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(46, 13);
+            this.label12.TabIndex = 16;
+            this.label12.Text = "Total Bill";
+            // 
+            // Txt_TotalBill
+            // 
+            this.Txt_TotalBill.Location = new System.Drawing.Point(402, 39);
+            this.Txt_TotalBill.Name = "Txt_TotalBill";
+            this.Txt_TotalBill.ReadOnly = true;
+            this.Txt_TotalBill.Size = new System.Drawing.Size(86, 20);
+            this.Txt_TotalBill.TabIndex = 17;
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Location = new System.Drawing.Point(504, 19);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(56, 13);
+            this.label13.TabIndex = 18;
+            this.label13.Text = "Remaining";
+            // 
+            // Txt_Remaining
+            // 
+            this.Txt_Remaining.Location = new System.Drawing.Point(507, 39);
+            this.Txt_Remaining.Name = "Txt_Remaining";
+            this.Txt_Remaining.ReadOnly = true;
+            this.Txt_Remaining.Size = new System.Drawing.Size(92, 20);
+            this.Txt_Remaining.TabIndex = 19;
             // 
             // Sell
             // 
@@ -573,5 +616,9 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn totalPriceDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn earningsDataGridViewTextBoxColumn;
         private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.TextBox Txt_TotalBill;
+        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.TextBox Txt_Remaining;
+        private System.Windows.Forms.Label label13;
     }
 }
