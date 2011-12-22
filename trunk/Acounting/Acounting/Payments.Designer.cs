@@ -46,12 +46,26 @@
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             this.paymentsBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.paymentsTableAdapter = new Acounting.storeDataSetTableAdapters.paymentsTableAdapter();
+            this.button2 = new System.Windows.Forms.Button();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.Cmb_Dealer = new System.Windows.Forms.ComboBox();
+            this.dealerpaymentsBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.dealerpaymentsTableAdapter = new Acounting.storeDataSetTableAdapters.dealerpaymentsTableAdapter();
+            this.dealersBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.dealersTableAdapter = new Acounting.storeDataSetTableAdapters.dealersTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.agentsBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.storeDataSet)).BeginInit();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
+            this.tabPage2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.paymentsBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dealerpaymentsBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dealersBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // comboBox1
@@ -164,10 +178,17 @@
             // 
             // tabPage2
             // 
+            this.tabPage2.Controls.Add(this.button2);
+            this.tabPage2.Controls.Add(this.textBox1);
+            this.tabPage2.Controls.Add(this.label4);
+            this.tabPage2.Controls.Add(this.textBox2);
+            this.tabPage2.Controls.Add(this.label5);
+            this.tabPage2.Controls.Add(this.label6);
+            this.tabPage2.Controls.Add(this.Cmb_Dealer);
             this.tabPage2.Location = new System.Drawing.Point(4, 22);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(447, 287);
+            this.tabPage2.Size = new System.Drawing.Size(389, 193);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Pay";
             this.tabPage2.UseVisualStyleBackColor = true;
@@ -177,7 +198,7 @@
             this.tabPage3.Location = new System.Drawing.Point(4, 22);
             this.tabPage3.Name = "tabPage3";
             this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage3.Size = new System.Drawing.Size(447, 287);
+            this.tabPage3.Size = new System.Drawing.Size(389, 193);
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "tabPage3";
             this.tabPage3.UseVisualStyleBackColor = true;
@@ -195,6 +216,87 @@
             // 
             this.paymentsTableAdapter.ClearBeforeFill = true;
             // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(239, 50);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(75, 23);
+            this.button2.TabIndex = 13;
+            this.button2.Text = "Pay";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(119, 115);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(65, 20);
+            this.textBox1.TabIndex = 12;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(116, 94);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(52, 13);
+            this.label4.TabIndex = 11;
+            this.label4.Text = "Ammount";
+            // 
+            // textBox2
+            // 
+            this.textBox2.Location = new System.Drawing.Point(35, 115);
+            this.textBox2.Name = "textBox2";
+            this.textBox2.ReadOnly = true;
+            this.textBox2.Size = new System.Drawing.Size(62, 20);
+            this.textBox2.TabIndex = 10;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(32, 94);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(30, 13);
+            this.label5.TabIndex = 9;
+            this.label5.Text = "Debt";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(35, 32);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(68, 13);
+            this.label6.TabIndex = 8;
+            this.label6.Text = "Dealer Name";
+            // 
+            // Cmb_Dealer
+            // 
+            this.Cmb_Dealer.DataSource = this.dealersBindingSource;
+            this.Cmb_Dealer.DisplayMember = "DealerName";
+            this.Cmb_Dealer.FormattingEnabled = true;
+            this.Cmb_Dealer.Location = new System.Drawing.Point(35, 52);
+            this.Cmb_Dealer.Name = "Cmb_Dealer";
+            this.Cmb_Dealer.Size = new System.Drawing.Size(121, 21);
+            this.Cmb_Dealer.TabIndex = 7;
+            this.Cmb_Dealer.TextChanged += new System.EventHandler(this.Cmb_Dealer_TextChanged);
+            // 
+            // dealerpaymentsBindingSource
+            // 
+            this.dealerpaymentsBindingSource.DataMember = "dealerpayments";
+            this.dealerpaymentsBindingSource.DataSource = this.storeDataSet;
+            // 
+            // dealerpaymentsTableAdapter
+            // 
+            this.dealerpaymentsTableAdapter.ClearBeforeFill = true;
+            // 
+            // dealersBindingSource
+            // 
+            this.dealersBindingSource.DataMember = "dealers";
+            this.dealersBindingSource.DataSource = this.storeDataSet;
+            // 
+            // dealersTableAdapter
+            // 
+            this.dealersTableAdapter.ClearBeforeFill = true;
+            // 
             // Payments
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -209,8 +311,12 @@
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             this.tabPage1.PerformLayout();
+            this.tabPage2.ResumeLayout(false);
+            this.tabPage2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.paymentsBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dealerpaymentsBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dealersBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -234,5 +340,16 @@
         private System.Windows.Forms.ErrorProvider errorProvider1;
         private System.Windows.Forms.BindingSource paymentsBindingSource;
         private storeDataSetTableAdapters.paymentsTableAdapter paymentsTableAdapter;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.ComboBox Cmb_Dealer;
+        private System.Windows.Forms.BindingSource dealerpaymentsBindingSource;
+        private storeDataSetTableAdapters.dealerpaymentsTableAdapter dealerpaymentsTableAdapter;
+        private System.Windows.Forms.BindingSource dealersBindingSource;
+        private storeDataSetTableAdapters.dealersTableAdapter dealersTableAdapter;
     }
 }
