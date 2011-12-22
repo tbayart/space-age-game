@@ -20,6 +20,10 @@ namespace Acounting
 
         private void Payments_Load(object sender, EventArgs e)
         {
+            // TODO: This line of code loads data into the 'storeDataSet1.vault' table. You can move, or remove it, as needed.
+            this.vaultTableAdapter.Fill(this.storeDataSet.vault);
+            // TODO: This line of code loads data into the 'storeDataSet1.spendings' table. You can move, or remove it, as needed.
+            this.spendingsTableAdapter.Fill(this.storeDataSet.spendings);
             // TODO: This line of code loads data into the 'storeDataSet.dealers' table. You can move, or remove it, as needed.
             this.dealersTableAdapter.Fill(this.storeDataSet.dealers);
             // TODO: This line of code loads data into the 'storeDataSet.dealerpayments' table. You can move, or remove it, as needed.
@@ -98,6 +102,20 @@ namespace Acounting
             agentrow["Debt"] = newdebt;
             agentsTableAdapter.Update(agentrow);
 
+            //add mount payed to the vault
+            int oldinhand, newinhand;
+            DataRow vaultrow = storeDataSet.vault.First();
+
+            int.TryParse(vaultrow["In_Hand"].ToString(), out oldinhand);
+            Console.WriteLine(oldinhand);
+            newinhand = oldinhand + ammount;
+            Console.WriteLine(newinhand);
+            vaultrow["In_Hand"] = newinhand;
+
+            vaultTableAdapter.Update(vaultrow);
+
+
+            vaultTableAdapter.Fill(storeDataSet.vault);
             agentsTableAdapter.Fill(storeDataSet.agents);
             paymentsTableAdapter.Fill(storeDataSet.payments);
             comboBox1_TextChanged(null, null);
@@ -106,19 +124,80 @@ namespace Acounting
 
         private void button2_Click(object sender, EventArgs e)
         {
+            errorProvider1.Clear();
+            //get last id
+            int lastid = 0;
+            int ammount;
 
+            //get ammount paid
+            if (!int.TryParse(Txt_DealerAmmount.Text, out ammount))
+            {
+                errorProvider1.SetError(Txt_DealerAmmount, "Wrong Number !!");
+            }
+
+
+            if (storeDataSet.dealerpayments.Count == 0)
+            {
+                lastid = 1;
+            }
+            else
+            {
+                // get last idnumber
+                DataRow lastrow = storeDataSet.dealerpayments.Last();
+
+                int.TryParse(lastrow["PaymentID"].ToString(), out lastid);
+
+                lastid++;
+            }
+
+            //insert payment
+            dealerpaymentsTableAdapter.Insert(lastid, DateTime.Now, ammount, selectedDealerID);
+
+            //decrement agent debt
+            DataRow dealerrow = storeDataSet.dealers.FindByDealerID(selectedDealerID);
+
+            int olddebt, newdebt;
+            int.TryParse(dealerrow["Debt"].ToString(), out olddebt);
+            newdebt = olddebt + ammount;
+
+            dealerrow["Debt"] = newdebt;
+            dealersTableAdapter.Update(dealerrow);
+
+
+            //add mount payed to the vault
+            int oldinhand, newinhand;
+            DataRow vaultrow = storeDataSet.vault.First();
+
+            int.TryParse(vaultrow["In_Hand"].ToString(), out oldinhand);
+            newinhand = oldinhand - ammount;
+
+            vaultrow["In_Hand"] = newinhand;
+
+            vaultTableAdapter.Update(vaultrow);
+
+
+            vaultTableAdapter.Fill(storeDataSet.vault);
+            dealersTableAdapter.Fill(storeDataSet.dealers);
+            dealerpaymentsTableAdapter.Fill(storeDataSet.dealerpayments);
+            Cmb_Dealer_TextChanged(null, null);
         }
 
         private void Cmb_Dealer_TextChanged(object sender, EventArgs e)
         {
+
+
             errorProvider1.Clear();
             try
             {
 
                 if (!(Cmb_Dealer.Text == ""))
                 {
-                    DataRow filterrow = storeDataSet.dealers.AsEnumerable().Where(i => i.Field<string>("DealerName") == comboBox1.Text).FirstOrDefault();
-                    Txt_Debt.Text = filterrow["Debt"].ToString();
+                    DataRow filterrow = storeDataSet.dealers.AsEnumerable().Where(i => i.Field<string>("DealerName") == Cmb_Dealer.Text).FirstOrDefault();
+                    if (filterrow == null)
+                    {
+                        return;
+                    }
+                    Txt_DealerDebt.Text = filterrow["Debt"].ToString();
                     int.TryParse(filterrow["DealerID"].ToString(), out selectedDealerID);
                 }
 
@@ -127,6 +206,55 @@ namespace Acounting
             {
                 errorProvider1.SetError(Cmb_Dealer, ee.Message);
             }
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            errorProvider1.Clear();
+            //get last id
+            int lastid = 0;
+            int ammount;
+
+            //get ammount paid
+            if (!int.TryParse(Txt_SpendingsAmmount.Text, out ammount))
+            {
+                errorProvider1.SetError(Txt_SpendingsAmmount, "Wrong Number !!");
+            }
+
+
+            if (storeDataSet.spendings.Count == 0)
+            {
+                lastid = 1;
+            }
+            else
+            {
+                // get last idnumber
+                DataRow lastrow = storeDataSet.spendings.Last();
+
+                int.TryParse(lastrow["ID"].ToString(), out lastid);
+
+                lastid++;
+            }
+
+            //insert payment
+            spendingsTableAdapter.Insert(lastid, DateTime.Now, ammount);
+
+
+
+
+            //add mount payed to the vault
+            int oldinhand, newinhand;
+            DataRow vaultrow = storeDataSet.vault.First();
+
+            int.TryParse(vaultrow["In_Hand"].ToString(), out oldinhand);
+            newinhand = oldinhand - ammount;
+            vaultrow["In_Hand"] = newinhand;
+            vaultTableAdapter.Update(vaultrow);
+
+
+            vaultTableAdapter.Fill(storeDataSet.vault);
+            spendingsTableAdapter.Fill(storeDataSet.spendings);
+
         }
     }
 }
