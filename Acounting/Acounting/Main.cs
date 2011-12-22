@@ -57,5 +57,12 @@ namespace Acounting
             vault.MdiParent = this;
             vault.Show();
         }
+
+        private void paymentsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Payments payments = new Payments();
+            payments.MdiParent = this;
+            payments.Show();
+        }
     }
 }
