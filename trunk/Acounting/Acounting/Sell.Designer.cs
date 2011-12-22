@@ -51,6 +51,10 @@
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.Txt_Remaining = new System.Windows.Forms.TextBox();
+            this.label13 = new System.Windows.Forms.Label();
+            this.Txt_TotalBill = new System.Windows.Forms.TextBox();
+            this.label12 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.Txt_Paid = new System.Windows.Forms.TextBox();
             this.Txt_AgentID = new System.Windows.Forms.TextBox();
@@ -76,10 +80,8 @@
             this.button1 = new System.Windows.Forms.Button();
             this.salesitemsTableAdapter = new Acounting.storeDataSetTableAdapters.salesitemsTableAdapter();
             this.button2 = new System.Windows.Forms.Button();
-            this.label12 = new System.Windows.Forms.Label();
-            this.Txt_TotalBill = new System.Windows.Forms.TextBox();
-            this.label13 = new System.Windows.Forms.Label();
-            this.Txt_Remaining = new System.Windows.Forms.TextBox();
+            this.vaultBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.vaultTableAdapter = new Acounting.storeDataSetTableAdapters.vaultTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.billsBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.storeDataSet)).BeginInit();
             this.groupBox1.SuspendLayout();
@@ -91,6 +93,7 @@
             this.groupBox4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.salesitemsBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.vaultBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // Txt_BillID
@@ -304,6 +307,40 @@
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Agent";
             // 
+            // Txt_Remaining
+            // 
+            this.Txt_Remaining.Location = new System.Drawing.Point(507, 39);
+            this.Txt_Remaining.Name = "Txt_Remaining";
+            this.Txt_Remaining.ReadOnly = true;
+            this.Txt_Remaining.Size = new System.Drawing.Size(92, 20);
+            this.Txt_Remaining.TabIndex = 19;
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Location = new System.Drawing.Point(504, 19);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(56, 13);
+            this.label13.TabIndex = 18;
+            this.label13.Text = "Remaining";
+            // 
+            // Txt_TotalBill
+            // 
+            this.Txt_TotalBill.Location = new System.Drawing.Point(402, 39);
+            this.Txt_TotalBill.Name = "Txt_TotalBill";
+            this.Txt_TotalBill.ReadOnly = true;
+            this.Txt_TotalBill.Size = new System.Drawing.Size(86, 20);
+            this.Txt_TotalBill.TabIndex = 17;
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Location = new System.Drawing.Point(399, 16);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(46, 13);
+            this.label12.TabIndex = 16;
+            this.label12.Text = "Total Bill";
+            // 
             // label3
             // 
             this.label3.AutoSize = true;
@@ -500,39 +537,14 @@
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
-            // label12
+            // vaultBindingSource
             // 
-            this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(399, 16);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(46, 13);
-            this.label12.TabIndex = 16;
-            this.label12.Text = "Total Bill";
+            this.vaultBindingSource.DataMember = "vault";
+            this.vaultBindingSource.DataSource = this.storeDataSet;
             // 
-            // Txt_TotalBill
+            // vaultTableAdapter
             // 
-            this.Txt_TotalBill.Location = new System.Drawing.Point(402, 39);
-            this.Txt_TotalBill.Name = "Txt_TotalBill";
-            this.Txt_TotalBill.ReadOnly = true;
-            this.Txt_TotalBill.Size = new System.Drawing.Size(86, 20);
-            this.Txt_TotalBill.TabIndex = 17;
-            // 
-            // label13
-            // 
-            this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(504, 19);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(56, 13);
-            this.label13.TabIndex = 18;
-            this.label13.Text = "Remaining";
-            // 
-            // Txt_Remaining
-            // 
-            this.Txt_Remaining.Location = new System.Drawing.Point(507, 39);
-            this.Txt_Remaining.Name = "Txt_Remaining";
-            this.Txt_Remaining.ReadOnly = true;
-            this.Txt_Remaining.Size = new System.Drawing.Size(92, 20);
-            this.Txt_Remaining.TabIndex = 19;
+            this.vaultTableAdapter.ClearBeforeFill = true;
             // 
             // Sell
             // 
@@ -563,6 +575,7 @@
             this.groupBox4.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.salesitemsBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.vaultBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -620,5 +633,7 @@
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.TextBox Txt_Remaining;
         private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.BindingSource vaultBindingSource;
+        private storeDataSetTableAdapters.vaultTableAdapter vaultTableAdapter;
     }
 }

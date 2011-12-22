@@ -22,6 +22,8 @@ namespace Acounting
 
         private void Sell_Load(object sender, EventArgs e)
         {
+            // TODO: This line of code loads data into the 'storeDataSet.vault' table. You can move, or remove it, as needed.
+            this.vaultTableAdapter.Fill(this.storeDataSet.vault);
             // TODO: This line of code loads data into the 'storeDataSet.salesitems' table. You can move, or remove it, as needed.
             this.salesitemsTableAdapter.Fill(this.storeDataSet.salesitems);
             // TODO: This line of code loads data into the 'storeDataSet.bills' table. You can move, or remove it, as needed.
@@ -189,6 +191,8 @@ namespace Acounting
             billrow["TotalBill"] = totalbill;
             billrow["Paid"] = billpaid;
             billrow["Remaining"] = remaining;
+
+            billsTableAdapter.Update(billrow);
         
             Txt_TotalBill.Text = totalbill.ToString();
             Txt_Remaining.Text = remaining.ToString();
@@ -227,6 +231,29 @@ namespace Acounting
 
         private void button2_Click(object sender, EventArgs e)
         {
+            
+            // find paid ammount
+            DataRow billrow;
+            int paid;
+            billrow = storeDataSet.bills.FindByBillID(billID);
+
+            int.TryParse(billrow["Paid"].ToString(), out paid);
+
+            Console.WriteLine(paid);
+            //put ammount in the vault
+
+            DataRow vaultrow = storeDataSet.vault.FindByidVault(0);
+
+            int oldvalue, newvalue;
+            int.TryParse(vaultrow["In_Hand"].ToString(), out oldvalue);
+
+            Console.WriteLine(oldvalue);
+            newvalue = oldvalue + paid;
+            Console.WriteLine(newvalue);
+            vaultrow["In_Hand"] = newvalue;
+
+            vaultTableAdapter.Update(vaultrow);
+
             updatedataset();
             totalbill = 0;
 
