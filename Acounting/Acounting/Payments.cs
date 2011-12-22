@@ -12,6 +12,7 @@ namespace Acounting
     public partial class Payments : Form
     {
         int selectedagentid;
+        int selectedDealerID;
         public Payments()
         {
             InitializeComponent();
@@ -19,6 +20,10 @@ namespace Acounting
 
         private void Payments_Load(object sender, EventArgs e)
         {
+            // TODO: This line of code loads data into the 'storeDataSet.dealers' table. You can move, or remove it, as needed.
+            this.dealersTableAdapter.Fill(this.storeDataSet.dealers);
+            // TODO: This line of code loads data into the 'storeDataSet.dealerpayments' table. You can move, or remove it, as needed.
+            this.dealerpaymentsTableAdapter.Fill(this.storeDataSet.dealerpayments);
             // TODO: This line of code loads data into the 'storeDataSet.payments' table. You can move, or remove it, as needed.
             this.paymentsTableAdapter.Fill(this.storeDataSet.payments);
             // TODO: This line of code loads data into the 'storeDataSet.agents' table. You can move, or remove it, as needed.
@@ -97,6 +102,31 @@ namespace Acounting
             paymentsTableAdapter.Fill(storeDataSet.payments);
             comboBox1_TextChanged(null, null);
 
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Cmb_Dealer_TextChanged(object sender, EventArgs e)
+        {
+            errorProvider1.Clear();
+            try
+            {
+
+                if (!(Cmb_Dealer.Text == ""))
+                {
+                    DataRow filterrow = storeDataSet.dealers.AsEnumerable().Where(i => i.Field<string>("DealerName") == comboBox1.Text).FirstOrDefault();
+                    Txt_Debt.Text = filterrow["Debt"].ToString();
+                    int.TryParse(filterrow["DealerID"].ToString(), out selectedDealerID);
+                }
+
+            }
+            catch (Exception ee)
+            {
+                errorProvider1.SetError(Cmb_Dealer, ee.Message);
+            }
         }
     }
 }

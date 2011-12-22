@@ -20,6 +20,8 @@ namespace Acounting
         {
             // TODO: This line of code loads data into the 'storeDataSet.dealers' table. You can move, or remove it, as needed.
             this.dealersTableAdapter.Fill(this.storeDataSet.dealers);
+            // TODO: This line of code loads data into the 'storeDataSet.dealers' table. You can move, or remove it, as needed.
+            this.dealersTableAdapter.Fill(this.storeDataSet.dealers);
 
         }
 

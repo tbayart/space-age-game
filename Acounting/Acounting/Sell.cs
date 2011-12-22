@@ -165,13 +165,14 @@ namespace Acounting
             DataRow billrow = storeDataSet.bills.FindByBillID(billID);
             if (billrow==null)
             {
-                billsTableAdapter.Insert(billID, agentid, dateTimePicker1.Value,0,0,0);
+                billsTableAdapter.Insert(billID, agentid, DateTime.Now, 0, 0, 0);
                 billrow = storeDataSet.bills.FindByBillID(billID);
             }
 
 
             #endregion
 
+            #region add bill
 
             // add items sales 
 
@@ -179,12 +180,8 @@ namespace Acounting
             totalbill += totalprice;
             Console.WriteLine("added new sales " + salesID.ToString());
 
-
             //  update bill
-
             updatedataset();
-
-    
 
             int remaining = billpaid - totalbill;
             billrow = storeDataSet.bills.FindByBillID(billID);
@@ -198,9 +195,6 @@ namespace Acounting
             Txt_Remaining.Text = remaining.ToString();
    
             updatedataset();
-    
-
-
 
             // update items to reduce items qty
 
@@ -215,9 +209,10 @@ namespace Acounting
            Cmb_ItemName_TextChanged(null, null);
            Cmb_AgentName_TextChanged(null, null);
 
-          
 
 
+
+            #endregion
         }
 
 
@@ -231,62 +226,73 @@ namespace Acounting
 
         private void button2_Click(object sender, EventArgs e)
         {
+            //show dialoge 
+
+            DialogResult result = MessageBox.Show("Do you want to save ?", "Accounting", MessageBoxButtons.YesNo);
             
-            // find paid ammount
-            DataRow billrow;
-            int paid;
-            int remaining;
-            billrow = storeDataSet.bills.FindByBillID(billID);
+            
+            if (result == System.Windows.Forms.DialogResult.Yes)
+            {
+                #region save
+                // find paid ammount
+                DataRow billrow;
+                int paid;
+                int remaining;
+                billrow = storeDataSet.bills.FindByBillID(billID);
+                if (billrow==null)
+                {
+                    MessageBox.Show("No Data", "Accounting", MessageBoxButtons.OK);
+                    return;
+                }
+                int.TryParse(billrow["Paid"].ToString(), out paid);
+                int.TryParse(billrow["Remaining"].ToString(), out remaining);
 
-            int.TryParse(billrow["Paid"].ToString(), out paid);
-            int.TryParse(billrow["Remaining"].ToString(), out remaining);
+                Console.WriteLine(paid);
+                //put ammount in the vault
 
-            Console.WriteLine(paid);
-            //put ammount in the vault
+                DataRow vaultrow = storeDataSet.vault.FindByidVault(0);
 
-            DataRow vaultrow = storeDataSet.vault.FindByidVault(0);
+                int oldvalue, newvalue;
+                int.TryParse(vaultrow["In_Hand"].ToString(), out oldvalue);
 
-            int oldvalue, newvalue;
-            int.TryParse(vaultrow["In_Hand"].ToString(), out oldvalue);
+                Console.WriteLine(oldvalue);
+                newvalue = oldvalue + paid;
+                Console.WriteLine(newvalue);
+                vaultrow["In_Hand"] = newvalue;
 
-            Console.WriteLine(oldvalue);
-            newvalue = oldvalue + paid;
-            Console.WriteLine(newvalue);
-            vaultrow["In_Hand"] = newvalue;
+                vaultTableAdapter.Update(vaultrow);
 
-            vaultTableAdapter.Update(vaultrow);
+                // find agent id
+                int agentID;
+                int.TryParse(billrow["Agents_AgentID"].ToString(), out agentID);
 
-            // find agent id
-            int agentID;
-            int.TryParse(billrow["Agents_AgentID"].ToString(), out agentID);
+                //find old debt
+                int debt;
+                DataRow agentrow = storeDataSet.agents.FindByAgentID(agentID);
+                int.TryParse(agentrow["Debt"].ToString(), out debt);
 
-            //find old debt
-            int debt;
-            DataRow agentrow = storeDataSet.agents.FindByAgentID(agentID);
-            int.TryParse(agentrow["Debt"].ToString(), out debt);
+                int newdebt = debt + remaining;
 
-            int newdebt = debt + remaining;
+                //add newdebt to agent
+                agentrow["Debt"] = newdebt;
 
-            //add newdebt to agent
-            agentrow["Debt"] = newdebt;
-
-            // update agent
-            agentsTableAdapter.Update(agentrow);
+                // update agent
+                agentsTableAdapter.Update(agentrow);
 
 
-            updatedataset();
-            totalbill = 0;
+                updatedataset();
+                totalbill = 0;
 
-            billID = storeDataSet.bills.Count + 1;
+                billID = storeDataSet.bills.Count + 1;
 
-            Txt_BillID.Text = billID.ToString();
-            salesitemsBindingSource.Filter = "Bills_BillID='" + billID + "'";
+                Txt_BillID.Text = billID.ToString();
+                salesitemsBindingSource.Filter = "Bills_BillID='" + billID + "'";
+
+            #endregion 
+            }
+            
         }
-
-        private void Cmb_ItemName_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
+         
  
     }
 }
