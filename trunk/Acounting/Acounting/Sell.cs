@@ -235,9 +235,11 @@ namespace Acounting
             // find paid ammount
             DataRow billrow;
             int paid;
+            int remaining;
             billrow = storeDataSet.bills.FindByBillID(billID);
 
             int.TryParse(billrow["Paid"].ToString(), out paid);
+            int.TryParse(billrow["Remaining"].ToString(), out remaining);
 
             Console.WriteLine(paid);
             //put ammount in the vault
@@ -253,6 +255,24 @@ namespace Acounting
             vaultrow["In_Hand"] = newvalue;
 
             vaultTableAdapter.Update(vaultrow);
+
+            // find agent id
+            int agentID;
+            int.TryParse(billrow["Agents_AgentID"].ToString(), out agentID);
+
+            //find old debt
+            int debt;
+            DataRow agentrow = storeDataSet.agents.FindByAgentID(agentID);
+            int.TryParse(agentrow["Debt"].ToString(), out debt);
+
+            int newdebt = debt + remaining;
+
+            //add newdebt to agent
+            agentrow["Debt"] = newdebt;
+
+            // update agent
+            agentsTableAdapter.Update(agentrow);
+
 
             updatedataset();
             totalbill = 0;

@@ -79,11 +79,11 @@
     <Compile Include="Items.Designer.cs">
       <DependentUpon>Items.cs</DependentUpon>
     </Compile>
-    <Compile Include="Payments_In.cs">
+    <Compile Include="Payments.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Payments_In.Designer.cs">
-      <DependentUpon>Payments_In.cs</DependentUpon>
+    <Compile Include="Payments.Designer.cs">
+      <DependentUpon>Payments.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -92,6 +92,10 @@
     </Compile>
     <Compile Include="Sell.Designer.cs">
       <DependentUpon>Sell.cs</DependentUpon>
+    </Compile>
+    <Compile Include="storeDataSet.cs">
+      <DependentUpon>storeDataSet.xsd</DependentUpon>
+      <SubType>Component</SubType>
     </Compile>
     <Compile Include="storeDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -116,8 +120,8 @@
     <EmbeddedResource Include="Items.resx">
       <DependentUpon>Items.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Payments_In.resx">
-      <DependentUpon>Payments_In.cs</DependentUpon>
+    <EmbeddedResource Include="Payments.resx">
+      <DependentUpon>Payments.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
