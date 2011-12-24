@@ -20,7 +20,7 @@ namespace Acounting
         int earnings;
         int remaining;
         int agentid;
-        List<DataRow> itemstosell;
+  
 
 
         public Sell()
@@ -31,8 +31,7 @@ namespace Acounting
         private void Sell_Load(object sender, EventArgs e)
         {
             // TODO: This line of code loads data into the 'storeDataSet.SalesDetails' table. You can move, or remove it, as needed.
-            this.salesDetailsTableAdapter.Fill(this.storeDataSet.SalesDetails);
-     
+            this.salesDetailsTableAdapter.Fill(this.storeDataSet.SalesDetails);     
             this.spendingsTableAdapter.Fill(this.storeDataSet.spendings);
             this.vaultTableAdapter.Fill(this.storeDataSet.vault);
             this.salesitemsTableAdapter.Fill(this.storeDataSet.salesitems);
@@ -40,8 +39,6 @@ namespace Acounting
             this.agentsTableAdapter.Fill(this.storeDataSet.agents);
             this.itemsTableAdapter.Fill(this.storeDataSet.items);
 
-            //items to sell
-            itemstosell = new List<DataRow>();
 
             virtualdata = storeDataSet.SalesDetails.Clone();
             dataGridView1.DataSource = virtualdata;
@@ -53,10 +50,10 @@ namespace Acounting
             Cmb_AgentName_TextChanged(null, null);
 
 
+            // new bill id
             billID = storeDataSet.bills.Count + 1;
-
             Txt_BillID.Text = billID.ToString();
-            salesitemsBindingSource.Filter = "Bills_BillID='" + billID + "'";
+  
           
         }
 
@@ -162,18 +159,10 @@ namespace Acounting
                 return;
             }
 
-           
-            if (!int.TryParse(Txt_AgentID.Text, out agentid))
-            {
-                errorProvider1.SetError(Txt_AgentID, "Error With AgentID");
-                return;
-            }
+            #endregion
 
             salesID++;
             
-            Console.WriteLine(storeDataSet.salesitems.Rows.Count);
-          
-
             totalprice = sellprice*sellqty;
             earnings = totalprice - (sellqty*cost);
 
@@ -184,7 +173,7 @@ namespace Acounting
                 return;
             }
 
-            #endregion
+           
 
             
             #region add items sales
