@@ -18,7 +18,10 @@ namespace Acounting
 
         private void Form1_Load(object sender, EventArgs e)
         {
+            // TODO: This line of code loads data into the 'storeDataSet.items' table. You can move, or remove it, as needed.
+            this.itemsTableAdapter.Fill(this.storeDataSet.items);
             Console.WriteLine("asdasd");
+ 
         }
 
         private void agentsToolStripMenuItem_Click(object sender, EventArgs e)
