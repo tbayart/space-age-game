@@ -121,6 +121,13 @@ namespace Acounting
             errorProvider1.Clear();
             // check data not empty
 
+
+            if (Txt_DealerID.Text == "")
+            {
+                errorProvider1.SetError(Cmb_DealerName, "Error with dealerID");
+                return;
+            }
+
             int itemid;
             if (!int.TryParse(Txt_ItemID.Text, out itemid))
             {
