@@ -35,8 +35,8 @@
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.purchasesitemsBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.storeDataSet = new Acounting.storeDataSet();
+            this.purchasesitemsBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.Txt_Remaining = new System.Windows.Forms.TextBox();
             this.label13 = new System.Windows.Forms.Label();
             this.Txt_TotalBill = new System.Windows.Forms.TextBox();
@@ -72,25 +72,21 @@
             this.purchasesitemsTableAdapter = new Acounting.storeDataSetTableAdapters.purchasesitemsTableAdapter();
             this.vaultBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.vaultTableAdapter = new Acounting.storeDataSetTableAdapters.vaultTableAdapter();
-            this.itemsPurchaseBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.purchaseBillsBillIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.itemNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.costDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.qtyDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.totalDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.purchaseDetailsBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.purchaseDetailsTableAdapter = new Acounting.storeDataSetTableAdapters.PurchaseDetailsTableAdapter();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.groupBox4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.purchasesitemsBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.storeDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.purchasesitemsBindingSource)).BeginInit();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.itemsBindingSource)).BeginInit();
             this.groupBox3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dealersBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.purchasebillsBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.vaultBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.itemsPurchaseBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.purchaseDetailsBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox1
@@ -140,15 +136,7 @@
             // 
             this.dataGridView1.AllowUserToAddRows = false;
             this.dataGridView1.AllowUserToDeleteRows = false;
-            this.dataGridView1.AutoGenerateColumns = false;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.purchaseBillsBillIDDataGridViewTextBoxColumn,
-            this.itemNameDataGridViewTextBoxColumn,
-            this.costDataGridViewTextBoxColumn,
-            this.qtyDataGridViewTextBoxColumn,
-            this.totalDataGridViewTextBoxColumn});
-            this.dataGridView1.DataSource = this.itemsPurchaseBindingSource;
             this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dataGridView1.Location = new System.Drawing.Point(3, 16);
             this.dataGridView1.Name = "dataGridView1";
@@ -156,15 +144,15 @@
             this.dataGridView1.Size = new System.Drawing.Size(868, 280);
             this.dataGridView1.TabIndex = 0;
             // 
-            // purchasesitemsBindingSource
-            // 
-            this.purchasesitemsBindingSource.DataMember = "purchasesitems";
-            this.purchasesitemsBindingSource.DataSource = this.storeDataSet;
-            // 
             // storeDataSet
             // 
             this.storeDataSet.DataSetName = "storeDataSet";
             this.storeDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // purchasesitemsBindingSource
+            // 
+            this.purchasesitemsBindingSource.DataMember = "purchasesitems";
+            this.purchasesitemsBindingSource.DataSource = this.storeDataSet;
             // 
             // Txt_Remaining
             // 
@@ -193,6 +181,7 @@
             // 
             // button2
             // 
+            this.button2.Enabled = false;
             this.button2.Location = new System.Drawing.Point(113, 568);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(112, 39);
@@ -235,6 +224,7 @@
             this.Txt_Paid.Size = new System.Drawing.Size(97, 20);
             this.Txt_Paid.TabIndex = 5;
             this.Txt_Paid.Text = "0";
+            this.Txt_Paid.TextChanged += new System.EventHandler(this.Txt_Paid_TextChanged);
             // 
             // Txt_Cost
             // 
@@ -463,49 +453,14 @@
             // 
             this.vaultTableAdapter.ClearBeforeFill = true;
             // 
-            // itemsPurchaseBindingSource
+            // purchaseDetailsBindingSource
             // 
-            this.itemsPurchaseBindingSource.DataMember = "ItemsPurchase";
-            this.itemsPurchaseBindingSource.DataSource = this.storeDataSet;
+            this.purchaseDetailsBindingSource.DataMember = "PurchaseDetails";
+            this.purchaseDetailsBindingSource.DataSource = this.storeDataSet;
             // 
-            // itemsPurchaseTableAdapter
+            // purchaseDetailsTableAdapter
             // 
-        //    this.itemsPurchaseTableAdapter.ClearBeforeFill = true;
-            // 
-            // purchaseBillsBillIDDataGridViewTextBoxColumn
-            // 
-            this.purchaseBillsBillIDDataGridViewTextBoxColumn.DataPropertyName = "PurchaseBills_BillID";
-            this.purchaseBillsBillIDDataGridViewTextBoxColumn.HeaderText = "PurchaseBills_BillID";
-            this.purchaseBillsBillIDDataGridViewTextBoxColumn.Name = "purchaseBillsBillIDDataGridViewTextBoxColumn";
-            this.purchaseBillsBillIDDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // itemNameDataGridViewTextBoxColumn
-            // 
-            this.itemNameDataGridViewTextBoxColumn.DataPropertyName = "ItemName";
-            this.itemNameDataGridViewTextBoxColumn.HeaderText = "ItemName";
-            this.itemNameDataGridViewTextBoxColumn.Name = "itemNameDataGridViewTextBoxColumn";
-            this.itemNameDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // costDataGridViewTextBoxColumn
-            // 
-            this.costDataGridViewTextBoxColumn.DataPropertyName = "Cost";
-            this.costDataGridViewTextBoxColumn.HeaderText = "Cost";
-            this.costDataGridViewTextBoxColumn.Name = "costDataGridViewTextBoxColumn";
-            this.costDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // qtyDataGridViewTextBoxColumn
-            // 
-            this.qtyDataGridViewTextBoxColumn.DataPropertyName = "Qty";
-            this.qtyDataGridViewTextBoxColumn.HeaderText = "Qty";
-            this.qtyDataGridViewTextBoxColumn.Name = "qtyDataGridViewTextBoxColumn";
-            this.qtyDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // totalDataGridViewTextBoxColumn
-            // 
-            this.totalDataGridViewTextBoxColumn.DataPropertyName = "Total";
-            this.totalDataGridViewTextBoxColumn.HeaderText = "Total";
-            this.totalDataGridViewTextBoxColumn.Name = "totalDataGridViewTextBoxColumn";
-            this.totalDataGridViewTextBoxColumn.ReadOnly = true;
+            this.purchaseDetailsTableAdapter.ClearBeforeFill = true;
             // 
             // Buy
             // 
@@ -526,8 +481,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             this.groupBox4.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.purchasesitemsBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.storeDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.purchasesitemsBindingSource)).EndInit();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.itemsBindingSource)).EndInit();
@@ -536,6 +491,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.dealersBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.purchasebillsBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.vaultBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.purchaseDetailsBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -585,12 +541,7 @@
         private storeDataSetTableAdapters.purchasesitemsTableAdapter purchasesitemsTableAdapter;
         private System.Windows.Forms.BindingSource vaultBindingSource;
         private storeDataSetTableAdapters.vaultTableAdapter vaultTableAdapter;
-        private System.Windows.Forms.BindingSource itemsPurchaseBindingSource;
-
-        private System.Windows.Forms.DataGridViewTextBoxColumn purchaseBillsBillIDDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn itemNameDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn costDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn qtyDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn totalDataGridViewTextBoxColumn;
+        private System.Windows.Forms.BindingSource purchaseDetailsBindingSource;
+        private storeDataSetTableAdapters.PurchaseDetailsTableAdapter purchaseDetailsTableAdapter;
     }
 }
