@@ -11,6 +11,10 @@ namespace Acounting
 {
     public partial class Buy : Form
     {
+
+        int totalbill = 0;
+        int billID;
+        
         public Buy()
         {
             InitializeComponent();
@@ -18,13 +22,22 @@ namespace Acounting
 
         private void Buy_Load(object sender, EventArgs e)
         {
-            // TODO: This line of code loads data into the 'storeDataSet.dealers' table. You can move, or remove it, as needed.
-            this.dealersTableAdapter.Fill(this.storeDataSet.dealers);
-            // TODO: This line of code loads data into the 'storeDataSet.purchasebills' table. You can move, or remove it, as needed.
-            this.purchasebillsTableAdapter.Fill(this.storeDataSet.purchasebills);
-            // TODO: This line of code loads data into the 'storeDataSet.items' table. You can move, or remove it, as needed.
-            this.itemsTableAdapter.Fill(this.storeDataSet.items);
 
+            this.vaultTableAdapter.Fill(this.storeDataSet.vault);
+            this.purchasesitemsTableAdapter.Fill(this.storeDataSet.purchasesitems);
+            this.dealersTableAdapter.Fill(this.storeDataSet.dealers);
+            this.purchasebillsTableAdapter.Fill(this.storeDataSet.purchasebills);
+
+
+            this.itemsTableAdapter.Fill(this.storeDataSet.items);
+            Cmb_ItemName_TextChanged(null, null);
+            Cmb_DealerName_TextChanged(null,null);
+
+            billID = storeDataSet.purchasebills.Count + 1;
+
+            Txt_BillID.Text = billID.ToString();
+
+            purchasesitemsBindingSource.Filter = "PurchaseBills_BillID='" + billID + "'";
         }
 
         private void Cmb_ItemName_TextChanged(object sender, EventArgs e)
@@ -64,5 +77,20 @@ namespace Acounting
 
             }
         }
+
+
+
+        private void updatedataset()
+        {
+            this.vaultTableAdapter.Fill(this.storeDataSet.vault);
+            this.purchasesitemsTableAdapter.Fill(this.storeDataSet.purchasesitems);
+            this.dealersTableAdapter.Fill(this.storeDataSet.dealers);
+            this.purchasebillsTableAdapter.Fill(this.storeDataSet.purchasebills);
+
+        }
+
+
+
+
     }
 }
