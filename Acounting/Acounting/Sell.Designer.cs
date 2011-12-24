@@ -65,6 +65,12 @@
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.billsBillIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.itemNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.qtyDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.sellPriceDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.totalPriceDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.earningsDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.salesitemsBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.billsTableAdapter = new Acounting.storeDataSetTableAdapters.billsTableAdapter();
             this.button1 = new System.Windows.Forms.Button();
@@ -73,12 +79,6 @@
             this.vaultBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.vaultTableAdapter = new Acounting.storeDataSetTableAdapters.vaultTableAdapter();
             this.itemsSalesTableAdapter = new Acounting.storeDataSetTableAdapters.ItemsSalesTableAdapter();
-            this.billsBillIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.itemNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.qtyDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.sellPriceDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.totalPriceDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.earningsDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.billsBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.storeDataSet)).BeginInit();
             this.groupBox1.SuspendLayout();
@@ -143,6 +143,7 @@
             this.Cmb_ItemName.Name = "Cmb_ItemName";
             this.Cmb_ItemName.Size = new System.Drawing.Size(178, 24);
             this.Cmb_ItemName.TabIndex = 1;
+            this.Cmb_ItemName.SelectedIndexChanged += new System.EventHandler(this.Cmb_ItemName_SelectedIndexChanged);
             this.Cmb_ItemName.TextChanged += new System.EventHandler(this.Cmb_ItemName_TextChanged);
             // 
             // itemsBindingSource
@@ -422,6 +423,48 @@
             this.dataGridView1.Size = new System.Drawing.Size(868, 280);
             this.dataGridView1.TabIndex = 0;
             // 
+            // billsBillIDDataGridViewTextBoxColumn
+            // 
+            this.billsBillIDDataGridViewTextBoxColumn.DataPropertyName = "Bills_BillID";
+            this.billsBillIDDataGridViewTextBoxColumn.HeaderText = "Bills_BillID";
+            this.billsBillIDDataGridViewTextBoxColumn.Name = "billsBillIDDataGridViewTextBoxColumn";
+            this.billsBillIDDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // itemNameDataGridViewTextBoxColumn
+            // 
+            this.itemNameDataGridViewTextBoxColumn.DataPropertyName = "ItemName";
+            this.itemNameDataGridViewTextBoxColumn.HeaderText = "ItemName";
+            this.itemNameDataGridViewTextBoxColumn.Name = "itemNameDataGridViewTextBoxColumn";
+            this.itemNameDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // qtyDataGridViewTextBoxColumn
+            // 
+            this.qtyDataGridViewTextBoxColumn.DataPropertyName = "Qty";
+            this.qtyDataGridViewTextBoxColumn.HeaderText = "Qty";
+            this.qtyDataGridViewTextBoxColumn.Name = "qtyDataGridViewTextBoxColumn";
+            this.qtyDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // sellPriceDataGridViewTextBoxColumn
+            // 
+            this.sellPriceDataGridViewTextBoxColumn.DataPropertyName = "SellPrice";
+            this.sellPriceDataGridViewTextBoxColumn.HeaderText = "SellPrice";
+            this.sellPriceDataGridViewTextBoxColumn.Name = "sellPriceDataGridViewTextBoxColumn";
+            this.sellPriceDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // totalPriceDataGridViewTextBoxColumn
+            // 
+            this.totalPriceDataGridViewTextBoxColumn.DataPropertyName = "TotalPrice";
+            this.totalPriceDataGridViewTextBoxColumn.HeaderText = "TotalPrice";
+            this.totalPriceDataGridViewTextBoxColumn.Name = "totalPriceDataGridViewTextBoxColumn";
+            this.totalPriceDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // earningsDataGridViewTextBoxColumn
+            // 
+            this.earningsDataGridViewTextBoxColumn.DataPropertyName = "Earnings";
+            this.earningsDataGridViewTextBoxColumn.HeaderText = "Earnings";
+            this.earningsDataGridViewTextBoxColumn.Name = "earningsDataGridViewTextBoxColumn";
+            this.earningsDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
             // salesitemsBindingSource
             // 
             this.salesitemsBindingSource.DataMember = "ItemsSales";
@@ -467,48 +510,6 @@
             // itemsSalesTableAdapter
             // 
             this.itemsSalesTableAdapter.ClearBeforeFill = true;
-            // 
-            // billsBillIDDataGridViewTextBoxColumn
-            // 
-            this.billsBillIDDataGridViewTextBoxColumn.DataPropertyName = "Bills_BillID";
-            this.billsBillIDDataGridViewTextBoxColumn.HeaderText = "Bills_BillID";
-            this.billsBillIDDataGridViewTextBoxColumn.Name = "billsBillIDDataGridViewTextBoxColumn";
-            this.billsBillIDDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // itemNameDataGridViewTextBoxColumn
-            // 
-            this.itemNameDataGridViewTextBoxColumn.DataPropertyName = "ItemName";
-            this.itemNameDataGridViewTextBoxColumn.HeaderText = "ItemName";
-            this.itemNameDataGridViewTextBoxColumn.Name = "itemNameDataGridViewTextBoxColumn";
-            this.itemNameDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // qtyDataGridViewTextBoxColumn
-            // 
-            this.qtyDataGridViewTextBoxColumn.DataPropertyName = "Qty";
-            this.qtyDataGridViewTextBoxColumn.HeaderText = "Qty";
-            this.qtyDataGridViewTextBoxColumn.Name = "qtyDataGridViewTextBoxColumn";
-            this.qtyDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // sellPriceDataGridViewTextBoxColumn
-            // 
-            this.sellPriceDataGridViewTextBoxColumn.DataPropertyName = "SellPrice";
-            this.sellPriceDataGridViewTextBoxColumn.HeaderText = "SellPrice";
-            this.sellPriceDataGridViewTextBoxColumn.Name = "sellPriceDataGridViewTextBoxColumn";
-            this.sellPriceDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // totalPriceDataGridViewTextBoxColumn
-            // 
-            this.totalPriceDataGridViewTextBoxColumn.DataPropertyName = "TotalPrice";
-            this.totalPriceDataGridViewTextBoxColumn.HeaderText = "TotalPrice";
-            this.totalPriceDataGridViewTextBoxColumn.Name = "totalPriceDataGridViewTextBoxColumn";
-            this.totalPriceDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // earningsDataGridViewTextBoxColumn
-            // 
-            this.earningsDataGridViewTextBoxColumn.DataPropertyName = "Earnings";
-            this.earningsDataGridViewTextBoxColumn.HeaderText = "Earnings";
-            this.earningsDataGridViewTextBoxColumn.Name = "earningsDataGridViewTextBoxColumn";
-            this.earningsDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // Sell
             // 

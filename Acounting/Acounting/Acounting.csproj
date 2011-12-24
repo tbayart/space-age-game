@@ -61,6 +61,12 @@
     <Compile Include="Agents.Designer.cs">
       <DependentUpon>Agents.cs</DependentUpon>
     </Compile>
+    <Compile Include="Buy.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Buy.Designer.cs">
+      <DependentUpon>Buy.cs</DependentUpon>
+    </Compile>
     <Compile Include="Dealers.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -110,6 +116,9 @@
     </Compile>
     <EmbeddedResource Include="Agents.resx">
       <DependentUpon>Agents.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Buy.resx">
+      <DependentUpon>Buy.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Dealers.resx">
       <DependentUpon>Dealers.cs</DependentUpon>

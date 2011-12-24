@@ -39,6 +39,7 @@
             this.vaultToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.paymentsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.itemsTableAdapter = new Acounting.storeDataSetTableAdapters.itemsTableAdapter();
+            this.buyToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.itemsBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.storeDataSet)).BeginInit();
             this.menuStrip1.SuspendLayout();
@@ -57,12 +58,13 @@
             // menuStrip1
             // 
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.agentsToolStripMenuItem,
             this.itemsToolStripMenuItem,
+            this.agentsToolStripMenuItem,
             this.dealersToolStripMenuItem,
+            this.buyToolStripMenuItem,
             this.sellToolStripMenuItem,
-            this.vaultToolStripMenuItem,
-            this.paymentsToolStripMenuItem});
+            this.paymentsToolStripMenuItem,
+            this.vaultToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(512, 24);
@@ -115,6 +117,13 @@
             // 
             this.itemsTableAdapter.ClearBeforeFill = true;
             // 
+            // buyToolStripMenuItem
+            // 
+            this.buyToolStripMenuItem.Name = "buyToolStripMenuItem";
+            this.buyToolStripMenuItem.Size = new System.Drawing.Size(37, 20);
+            this.buyToolStripMenuItem.Text = "Buy";
+            this.buyToolStripMenuItem.Click += new System.EventHandler(this.buyToolStripMenuItem_Click);
+            // 
             // Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -148,6 +157,7 @@
         private System.Windows.Forms.BindingSource itemsBindingSource;
         private storeDataSet storeDataSet;
         private storeDataSetTableAdapters.itemsTableAdapter itemsTableAdapter;
+        private System.Windows.Forms.ToolStripMenuItem buyToolStripMenuItem;
     }
 }
 
