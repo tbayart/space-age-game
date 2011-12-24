@@ -67,6 +67,18 @@
     <Compile Include="Buy.Designer.cs">
       <DependentUpon>Buy.cs</DependentUpon>
     </Compile>
+    <Compile Include="ReturnBuy.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReturnBuy.Designer.cs">
+      <DependentUpon>ReturnBuy.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ReturnSell.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReturnSell.Designer.cs">
+      <DependentUpon>ReturnSell.cs</DependentUpon>
+    </Compile>
     <Compile Include="Dealers.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -120,6 +132,12 @@
     <EmbeddedResource Include="Buy.resx">
       <DependentUpon>Buy.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="ReturnBuy.resx">
+      <DependentUpon>ReturnBuy.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReturnSell.resx">
+      <DependentUpon>ReturnSell.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Dealers.resx">
       <DependentUpon>Dealers.cs</DependentUpon>
     </EmbeddedResource>
@@ -147,7 +165,9 @@
     <EmbeddedResource Include="Vault.resx">
       <DependentUpon>Vault.cs</DependentUpon>
     </EmbeddedResource>
-    <None Include="app.config" />
+    <None Include="app.config">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="asd.mwb" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
