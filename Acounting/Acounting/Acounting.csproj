@@ -105,10 +105,6 @@
     <Compile Include="Sell.Designer.cs">
       <DependentUpon>Sell.cs</DependentUpon>
     </Compile>
-    <Compile Include="storeDataSet.cs">
-      <DependentUpon>storeDataSet.xsd</DependentUpon>
-      <SubType>Component</SubType>
-    </Compile>
     <Compile Include="storeDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
