@@ -48,7 +48,7 @@ namespace Acounting
 
         private void sellToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Sell sell = new Sell();
+            ReturnSell sell = new ReturnSell();
             sell.MdiParent = this;
             sell.Show();
 
@@ -73,6 +73,13 @@ namespace Acounting
             Buy buy = new Buy();
             buy.MdiParent = this;
             buy.Show();
+        }
+
+        private void reportsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Reports reports = new Reports();
+            reports.MdiParent = this;
+            reports.Show();
         }
     }
 }

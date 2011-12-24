@@ -67,18 +67,6 @@
     <Compile Include="Buy.Designer.cs">
       <DependentUpon>Buy.cs</DependentUpon>
     </Compile>
-    <Compile Include="ReturnBuy.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="ReturnBuy.Designer.cs">
-      <DependentUpon>ReturnBuy.cs</DependentUpon>
-    </Compile>
-    <Compile Include="ReturnSell.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="ReturnSell.Designer.cs">
-      <DependentUpon>ReturnSell.cs</DependentUpon>
-    </Compile>
     <Compile Include="Dealers.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -105,6 +93,12 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Reports.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reports.Designer.cs">
+      <DependentUpon>Reports.cs</DependentUpon>
+    </Compile>
     <Compile Include="Sell.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -129,14 +123,10 @@
     <EmbeddedResource Include="Agents.resx">
       <DependentUpon>Agents.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="AgentsDebtTotalAr.rdlc" />
+    <EmbeddedResource Include="AgentsDebtTotalEn.rdlc" />
     <EmbeddedResource Include="Buy.resx">
       <DependentUpon>Buy.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="ReturnBuy.resx">
-      <DependentUpon>ReturnBuy.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="ReturnSell.resx">
-      <DependentUpon>ReturnSell.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Dealers.resx">
       <DependentUpon>Dealers.cs</DependentUpon>
@@ -159,6 +149,10 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Report1.rdlc" />
+    <EmbeddedResource Include="Reports.resx">
+      <DependentUpon>Reports.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Sell.resx">
       <DependentUpon>Sell.cs</DependentUpon>
     </EmbeddedResource>
