@@ -23,10 +23,6 @@ namespace Acounting
 
         }
 
-        private void saveToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            itemsTableAdapter.Update(storeDataSet);
-        }
 
  
 
@@ -50,7 +46,23 @@ namespace Acounting
 
         private void bindingNavigatorAddNewItem_Click(object sender, EventArgs e)
         {
+            int newid;
+            int.TryParse(bindingNavigatorPositionItem.Text, out newid);
+            Console.WriteLine(newid);
+            Txt_ItemID.Text = newid.ToString();
 
+        }
+
+        private void Txt_Qty_TextChanged(object sender, EventArgs e)
+        {
+
+            int cost;
+            int qty;
+            int.TryParse(Txt_Qty.Text, out qty);
+            int.TryParse(Txt_Cost.Text, out cost);
+            int totalcost = cost * qty;
+
+            Txt_Totalcost.Text = totalcost.ToString();
         }
 
  
