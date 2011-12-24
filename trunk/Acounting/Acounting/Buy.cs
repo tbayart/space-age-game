@@ -229,6 +229,8 @@ namespace Acounting
             Cmb_DealerName_TextChanged(null, null);
             #endregion
 
+            button2.Enabled = true;
+
         }
 
         private void Txt_Paid_TextChanged(object sender, EventArgs e)
@@ -243,6 +245,85 @@ namespace Acounting
 
             remaining = billpaid - totalbill;
             Txt_Remaining.Text = remaining.ToString();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+
+            {
+                //show dialoge 
+
+                DialogResult result = MessageBox.Show("Do you want to save ?", "Accounting", MessageBoxButtons.YesNo);
+
+
+                if (result == System.Windows.Forms.DialogResult.Yes)
+                {
+                    #region save
+
+
+                    // find paid ammount  
+                    int paid;
+
+                    int.TryParse(Txt_Paid.Text, out paid);
+
+
+                    //make sure paid is right
+                    Txt_Paid_TextChanged(null, null);
+
+                    //add bill
+                    DataRow billrow = storeDataSet.purchasebills.NewRow();
+
+                    billrow[0] = billID;
+                    billrow[1] = dealerId;
+                    billrow[2] = DateTime.Now;
+                    billrow[3] = totalbill;
+                    billrow[4] = paid;
+                    billrow[5] = remaining;
+                    storeDataSet.purchasebills.Rows.Add(billrow);
+
+
+                    // get vault row for manipulation
+                    DataRow vaultrow = storeDataSet.vault.FindByidVault(0);
+
+                    int oldvalue, newvalue;
+                    int.TryParse(vaultrow["In_Hand"].ToString(), out oldvalue);
+
+                    Console.WriteLine(oldvalue);
+                    newvalue = oldvalue - paid;
+                    Console.WriteLine(newvalue);
+                    vaultrow["In_Hand"] = newvalue;
+
+
+                    //find old debt
+                    int debt;
+                    DataRow dealerrow = storeDataSet.dealers.FindByDealerID(dealerId);
+                    int.TryParse(dealerrow["Debt"].ToString(), out debt);
+
+                    int newdebt = debt + remaining;
+
+                    //add newdebt to agent
+                    dealerrow["Debt"] = newdebt;
+
+                    // update alll
+                    updatedataset();
+
+                    //reset globals
+                    totalbill = 0;
+                    totalprice = 0;
+                    remaining = 0;
+
+                    virtualdata.Clear();
+
+
+                    billID = storeDataSet.purchasebills.Count + 1;
+
+                    Txt_BillID.Text = billID.ToString();
+ 
+
+                    #endregion
+                }
+
+            }
         }
 
 
