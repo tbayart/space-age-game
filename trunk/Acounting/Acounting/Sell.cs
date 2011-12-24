@@ -89,6 +89,12 @@ namespace Acounting
                 DataRow filterrow = agents.AsEnumerable().Where(i => i.Field<string>("AgentName") == Cmb_AgentName.Text).FirstOrDefault();
                 
                 Txt_AgentID.Text = filterrow["AgentID"].ToString();
+
+                if (!int.TryParse(Txt_AgentID.Text, out agentid))
+                {
+                    errorProvider1.SetError(Txt_AgentID, "Error With AgentID");
+                    return;
+                }
             }
             catch (Exception ee)
             {
@@ -229,7 +235,7 @@ namespace Acounting
            itemrow["Qty"] = newqty;
 
 
-           
+           button2.Enabled = true;
            Cmb_ItemName_TextChanged(null, null);
            Cmb_AgentName_TextChanged(null, null);
            #endregion
@@ -273,6 +279,10 @@ namespace Acounting
 
                 int.TryParse(Txt_Paid.Text, out paid);
                 
+
+                //make sure paid is right
+                Txt_Paid_TextChanged(null, null);
+
                 //add bill
                 DataRow billrow = storeDataSet.bills.NewRow();
 
@@ -334,6 +344,20 @@ namespace Acounting
         private void groupBox3_Enter(object sender, EventArgs e)
         {
 
+        }
+
+        private void Txt_Paid_TextChanged(object sender, EventArgs e)
+        {
+            errorProvider1.Clear();
+            int billpaid;
+            if (!int.TryParse(Txt_Paid.Text, out billpaid))
+            {
+                errorProvider1.SetError(Txt_Paid,"Error With Paid Value");
+                return;
+            }
+     
+            remaining = billpaid - totalbill;
+            Txt_Remaining.Text = remaining.ToString();
         }
 
  
