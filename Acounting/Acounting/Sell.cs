@@ -323,7 +323,7 @@ namespace Acounting
                 billID = storeDataSet.bills.Count + 1;
 
                 Txt_BillID.Text = billID.ToString();
-                salesitemsBindingSource.Filter = "Bills_BillID='" + billID + "'";
+ 
 
             #endregion 
             }
