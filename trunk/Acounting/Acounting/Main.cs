@@ -67,5 +67,12 @@ namespace Acounting
             payments.MdiParent = this;
             payments.Show();
         }
+
+        private void buyToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Buy buy = new Buy();
+            buy.MdiParent = this;
+            buy.Show();
+        }
     }
 }

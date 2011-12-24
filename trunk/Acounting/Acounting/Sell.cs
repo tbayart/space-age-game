@@ -295,6 +295,11 @@ namespace Acounting
             }
             
         }
+
+        private void Cmb_ItemName_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
          
  
     }
