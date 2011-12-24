@@ -22,6 +22,8 @@ namespace Acounting
 
         private void Sell_Load(object sender, EventArgs e)
         {
+            // TODO: This line of code loads data into the 'storeDataSet.ItemsSales' table. You can move, or remove it, as needed.
+            this.itemsSalesTableAdapter.Fill(this.storeDataSet.ItemsSales);
             // TODO: This line of code loads data into the 'storeDataSet.vault' table. You can move, or remove it, as needed.
             this.vaultTableAdapter.Fill(this.storeDataSet.vault);
             // TODO: This line of code loads data into the 'storeDataSet.salesitems' table. You can move, or remove it, as needed.
@@ -219,6 +221,7 @@ namespace Acounting
 
         private void updatedataset()
         {
+            itemsSalesTableAdapter.Fill(storeDataSet.ItemsSales);
             billsTableAdapter.Fill(storeDataSet.bills);
             salesitemsTableAdapter.Fill(storeDataSet.salesitems);
             itemsTableAdapter.Fill(storeDataSet.items);
