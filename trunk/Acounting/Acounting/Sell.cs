@@ -10,7 +10,7 @@ using MySql.Data.MySqlClient;
 using   System.Configuration;
 namespace Acounting
 {
-    public partial class Sell : Form
+    public partial class ReturnSell : Form
     {
         int totalbill = 0;
         int billID;
@@ -23,7 +23,7 @@ namespace Acounting
   
 
 
-        public Sell()
+        public ReturnSell()
         {
             InitializeComponent();
         }

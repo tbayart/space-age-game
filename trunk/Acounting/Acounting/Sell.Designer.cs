@@ -1,6 +1,6 @@
 ﻿namespace Acounting
 {
-    partial class Sell
+    partial class ReturnSell
     {
         /// <summary>
         /// Required designer variable.
