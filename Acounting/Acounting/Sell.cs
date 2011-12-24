@@ -14,7 +14,15 @@ namespace Acounting
     {
         int totalbill = 0;
         int billID;
-        
+        DataTable virtualdata;
+        int salesID;
+        int totalprice;
+        int earnings;
+        int remaining;
+        int agentid;
+        List<DataRow> itemstosell;
+
+
         public Sell()
         {
             InitializeComponent();
@@ -22,21 +30,33 @@ namespace Acounting
 
         private void Sell_Load(object sender, EventArgs e)
         {
-            // TODO: This line of code loads data into the 'storeDataSet.ItemsSales' table. You can move, or remove it, as needed.
-            this.itemsSalesTableAdapter.Fill(this.storeDataSet.ItemsSales);
+            // TODO: This line of code loads data into the 'storeDataSet.SalesDetails' table. You can move, or remove it, as needed.
+            this.salesDetailsTableAdapter.Fill(this.storeDataSet.SalesDetails);
+     
+            this.spendingsTableAdapter.Fill(this.storeDataSet.spendings);
             this.vaultTableAdapter.Fill(this.storeDataSet.vault);
             this.salesitemsTableAdapter.Fill(this.storeDataSet.salesitems);
             this.billsTableAdapter.Fill(this.storeDataSet.bills);
             this.agentsTableAdapter.Fill(this.storeDataSet.agents);
             this.itemsTableAdapter.Fill(this.storeDataSet.items);
 
+            //items to sell
+            itemstosell = new List<DataRow>();
+
+            virtualdata = storeDataSet.SalesDetails.Clone();
+            dataGridView1.DataSource = virtualdata;
+
+            //get lastid
+            salesID = storeDataSet.salesitems.Rows.Count;
+
             Cmb_ItemName_TextChanged(null, null);
             Cmb_AgentName_TextChanged(null, null);
 
-              billID = storeDataSet.bills.Count + 1;
 
-              Txt_BillID.Text = billID.ToString();
-              salesitemsBindingSource.Filter = "Bills_BillID='" + billID + "'";
+            billID = storeDataSet.bills.Count + 1;
+
+            Txt_BillID.Text = billID.ToString();
+            salesitemsBindingSource.Filter = "Bills_BillID='" + billID + "'";
           
         }
 
@@ -136,67 +156,69 @@ namespace Acounting
                 return;
             }
 
-            int agentid;
+           
             if (!int.TryParse(Txt_AgentID.Text, out agentid))
             {
                 errorProvider1.SetError(Txt_AgentID, "Error With AgentID");
                 return;
             }
 
-            int salesID = storeDataSet.salesitems.Rows.Count + 1;
+            salesID++;
+            
             Console.WriteLine(storeDataSet.salesitems.Rows.Count);
           
 
-            int totalprice = sellprice*sellqty;
-            int earnings = totalprice - (sellqty*cost);
+            totalprice = sellprice*sellqty;
+            earnings = totalprice - (sellqty*cost);
 
             int billpaid;
             if (!int.TryParse(Txt_Paid.Text, out billpaid))
             {
-                errorProvider1.SetError(Txt_Paid, "Error With AgentID");
+                errorProvider1.SetError(Txt_Paid, "Error With Paid !");
                 return;
             }
 
             #endregion
 
-            #region check bill
-            // check if same bill exists on database 
-            Console.WriteLine("billid " + billID.ToString());
+            
+            #region add items sales
 
-            //find the bill or add a new one of not found
-            DataRow billrow = storeDataSet.bills.FindByBillID(billID);
-            if (billrow==null)
-            {
-                billsTableAdapter.Insert(billID, agentid, DateTime.Now, 0, 0, 0);
-                billrow = storeDataSet.bills.FindByBillID(billID);
-            }
+            // add items sales  
+            DataRow newrow = storeDataSet.salesitems.NewRow();        
+            newrow[0] = salesID;
+            newrow[1] = billID;
+            newrow[2] = itemid;
+            newrow[3] = sellqty;
+            newrow[4] = sellprice;
+            newrow[5] = cost;
+            newrow[6] = totalprice;
+            newrow[7] = earnings;
+            storeDataSet.salesitems.Rows.Add(newrow);
+            
+            //add virtual data to datagrid
 
+            DataRow detailsrow = virtualdata.NewRow();
 
-            #endregion
+            detailsrow[0] = Cmb_ItemName.Text;
+            detailsrow[1] = sellqty;
+            detailsrow[2] = sellprice;
+            detailsrow[3] = totalprice;
+            detailsrow[4] = earnings;
 
-            #region add bill
+            virtualdata.Rows.Add(detailsrow);
 
-            // add items sales 
-
-            salesitemsTableAdapter.Insert((uint)salesID, billID, itemid, sellqty, sellprice, cost, totalprice, earnings);
             totalbill += totalprice;
+
             Console.WriteLine("added new sales " + salesID.ToString());
 
-            //  update bill
-            updatedataset();
+            //  update parameters for bill
 
-            int remaining = billpaid - totalbill;
-            billrow = storeDataSet.bills.FindByBillID(billID);
-            billrow["TotalBill"] = totalbill;
-            billrow["Paid"] = billpaid;
-            billrow["Remaining"] = remaining;
-
-            billsTableAdapter.Update(billrow);
+            remaining = billpaid - totalbill;
         
             Txt_TotalBill.Text = totalbill.ToString();
             Txt_Remaining.Text = remaining.ToString();
    
-            updatedataset();
+
 
             // update items to reduce items qty
 
@@ -206,27 +228,32 @@ namespace Acounting
            int newqty = originalqty - sellqty;
            itemrow["Qty"] = newqty;
 
-           itemsTableAdapter.Update(itemrow);
-           updatedataset();
+
+           
            Cmb_ItemName_TextChanged(null, null);
            Cmb_AgentName_TextChanged(null, null);
+           #endregion
 
-
-
-
-            #endregion
+      
         }
 
 
 
         private void updatedataset()
         {
-            this.itemsSalesTableAdapter.Fill(this.storeDataSet.ItemsSales);
+            billsTableAdapter.Update(storeDataSet);
+            salesitemsTableAdapter.Update(storeDataSet);
+            
+            itemsTableAdapter.Update(storeDataSet);
+            agentsTableAdapter.Update(storeDataSet);
+            vaultTableAdapter.Update(storeDataSet);
+/*
             this.vaultTableAdapter.Fill(this.storeDataSet.vault);
             this.salesitemsTableAdapter.Fill(this.storeDataSet.salesitems);
             this.billsTableAdapter.Fill(this.storeDataSet.bills);
             this.agentsTableAdapter.Fill(this.storeDataSet.agents);
             this.itemsTableAdapter.Fill(this.storeDataSet.items);
+ * */
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -239,22 +266,26 @@ namespace Acounting
             if (result == System.Windows.Forms.DialogResult.Yes)
             {
                 #region save
-                // find paid ammount
-                DataRow billrow;
+
+
+                // find paid ammount  
                 int paid;
-                int remaining;
-                billrow = storeDataSet.bills.FindByBillID(billID);
-                if (billrow==null)
-                {
-                    MessageBox.Show("No Data", "Accounting", MessageBoxButtons.OK);
-                    return;
-                }
-                int.TryParse(billrow["Paid"].ToString(), out paid);
-                int.TryParse(billrow["Remaining"].ToString(), out remaining);
 
-                Console.WriteLine(paid);
-                //put ammount in the vault
+                int.TryParse(Txt_Paid.Text, out paid);
+                
+                //add bill
+                DataRow billrow = storeDataSet.bills.NewRow();
 
+                billrow[0] = billID;
+                billrow[1] = agentid;
+                billrow[2] = DateTime.Now;
+                billrow[3] = totalbill;
+                billrow[4] = paid;
+                billrow[5] = remaining;
+                storeDataSet.bills.Rows.Add(billrow);
+
+
+                // get vault row for manipulation
                 DataRow vaultrow = storeDataSet.vault.FindByidVault(0);
 
                 int oldvalue, newvalue;
@@ -265,15 +296,10 @@ namespace Acounting
                 Console.WriteLine(newvalue);
                 vaultrow["In_Hand"] = newvalue;
 
-                vaultTableAdapter.Update(vaultrow);
-
-                // find agent id
-                int agentID;
-                int.TryParse(billrow["Agents_AgentID"].ToString(), out agentID);
-
+                            
                 //find old debt
                 int debt;
-                DataRow agentrow = storeDataSet.agents.FindByAgentID(agentID);
+                DataRow agentrow = storeDataSet.agents.FindByAgentID(agentid);
                 int.TryParse(agentrow["Debt"].ToString(), out debt);
 
                 int newdebt = debt + remaining;
@@ -281,12 +307,19 @@ namespace Acounting
                 //add newdebt to agent
                 agentrow["Debt"] = newdebt;
 
-                // update agent
-                agentsTableAdapter.Update(agentrow);
+                // update alll
 
 
                 updatedataset();
+
+                //reset globals
                 totalbill = 0;
+                totalprice = 0;
+                earnings = 0;
+                remaining = 0;
+
+                virtualdata.Clear();
+
 
                 billID = storeDataSet.bills.Count + 1;
 
@@ -296,6 +329,11 @@ namespace Acounting
             #endregion 
             }
             
+        }
+
+        private void groupBox3_Enter(object sender, EventArgs e)
+        {
+
         }
 
  

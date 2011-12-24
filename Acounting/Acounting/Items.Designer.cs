@@ -67,6 +67,7 @@
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
+            this.saveToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.itemsBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.storeDataSet)).BeginInit();
@@ -152,7 +153,8 @@
             // 
             this.menuStrip1.AllowMerge = false;
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.exitToolStripMenuItem});
+            this.exitToolStripMenuItem,
+            this.saveToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(781, 24);
@@ -416,6 +418,13 @@
             // 
             this.errorProvider1.ContainerControl = this;
             // 
+            // saveToolStripMenuItem
+            // 
+            this.saveToolStripMenuItem.Name = "saveToolStripMenuItem";
+            this.saveToolStripMenuItem.Size = new System.Drawing.Size(43, 20);
+            this.saveToolStripMenuItem.Text = "Save";
+            this.saveToolStripMenuItem.Click += new System.EventHandler(this.saveToolStripMenuItem_Click);
+            // 
             // Items
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -485,5 +494,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.ToolStripButton bindingNavigatorAddNewItem;
         private System.Windows.Forms.ErrorProvider errorProvider1;
+        private System.Windows.Forms.ToolStripMenuItem saveToolStripMenuItem;
     }
 }

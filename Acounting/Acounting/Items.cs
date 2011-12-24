@@ -65,6 +65,11 @@ namespace Acounting
             Txt_Totalcost.Text = totalcost.ToString();
         }
 
+        private void saveToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            itemsTableAdapter.Update(storeDataSet);
+        }
+
  
          
     }
