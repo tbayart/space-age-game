@@ -24,16 +24,12 @@ namespace Acounting
         {
             // TODO: This line of code loads data into the 'storeDataSet.ItemsSales' table. You can move, or remove it, as needed.
             this.itemsSalesTableAdapter.Fill(this.storeDataSet.ItemsSales);
-            // TODO: This line of code loads data into the 'storeDataSet.vault' table. You can move, or remove it, as needed.
             this.vaultTableAdapter.Fill(this.storeDataSet.vault);
-            // TODO: This line of code loads data into the 'storeDataSet.salesitems' table. You can move, or remove it, as needed.
             this.salesitemsTableAdapter.Fill(this.storeDataSet.salesitems);
-            // TODO: This line of code loads data into the 'storeDataSet.bills' table. You can move, or remove it, as needed.
             this.billsTableAdapter.Fill(this.storeDataSet.bills);
-            // TODO: This line of code loads data into the 'storeDataSet.agents' table. You can move, or remove it, as needed.
             this.agentsTableAdapter.Fill(this.storeDataSet.agents);
-            // TODO: This line of code loads data into the 'storeDataSet.items' table. You can move, or remove it, as needed.
             this.itemsTableAdapter.Fill(this.storeDataSet.items);
+
             Cmb_ItemName_TextChanged(null, null);
             Cmb_AgentName_TextChanged(null, null);
 
@@ -81,6 +77,10 @@ namespace Acounting
 
             }
         }
+        
+
+
+
 
         private void button1_Click(object sender, EventArgs e)
         {
@@ -221,10 +221,12 @@ namespace Acounting
 
         private void updatedataset()
         {
-            itemsSalesTableAdapter.Fill(storeDataSet.ItemsSales);
-            billsTableAdapter.Fill(storeDataSet.bills);
-            salesitemsTableAdapter.Fill(storeDataSet.salesitems);
-            itemsTableAdapter.Fill(storeDataSet.items);
+            this.itemsSalesTableAdapter.Fill(this.storeDataSet.ItemsSales);
+            this.vaultTableAdapter.Fill(this.storeDataSet.vault);
+            this.salesitemsTableAdapter.Fill(this.storeDataSet.salesitems);
+            this.billsTableAdapter.Fill(this.storeDataSet.bills);
+            this.agentsTableAdapter.Fill(this.storeDataSet.agents);
+            this.itemsTableAdapter.Fill(this.storeDataSet.items);
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -296,11 +298,7 @@ namespace Acounting
             
         }
 
-        private void Cmb_ItemName_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-         
+ 
  
     }
 }
