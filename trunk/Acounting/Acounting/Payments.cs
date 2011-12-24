@@ -239,9 +239,6 @@ namespace Acounting
             //insert payment
             spendingsTableAdapter.Insert(lastid, DateTime.Now, ammount);
 
-
-
-
             //add mount payed to the vault
             int oldinhand, newinhand;
             DataRow vaultrow = storeDataSet.vault.First();
