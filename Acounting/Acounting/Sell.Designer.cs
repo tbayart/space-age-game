@@ -143,7 +143,7 @@
             this.Cmb_ItemName.Name = "Cmb_ItemName";
             this.Cmb_ItemName.Size = new System.Drawing.Size(178, 24);
             this.Cmb_ItemName.TabIndex = 1;
-            this.Cmb_ItemName.SelectedIndexChanged += new System.EventHandler(this.Cmb_ItemName_SelectedIndexChanged);
+
             this.Cmb_ItemName.TextChanged += new System.EventHandler(this.Cmb_ItemName_TextChanged);
             // 
             // itemsBindingSource
