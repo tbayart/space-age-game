@@ -65,6 +65,12 @@
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.itemNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.qtyDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.sellPriceDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.totalPriceDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.earningsDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.salesDetailsBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.salesitemsBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.billsTableAdapter = new Acounting.storeDataSetTableAdapters.billsTableAdapter();
             this.button1 = new System.Windows.Forms.Button();
@@ -73,13 +79,7 @@
             this.vaultBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.vaultTableAdapter = new Acounting.storeDataSetTableAdapters.vaultTableAdapter();
             this.spendingsTableAdapter = new Acounting.storeDataSetTableAdapters.spendingsTableAdapter();
-            this.salesDetailsBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.salesDetailsTableAdapter = new Acounting.storeDataSetTableAdapters.SalesDetailsTableAdapter();
-            this.itemNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.qtyDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.sellPriceDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.totalPriceDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.earningsDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.billsBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.storeDataSet)).BeginInit();
             this.groupBox1.SuspendLayout();
@@ -90,9 +90,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.groupBox4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.salesDetailsBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.salesitemsBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.vaultBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.salesDetailsBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // Txt_BillID
@@ -336,6 +336,7 @@
             this.Txt_Paid.Size = new System.Drawing.Size(97, 20);
             this.Txt_Paid.TabIndex = 5;
             this.Txt_Paid.Text = "0";
+            this.Txt_Paid.TextChanged += new System.EventHandler(this.Txt_Paid_TextChanged);
             // 
             // Txt_AgentID
             // 
@@ -424,61 +425,6 @@
             this.dataGridView1.Size = new System.Drawing.Size(868, 280);
             this.dataGridView1.TabIndex = 0;
             // 
-            // salesitemsBindingSource
-            // 
-            this.salesitemsBindingSource.DataMember = "salesitems";
-            this.salesitemsBindingSource.DataSource = this.storeDataSet;
-            // 
-            // billsTableAdapter
-            // 
-            this.billsTableAdapter.ClearBeforeFill = true;
-            // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(5, 561);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(90, 42);
-            this.button1.TabIndex = 6;
-            this.button1.Text = "Add To Bill";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // salesitemsTableAdapter
-            // 
-            this.salesitemsTableAdapter.ClearBeforeFill = true;
-            // 
-            // button2
-            // 
-            this.button2.Location = new System.Drawing.Point(108, 563);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(112, 39);
-            this.button2.TabIndex = 9;
-            this.button2.Text = "Save";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
-            // 
-            // vaultBindingSource
-            // 
-            this.vaultBindingSource.DataMember = "vault";
-            this.vaultBindingSource.DataSource = this.storeDataSet;
-            // 
-            // vaultTableAdapter
-            // 
-            this.vaultTableAdapter.ClearBeforeFill = true;
-            // 
-            // spendingsTableAdapter
-            // 
-            this.spendingsTableAdapter.ClearBeforeFill = true;
-            // 
-            // salesDetailsBindingSource
-            // 
-            this.salesDetailsBindingSource.DataMember = "SalesDetails";
-            this.salesDetailsBindingSource.DataSource = this.storeDataSet;
-            // 
-            // salesDetailsTableAdapter
-            // 
-            this.salesDetailsTableAdapter.ClearBeforeFill = true;
-            // 
             // itemNameDataGridViewTextBoxColumn
             // 
             this.itemNameDataGridViewTextBoxColumn.DataPropertyName = "ItemName";
@@ -514,6 +460,62 @@
             this.earningsDataGridViewTextBoxColumn.Name = "earningsDataGridViewTextBoxColumn";
             this.earningsDataGridViewTextBoxColumn.ReadOnly = true;
             // 
+            // salesDetailsBindingSource
+            // 
+            this.salesDetailsBindingSource.DataMember = "SalesDetails";
+            this.salesDetailsBindingSource.DataSource = this.storeDataSet;
+            // 
+            // salesitemsBindingSource
+            // 
+            this.salesitemsBindingSource.DataMember = "salesitems";
+            this.salesitemsBindingSource.DataSource = this.storeDataSet;
+            // 
+            // billsTableAdapter
+            // 
+            this.billsTableAdapter.ClearBeforeFill = true;
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(5, 561);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(90, 42);
+            this.button1.TabIndex = 6;
+            this.button1.Text = "Add To Bill";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // salesitemsTableAdapter
+            // 
+            this.salesitemsTableAdapter.ClearBeforeFill = true;
+            // 
+            // button2
+            // 
+            this.button2.Enabled = false;
+            this.button2.Location = new System.Drawing.Point(108, 563);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(112, 39);
+            this.button2.TabIndex = 9;
+            this.button2.Text = "Save";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
+            // vaultBindingSource
+            // 
+            this.vaultBindingSource.DataMember = "vault";
+            this.vaultBindingSource.DataSource = this.storeDataSet;
+            // 
+            // vaultTableAdapter
+            // 
+            this.vaultTableAdapter.ClearBeforeFill = true;
+            // 
+            // spendingsTableAdapter
+            // 
+            this.spendingsTableAdapter.ClearBeforeFill = true;
+            // 
+            // salesDetailsTableAdapter
+            // 
+            this.salesDetailsTableAdapter.ClearBeforeFill = true;
+            // 
             // Sell
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -542,9 +544,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             this.groupBox4.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.salesDetailsBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.salesitemsBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.vaultBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.salesDetailsBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
