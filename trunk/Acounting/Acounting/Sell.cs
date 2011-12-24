@@ -110,11 +110,17 @@ namespace Acounting
             #region check and make sure everything ok
             errorProvider1.Clear();
             // check data not empty
-  
+
+            if (Txt_AgentID.Text == "")
+            {
+                errorProvider1.SetError(Cmb_AgentName, "Error with agentID");
+                return;
+            }
             int itemid;
             if (!int.TryParse(Txt_ItemID.Text, out itemid))
             {
                 errorProvider1.SetError(Txt_ItemID, "Error With ItemID");
+               
                 return;
             }
 
@@ -126,6 +132,7 @@ namespace Acounting
             if (!int.TryParse(Txt_Cost.Text, out cost))
             {
                 errorProvider1.SetError(Txt_Cost, "Error With Cost");
+             
                 return;
             }
 
@@ -134,11 +141,13 @@ namespace Acounting
             if (!int.TryParse(Txt_ToSell.Text, out sellqty))
             {
                 errorProvider1.SetError(Txt_ToSell, "Error With SellQty");
+                Txt_ToSell.Focus();
                 return;
             }
             else if (sellqty <=0)
             {
                 errorProvider1.SetError(Txt_ToSell, "Less Than 0 ITEM ?????!!");
+                Txt_ToSell.Focus();
                 return;
             }
 
@@ -148,6 +157,7 @@ namespace Acounting
             if (sellqty>originalqty)
             {
                 errorProvider1.SetError(Txt_ToSell, "Not enough items in stock");
+                Txt_ToSell.Focus();
                 return;
             }
 
@@ -156,6 +166,7 @@ namespace Acounting
             if (!int.TryParse(Txt_SellPrice.Text, out sellprice))
             {
                 errorProvider1.SetError(Txt_SellPrice, "Error With Sellprice");
+                Txt_SellPrice.Focus();
                 return;
             }
 
@@ -170,6 +181,7 @@ namespace Acounting
             if (!int.TryParse(Txt_Paid.Text, out billpaid))
             {
                 errorProvider1.SetError(Txt_Paid, "Error With Paid !");
+                Txt_Paid.Focus();
                 return;
             }
 
