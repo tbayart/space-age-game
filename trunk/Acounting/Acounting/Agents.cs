@@ -11,6 +11,8 @@ namespace Acounting
 {
     public partial class Agents : Form
     {
+
+        bool canchange = false;
         public Agents()
         {
             InitializeComponent();
@@ -33,6 +35,43 @@ namespace Acounting
         private void exitToolStripMenuItem_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void bindingNavigatorAddNewItem_Click(object sender, EventArgs e)
+        {
+            int newid;
+            int.TryParse(bindingNavigatorPositionItem.Text, out newid);
+            Console.WriteLine(newid);
+            Txt_AgentID.Text = newid.ToString();
+
+            if (dataGridView1.Rows.Count <= newid)
+            {
+                canchange = true;
+            }
+        }
+
+        private void agentsBindingSource_CurrentChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void agentsBindingSource_AddingNew(object sender, AddingNewEventArgs e)
+        {
+            
+        }
+
+        private void Txt_Debt_TextChanged(object sender, EventArgs e)
+        {
+            if (canchange)
+            {
+                Txt_InialDebt.Text = Txt_Debt.Text;
+            }
+           
+        }
+
+        private void bindingNavigatorMovePreviousItem_Click(object sender, EventArgs e)
+        {
+            canchange = false;
         }
 
  
