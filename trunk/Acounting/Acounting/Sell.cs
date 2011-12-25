@@ -361,6 +361,11 @@ namespace Acounting
             Txt_Remaining.Text = remaining.ToString();
         }
 
+        private void Cmb_AgentName_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
  
  
     }

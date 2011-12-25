@@ -119,6 +119,7 @@
     <EmbeddedResource Include="Agents.resx">
       <DependentUpon>Agents.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="AgentsDebtAr.rdlc" />
     <EmbeddedResource Include="AgentsDebtTotalAr.rdlc" />
     <EmbeddedResource Include="AgentsDebtTotalEn.rdlc" />
     <EmbeddedResource Include="Buy.resx">

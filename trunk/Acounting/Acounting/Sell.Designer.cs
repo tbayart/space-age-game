@@ -367,6 +367,7 @@
             this.Cmb_AgentName.Size = new System.Drawing.Size(178, 21);
             this.Cmb_AgentName.TabIndex = 4;
             this.Cmb_AgentName.ValueMember = "AgentName";
+            this.Cmb_AgentName.SelectedIndexChanged += new System.EventHandler(this.Cmb_AgentName_SelectedIndexChanged);
             this.Cmb_AgentName.TextChanged += new System.EventHandler(this.Cmb_AgentName_TextChanged);
             // 
             // agentsBindingSource
@@ -515,7 +516,7 @@
             // 
             this.salesDetailsTableAdapter.ClearBeforeFill = true;
             // 
-            // Sell
+            // ReturnSell
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -526,7 +527,7 @@
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
-            this.Name = "Sell";
+            this.Name = "ReturnSell";
             this.Text = "Sell";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.Sell_Load);
