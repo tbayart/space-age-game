@@ -23,6 +23,12 @@ namespace Acounting
 
             this.reportViewer1.RefreshReport();
             this.reportViewer2.RefreshReport();
+            this.reportViewer3.RefreshReport();
+        }
+
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            reportViewer1.
         }
     }
 }
