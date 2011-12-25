@@ -11,8 +11,8 @@ namespace Acounting
 {
     public partial class Payments : Form
     {
-        int selectedagentid;
-        int selectedDealerID;
+        int selectedagentid=0;
+        int selectedDealerID=0;
         public Payments()
         {
             InitializeComponent();
@@ -56,11 +56,7 @@ namespace Acounting
             }
         }
 
-        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
+    
         private void button1_Click(object sender, EventArgs e)
         {
             errorProvider1.Clear();
@@ -68,10 +64,17 @@ namespace Acounting
             int lastid=0;
             int ammount;
 
+            if (Txt_Debt.Text =="")
+            {
+                errorProvider1.SetError(Txt_Debt, "Wrong Number !!");
+                return;
+            }
+
             //get ammount paid
             if (!int.TryParse(Txt_Ammount.Text,out ammount))
             {
                 errorProvider1.SetError(Txt_Ammount,"Wrong Number !!");
+                return;
             }
 
             
@@ -118,6 +121,9 @@ namespace Acounting
             vaultTableAdapter.Fill(storeDataSet.vault);
             agentsTableAdapter.Fill(storeDataSet.agents);
             paymentsTableAdapter.Fill(storeDataSet.payments);
+
+            Txt_Ammount.Text = "";
+            Txt_Ammount.Focus();
             comboBox1_TextChanged(null, null);
 
         }
@@ -129,10 +135,20 @@ namespace Acounting
             int lastid = 0;
             int ammount;
 
+            //check dealer name
+
+            if (Txt_DealerDebt.Text=="")
+            {
+                errorProvider1.SetError(Txt_DealerDebt, "Wrong Number !!");
+                return;
+            }
+
+
             //get ammount paid
             if (!int.TryParse(Txt_DealerAmmount.Text, out ammount))
             {
                 errorProvider1.SetError(Txt_DealerAmmount, "Wrong Number !!");
+                return;
             }
 
 
@@ -179,6 +195,10 @@ namespace Acounting
             vaultTableAdapter.Fill(storeDataSet.vault);
             dealersTableAdapter.Fill(storeDataSet.dealers);
             dealerpaymentsTableAdapter.Fill(storeDataSet.dealerpayments);
+
+            Txt_DealerAmmount.Text = "";
+            Txt_DealerAmmount.Focus();
+
             Cmb_Dealer_TextChanged(null, null);
         }
 
@@ -251,6 +271,9 @@ namespace Acounting
 
             vaultTableAdapter.Fill(storeDataSet.vault);
             spendingsTableAdapter.Fill(storeDataSet.spendings);
+
+            Txt_SpendingsAmmount.Text = "";
+            Txt_SpendingsAmmount.Focus();
 
         }
     }
