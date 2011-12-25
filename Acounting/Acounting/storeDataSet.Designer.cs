@@ -1087,6 +1087,10 @@ namespace Acounting {
             
             private global::System.Data.DataColumn columnDebt;
             
+            private global::System.Data.DataColumn columnInitialDebt;
+            
+            private global::System.Data.DataColumn columnInitialDate;
+            
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public agentsDataTable() {
@@ -1162,13 +1166,29 @@ namespace Acounting {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn InitialDebtColumn {
+                get {
+                    return this.columnInitialDebt;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn InitialDateColumn {
+                get {
+                    return this.columnInitialDate;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             [global::System.ComponentModel.Browsable(false)]
             public int Count {
                 get {
                     return this.Rows.Count;
                 }
             }
-            
+                    
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public agentsRow this[int index] {
@@ -1197,14 +1217,16 @@ namespace Acounting {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public agentsRow AddagentsRow(int AgentID, string AgentName, string Address, string Telephone, int Debt) {
+            public agentsRow AddagentsRow(int AgentID, string AgentName, string Address, string Telephone, int Debt, int InitialDebt, System.DateTime InitialDate) {
                 agentsRow rowagentsRow = ((agentsRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         AgentID,
                         AgentName,
                         Address,
                         Telephone,
-                        Debt};
+                        Debt,
+                        InitialDebt,
+                        InitialDate};
                 rowagentsRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowagentsRow);
                 return rowagentsRow;
@@ -1239,6 +1261,8 @@ namespace Acounting {
                 this.columnAddress = base.Columns["Address"];
                 this.columnTelephone = base.Columns["Telephone"];
                 this.columnDebt = base.Columns["Debt"];
+                this.columnInitialDebt = base.Columns["InitialDebt"];
+                this.columnInitialDate = base.Columns["InitialDate"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -1254,6 +1278,10 @@ namespace Acounting {
                 base.Columns.Add(this.columnTelephone);
                 this.columnDebt = new global::System.Data.DataColumn("Debt", typeof(int), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnDebt);
+                this.columnInitialDebt = new global::System.Data.DataColumn("InitialDebt", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnInitialDebt);
+                this.columnInitialDate = new global::System.Data.DataColumn("InitialDate", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnInitialDate);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
                                 this.columnAgentID}, true));
                 this.columnAgentID.AllowDBNull = false;
@@ -1263,6 +1291,8 @@ namespace Acounting {
                 this.columnAddress.MaxLength = 45;
                 this.columnTelephone.MaxLength = 45;
                 this.columnDebt.AllowDBNull = false;
+                this.columnInitialDebt.AllowDBNull = false;
+                this.columnInitialDate.AllowDBNull = false;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -2383,6 +2413,10 @@ namespace Acounting {
             
             private global::System.Data.DataColumn columnDebt;
             
+            private global::System.Data.DataColumn columnInitialDebt;
+            
+            private global::System.Data.DataColumn columnInitialDate;
+            
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public dealersDataTable() {
@@ -2458,6 +2492,22 @@ namespace Acounting {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn InitialDebtColumn {
+                get {
+                    return this.columnInitialDebt;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn InitialDateColumn {
+                get {
+                    return this.columnInitialDate;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             [global::System.ComponentModel.Browsable(false)]
             public int Count {
                 get {
@@ -2493,14 +2543,16 @@ namespace Acounting {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public dealersRow AdddealersRow(int DealerID, string DealerName, string Adress, string Telephone, int Debt) {
+            public dealersRow AdddealersRow(int DealerID, string DealerName, string Adress, string Telephone, int Debt, int InitialDebt, System.DateTime InitialDate) {
                 dealersRow rowdealersRow = ((dealersRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         DealerID,
                         DealerName,
                         Adress,
                         Telephone,
-                        Debt};
+                        Debt,
+                        InitialDebt,
+                        InitialDate};
                 rowdealersRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowdealersRow);
                 return rowdealersRow;
@@ -2535,6 +2587,8 @@ namespace Acounting {
                 this.columnAdress = base.Columns["Adress"];
                 this.columnTelephone = base.Columns["Telephone"];
                 this.columnDebt = base.Columns["Debt"];
+                this.columnInitialDebt = base.Columns["InitialDebt"];
+                this.columnInitialDate = base.Columns["InitialDate"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -2550,6 +2604,10 @@ namespace Acounting {
                 base.Columns.Add(this.columnTelephone);
                 this.columnDebt = new global::System.Data.DataColumn("Debt", typeof(int), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnDebt);
+                this.columnInitialDebt = new global::System.Data.DataColumn("InitialDebt", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnInitialDebt);
+                this.columnInitialDate = new global::System.Data.DataColumn("InitialDate", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnInitialDate);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
                                 this.columnDealerID}, true));
                 this.columnDealerID.AllowDBNull = false;
@@ -2559,6 +2617,8 @@ namespace Acounting {
                 this.columnAdress.MaxLength = 45;
                 this.columnTelephone.MaxLength = 45;
                 this.columnDebt.AllowDBNull = false;
+                this.columnInitialDebt.AllowDBNull = false;
+                this.columnInitialDate.AllowDBNull = false;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -7761,6 +7821,28 @@ namespace Acounting {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public int InitialDebt {
+                get {
+                    return ((int)(this[this.tableagents.InitialDebtColumn]));
+                }
+                set {
+                    this[this.tableagents.InitialDebtColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public System.DateTime InitialDate {
+                get {
+                    return ((global::System.DateTime)(this[this.tableagents.InitialDateColumn]));
+                }
+                set {
+                    this[this.tableagents.InitialDateColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public bool IsAddressNull() {
                 return this.IsNull(this.tableagents.AddressColumn);
             }
@@ -8186,6 +8268,28 @@ namespace Acounting {
                 }
                 set {
                     this[this.tabledealers.DebtColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public int InitialDebt {
+                get {
+                    return ((int)(this[this.tabledealers.InitialDebtColumn]));
+                }
+                set {
+                    this[this.tabledealers.InitialDebtColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public System.DateTime InitialDate {
+                get {
+                    return ((global::System.DateTime)(this[this.tabledealers.InitialDateColumn]));
+                }
+                set {
+                    this[this.tabledealers.InitialDateColumn] = value;
                 }
             }
             
@@ -10383,10 +10487,12 @@ namespace Acounting.storeDataSetTableAdapters {
             tableMapping.ColumnMappings.Add("Address", "Address");
             tableMapping.ColumnMappings.Add("Telephone", "Telephone");
             tableMapping.ColumnMappings.Add("Debt", "Debt");
+            tableMapping.ColumnMappings.Add("InitialDebt", "InitialDebt");
+            tableMapping.ColumnMappings.Add("InitialDate", "InitialDate");
             this._adapter.TableMappings.Add(tableMapping);
             this._adapter.DeleteCommand = new global::MySql.Data.MySqlClient.MySqlCommand();
             this._adapter.DeleteCommand.Connection = this.Connection;
-            this._adapter.DeleteCommand.CommandText = @"DELETE FROM `agents` WHERE ((`AgentID` = @Original_AgentID) AND (`AgentName` = @Original_AgentName) AND ((@IsNull_Address = 1 AND `Address` IS NULL) OR (`Address` = @Original_Address)) AND ((@IsNull_Telephone = 1 AND `Telephone` IS NULL) OR (`Telephone` = @Original_Telephone)) AND (`Debt` = @Original_Debt))";
+            this._adapter.DeleteCommand.CommandText = @"DELETE FROM `agents` WHERE ((`AgentID` = @Original_AgentID) AND (`AgentName` = @Original_AgentName) AND ((@IsNull_Address = 1 AND `Address` IS NULL) OR (`Address` = @Original_Address)) AND ((@IsNull_Telephone = 1 AND `Telephone` IS NULL) OR (`Telephone` = @Original_Telephone)) AND (`Debt` = @Original_Debt) AND (`InitialDebt` = @Original_InitialDebt) AND (`InitialDate` = @Original_InitialDate))";
             this._adapter.DeleteCommand.CommandType = global::System.Data.CommandType.Text;
             global::MySql.Data.MySqlClient.MySqlParameter param = new global::MySql.Data.MySqlClient.MySqlParameter();
             param.ParameterName = "@Original_AgentID";
@@ -10446,10 +10552,27 @@ namespace Acounting.storeDataSetTableAdapters {
             param.SourceColumn = "Debt";
             param.SourceVersion = global::System.Data.DataRowVersion.Original;
             this._adapter.DeleteCommand.Parameters.Add(param);
+            param = new global::MySql.Data.MySqlClient.MySqlParameter();
+            param.ParameterName = "@Original_InitialDebt";
+            param.DbType = global::System.Data.DbType.Int32;
+            param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.Int32;
+            param.IsNullable = true;
+            param.SourceColumn = "InitialDebt";
+            param.SourceVersion = global::System.Data.DataRowVersion.Original;
+            this._adapter.DeleteCommand.Parameters.Add(param);
+            param = new global::MySql.Data.MySqlClient.MySqlParameter();
+            param.ParameterName = "@Original_InitialDate";
+            param.DbType = global::System.Data.DbType.Date;
+            param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.Date;
+            param.IsNullable = true;
+            param.SourceColumn = "InitialDate";
+            param.SourceVersion = global::System.Data.DataRowVersion.Original;
+            this._adapter.DeleteCommand.Parameters.Add(param);
             this._adapter.InsertCommand = new global::MySql.Data.MySqlClient.MySqlCommand();
             this._adapter.InsertCommand.Connection = this.Connection;
-            this._adapter.InsertCommand.CommandText = "INSERT INTO `agents` (`AgentID`, `AgentName`, `Address`, `Telephone`, `Debt`) VAL" +
-                "UES (@AgentID, @AgentName, @Address, @Telephone, @Debt)";
+            this._adapter.InsertCommand.CommandText = "INSERT INTO `agents` (`AgentID`, `AgentName`, `Address`, `Telephone`, `Debt`, `In" +
+                "itialDebt`, `InitialDate`) VALUES (@AgentID, @AgentName, @Address, @Telephone, @" +
+                "Debt, @InitialDebt, @InitialDate)";
             this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
             param = new global::MySql.Data.MySqlClient.MySqlParameter();
             param.ParameterName = "@AgentID";
@@ -10486,9 +10609,23 @@ namespace Acounting.storeDataSetTableAdapters {
             param.IsNullable = true;
             param.SourceColumn = "Debt";
             this._adapter.InsertCommand.Parameters.Add(param);
+            param = new global::MySql.Data.MySqlClient.MySqlParameter();
+            param.ParameterName = "@InitialDebt";
+            param.DbType = global::System.Data.DbType.Int32;
+            param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.Int32;
+            param.IsNullable = true;
+            param.SourceColumn = "InitialDebt";
+            this._adapter.InsertCommand.Parameters.Add(param);
+            param = new global::MySql.Data.MySqlClient.MySqlParameter();
+            param.ParameterName = "@InitialDate";
+            param.DbType = global::System.Data.DbType.Date;
+            param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.Date;
+            param.IsNullable = true;
+            param.SourceColumn = "InitialDate";
+            this._adapter.InsertCommand.Parameters.Add(param);
             this._adapter.UpdateCommand = new global::MySql.Data.MySqlClient.MySqlCommand();
             this._adapter.UpdateCommand.Connection = this.Connection;
-            this._adapter.UpdateCommand.CommandText = @"UPDATE `agents` SET `AgentID` = @AgentID, `AgentName` = @AgentName, `Address` = @Address, `Telephone` = @Telephone, `Debt` = @Debt WHERE ((`AgentID` = @Original_AgentID) AND (`AgentName` = @Original_AgentName) AND ((@IsNull_Address = 1 AND `Address` IS NULL) OR (`Address` = @Original_Address)) AND ((@IsNull_Telephone = 1 AND `Telephone` IS NULL) OR (`Telephone` = @Original_Telephone)) AND (`Debt` = @Original_Debt))";
+            this._adapter.UpdateCommand.CommandText = @"UPDATE `agents` SET `AgentID` = @AgentID, `AgentName` = @AgentName, `Address` = @Address, `Telephone` = @Telephone, `Debt` = @Debt, `InitialDebt` = @InitialDebt, `InitialDate` = @InitialDate WHERE ((`AgentID` = @Original_AgentID) AND (`AgentName` = @Original_AgentName) AND ((@IsNull_Address = 1 AND `Address` IS NULL) OR (`Address` = @Original_Address)) AND ((@IsNull_Telephone = 1 AND `Telephone` IS NULL) OR (`Telephone` = @Original_Telephone)) AND (`Debt` = @Original_Debt) AND (`InitialDebt` = @Original_InitialDebt) AND (`InitialDate` = @Original_InitialDate))";
             this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
             param = new global::MySql.Data.MySqlClient.MySqlParameter();
             param.ParameterName = "@AgentID";
@@ -10524,6 +10661,20 @@ namespace Acounting.storeDataSetTableAdapters {
             param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.Int32;
             param.IsNullable = true;
             param.SourceColumn = "Debt";
+            this._adapter.UpdateCommand.Parameters.Add(param);
+            param = new global::MySql.Data.MySqlClient.MySqlParameter();
+            param.ParameterName = "@InitialDebt";
+            param.DbType = global::System.Data.DbType.Int32;
+            param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.Int32;
+            param.IsNullable = true;
+            param.SourceColumn = "InitialDebt";
+            this._adapter.UpdateCommand.Parameters.Add(param);
+            param = new global::MySql.Data.MySqlClient.MySqlParameter();
+            param.ParameterName = "@InitialDate";
+            param.DbType = global::System.Data.DbType.Date;
+            param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.Date;
+            param.IsNullable = true;
+            param.SourceColumn = "InitialDate";
             this._adapter.UpdateCommand.Parameters.Add(param);
             param = new global::MySql.Data.MySqlClient.MySqlParameter();
             param.ParameterName = "@Original_AgentID";
@@ -10583,6 +10734,22 @@ namespace Acounting.storeDataSetTableAdapters {
             param.SourceColumn = "Debt";
             param.SourceVersion = global::System.Data.DataRowVersion.Original;
             this._adapter.UpdateCommand.Parameters.Add(param);
+            param = new global::MySql.Data.MySqlClient.MySqlParameter();
+            param.ParameterName = "@Original_InitialDebt";
+            param.DbType = global::System.Data.DbType.Int32;
+            param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.Int32;
+            param.IsNullable = true;
+            param.SourceColumn = "InitialDebt";
+            param.SourceVersion = global::System.Data.DataRowVersion.Original;
+            this._adapter.UpdateCommand.Parameters.Add(param);
+            param = new global::MySql.Data.MySqlClient.MySqlParameter();
+            param.ParameterName = "@Original_InitialDate";
+            param.DbType = global::System.Data.DbType.Date;
+            param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.Date;
+            param.IsNullable = true;
+            param.SourceColumn = "InitialDate";
+            param.SourceVersion = global::System.Data.DataRowVersion.Original;
+            this._adapter.UpdateCommand.Parameters.Add(param);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -10598,7 +10765,8 @@ namespace Acounting.storeDataSetTableAdapters {
             this._commandCollection = new global::MySql.Data.MySqlClient.MySqlCommand[1];
             this._commandCollection[0] = new global::MySql.Data.MySqlClient.MySqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "SELECT `AgentID`, `AgentName`, `Address`, `Telephone`, `Debt` FROM `agents`";
+            this._commandCollection[0].CommandText = "SELECT `AgentID`, `AgentName`, `Address`, `Telephone`, `Debt`, `InitialDebt`, `In" +
+                "itialDate` FROM `agents`";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
         }
         
@@ -10659,7 +10827,7 @@ namespace Acounting.storeDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Delete, true)]
-        public virtual int Delete(int Original_AgentID, string Original_AgentName, string Original_Address, string Original_Telephone, int Original_Debt) {
+        public virtual int Delete(int Original_AgentID, string Original_AgentName, string Original_Address, string Original_Telephone, int Original_Debt, int Original_InitialDebt, System.DateTime Original_InitialDate) {
             this.Adapter.DeleteCommand.Parameters[0].Value = ((int)(Original_AgentID));
             if ((Original_AgentName == null)) {
                 throw new global::System.ArgumentNullException("Original_AgentName");
@@ -10684,6 +10852,8 @@ namespace Acounting.storeDataSetTableAdapters {
                 this.Adapter.DeleteCommand.Parameters[5].Value = ((string)(Original_Telephone));
             }
             this.Adapter.DeleteCommand.Parameters[6].Value = ((int)(Original_Debt));
+            this.Adapter.DeleteCommand.Parameters[7].Value = ((int)(Original_InitialDebt));
+            this.Adapter.DeleteCommand.Parameters[8].Value = ((System.DateTime)(Original_InitialDate));
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.DeleteCommand.Connection.State;
             if (((this.Adapter.DeleteCommand.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
@@ -10704,7 +10874,7 @@ namespace Acounting.storeDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, true)]
-        public virtual int Insert(int AgentID, string AgentName, string Address, string Telephone, int Debt) {
+        public virtual int Insert(int AgentID, string AgentName, string Address, string Telephone, int Debt, int InitialDebt, System.DateTime InitialDate) {
             this.Adapter.InsertCommand.Parameters[0].Value = ((int)(AgentID));
             if ((AgentName == null)) {
                 throw new global::System.ArgumentNullException("AgentName");
@@ -10725,6 +10895,8 @@ namespace Acounting.storeDataSetTableAdapters {
                 this.Adapter.InsertCommand.Parameters[3].Value = ((string)(Telephone));
             }
             this.Adapter.InsertCommand.Parameters[4].Value = ((int)(Debt));
+            this.Adapter.InsertCommand.Parameters[5].Value = ((int)(InitialDebt));
+            this.Adapter.InsertCommand.Parameters[6].Value = ((System.DateTime)(InitialDate));
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.InsertCommand.Connection.State;
             if (((this.Adapter.InsertCommand.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
@@ -10745,7 +10917,7 @@ namespace Acounting.storeDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(int AgentID, string AgentName, string Address, string Telephone, int Debt, int Original_AgentID, string Original_AgentName, string Original_Address, string Original_Telephone, int Original_Debt) {
+        public virtual int Update(int AgentID, string AgentName, string Address, string Telephone, int Debt, int InitialDebt, System.DateTime InitialDate, int Original_AgentID, string Original_AgentName, string Original_Address, string Original_Telephone, int Original_Debt, int Original_InitialDebt, System.DateTime Original_InitialDate) {
             this.Adapter.UpdateCommand.Parameters[0].Value = ((int)(AgentID));
             if ((AgentName == null)) {
                 throw new global::System.ArgumentNullException("AgentName");
@@ -10766,30 +10938,34 @@ namespace Acounting.storeDataSetTableAdapters {
                 this.Adapter.UpdateCommand.Parameters[3].Value = ((string)(Telephone));
             }
             this.Adapter.UpdateCommand.Parameters[4].Value = ((int)(Debt));
-            this.Adapter.UpdateCommand.Parameters[5].Value = ((int)(Original_AgentID));
+            this.Adapter.UpdateCommand.Parameters[5].Value = ((int)(InitialDebt));
+            this.Adapter.UpdateCommand.Parameters[6].Value = ((System.DateTime)(InitialDate));
+            this.Adapter.UpdateCommand.Parameters[7].Value = ((int)(Original_AgentID));
             if ((Original_AgentName == null)) {
                 throw new global::System.ArgumentNullException("Original_AgentName");
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[6].Value = ((string)(Original_AgentName));
+                this.Adapter.UpdateCommand.Parameters[8].Value = ((string)(Original_AgentName));
             }
             if ((Original_Address == null)) {
-                this.Adapter.UpdateCommand.Parameters[7].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[8].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[7].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[8].Value = ((string)(Original_Address));
-            }
-            if ((Original_Telephone == null)) {
                 this.Adapter.UpdateCommand.Parameters[9].Value = ((object)(1));
                 this.Adapter.UpdateCommand.Parameters[10].Value = global::System.DBNull.Value;
             }
             else {
                 this.Adapter.UpdateCommand.Parameters[9].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[10].Value = ((string)(Original_Telephone));
+                this.Adapter.UpdateCommand.Parameters[10].Value = ((string)(Original_Address));
             }
-            this.Adapter.UpdateCommand.Parameters[11].Value = ((int)(Original_Debt));
+            if ((Original_Telephone == null)) {
+                this.Adapter.UpdateCommand.Parameters[11].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[12].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[11].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[12].Value = ((string)(Original_Telephone));
+            }
+            this.Adapter.UpdateCommand.Parameters[13].Value = ((int)(Original_Debt));
+            this.Adapter.UpdateCommand.Parameters[14].Value = ((int)(Original_InitialDebt));
+            this.Adapter.UpdateCommand.Parameters[15].Value = ((System.DateTime)(Original_InitialDate));
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.UpdateCommand.Connection.State;
             if (((this.Adapter.UpdateCommand.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
@@ -10810,8 +10986,8 @@ namespace Acounting.storeDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(string AgentName, string Address, string Telephone, int Debt, int Original_AgentID, string Original_AgentName, string Original_Address, string Original_Telephone, int Original_Debt) {
-            return this.Update(Original_AgentID, AgentName, Address, Telephone, Debt, Original_AgentID, Original_AgentName, Original_Address, Original_Telephone, Original_Debt);
+        public virtual int Update(string AgentName, string Address, string Telephone, int Debt, int InitialDebt, System.DateTime InitialDate, int Original_AgentID, string Original_AgentName, string Original_Address, string Original_Telephone, int Original_Debt, int Original_InitialDebt, System.DateTime Original_InitialDate) {
+            return this.Update(Original_AgentID, AgentName, Address, Telephone, Debt, InitialDebt, InitialDate, Original_AgentID, Original_AgentName, Original_Address, Original_Telephone, Original_Debt, Original_InitialDebt, Original_InitialDate);
         }
     }
     
@@ -12391,10 +12567,12 @@ namespace Acounting.storeDataSetTableAdapters {
             tableMapping.ColumnMappings.Add("Adress", "Adress");
             tableMapping.ColumnMappings.Add("Telephone", "Telephone");
             tableMapping.ColumnMappings.Add("Debt", "Debt");
+            tableMapping.ColumnMappings.Add("InitialDebt", "InitialDebt");
+            tableMapping.ColumnMappings.Add("InitialDate", "InitialDate");
             this._adapter.TableMappings.Add(tableMapping);
             this._adapter.DeleteCommand = new global::MySql.Data.MySqlClient.MySqlCommand();
             this._adapter.DeleteCommand.Connection = this.Connection;
-            this._adapter.DeleteCommand.CommandText = @"DELETE FROM `dealers` WHERE ((`DealerID` = @Original_DealerID) AND (`DealerName` = @Original_DealerName) AND ((@IsNull_Adress = 1 AND `Adress` IS NULL) OR (`Adress` = @Original_Adress)) AND ((@IsNull_Telephone = 1 AND `Telephone` IS NULL) OR (`Telephone` = @Original_Telephone)) AND (`Debt` = @Original_Debt))";
+            this._adapter.DeleteCommand.CommandText = @"DELETE FROM `dealers` WHERE ((`DealerID` = @Original_DealerID) AND (`DealerName` = @Original_DealerName) AND ((@IsNull_Adress = 1 AND `Adress` IS NULL) OR (`Adress` = @Original_Adress)) AND ((@IsNull_Telephone = 1 AND `Telephone` IS NULL) OR (`Telephone` = @Original_Telephone)) AND (`Debt` = @Original_Debt) AND (`InitialDebt` = @Original_InitialDebt) AND (`InitialDate` = @Original_InitialDate))";
             this._adapter.DeleteCommand.CommandType = global::System.Data.CommandType.Text;
             global::MySql.Data.MySqlClient.MySqlParameter param = new global::MySql.Data.MySqlClient.MySqlParameter();
             param.ParameterName = "@Original_DealerID";
@@ -12454,10 +12632,27 @@ namespace Acounting.storeDataSetTableAdapters {
             param.SourceColumn = "Debt";
             param.SourceVersion = global::System.Data.DataRowVersion.Original;
             this._adapter.DeleteCommand.Parameters.Add(param);
+            param = new global::MySql.Data.MySqlClient.MySqlParameter();
+            param.ParameterName = "@Original_InitialDebt";
+            param.DbType = global::System.Data.DbType.Int32;
+            param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.Int32;
+            param.IsNullable = true;
+            param.SourceColumn = "InitialDebt";
+            param.SourceVersion = global::System.Data.DataRowVersion.Original;
+            this._adapter.DeleteCommand.Parameters.Add(param);
+            param = new global::MySql.Data.MySqlClient.MySqlParameter();
+            param.ParameterName = "@Original_InitialDate";
+            param.DbType = global::System.Data.DbType.Date;
+            param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.Date;
+            param.IsNullable = true;
+            param.SourceColumn = "InitialDate";
+            param.SourceVersion = global::System.Data.DataRowVersion.Original;
+            this._adapter.DeleteCommand.Parameters.Add(param);
             this._adapter.InsertCommand = new global::MySql.Data.MySqlClient.MySqlCommand();
             this._adapter.InsertCommand.Connection = this.Connection;
-            this._adapter.InsertCommand.CommandText = "INSERT INTO `dealers` (`DealerID`, `DealerName`, `Adress`, `Telephone`, `Debt`) V" +
-                "ALUES (@DealerID, @DealerName, @Adress, @Telephone, @Debt)";
+            this._adapter.InsertCommand.CommandText = "INSERT INTO `dealers` (`DealerID`, `DealerName`, `Adress`, `Telephone`, `Debt`, `" +
+                "InitialDebt`, `InitialDate`) VALUES (@DealerID, @DealerName, @Adress, @Telephone" +
+                ", @Debt, @InitialDebt, @InitialDate)";
             this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
             param = new global::MySql.Data.MySqlClient.MySqlParameter();
             param.ParameterName = "@DealerID";
@@ -12494,9 +12689,23 @@ namespace Acounting.storeDataSetTableAdapters {
             param.IsNullable = true;
             param.SourceColumn = "Debt";
             this._adapter.InsertCommand.Parameters.Add(param);
+            param = new global::MySql.Data.MySqlClient.MySqlParameter();
+            param.ParameterName = "@InitialDebt";
+            param.DbType = global::System.Data.DbType.Int32;
+            param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.Int32;
+            param.IsNullable = true;
+            param.SourceColumn = "InitialDebt";
+            this._adapter.InsertCommand.Parameters.Add(param);
+            param = new global::MySql.Data.MySqlClient.MySqlParameter();
+            param.ParameterName = "@InitialDate";
+            param.DbType = global::System.Data.DbType.Date;
+            param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.Date;
+            param.IsNullable = true;
+            param.SourceColumn = "InitialDate";
+            this._adapter.InsertCommand.Parameters.Add(param);
             this._adapter.UpdateCommand = new global::MySql.Data.MySqlClient.MySqlCommand();
             this._adapter.UpdateCommand.Connection = this.Connection;
-            this._adapter.UpdateCommand.CommandText = @"UPDATE `dealers` SET `DealerID` = @DealerID, `DealerName` = @DealerName, `Adress` = @Adress, `Telephone` = @Telephone, `Debt` = @Debt WHERE ((`DealerID` = @Original_DealerID) AND (`DealerName` = @Original_DealerName) AND ((@IsNull_Adress = 1 AND `Adress` IS NULL) OR (`Adress` = @Original_Adress)) AND ((@IsNull_Telephone = 1 AND `Telephone` IS NULL) OR (`Telephone` = @Original_Telephone)) AND (`Debt` = @Original_Debt))";
+            this._adapter.UpdateCommand.CommandText = @"UPDATE `dealers` SET `DealerID` = @DealerID, `DealerName` = @DealerName, `Adress` = @Adress, `Telephone` = @Telephone, `Debt` = @Debt, `InitialDebt` = @InitialDebt, `InitialDate` = @InitialDate WHERE ((`DealerID` = @Original_DealerID) AND (`DealerName` = @Original_DealerName) AND ((@IsNull_Adress = 1 AND `Adress` IS NULL) OR (`Adress` = @Original_Adress)) AND ((@IsNull_Telephone = 1 AND `Telephone` IS NULL) OR (`Telephone` = @Original_Telephone)) AND (`Debt` = @Original_Debt) AND (`InitialDebt` = @Original_InitialDebt) AND (`InitialDate` = @Original_InitialDate))";
             this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
             param = new global::MySql.Data.MySqlClient.MySqlParameter();
             param.ParameterName = "@DealerID";
@@ -12532,6 +12741,20 @@ namespace Acounting.storeDataSetTableAdapters {
             param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.Int32;
             param.IsNullable = true;
             param.SourceColumn = "Debt";
+            this._adapter.UpdateCommand.Parameters.Add(param);
+            param = new global::MySql.Data.MySqlClient.MySqlParameter();
+            param.ParameterName = "@InitialDebt";
+            param.DbType = global::System.Data.DbType.Int32;
+            param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.Int32;
+            param.IsNullable = true;
+            param.SourceColumn = "InitialDebt";
+            this._adapter.UpdateCommand.Parameters.Add(param);
+            param = new global::MySql.Data.MySqlClient.MySqlParameter();
+            param.ParameterName = "@InitialDate";
+            param.DbType = global::System.Data.DbType.Date;
+            param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.Date;
+            param.IsNullable = true;
+            param.SourceColumn = "InitialDate";
             this._adapter.UpdateCommand.Parameters.Add(param);
             param = new global::MySql.Data.MySqlClient.MySqlParameter();
             param.ParameterName = "@Original_DealerID";
@@ -12591,6 +12814,22 @@ namespace Acounting.storeDataSetTableAdapters {
             param.SourceColumn = "Debt";
             param.SourceVersion = global::System.Data.DataRowVersion.Original;
             this._adapter.UpdateCommand.Parameters.Add(param);
+            param = new global::MySql.Data.MySqlClient.MySqlParameter();
+            param.ParameterName = "@Original_InitialDebt";
+            param.DbType = global::System.Data.DbType.Int32;
+            param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.Int32;
+            param.IsNullable = true;
+            param.SourceColumn = "InitialDebt";
+            param.SourceVersion = global::System.Data.DataRowVersion.Original;
+            this._adapter.UpdateCommand.Parameters.Add(param);
+            param = new global::MySql.Data.MySqlClient.MySqlParameter();
+            param.ParameterName = "@Original_InitialDate";
+            param.DbType = global::System.Data.DbType.Date;
+            param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.Date;
+            param.IsNullable = true;
+            param.SourceColumn = "InitialDate";
+            param.SourceVersion = global::System.Data.DataRowVersion.Original;
+            this._adapter.UpdateCommand.Parameters.Add(param);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -12606,7 +12845,8 @@ namespace Acounting.storeDataSetTableAdapters {
             this._commandCollection = new global::MySql.Data.MySqlClient.MySqlCommand[1];
             this._commandCollection[0] = new global::MySql.Data.MySqlClient.MySqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "SELECT `DealerID`, `DealerName`, `Adress`, `Telephone`, `Debt` FROM `dealers`";
+            this._commandCollection[0].CommandText = "SELECT `DealerID`, `DealerName`, `Adress`, `Telephone`, `Debt`, `InitialDebt`, `I" +
+                "nitialDate` FROM `dealers`";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
         }
         
@@ -12667,7 +12907,7 @@ namespace Acounting.storeDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Delete, true)]
-        public virtual int Delete(int Original_DealerID, string Original_DealerName, string Original_Adress, string Original_Telephone, int Original_Debt) {
+        public virtual int Delete(int Original_DealerID, string Original_DealerName, string Original_Adress, string Original_Telephone, int Original_Debt, int Original_InitialDebt, System.DateTime Original_InitialDate) {
             this.Adapter.DeleteCommand.Parameters[0].Value = ((int)(Original_DealerID));
             if ((Original_DealerName == null)) {
                 throw new global::System.ArgumentNullException("Original_DealerName");
@@ -12692,6 +12932,8 @@ namespace Acounting.storeDataSetTableAdapters {
                 this.Adapter.DeleteCommand.Parameters[5].Value = ((string)(Original_Telephone));
             }
             this.Adapter.DeleteCommand.Parameters[6].Value = ((int)(Original_Debt));
+            this.Adapter.DeleteCommand.Parameters[7].Value = ((int)(Original_InitialDebt));
+            this.Adapter.DeleteCommand.Parameters[8].Value = ((System.DateTime)(Original_InitialDate));
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.DeleteCommand.Connection.State;
             if (((this.Adapter.DeleteCommand.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
@@ -12712,7 +12954,7 @@ namespace Acounting.storeDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, true)]
-        public virtual int Insert(int DealerID, string DealerName, string Adress, string Telephone, int Debt) {
+        public virtual int Insert(int DealerID, string DealerName, string Adress, string Telephone, int Debt, int InitialDebt, System.DateTime InitialDate) {
             this.Adapter.InsertCommand.Parameters[0].Value = ((int)(DealerID));
             if ((DealerName == null)) {
                 throw new global::System.ArgumentNullException("DealerName");
@@ -12733,6 +12975,8 @@ namespace Acounting.storeDataSetTableAdapters {
                 this.Adapter.InsertCommand.Parameters[3].Value = ((string)(Telephone));
             }
             this.Adapter.InsertCommand.Parameters[4].Value = ((int)(Debt));
+            this.Adapter.InsertCommand.Parameters[5].Value = ((int)(InitialDebt));
+            this.Adapter.InsertCommand.Parameters[6].Value = ((System.DateTime)(InitialDate));
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.InsertCommand.Connection.State;
             if (((this.Adapter.InsertCommand.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
@@ -12753,7 +12997,7 @@ namespace Acounting.storeDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(int DealerID, string DealerName, string Adress, string Telephone, int Debt, int Original_DealerID, string Original_DealerName, string Original_Adress, string Original_Telephone, int Original_Debt) {
+        public virtual int Update(int DealerID, string DealerName, string Adress, string Telephone, int Debt, int InitialDebt, System.DateTime InitialDate, int Original_DealerID, string Original_DealerName, string Original_Adress, string Original_Telephone, int Original_Debt, int Original_InitialDebt, System.DateTime Original_InitialDate) {
             this.Adapter.UpdateCommand.Parameters[0].Value = ((int)(DealerID));
             if ((DealerName == null)) {
                 throw new global::System.ArgumentNullException("DealerName");
@@ -12774,30 +13018,34 @@ namespace Acounting.storeDataSetTableAdapters {
                 this.Adapter.UpdateCommand.Parameters[3].Value = ((string)(Telephone));
             }
             this.Adapter.UpdateCommand.Parameters[4].Value = ((int)(Debt));
-            this.Adapter.UpdateCommand.Parameters[5].Value = ((int)(Original_DealerID));
+            this.Adapter.UpdateCommand.Parameters[5].Value = ((int)(InitialDebt));
+            this.Adapter.UpdateCommand.Parameters[6].Value = ((System.DateTime)(InitialDate));
+            this.Adapter.UpdateCommand.Parameters[7].Value = ((int)(Original_DealerID));
             if ((Original_DealerName == null)) {
                 throw new global::System.ArgumentNullException("Original_DealerName");
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[6].Value = ((string)(Original_DealerName));
+                this.Adapter.UpdateCommand.Parameters[8].Value = ((string)(Original_DealerName));
             }
             if ((Original_Adress == null)) {
-                this.Adapter.UpdateCommand.Parameters[7].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[8].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[7].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[8].Value = ((string)(Original_Adress));
-            }
-            if ((Original_Telephone == null)) {
                 this.Adapter.UpdateCommand.Parameters[9].Value = ((object)(1));
                 this.Adapter.UpdateCommand.Parameters[10].Value = global::System.DBNull.Value;
             }
             else {
                 this.Adapter.UpdateCommand.Parameters[9].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[10].Value = ((string)(Original_Telephone));
+                this.Adapter.UpdateCommand.Parameters[10].Value = ((string)(Original_Adress));
             }
-            this.Adapter.UpdateCommand.Parameters[11].Value = ((int)(Original_Debt));
+            if ((Original_Telephone == null)) {
+                this.Adapter.UpdateCommand.Parameters[11].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[12].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[11].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[12].Value = ((string)(Original_Telephone));
+            }
+            this.Adapter.UpdateCommand.Parameters[13].Value = ((int)(Original_Debt));
+            this.Adapter.UpdateCommand.Parameters[14].Value = ((int)(Original_InitialDebt));
+            this.Adapter.UpdateCommand.Parameters[15].Value = ((System.DateTime)(Original_InitialDate));
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.UpdateCommand.Connection.State;
             if (((this.Adapter.UpdateCommand.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
@@ -12818,8 +13066,8 @@ namespace Acounting.storeDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(string DealerName, string Adress, string Telephone, int Debt, int Original_DealerID, string Original_DealerName, string Original_Adress, string Original_Telephone, int Original_Debt) {
-            return this.Update(Original_DealerID, DealerName, Adress, Telephone, Debt, Original_DealerID, Original_DealerName, Original_Adress, Original_Telephone, Original_Debt);
+        public virtual int Update(string DealerName, string Adress, string Telephone, int Debt, int InitialDebt, System.DateTime InitialDate, int Original_DealerID, string Original_DealerName, string Original_Adress, string Original_Telephone, int Original_Debt, int Original_InitialDebt, System.DateTime Original_InitialDate) {
+            return this.Update(Original_DealerID, DealerName, Adress, Telephone, Debt, InitialDebt, InitialDate, Original_DealerID, Original_DealerName, Original_Adress, Original_Telephone, Original_Debt, Original_InitialDebt, Original_InitialDate);
         }
     }
     
@@ -13622,7 +13870,7 @@ namespace Acounting.storeDataSetTableAdapters {
             this._commandCollection = new global::MySql.Data.MySqlClient.MySqlCommand[1];
             this._commandCollection[0] = new global::MySql.Data.MySqlClient.MySqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "SELECT        moves.*\r\nFROM            moves";
+            this._commandCollection[0].CommandText = "SELECT `idMoves`, `Date`, `MoveName`, `MoveData`, `MoveData2` FROM `moves`";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
         }
         
