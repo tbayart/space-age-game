@@ -115,6 +115,12 @@
     <Compile Include="Agents.Designer.cs">
       <DependentUpon>Agents.cs</DependentUpon>
     </Compile>
+    <Compile Include="Assetscs.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Assetscs.Designer.cs">
+      <DependentUpon>Assetscs.cs</DependentUpon>
+    </Compile>
     <Compile Include="Buy.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -181,6 +187,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="AgentsDebtTotalEn.rdlc">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Assetscs.resx">
+      <DependentUpon>Assetscs.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Buy.resx">
       <DependentUpon>Buy.cs</DependentUpon>
