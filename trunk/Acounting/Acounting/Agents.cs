@@ -22,8 +22,7 @@ namespace Acounting
         {
             // TODO: This line of code loads data into the 'storeDataSet.agents' table. You can move, or remove it, as needed.
             this.agentsTableAdapter.Fill(this.storeDataSet.agents);
-            // TODO: This line of code loads data into the 'storeDataSet.agents' table. You can move, or remove it, as needed.
-            this.agentsTableAdapter.Fill(this.storeDataSet.agents);
+ 
 
         }
 
@@ -39,6 +38,7 @@ namespace Acounting
 
         private void bindingNavigatorAddNewItem_Click(object sender, EventArgs e)
         {
+            Txt_AgentName.Focus();
             int newid;
             int.TryParse(bindingNavigatorPositionItem.Text, out newid);
             Console.WriteLine(newid);

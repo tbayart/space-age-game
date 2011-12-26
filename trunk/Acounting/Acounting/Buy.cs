@@ -12,12 +12,12 @@ namespace Acounting
     public partial class Buy : Form
     {
 
-        int totalbill = 0;
+        double totalbill = 0;
         int billID; 
         DataTable virtualdata;
         int purchaseID;
-        int totalprice;
-        int remaining;
+        double totalprice;
+        double remaining;
         int dealerId;
   
 
@@ -141,9 +141,9 @@ namespace Acounting
 
             //items check
 
-            int buyqty;
+            double buyqty;
 
-            if (!int.TryParse(Txt_ToBuy.Text, out buyqty))
+            if (!double.TryParse(Txt_ToBuy.Text, out buyqty))
             {
                 errorProvider1.SetError(Txt_ToBuy, "Error With Quantity");
                 return;
@@ -153,16 +153,16 @@ namespace Acounting
                 errorProvider1.SetError(Txt_ToBuy, "Less Than 0 ITEM ?????!!");
                 return;
             }
-            int buyprice;
+            double buyprice;
 
-            if (!int.TryParse(Txt_BuyPrice.Text,out buyprice))
+            if (!double.TryParse(Txt_BuyPrice.Text, out buyprice))
             {
                 errorProvider1.SetError(Txt_BuyPrice, "Error with Price!");
                 return;
             }
 
-            int originalqty;
-            int.TryParse(itemrow["Qty"].ToString(), out originalqty);
+            double originalqty;
+            double.TryParse(itemrow["Qty"].ToString(), out originalqty);
 
             #endregion
 
@@ -170,11 +170,11 @@ namespace Acounting
             #region dealers
 
 
-            int totalprice = buyprice * buyqty;
-            
+            double totalprice = buyprice * buyqty;
 
-            int billpaid;
-            if (!int.TryParse(Txt_Paid.Text, out billpaid))
+
+            double billpaid;
+            if (!double.TryParse(Txt_Paid.Text, out billpaid))
             {
                 errorProvider1.SetError(Txt_Paid, "Error With Paid !");
                 return;
@@ -224,11 +224,11 @@ namespace Acounting
             // update items to add items qty
 
             itemrow = storeDataSet.items.FindByItemID(itemid);
-            int.TryParse(itemrow["Qty"].ToString(), out originalqty);
-            int newqty = originalqty + buyqty;
+            double.TryParse(itemrow["Qty"].ToString(), out originalqty);
+            double newqty = originalqty + buyqty;
             itemrow["Qty"] = newqty;
             itemrow["Cost"] = buyprice;
-            int totalcost = buyprice * newqty;
+            double totalcost = buyprice * newqty;
             itemrow["TotalCost"] = totalcost;
 
             button2.Enabled = true;
@@ -243,8 +243,8 @@ namespace Acounting
         private void Txt_Paid_TextChanged(object sender, EventArgs e)
         {
             errorProvider1.Clear();
-            int billpaid;
-            if (!int.TryParse(Txt_Paid.Text, out billpaid))
+            double billpaid;
+            if (!double.TryParse(Txt_Paid.Text, out billpaid))
             {
                 errorProvider1.SetError(Txt_Paid, "Error With Paid Value");
                 return;
@@ -269,9 +269,9 @@ namespace Acounting
 
 
                     // find paid ammount  
-                    int paid;
+                    double paid;
 
-                    int.TryParse(Txt_Paid.Text, out paid);
+                    double.TryParse(Txt_Paid.Text, out paid);
 
 
                     //make sure paid is right
@@ -292,8 +292,8 @@ namespace Acounting
                     // get vault row for manipulation
                     DataRow vaultrow = storeDataSet.vault.FindByidVault(0);
 
-                    int oldvalue, newvalue;
-                    int.TryParse(vaultrow["In_Hand"].ToString(), out oldvalue);
+                    double oldvalue, newvalue;
+                    double.TryParse(vaultrow["In_Hand"].ToString(), out oldvalue);
 
                     Console.WriteLine(oldvalue);
                     newvalue = oldvalue - paid;
@@ -302,11 +302,11 @@ namespace Acounting
 
 
                     //find old debt
-                    int debt;
+                    double debt;
                     DataRow dealerrow = storeDataSet.dealers.FindByDealerID(dealerId);
-                    int.TryParse(dealerrow["Debt"].ToString(), out debt);
+                    double.TryParse(dealerrow["Debt"].ToString(), out debt);
 
-                    int newdebt = debt + remaining;
+                    double newdebt = debt + remaining;
 
                     //add newdebt to agent
                     dealerrow["Debt"] = newdebt;
@@ -332,11 +332,7 @@ namespace Acounting
 
             }
         }
-
-        private void groupBox3_Enter(object sender, EventArgs e)
-        {
-
-        }
+ 
 
 
 
