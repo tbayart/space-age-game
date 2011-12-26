@@ -46,6 +46,7 @@ namespace Acounting
 
         private void bindingNavigatorAddNewItem_Click(object sender, EventArgs e)
         {
+            Txt_ItemName.Focus();
             int newid;
             int.TryParse(bindingNavigatorPositionItem.Text, out newid);
             Console.WriteLine(newid);
