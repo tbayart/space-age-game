@@ -153,6 +153,12 @@
     <Compile Include="Reports.Designer.cs">
       <DependentUpon>Reports.cs</DependentUpon>
     </Compile>
+    <Compile Include="ReturnBuy.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReturnBuy.Designer.cs">
+      <DependentUpon>ReturnBuy.cs</DependentUpon>
+    </Compile>
     <Compile Include="Sell.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -214,6 +220,9 @@
     </Compile>
     <EmbeddedResource Include="Reports.resx">
       <DependentUpon>Reports.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReturnBuy.resx">
+      <DependentUpon>ReturnBuy.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Sell.resx">
       <DependentUpon>Sell.cs</DependentUpon>
