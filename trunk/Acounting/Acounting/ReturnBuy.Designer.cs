@@ -72,6 +72,8 @@
             this.purchasebillsreturnTableAdapter = new Acounting.storeDataSetTableAdapters.purchasebillsreturnTableAdapter();
             this.purchasesitemsreturnBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.purchasesitemsreturnTableAdapter = new Acounting.storeDataSetTableAdapters.purchasesitemsreturnTableAdapter();
+            this.purchaseReturnDetailsBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.purchaseReturnDetailsTableAdapter = new Acounting.storeDataSetTableAdapters.PurchaseReturnDetailsTableAdapter();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.itemsBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.storeDataSet)).BeginInit();
@@ -84,6 +86,7 @@
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.purchasebillsreturnBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.purchasesitemsreturnBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.purchaseReturnDetailsBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox1
@@ -101,7 +104,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(110, 18);
+            this.label1.Location = new System.Drawing.Point(22, 18);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(46, 16);
             this.label1.TabIndex = 1;
@@ -109,7 +112,7 @@
             // 
             // Txt_BillID
             // 
-            this.Txt_BillID.Location = new System.Drawing.Point(113, 34);
+            this.Txt_BillID.Location = new System.Drawing.Point(25, 34);
             this.Txt_BillID.Name = "Txt_BillID";
             this.Txt_BillID.ReadOnly = true;
             this.Txt_BillID.Size = new System.Drawing.Size(100, 22);
@@ -117,7 +120,7 @@
             // 
             // Txt_DealerID
             // 
-            this.Txt_DealerID.Location = new System.Drawing.Point(299, 54);
+            this.Txt_DealerID.Location = new System.Drawing.Point(215, 39);
             this.Txt_DealerID.Name = "Txt_DealerID";
             this.Txt_DealerID.ReadOnly = true;
             this.Txt_DealerID.Size = new System.Drawing.Size(66, 20);
@@ -126,7 +129,7 @@
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(296, 31);
+            this.label10.Location = new System.Drawing.Point(212, 16);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(52, 13);
             this.label10.TabIndex = 2;
@@ -163,7 +166,7 @@
             // 
             // Txt_Remaining
             // 
-            this.Txt_Remaining.Location = new System.Drawing.Point(600, 54);
+            this.Txt_Remaining.Location = new System.Drawing.Point(516, 39);
             this.Txt_Remaining.Name = "Txt_Remaining";
             this.Txt_Remaining.ReadOnly = true;
             this.Txt_Remaining.Size = new System.Drawing.Size(92, 20);
@@ -172,7 +175,7 @@
             // label13
             // 
             this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(597, 34);
+            this.label13.Location = new System.Drawing.Point(513, 19);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(56, 13);
             this.label13.TabIndex = 18;
@@ -180,7 +183,7 @@
             // 
             // Txt_TotalBill
             // 
-            this.Txt_TotalBill.Location = new System.Drawing.Point(495, 54);
+            this.Txt_TotalBill.Location = new System.Drawing.Point(411, 39);
             this.Txt_TotalBill.Name = "Txt_TotalBill";
             this.Txt_TotalBill.ReadOnly = true;
             this.Txt_TotalBill.Size = new System.Drawing.Size(86, 20);
@@ -189,7 +192,7 @@
             // label12
             // 
             this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(492, 31);
+            this.label12.Location = new System.Drawing.Point(408, 16);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(46, 13);
             this.label12.TabIndex = 16;
@@ -198,7 +201,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(386, 31);
+            this.label3.Location = new System.Drawing.Point(302, 16);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(27, 13);
             this.label3.TabIndex = 15;
@@ -206,11 +209,12 @@
             // 
             // Txt_Paid
             // 
-            this.Txt_Paid.Location = new System.Drawing.Point(387, 53);
+            this.Txt_Paid.Location = new System.Drawing.Point(303, 38);
             this.Txt_Paid.Name = "Txt_Paid";
             this.Txt_Paid.Size = new System.Drawing.Size(97, 20);
             this.Txt_Paid.TabIndex = 5;
             this.Txt_Paid.Text = "0";
+            this.Txt_Paid.TextChanged += new System.EventHandler(this.Txt_Paid_TextChanged);
             // 
             // Cmb_DealerName
             // 
@@ -219,11 +223,12 @@
             this.Cmb_DealerName.DataSource = this.dealersBindingSource;
             this.Cmb_DealerName.DisplayMember = "DealerName";
             this.Cmb_DealerName.FormattingEnabled = true;
-            this.Cmb_DealerName.Location = new System.Drawing.Point(104, 53);
+            this.Cmb_DealerName.Location = new System.Drawing.Point(20, 38);
             this.Cmb_DealerName.Name = "Cmb_DealerName";
             this.Cmb_DealerName.Size = new System.Drawing.Size(178, 21);
             this.Cmb_DealerName.TabIndex = 4;
             this.Cmb_DealerName.ValueMember = "DealerName";
+            this.Cmb_DealerName.TextChanged += new System.EventHandler(this.Cmb_DealerName_TextChanged);
             // 
             // dealersBindingSource
             // 
@@ -233,7 +238,7 @@
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(106, 31);
+            this.label9.Location = new System.Drawing.Point(22, 16);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(68, 13);
             this.label9.TabIndex = 0;
@@ -241,7 +246,7 @@
             // 
             // Txt_Cost
             // 
-            this.Txt_Cost.Location = new System.Drawing.Point(471, 59);
+            this.Txt_Cost.Location = new System.Drawing.Point(378, 37);
             this.Txt_Cost.Name = "Txt_Cost";
             this.Txt_Cost.ReadOnly = true;
             this.Txt_Cost.Size = new System.Drawing.Size(53, 22);
@@ -250,7 +255,7 @@
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(468, 40);
+            this.label11.Location = new System.Drawing.Point(375, 18);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(35, 16);
             this.label11.TabIndex = 14;
@@ -258,7 +263,7 @@
             // 
             // Txt_ItemID
             // 
-            this.Txt_ItemID.Location = new System.Drawing.Point(311, 59);
+            this.Txt_ItemID.Location = new System.Drawing.Point(218, 37);
             this.Txt_ItemID.Name = "Txt_ItemID";
             this.Txt_ItemID.ReadOnly = true;
             this.Txt_ItemID.Size = new System.Drawing.Size(58, 22);
@@ -267,7 +272,7 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(386, 40);
+            this.label7.Location = new System.Drawing.Point(293, 18);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(56, 16);
             this.label7.TabIndex = 10;
@@ -276,7 +281,7 @@
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(308, 40);
+            this.label8.Location = new System.Drawing.Point(215, 18);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(49, 16);
             this.label8.TabIndex = 12;
@@ -301,7 +306,7 @@
             // 
             // Txt_InStock
             // 
-            this.Txt_InStock.Location = new System.Drawing.Point(389, 59);
+            this.Txt_InStock.Location = new System.Drawing.Point(296, 37);
             this.Txt_InStock.Name = "Txt_InStock";
             this.Txt_InStock.ReadOnly = true;
             this.Txt_InStock.Size = new System.Drawing.Size(62, 22);
@@ -342,17 +347,18 @@
             this.button2.TabIndex = 21;
             this.button2.Text = "Save";
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // Txt_BuyPrice
             // 
-            this.Txt_BuyPrice.Location = new System.Drawing.Point(637, 59);
+            this.Txt_BuyPrice.Location = new System.Drawing.Point(559, 37);
             this.Txt_BuyPrice.Name = "Txt_BuyPrice";
             this.Txt_BuyPrice.Size = new System.Drawing.Size(61, 22);
             this.Txt_BuyPrice.TabIndex = 3;
             // 
             // Txt_ToBuy
             // 
-            this.Txt_ToBuy.Location = new System.Drawing.Point(549, 59);
+            this.Txt_ToBuy.Location = new System.Drawing.Point(456, 37);
             this.Txt_ToBuy.Name = "Txt_ToBuy";
             this.Txt_ToBuy.Size = new System.Drawing.Size(62, 22);
             this.Txt_ToBuy.TabIndex = 2;
@@ -360,11 +366,11 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(634, 40);
+            this.label6.Location = new System.Drawing.Point(556, 18);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(82, 16);
+            this.label6.Size = new System.Drawing.Size(84, 16);
             this.label6.TabIndex = 8;
-            this.label6.Text = "Buying Price";
+            this.label6.Text = "Return  Price";
             // 
             // button1
             // 
@@ -374,20 +380,21 @@
             this.button1.TabIndex = 17;
             this.button1.Text = "Add To Bill";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(546, 40);
+            this.label5.Location = new System.Drawing.Point(453, 18);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(82, 16);
+            this.label5.Size = new System.Drawing.Size(97, 16);
             this.label5.TabIndex = 6;
-            this.label5.Text = "Units To Buy";
+            this.label5.Text = "Units To Return";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(115, 40);
+            this.label4.Location = new System.Drawing.Point(22, 18);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(71, 16);
             this.label4.TabIndex = 5;
@@ -400,11 +407,12 @@
             this.Cmb_ItemName.DataSource = this.itemsBindingSource;
             this.Cmb_ItemName.DisplayMember = "ItemName";
             this.Cmb_ItemName.FormattingEnabled = true;
-            this.Cmb_ItemName.Location = new System.Drawing.Point(113, 57);
+            this.Cmb_ItemName.Location = new System.Drawing.Point(20, 35);
             this.Cmb_ItemName.Name = "Cmb_ItemName";
             this.Cmb_ItemName.Size = new System.Drawing.Size(178, 24);
             this.Cmb_ItemName.TabIndex = 1;
             this.Cmb_ItemName.ValueMember = "ItemName";
+            this.Cmb_ItemName.TextChanged += new System.EventHandler(this.Cmb_ItemName_TextChanged);
             // 
             // groupBox2
             // 
@@ -446,11 +454,20 @@
             // 
             this.purchasesitemsreturnTableAdapter.ClearBeforeFill = true;
             // 
+            // purchaseReturnDetailsBindingSource
+            // 
+            this.purchaseReturnDetailsBindingSource.DataMember = "PurchaseReturnDetails";
+            this.purchaseReturnDetailsBindingSource.DataSource = this.storeDataSet;
+            // 
+            // purchaseReturnDetailsTableAdapter
+            // 
+            this.purchaseReturnDetailsTableAdapter.ClearBeforeFill = true;
+            // 
             // ReturnBuy
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(712, 629);
+            this.ClientSize = new System.Drawing.Size(735, 629);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox4);
@@ -475,6 +492,7 @@
             this.groupBox2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.purchasebillsreturnBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.purchasesitemsreturnBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.purchaseReturnDetailsBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -524,5 +542,7 @@
         private storeDataSetTableAdapters.purchasebillsreturnTableAdapter purchasebillsreturnTableAdapter;
         private System.Windows.Forms.BindingSource purchasesitemsreturnBindingSource;
         private storeDataSetTableAdapters.purchasesitemsreturnTableAdapter purchasesitemsreturnTableAdapter;
+        private System.Windows.Forms.BindingSource purchaseReturnDetailsBindingSource;
+        private storeDataSetTableAdapters.PurchaseReturnDetailsTableAdapter purchaseReturnDetailsTableAdapter;
     }
 }

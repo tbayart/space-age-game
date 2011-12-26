@@ -196,5 +196,12 @@ namespace Acounting
             staticassets.MdiParent = this;
             staticassets.Show();
         }
+
+        private void returnBuyToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ReturnBuy returnbuy = new ReturnBuy();
+            returnbuy.MdiParent = this;
+            returnbuy.Show();
+        }
     }
 }

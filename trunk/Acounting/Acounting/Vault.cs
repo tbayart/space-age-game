@@ -59,13 +59,13 @@ namespace Acounting
         {
 
             double Openning;
- 
+            
             DataRow row1 = storeDataSet.vault.FindByidVault(0);
             if (row1 == null)
             {
                 if (double.TryParse(Txt_AddOpenning.Text, out Openning))
                 {
-                    vaultTableAdapter.Insert(0, 0, Openning);
+                    vaultTableAdapter.Insert(0, Openning, Openning);
                     Cmd_Add.Enabled = false;
                     Txt_AddOpenning.ReadOnly = true;
 

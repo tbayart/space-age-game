@@ -11,37 +11,36 @@ namespace Acounting
 {
     public partial class ReturnBuy : Form
     {
-       
+
         double totalbill = 0;
-        int billID; 
+        int billID;
         DataTable virtualdata;
         int purchaseID;
         double totalprice;
         double remaining;
         int dealerId;
-  
 
 
 
-        public Buy()
+        public ReturnBuy()
         {
             InitializeComponent();
         }
 
-        private void Buy_Load(object sender, EventArgs e)
+        private void ReturnBuy_Load(object sender, EventArgs e)
         {
 
-            this.purchaseDetailsTableAdapter.Fill(this.storeDataSet.PurchaseDetails);
+            this.purchaseReturnDetailsTableAdapter.Fill(this.storeDataSet.PurchaseReturnDetails);
             this.vaultTableAdapter.Fill(this.storeDataSet.vault);
-            this.purchasesitemsTableAdapter.Fill(this.storeDataSet.purchasesitems);
+            this.purchasesitemsreturnTableAdapter.Fill(this.storeDataSet.purchasesitemsreturn);
             this.dealersTableAdapter.Fill(this.storeDataSet.dealers);
-            this.purchasebillsTableAdapter.Fill(this.storeDataSet.purchasebills);
+            this.purchasebillsreturnTableAdapter.Fill(this.storeDataSet.purchasebillsreturn);
             this.itemsTableAdapter.Fill(this.storeDataSet.items);
 
 
 
             Cmb_ItemName_TextChanged(null, null);
-            Cmb_DealerName_TextChanged(null,null);
+            Cmb_DealerName_TextChanged(null, null);
 
 
             //make a ghost table
@@ -50,13 +49,13 @@ namespace Acounting
 
             //get purchase lastid
             purchaseID = storeDataSet.purchasesitems.Rows.Count;
- 
+
             //new bill id      
             billID = storeDataSet.purchasebills.Count + 1;
 
             Txt_BillID.Text = billID.ToString();
-  
- 
+
+
         }
 
         private void Cmb_ItemName_TextChanged(object sender, EventArgs e)
@@ -82,7 +81,7 @@ namespace Acounting
 
         private void Cmb_DealerName_TextChanged(object sender, EventArgs e)
         {
-            DataTable dealers = storeDataSet.dealers ;
+            DataTable dealers = storeDataSet.dealers;
             try
             {
                 DataRow filterrow = dealers.AsEnumerable().Where(i => i.Field<string>("DealerName") == Cmb_DealerName.Text).FirstOrDefault();
@@ -107,12 +106,12 @@ namespace Acounting
 
         private void updatedataset()
         {
-            purchasebillsTableAdapter.Update(storeDataSet);
-            purchasesitemsTableAdapter.Update(storeDataSet);
+            purchasebillsreturnTableAdapter.Update(storeDataSet);
+            purchasesitemsreturnTableAdapter.Update(storeDataSet);
             itemsTableAdapter.Update(storeDataSet);
             dealersTableAdapter.Update(storeDataSet);
-            vaultTableAdapter.Update(storeDataSet);            
-                
+            vaultTableAdapter.Update(storeDataSet);
+
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -194,8 +193,8 @@ namespace Acounting
             newrow[1] = billID;
             newrow[2] = itemid;
             newrow[3] = buyqty;
-            newrow[4] = buyprice; 
-            newrow[5] = totalprice; 
+            newrow[4] = buyprice;
+            newrow[5] = totalprice;
             storeDataSet.purchasesitems.Rows.Add(newrow);
 
             //add virtual data to datagrid
@@ -225,9 +224,9 @@ namespace Acounting
 
             itemrow = storeDataSet.items.FindByItemID(itemid);
             double.TryParse(itemrow["Qty"].ToString(), out originalqty);
-            double newqty = originalqty + buyqty;
+            double newqty = originalqty - buyqty;
             itemrow["Qty"] = newqty;
-            itemrow["Cost"] = buyprice;
+            //itemrow["Cost"] = buyprice;
             double totalcost = buyprice * newqty;
             itemrow["TotalCost"] = totalcost;
 
@@ -235,8 +234,7 @@ namespace Acounting
             Cmb_ItemName_TextChanged(null, null);
             Cmb_DealerName_TextChanged(null, null);
             #endregion
-
-            button2.Enabled = true;
+ 
 
         }
 
@@ -296,7 +294,7 @@ namespace Acounting
                     double.TryParse(vaultrow["In_Hand"].ToString(), out oldvalue);
 
                     Console.WriteLine(oldvalue);
-                    newvalue = oldvalue - paid;
+                    newvalue = oldvalue + paid;
                     Console.WriteLine(newvalue);
                     vaultrow["In_Hand"] = newvalue;
 
@@ -306,7 +304,7 @@ namespace Acounting
                     DataRow dealerrow = storeDataSet.dealers.FindByDealerID(dealerId);
                     double.TryParse(dealerrow["Debt"].ToString(), out debt);
 
-                    double newdebt = debt + remaining;
+                    double newdebt = debt - remaining;
 
                     //add newdebt to agent
                     dealerrow["Debt"] = newdebt;
@@ -325,14 +323,15 @@ namespace Acounting
                     billID = storeDataSet.purchasebills.Count + 1;
 
                     Txt_BillID.Text = billID.ToString();
- 
+
 
                     #endregion
                 }
 
             }
         }
- 
+
+   
 
     }
 }
