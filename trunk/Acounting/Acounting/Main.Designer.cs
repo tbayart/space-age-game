@@ -44,6 +44,7 @@
             this.reportsToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.agentDebtToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.itemsTableAdapter = new Acounting.storeDataSetTableAdapters.itemsTableAdapter();
+            this.staticAssetsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.itemsBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.storeDataSet)).BeginInit();
             this.menuStrip1.SuspendLayout();
@@ -76,9 +77,10 @@
             this.dataToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.itemToolStripMenuItem,
             this.agentsToolStripMenuItem1,
-            this.dealersToolStripMenuItem1});
+            this.dealersToolStripMenuItem1,
+            this.staticAssetsToolStripMenuItem});
             this.dataToolStripMenuItem.Name = "dataToolStripMenuItem";
-            this.dataToolStripMenuItem.Size = new System.Drawing.Size(42, 20);
+            this.dataToolStripMenuItem.Size = new System.Drawing.Size(43, 20);
             this.dataToolStripMenuItem.Text = "Data";
             // 
             // itemToolStripMenuItem
@@ -110,34 +112,34 @@
             this.paymentsToolStripMenuItem1,
             this.vaultToolStripMenuItem1});
             this.storageToolStripMenuItem.Name = "storageToolStripMenuItem";
-            this.storageToolStripMenuItem.Size = new System.Drawing.Size(57, 20);
+            this.storageToolStripMenuItem.Size = new System.Drawing.Size(59, 20);
             this.storageToolStripMenuItem.Text = "Storage";
             // 
             // buyToolStripMenuItem1
             // 
             this.buyToolStripMenuItem1.Name = "buyToolStripMenuItem1";
-            this.buyToolStripMenuItem1.Size = new System.Drawing.Size(152, 22);
+            this.buyToolStripMenuItem1.Size = new System.Drawing.Size(126, 22);
             this.buyToolStripMenuItem1.Text = "Buy";
             this.buyToolStripMenuItem1.Click += new System.EventHandler(this.buyToolStripMenuItem1_Click);
             // 
             // sellToolStripMenuItem1
             // 
             this.sellToolStripMenuItem1.Name = "sellToolStripMenuItem1";
-            this.sellToolStripMenuItem1.Size = new System.Drawing.Size(152, 22);
+            this.sellToolStripMenuItem1.Size = new System.Drawing.Size(126, 22);
             this.sellToolStripMenuItem1.Text = "Sell";
             this.sellToolStripMenuItem1.Click += new System.EventHandler(this.sellToolStripMenuItem1_Click);
             // 
             // paymentsToolStripMenuItem1
             // 
             this.paymentsToolStripMenuItem1.Name = "paymentsToolStripMenuItem1";
-            this.paymentsToolStripMenuItem1.Size = new System.Drawing.Size(152, 22);
+            this.paymentsToolStripMenuItem1.Size = new System.Drawing.Size(126, 22);
             this.paymentsToolStripMenuItem1.Text = "Payments";
             this.paymentsToolStripMenuItem1.Click += new System.EventHandler(this.paymentsToolStripMenuItem1_Click);
             // 
             // vaultToolStripMenuItem1
             // 
             this.vaultToolStripMenuItem1.Name = "vaultToolStripMenuItem1";
-            this.vaultToolStripMenuItem1.Size = new System.Drawing.Size(152, 22);
+            this.vaultToolStripMenuItem1.Size = new System.Drawing.Size(126, 22);
             this.vaultToolStripMenuItem1.Text = "Vault";
             this.vaultToolStripMenuItem1.Click += new System.EventHandler(this.vaultToolStripMenuItem1_Click);
             // 
@@ -146,19 +148,26 @@
             this.reportsToolStripMenuItem1.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.agentDebtToolStripMenuItem});
             this.reportsToolStripMenuItem1.Name = "reportsToolStripMenuItem1";
-            this.reportsToolStripMenuItem1.Size = new System.Drawing.Size(57, 20);
+            this.reportsToolStripMenuItem1.Size = new System.Drawing.Size(59, 20);
             this.reportsToolStripMenuItem1.Text = "Reports";
             // 
             // agentDebtToolStripMenuItem
             // 
             this.agentDebtToolStripMenuItem.Name = "agentDebtToolStripMenuItem";
-            this.agentDebtToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.agentDebtToolStripMenuItem.Size = new System.Drawing.Size(134, 22);
             this.agentDebtToolStripMenuItem.Text = "Agent Debt";
             this.agentDebtToolStripMenuItem.Click += new System.EventHandler(this.agentDebtToolStripMenuItem_Click);
             // 
             // itemsTableAdapter
             // 
             this.itemsTableAdapter.ClearBeforeFill = true;
+            // 
+            // staticAssetsToolStripMenuItem
+            // 
+            this.staticAssetsToolStripMenuItem.Name = "staticAssetsToolStripMenuItem";
+            this.staticAssetsToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.staticAssetsToolStripMenuItem.Text = "Static Assets";
+            this.staticAssetsToolStripMenuItem.Click += new System.EventHandler(this.staticAssetsToolStripMenuItem_Click);
             // 
             // Main
             // 
@@ -198,6 +207,7 @@
         private System.Windows.Forms.ToolStripMenuItem vaultToolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem reportsToolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem agentDebtToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem staticAssetsToolStripMenuItem;
     }
 }
 
