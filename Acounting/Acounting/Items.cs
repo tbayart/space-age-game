@@ -30,11 +30,11 @@ namespace Acounting
         {
             if (e.ColumnIndex == 4)
             {
-                int qty;
-                int cost;
-                int.TryParse(dataGridView1[3, e.RowIndex].Value.ToString(), out qty);
-                int.TryParse(dataGridView1[2, e.RowIndex].Value.ToString(), out cost);
-                int total = cost * qty;
+                double qty;
+                double cost;
+                double.TryParse(dataGridView1[3, e.RowIndex].Value.ToString(), out qty);
+                double.TryParse(dataGridView1[2, e.RowIndex].Value.ToString(), out cost);
+                double total = cost * qty;
                 dataGridView1[4, e.RowIndex].Value = total;
             }
         }
@@ -56,11 +56,11 @@ namespace Acounting
         private void Txt_Qty_TextChanged(object sender, EventArgs e)
         {
 
-            int cost;
-            int qty;
-            int.TryParse(Txt_Qty.Text, out qty);
-            int.TryParse(Txt_Cost.Text, out cost);
-            int totalcost = cost * qty;
+            double cost;
+            double qty;
+            double.TryParse(Txt_Qty.Text, out qty);
+            double.TryParse(Txt_Cost.Text, out cost);
+            double totalcost = cost * qty;
 
             Txt_Totalcost.Text = totalcost.ToString();
         }
