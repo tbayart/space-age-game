@@ -189,5 +189,12 @@ namespace Acounting
             agents.MdiParent = this;
             agents.Show();
         }
+
+        private void staticAssetsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            StaticAssets staticassets = new StaticAssets();
+            staticassets.MdiParent = this;
+            staticassets.Show();
+        }
     }
 }
