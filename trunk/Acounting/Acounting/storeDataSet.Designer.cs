@@ -6122,6 +6122,8 @@ namespace Acounting {
             
             private global::System.Data.DataColumn columnCost;
             
+            private global::System.Data.DataColumn columnTotalCost;
+            
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public staticassestsDataTable() {
@@ -6189,6 +6191,14 @@ namespace Acounting {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn TotalCostColumn {
+                get {
+                    return this.columnTotalCost;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             [global::System.ComponentModel.Browsable(false)]
             public int Count {
                 get {
@@ -6224,13 +6234,14 @@ namespace Acounting {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public staticassestsRow AddstaticassestsRow(int Id, string ItemName, int Qty, int Cost) {
+            public staticassestsRow AddstaticassestsRow(int Id, string ItemName, double Qty, double Cost, string TotalCost) {
                 staticassestsRow rowstaticassestsRow = ((staticassestsRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         Id,
                         ItemName,
                         Qty,
-                        Cost};
+                        Cost,
+                        TotalCost};
                 rowstaticassestsRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowstaticassestsRow);
                 return rowstaticassestsRow;
@@ -6264,6 +6275,7 @@ namespace Acounting {
                 this.columnItemName = base.Columns["ItemName"];
                 this.columnQty = base.Columns["Qty"];
                 this.columnCost = base.Columns["Cost"];
+                this.columnTotalCost = base.Columns["TotalCost"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -6273,10 +6285,12 @@ namespace Acounting {
                 base.Columns.Add(this.columnId);
                 this.columnItemName = new global::System.Data.DataColumn("ItemName", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnItemName);
-                this.columnQty = new global::System.Data.DataColumn("Qty", typeof(int), null, global::System.Data.MappingType.Element);
+                this.columnQty = new global::System.Data.DataColumn("Qty", typeof(double), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnQty);
-                this.columnCost = new global::System.Data.DataColumn("Cost", typeof(int), null, global::System.Data.MappingType.Element);
+                this.columnCost = new global::System.Data.DataColumn("Cost", typeof(double), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnCost);
+                this.columnTotalCost = new global::System.Data.DataColumn("TotalCost", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnTotalCost);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
                                 this.columnId}, true));
                 this.columnId.AllowDBNull = false;
@@ -6285,6 +6299,7 @@ namespace Acounting {
                 this.columnItemName.MaxLength = 45;
                 this.columnQty.AllowDBNull = false;
                 this.columnCost.AllowDBNull = false;
+                this.columnTotalCost.MaxLength = 45;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -6518,7 +6533,7 @@ namespace Acounting {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public vaultRow AddvaultRow(int idVault, int In_Hand, int Opennings) {
+            public vaultRow AddvaultRow(int idVault, double In_Hand, double Opennings) {
                 vaultRow rowvaultRow = ((vaultRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         idVault,
@@ -6563,9 +6578,9 @@ namespace Acounting {
             private void InitClass() {
                 this.columnidVault = new global::System.Data.DataColumn("idVault", typeof(int), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnidVault);
-                this.columnIn_Hand = new global::System.Data.DataColumn("In_Hand", typeof(int), null, global::System.Data.MappingType.Element);
+                this.columnIn_Hand = new global::System.Data.DataColumn("In_Hand", typeof(double), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnIn_Hand);
-                this.columnOpennings = new global::System.Data.DataColumn("Opennings", typeof(int), null, global::System.Data.MappingType.Element);
+                this.columnOpennings = new global::System.Data.DataColumn("Opennings", typeof(double), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnOpennings);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
                                 this.columnidVault}, true));
@@ -9827,9 +9842,9 @@ namespace Acounting {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public int Qty {
+            public double Qty {
                 get {
-                    return ((int)(this[this.tablestaticassests.QtyColumn]));
+                    return ((double)(this[this.tablestaticassests.QtyColumn]));
                 }
                 set {
                     this[this.tablestaticassests.QtyColumn] = value;
@@ -9838,13 +9853,41 @@ namespace Acounting {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public int Cost {
+            public double Cost {
                 get {
-                    return ((int)(this[this.tablestaticassests.CostColumn]));
+                    return ((double)(this[this.tablestaticassests.CostColumn]));
                 }
                 set {
                     this[this.tablestaticassests.CostColumn] = value;
                 }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string TotalCost {
+                get {
+                    try {
+                        return ((string)(this[this.tablestaticassests.TotalCostColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'TotalCost\' in table \'staticassests\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tablestaticassests.TotalCostColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsTotalCostNull() {
+                return this.IsNull(this.tablestaticassests.TotalCostColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetTotalCostNull() {
+                this[this.tablestaticassests.TotalCostColumn] = global::System.Convert.DBNull;
             }
         }
         
@@ -9875,9 +9918,9 @@ namespace Acounting {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public int In_Hand {
+            public double In_Hand {
                 get {
-                    return ((int)(this[this.tablevault.In_HandColumn]));
+                    return ((double)(this[this.tablevault.In_HandColumn]));
                 }
                 set {
                     this[this.tablevault.In_HandColumn] = value;
@@ -9886,9 +9929,9 @@ namespace Acounting {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public int Opennings {
+            public double Opennings {
                 get {
-                    return ((int)(this[this.tablevault.OpenningsColumn]));
+                    return ((double)(this[this.tablevault.OpenningsColumn]));
                 }
                 set {
                     this[this.tablevault.OpenningsColumn] = value;
@@ -18734,11 +18777,14 @@ namespace Acounting.storeDataSetTableAdapters {
             tableMapping.ColumnMappings.Add("ItemName", "ItemName");
             tableMapping.ColumnMappings.Add("Qty", "Qty");
             tableMapping.ColumnMappings.Add("Cost", "Cost");
+            tableMapping.ColumnMappings.Add("TotalCost", "TotalCost");
             this._adapter.TableMappings.Add(tableMapping);
             this._adapter.DeleteCommand = new global::MySql.Data.MySqlClient.MySqlCommand();
             this._adapter.DeleteCommand.Connection = this.Connection;
             this._adapter.DeleteCommand.CommandText = "DELETE FROM `staticassests` WHERE ((`Id` = @Original_Id) AND (`ItemName` = @Origi" +
-                "nal_ItemName) AND (`Qty` = @Original_Qty) AND (`Cost` = @Original_Cost))";
+                "nal_ItemName) AND (`Qty` = @Original_Qty) AND (`Cost` = @Original_Cost) AND ((@I" +
+                "sNull_TotalCost = 1 AND `TotalCost` IS NULL) OR (`TotalCost` = @Original_TotalCo" +
+                "st)))";
             this._adapter.DeleteCommand.CommandType = global::System.Data.CommandType.Text;
             global::MySql.Data.MySqlClient.MySqlParameter param = new global::MySql.Data.MySqlClient.MySqlParameter();
             param.ParameterName = "@Original_Id";
@@ -18758,24 +18804,41 @@ namespace Acounting.storeDataSetTableAdapters {
             this._adapter.DeleteCommand.Parameters.Add(param);
             param = new global::MySql.Data.MySqlClient.MySqlParameter();
             param.ParameterName = "@Original_Qty";
-            param.DbType = global::System.Data.DbType.Int32;
-            param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.Int32;
+            param.DbType = global::System.Data.DbType.Double;
+            param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.Double;
             param.IsNullable = true;
             param.SourceColumn = "Qty";
             param.SourceVersion = global::System.Data.DataRowVersion.Original;
             this._adapter.DeleteCommand.Parameters.Add(param);
             param = new global::MySql.Data.MySqlClient.MySqlParameter();
             param.ParameterName = "@Original_Cost";
-            param.DbType = global::System.Data.DbType.Int32;
-            param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.Int32;
+            param.DbType = global::System.Data.DbType.Double;
+            param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.Double;
             param.IsNullable = true;
             param.SourceColumn = "Cost";
             param.SourceVersion = global::System.Data.DataRowVersion.Original;
             this._adapter.DeleteCommand.Parameters.Add(param);
+            param = new global::MySql.Data.MySqlClient.MySqlParameter();
+            param.ParameterName = "@IsNull_TotalCost";
+            param.DbType = global::System.Data.DbType.Int32;
+            param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.Int32;
+            param.IsNullable = true;
+            param.SourceColumn = "TotalCost";
+            param.SourceVersion = global::System.Data.DataRowVersion.Original;
+            param.SourceColumnNullMapping = true;
+            this._adapter.DeleteCommand.Parameters.Add(param);
+            param = new global::MySql.Data.MySqlClient.MySqlParameter();
+            param.ParameterName = "@Original_TotalCost";
+            param.DbType = global::System.Data.DbType.String;
+            param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.VarChar;
+            param.IsNullable = true;
+            param.SourceColumn = "TotalCost";
+            param.SourceVersion = global::System.Data.DataRowVersion.Original;
+            this._adapter.DeleteCommand.Parameters.Add(param);
             this._adapter.InsertCommand = new global::MySql.Data.MySqlClient.MySqlCommand();
             this._adapter.InsertCommand.Connection = this.Connection;
-            this._adapter.InsertCommand.CommandText = "INSERT INTO `staticassests` (`Id`, `ItemName`, `Qty`, `Cost`) VALUES (@Id, @ItemN" +
-                "ame, @Qty, @Cost)";
+            this._adapter.InsertCommand.CommandText = "INSERT INTO `staticassests` (`Id`, `ItemName`, `Qty`, `Cost`, `TotalCost`) VALUES" +
+                " (@Id, @ItemName, @Qty, @Cost, @TotalCost)";
             this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
             param = new global::MySql.Data.MySqlClient.MySqlParameter();
             param.ParameterName = "@Id";
@@ -18793,23 +18856,28 @@ namespace Acounting.storeDataSetTableAdapters {
             this._adapter.InsertCommand.Parameters.Add(param);
             param = new global::MySql.Data.MySqlClient.MySqlParameter();
             param.ParameterName = "@Qty";
-            param.DbType = global::System.Data.DbType.Int32;
-            param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.Int32;
+            param.DbType = global::System.Data.DbType.Double;
+            param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.Double;
             param.IsNullable = true;
             param.SourceColumn = "Qty";
             this._adapter.InsertCommand.Parameters.Add(param);
             param = new global::MySql.Data.MySqlClient.MySqlParameter();
             param.ParameterName = "@Cost";
-            param.DbType = global::System.Data.DbType.Int32;
-            param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.Int32;
+            param.DbType = global::System.Data.DbType.Double;
+            param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.Double;
             param.IsNullable = true;
             param.SourceColumn = "Cost";
             this._adapter.InsertCommand.Parameters.Add(param);
+            param = new global::MySql.Data.MySqlClient.MySqlParameter();
+            param.ParameterName = "@TotalCost";
+            param.DbType = global::System.Data.DbType.String;
+            param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.VarChar;
+            param.IsNullable = true;
+            param.SourceColumn = "TotalCost";
+            this._adapter.InsertCommand.Parameters.Add(param);
             this._adapter.UpdateCommand = new global::MySql.Data.MySqlClient.MySqlCommand();
             this._adapter.UpdateCommand.Connection = this.Connection;
-            this._adapter.UpdateCommand.CommandText = "UPDATE `staticassests` SET `Id` = @Id, `ItemName` = @ItemName, `Qty` = @Qty, `Cos" +
-                "t` = @Cost WHERE ((`Id` = @Original_Id) AND (`ItemName` = @Original_ItemName) AN" +
-                "D (`Qty` = @Original_Qty) AND (`Cost` = @Original_Cost))";
+            this._adapter.UpdateCommand.CommandText = @"UPDATE `staticassests` SET `Id` = @Id, `ItemName` = @ItemName, `Qty` = @Qty, `Cost` = @Cost, `TotalCost` = @TotalCost WHERE ((`Id` = @Original_Id) AND (`ItemName` = @Original_ItemName) AND (`Qty` = @Original_Qty) AND (`Cost` = @Original_Cost) AND ((@IsNull_TotalCost = 1 AND `TotalCost` IS NULL) OR (`TotalCost` = @Original_TotalCost)))";
             this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
             param = new global::MySql.Data.MySqlClient.MySqlParameter();
             param.ParameterName = "@Id";
@@ -18827,17 +18895,24 @@ namespace Acounting.storeDataSetTableAdapters {
             this._adapter.UpdateCommand.Parameters.Add(param);
             param = new global::MySql.Data.MySqlClient.MySqlParameter();
             param.ParameterName = "@Qty";
-            param.DbType = global::System.Data.DbType.Int32;
-            param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.Int32;
+            param.DbType = global::System.Data.DbType.Double;
+            param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.Double;
             param.IsNullable = true;
             param.SourceColumn = "Qty";
             this._adapter.UpdateCommand.Parameters.Add(param);
             param = new global::MySql.Data.MySqlClient.MySqlParameter();
             param.ParameterName = "@Cost";
-            param.DbType = global::System.Data.DbType.Int32;
-            param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.Int32;
+            param.DbType = global::System.Data.DbType.Double;
+            param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.Double;
             param.IsNullable = true;
             param.SourceColumn = "Cost";
+            this._adapter.UpdateCommand.Parameters.Add(param);
+            param = new global::MySql.Data.MySqlClient.MySqlParameter();
+            param.ParameterName = "@TotalCost";
+            param.DbType = global::System.Data.DbType.String;
+            param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.VarChar;
+            param.IsNullable = true;
+            param.SourceColumn = "TotalCost";
             this._adapter.UpdateCommand.Parameters.Add(param);
             param = new global::MySql.Data.MySqlClient.MySqlParameter();
             param.ParameterName = "@Original_Id";
@@ -18857,18 +18932,35 @@ namespace Acounting.storeDataSetTableAdapters {
             this._adapter.UpdateCommand.Parameters.Add(param);
             param = new global::MySql.Data.MySqlClient.MySqlParameter();
             param.ParameterName = "@Original_Qty";
-            param.DbType = global::System.Data.DbType.Int32;
-            param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.Int32;
+            param.DbType = global::System.Data.DbType.Double;
+            param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.Double;
             param.IsNullable = true;
             param.SourceColumn = "Qty";
             param.SourceVersion = global::System.Data.DataRowVersion.Original;
             this._adapter.UpdateCommand.Parameters.Add(param);
             param = new global::MySql.Data.MySqlClient.MySqlParameter();
             param.ParameterName = "@Original_Cost";
+            param.DbType = global::System.Data.DbType.Double;
+            param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.Double;
+            param.IsNullable = true;
+            param.SourceColumn = "Cost";
+            param.SourceVersion = global::System.Data.DataRowVersion.Original;
+            this._adapter.UpdateCommand.Parameters.Add(param);
+            param = new global::MySql.Data.MySqlClient.MySqlParameter();
+            param.ParameterName = "@IsNull_TotalCost";
             param.DbType = global::System.Data.DbType.Int32;
             param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.Int32;
             param.IsNullable = true;
-            param.SourceColumn = "Cost";
+            param.SourceColumn = "TotalCost";
+            param.SourceVersion = global::System.Data.DataRowVersion.Original;
+            param.SourceColumnNullMapping = true;
+            this._adapter.UpdateCommand.Parameters.Add(param);
+            param = new global::MySql.Data.MySqlClient.MySqlParameter();
+            param.ParameterName = "@Original_TotalCost";
+            param.DbType = global::System.Data.DbType.String;
+            param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.VarChar;
+            param.IsNullable = true;
+            param.SourceColumn = "TotalCost";
             param.SourceVersion = global::System.Data.DataRowVersion.Original;
             this._adapter.UpdateCommand.Parameters.Add(param);
         }
@@ -18886,7 +18978,7 @@ namespace Acounting.storeDataSetTableAdapters {
             this._commandCollection = new global::MySql.Data.MySqlClient.MySqlCommand[1];
             this._commandCollection[0] = new global::MySql.Data.MySqlClient.MySqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "SELECT `Id`, `ItemName`, `Qty`, `Cost` FROM `staticassests`";
+            this._commandCollection[0].CommandText = "SELECT * FROM staticassests";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
         }
         
@@ -18947,7 +19039,7 @@ namespace Acounting.storeDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Delete, true)]
-        public virtual int Delete(int Original_Id, string Original_ItemName, int Original_Qty, int Original_Cost) {
+        public virtual int Delete(int Original_Id, string Original_ItemName, double Original_Qty, double Original_Cost, string Original_TotalCost) {
             this.Adapter.DeleteCommand.Parameters[0].Value = ((int)(Original_Id));
             if ((Original_ItemName == null)) {
                 throw new global::System.ArgumentNullException("Original_ItemName");
@@ -18955,8 +19047,16 @@ namespace Acounting.storeDataSetTableAdapters {
             else {
                 this.Adapter.DeleteCommand.Parameters[1].Value = ((string)(Original_ItemName));
             }
-            this.Adapter.DeleteCommand.Parameters[2].Value = ((int)(Original_Qty));
-            this.Adapter.DeleteCommand.Parameters[3].Value = ((int)(Original_Cost));
+            this.Adapter.DeleteCommand.Parameters[2].Value = ((double)(Original_Qty));
+            this.Adapter.DeleteCommand.Parameters[3].Value = ((double)(Original_Cost));
+            if ((Original_TotalCost == null)) {
+                this.Adapter.DeleteCommand.Parameters[4].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[5].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[4].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[5].Value = ((string)(Original_TotalCost));
+            }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.DeleteCommand.Connection.State;
             if (((this.Adapter.DeleteCommand.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
@@ -18977,7 +19077,7 @@ namespace Acounting.storeDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, true)]
-        public virtual int Insert(int Id, string ItemName, int Qty, int Cost) {
+        public virtual int Insert(int Id, string ItemName, double Qty, double Cost, string TotalCost) {
             this.Adapter.InsertCommand.Parameters[0].Value = ((int)(Id));
             if ((ItemName == null)) {
                 throw new global::System.ArgumentNullException("ItemName");
@@ -18985,8 +19085,14 @@ namespace Acounting.storeDataSetTableAdapters {
             else {
                 this.Adapter.InsertCommand.Parameters[1].Value = ((string)(ItemName));
             }
-            this.Adapter.InsertCommand.Parameters[2].Value = ((int)(Qty));
-            this.Adapter.InsertCommand.Parameters[3].Value = ((int)(Cost));
+            this.Adapter.InsertCommand.Parameters[2].Value = ((double)(Qty));
+            this.Adapter.InsertCommand.Parameters[3].Value = ((double)(Cost));
+            if ((TotalCost == null)) {
+                this.Adapter.InsertCommand.Parameters[4].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[4].Value = ((string)(TotalCost));
+            }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.InsertCommand.Connection.State;
             if (((this.Adapter.InsertCommand.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
@@ -19007,7 +19113,7 @@ namespace Acounting.storeDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(int Id, string ItemName, int Qty, int Cost, int Original_Id, string Original_ItemName, int Original_Qty, int Original_Cost) {
+        public virtual int Update(int Id, string ItemName, double Qty, double Cost, string TotalCost, int Original_Id, string Original_ItemName, double Original_Qty, double Original_Cost, string Original_TotalCost) {
             this.Adapter.UpdateCommand.Parameters[0].Value = ((int)(Id));
             if ((ItemName == null)) {
                 throw new global::System.ArgumentNullException("ItemName");
@@ -19015,17 +19121,31 @@ namespace Acounting.storeDataSetTableAdapters {
             else {
                 this.Adapter.UpdateCommand.Parameters[1].Value = ((string)(ItemName));
             }
-            this.Adapter.UpdateCommand.Parameters[2].Value = ((int)(Qty));
-            this.Adapter.UpdateCommand.Parameters[3].Value = ((int)(Cost));
-            this.Adapter.UpdateCommand.Parameters[4].Value = ((int)(Original_Id));
+            this.Adapter.UpdateCommand.Parameters[2].Value = ((double)(Qty));
+            this.Adapter.UpdateCommand.Parameters[3].Value = ((double)(Cost));
+            if ((TotalCost == null)) {
+                this.Adapter.UpdateCommand.Parameters[4].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[4].Value = ((string)(TotalCost));
+            }
+            this.Adapter.UpdateCommand.Parameters[5].Value = ((int)(Original_Id));
             if ((Original_ItemName == null)) {
                 throw new global::System.ArgumentNullException("Original_ItemName");
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[5].Value = ((string)(Original_ItemName));
+                this.Adapter.UpdateCommand.Parameters[6].Value = ((string)(Original_ItemName));
             }
-            this.Adapter.UpdateCommand.Parameters[6].Value = ((int)(Original_Qty));
-            this.Adapter.UpdateCommand.Parameters[7].Value = ((int)(Original_Cost));
+            this.Adapter.UpdateCommand.Parameters[7].Value = ((double)(Original_Qty));
+            this.Adapter.UpdateCommand.Parameters[8].Value = ((double)(Original_Cost));
+            if ((Original_TotalCost == null)) {
+                this.Adapter.UpdateCommand.Parameters[9].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[10].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[9].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[10].Value = ((string)(Original_TotalCost));
+            }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.UpdateCommand.Connection.State;
             if (((this.Adapter.UpdateCommand.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
@@ -19046,8 +19166,8 @@ namespace Acounting.storeDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(string ItemName, int Qty, int Cost, int Original_Id, string Original_ItemName, int Original_Qty, int Original_Cost) {
-            return this.Update(Original_Id, ItemName, Qty, Cost, Original_Id, Original_ItemName, Original_Qty, Original_Cost);
+        public virtual int Update(string ItemName, double Qty, double Cost, string TotalCost, int Original_Id, string Original_ItemName, double Original_Qty, double Original_Cost, string Original_TotalCost) {
+            return this.Update(Original_Id, ItemName, Qty, Cost, TotalCost, Original_Id, Original_ItemName, Original_Qty, Original_Cost, Original_TotalCost);
         }
     }
     
@@ -19191,16 +19311,16 @@ namespace Acounting.storeDataSetTableAdapters {
             this._adapter.DeleteCommand.Parameters.Add(param);
             param = new global::MySql.Data.MySqlClient.MySqlParameter();
             param.ParameterName = "@Original_In_Hand";
-            param.DbType = global::System.Data.DbType.Int32;
-            param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.Int32;
+            param.DbType = global::System.Data.DbType.Double;
+            param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.Double;
             param.IsNullable = true;
             param.SourceColumn = "In_Hand";
             param.SourceVersion = global::System.Data.DataRowVersion.Original;
             this._adapter.DeleteCommand.Parameters.Add(param);
             param = new global::MySql.Data.MySqlClient.MySqlParameter();
             param.ParameterName = "@Original_Opennings";
-            param.DbType = global::System.Data.DbType.Int32;
-            param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.Int32;
+            param.DbType = global::System.Data.DbType.Double;
+            param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.Double;
             param.IsNullable = true;
             param.SourceColumn = "Opennings";
             param.SourceVersion = global::System.Data.DataRowVersion.Original;
@@ -19219,15 +19339,15 @@ namespace Acounting.storeDataSetTableAdapters {
             this._adapter.InsertCommand.Parameters.Add(param);
             param = new global::MySql.Data.MySqlClient.MySqlParameter();
             param.ParameterName = "@In_Hand";
-            param.DbType = global::System.Data.DbType.Int32;
-            param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.Int32;
+            param.DbType = global::System.Data.DbType.Double;
+            param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.Double;
             param.IsNullable = true;
             param.SourceColumn = "In_Hand";
             this._adapter.InsertCommand.Parameters.Add(param);
             param = new global::MySql.Data.MySqlClient.MySqlParameter();
             param.ParameterName = "@Opennings";
-            param.DbType = global::System.Data.DbType.Int32;
-            param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.Int32;
+            param.DbType = global::System.Data.DbType.Double;
+            param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.Double;
             param.IsNullable = true;
             param.SourceColumn = "Opennings";
             this._adapter.InsertCommand.Parameters.Add(param);
@@ -19246,15 +19366,15 @@ namespace Acounting.storeDataSetTableAdapters {
             this._adapter.UpdateCommand.Parameters.Add(param);
             param = new global::MySql.Data.MySqlClient.MySqlParameter();
             param.ParameterName = "@In_Hand";
-            param.DbType = global::System.Data.DbType.Int32;
-            param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.Int32;
+            param.DbType = global::System.Data.DbType.Double;
+            param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.Double;
             param.IsNullable = true;
             param.SourceColumn = "In_Hand";
             this._adapter.UpdateCommand.Parameters.Add(param);
             param = new global::MySql.Data.MySqlClient.MySqlParameter();
             param.ParameterName = "@Opennings";
-            param.DbType = global::System.Data.DbType.Int32;
-            param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.Int32;
+            param.DbType = global::System.Data.DbType.Double;
+            param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.Double;
             param.IsNullable = true;
             param.SourceColumn = "Opennings";
             this._adapter.UpdateCommand.Parameters.Add(param);
@@ -19268,16 +19388,16 @@ namespace Acounting.storeDataSetTableAdapters {
             this._adapter.UpdateCommand.Parameters.Add(param);
             param = new global::MySql.Data.MySqlClient.MySqlParameter();
             param.ParameterName = "@Original_In_Hand";
-            param.DbType = global::System.Data.DbType.Int32;
-            param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.Int32;
+            param.DbType = global::System.Data.DbType.Double;
+            param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.Double;
             param.IsNullable = true;
             param.SourceColumn = "In_Hand";
             param.SourceVersion = global::System.Data.DataRowVersion.Original;
             this._adapter.UpdateCommand.Parameters.Add(param);
             param = new global::MySql.Data.MySqlClient.MySqlParameter();
             param.ParameterName = "@Original_Opennings";
-            param.DbType = global::System.Data.DbType.Int32;
-            param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.Int32;
+            param.DbType = global::System.Data.DbType.Double;
+            param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.Double;
             param.IsNullable = true;
             param.SourceColumn = "Opennings";
             param.SourceVersion = global::System.Data.DataRowVersion.Original;
@@ -19297,7 +19417,7 @@ namespace Acounting.storeDataSetTableAdapters {
             this._commandCollection = new global::MySql.Data.MySqlClient.MySqlCommand[1];
             this._commandCollection[0] = new global::MySql.Data.MySqlClient.MySqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "SELECT `idVault`, `In_Hand`, `Opennings` FROM `vault`";
+            this._commandCollection[0].CommandText = "SELECT * FROM vault";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
         }
         
@@ -19358,10 +19478,10 @@ namespace Acounting.storeDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Delete, true)]
-        public virtual int Delete(int Original_idVault, int Original_In_Hand, int Original_Opennings) {
+        public virtual int Delete(int Original_idVault, double Original_In_Hand, double Original_Opennings) {
             this.Adapter.DeleteCommand.Parameters[0].Value = ((int)(Original_idVault));
-            this.Adapter.DeleteCommand.Parameters[1].Value = ((int)(Original_In_Hand));
-            this.Adapter.DeleteCommand.Parameters[2].Value = ((int)(Original_Opennings));
+            this.Adapter.DeleteCommand.Parameters[1].Value = ((double)(Original_In_Hand));
+            this.Adapter.DeleteCommand.Parameters[2].Value = ((double)(Original_Opennings));
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.DeleteCommand.Connection.State;
             if (((this.Adapter.DeleteCommand.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
@@ -19382,10 +19502,10 @@ namespace Acounting.storeDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, true)]
-        public virtual int Insert(int idVault, int In_Hand, int Opennings) {
+        public virtual int Insert(int idVault, double In_Hand, double Opennings) {
             this.Adapter.InsertCommand.Parameters[0].Value = ((int)(idVault));
-            this.Adapter.InsertCommand.Parameters[1].Value = ((int)(In_Hand));
-            this.Adapter.InsertCommand.Parameters[2].Value = ((int)(Opennings));
+            this.Adapter.InsertCommand.Parameters[1].Value = ((double)(In_Hand));
+            this.Adapter.InsertCommand.Parameters[2].Value = ((double)(Opennings));
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.InsertCommand.Connection.State;
             if (((this.Adapter.InsertCommand.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
@@ -19406,13 +19526,13 @@ namespace Acounting.storeDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(int idVault, int In_Hand, int Opennings, int Original_idVault, int Original_In_Hand, int Original_Opennings) {
+        public virtual int Update(int idVault, double In_Hand, double Opennings, int Original_idVault, double Original_In_Hand, double Original_Opennings) {
             this.Adapter.UpdateCommand.Parameters[0].Value = ((int)(idVault));
-            this.Adapter.UpdateCommand.Parameters[1].Value = ((int)(In_Hand));
-            this.Adapter.UpdateCommand.Parameters[2].Value = ((int)(Opennings));
+            this.Adapter.UpdateCommand.Parameters[1].Value = ((double)(In_Hand));
+            this.Adapter.UpdateCommand.Parameters[2].Value = ((double)(Opennings));
             this.Adapter.UpdateCommand.Parameters[3].Value = ((int)(Original_idVault));
-            this.Adapter.UpdateCommand.Parameters[4].Value = ((int)(Original_In_Hand));
-            this.Adapter.UpdateCommand.Parameters[5].Value = ((int)(Original_Opennings));
+            this.Adapter.UpdateCommand.Parameters[4].Value = ((double)(Original_In_Hand));
+            this.Adapter.UpdateCommand.Parameters[5].Value = ((double)(Original_Opennings));
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.UpdateCommand.Connection.State;
             if (((this.Adapter.UpdateCommand.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
@@ -19433,7 +19553,7 @@ namespace Acounting.storeDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(int In_Hand, int Opennings, int Original_idVault, int Original_In_Hand, int Original_Opennings) {
+        public virtual int Update(double In_Hand, double Opennings, int Original_idVault, double Original_In_Hand, double Original_Opennings) {
             return this.Update(Original_idVault, In_Hand, Opennings, Original_idVault, Original_In_Hand, Original_Opennings);
         }
     }

@@ -26,8 +26,8 @@ namespace Acounting
             this.vaultTableAdapter.Fill(this.storeDataSet.vault);
             Cmd_Add.Enabled = false;
             Txt_AddOpenning.ReadOnly = true;
- 
-            int DatabaseOpenning;
+
+            double DatabaseOpenning;
 
             Console.WriteLine(Txt_AddOpenning.Text);
 
@@ -39,7 +39,7 @@ namespace Acounting
             }
             else
             {
-                int.TryParse(row1["Opennings"].ToString(), out DatabaseOpenning);
+                double.TryParse(row1["Opennings"].ToString(), out DatabaseOpenning);
                 if (DatabaseOpenning == 0)
                 {
                     Cmd_Add.Enabled = true;
@@ -57,13 +57,13 @@ namespace Acounting
 
         private void Cmd_Add_Click(object sender, EventArgs e)
         {
- 
-            int Openning;
+
+            double Openning;
  
             DataRow row1 = storeDataSet.vault.FindByidVault(0);
             if (row1 == null)
             {
-                if (int.TryParse(Txt_AddOpenning.Text, out Openning))
+                if (double.TryParse(Txt_AddOpenning.Text, out Openning))
                 {
                     vaultTableAdapter.Insert(0, 0, Openning);
                     Cmd_Add.Enabled = false;

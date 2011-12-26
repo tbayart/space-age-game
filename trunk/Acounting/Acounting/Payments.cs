@@ -62,7 +62,7 @@ namespace Acounting
             errorProvider1.Clear();
             //get last id
             int lastid=0;
-            int ammount;
+            double ammount;
 
             if (Txt_Debt.Text =="")
             {
@@ -71,7 +71,7 @@ namespace Acounting
             }
 
             //get ammount paid
-            if (!int.TryParse(Txt_Ammount.Text,out ammount))
+            if (!double.TryParse(Txt_Ammount.Text, out ammount))
             {
                 errorProvider1.SetError(Txt_Ammount,"Wrong Number !!");
                 return;
@@ -98,18 +98,18 @@ namespace Acounting
             //decrement agent debt
             DataRow agentrow = storeDataSet.agents.FindByAgentID(selectedagentid);
 
-            int olddebt, newdebt;
-            int.TryParse(agentrow["Debt"].ToString(), out olddebt);
+            double olddebt, newdebt;
+            double.TryParse(agentrow["Debt"].ToString(), out olddebt);
             newdebt = olddebt + ammount;
 
             agentrow["Debt"] = newdebt;
             agentsTableAdapter.Update(agentrow);
 
             //add mount payed to the vault
-            int oldinhand, newinhand;
+            double oldinhand, newinhand;
             DataRow vaultrow = storeDataSet.vault.First();
 
-            int.TryParse(vaultrow["In_Hand"].ToString(), out oldinhand);
+            double.TryParse(vaultrow["In_Hand"].ToString(), out oldinhand);
             Console.WriteLine(oldinhand);
             newinhand = oldinhand + ammount;
             Console.WriteLine(newinhand);
@@ -133,7 +133,7 @@ namespace Acounting
             errorProvider1.Clear();
             //get last id
             int lastid = 0;
-            int ammount;
+            double ammount;
 
             //check dealer name
 
@@ -145,7 +145,7 @@ namespace Acounting
 
 
             //get ammount paid
-            if (!int.TryParse(Txt_DealerAmmount.Text, out ammount))
+            if (!double.TryParse(Txt_DealerAmmount.Text, out ammount))
             {
                 errorProvider1.SetError(Txt_DealerAmmount, "Wrong Number !!");
                 return;
@@ -172,8 +172,8 @@ namespace Acounting
             //decrement agent debt
             DataRow dealerrow = storeDataSet.dealers.FindByDealerID(selectedDealerID);
 
-            int olddebt, newdebt;
-            int.TryParse(dealerrow["Debt"].ToString(), out olddebt);
+            double olddebt, newdebt;
+            double.TryParse(dealerrow["Debt"].ToString(), out olddebt);
             newdebt = olddebt + ammount;
 
             dealerrow["Debt"] = newdebt;
@@ -181,10 +181,10 @@ namespace Acounting
 
 
             //add mount payed to the vault
-            int oldinhand, newinhand;
+            double oldinhand, newinhand;
             DataRow vaultrow = storeDataSet.vault.First();
 
-            int.TryParse(vaultrow["In_Hand"].ToString(), out oldinhand);
+            double.TryParse(vaultrow["In_Hand"].ToString(), out oldinhand);
             newinhand = oldinhand - ammount;
 
             vaultrow["In_Hand"] = newinhand;
@@ -233,10 +233,10 @@ namespace Acounting
             errorProvider1.Clear();
             //get last id
             int lastid = 0;
-            int ammount;
+            double ammount;
 
             //get ammount paid
-            if (!int.TryParse(Txt_SpendingsAmmount.Text, out ammount))
+            if (!double.TryParse(Txt_SpendingsAmmount.Text, out ammount))
             {
                 errorProvider1.SetError(Txt_SpendingsAmmount, "Wrong Number !!");
             }
@@ -260,10 +260,10 @@ namespace Acounting
             spendingsTableAdapter.Insert(lastid, DateTime.Now, ammount);
 
             //add mount payed to the vault
-            int oldinhand, newinhand;
+            double oldinhand, newinhand;
             DataRow vaultrow = storeDataSet.vault.First();
 
-            int.TryParse(vaultrow["In_Hand"].ToString(), out oldinhand);
+            double.TryParse(vaultrow["In_Hand"].ToString(), out oldinhand);
             newinhand = oldinhand - ammount;
             vaultrow["In_Hand"] = newinhand;
             vaultTableAdapter.Update(vaultrow);
