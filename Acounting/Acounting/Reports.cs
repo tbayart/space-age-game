@@ -18,6 +18,14 @@ namespace Acounting
 
         private void Reports_Load(object sender, EventArgs e)
         {
+            // TODO: This line of code loads data into the 'storeDataSet.dealers' table. You can move, or remove it, as needed.
+            this.dealersTableAdapter.Fill(this.storeDataSet.dealers);
+            // TODO: This line of code loads data into the 'storeDataSet.purchasebills' table. You can move, or remove it, as needed.
+            this.purchasebillsTableAdapter.Fill(this.storeDataSet.purchasebills);
+            // TODO: This line of code loads data into the 'storeDataSet.purchasebillsreturn' table. You can move, or remove it, as needed.
+            this.purchasebillsreturnTableAdapter.Fill(this.storeDataSet.purchasebillsreturn);
+            // TODO: This line of code loads data into the 'storeDataSet.dealerpayments' table. You can move, or remove it, as needed.
+            this.dealerpaymentsTableAdapter.Fill(this.storeDataSet.dealerpayments);
             // TODO: This line of code loads data into the 'storeDataSet.payments' table. You can move, or remove it, as needed.
             this.paymentsTableAdapter.Fill(this.storeDataSet.payments);
             // TODO: This line of code loads data into the 'storeDataSet.billsreturn' table. You can move, or remove it, as needed.
@@ -28,7 +36,8 @@ namespace Acounting
             this.agentsTableAdapter.Fill(this.storeDataSet.agents);
                 
             this.reportViewer3.RefreshReport();
-            
+
+            this.reportViewer1.RefreshReport();
         }
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
