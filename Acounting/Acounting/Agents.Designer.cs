@@ -31,6 +31,13 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Agents));
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.agentIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.agentNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.addressDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.telephoneDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.debtDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.initialDebtDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.initialDateDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.agentsBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.storeDataSet = new Acounting.storeDataSet();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
@@ -40,6 +47,10 @@
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.Txt_InialDebt = new System.Windows.Forms.TextBox();
             this.bindingNavigator1 = new System.Windows.Forms.BindingNavigator(this.components);
             this.bindingNavigatorAddNewItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorCountItem = new System.Windows.Forms.ToolStripLabel();
@@ -62,17 +73,6 @@
             this.Txt_Telephone = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.agentIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.agentNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.addressDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.telephoneDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.debtDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.initialDebtDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.initialDateDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Txt_InialDebt = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.agentsBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.storeDataSet)).BeginInit();
@@ -106,12 +106,60 @@
             this.dataGridView1.Size = new System.Drawing.Size(759, 393);
             this.dataGridView1.TabIndex = 0;
             // 
+            // agentIDDataGridViewTextBoxColumn
+            // 
+            this.agentIDDataGridViewTextBoxColumn.DataPropertyName = "AgentID";
+            this.agentIDDataGridViewTextBoxColumn.HeaderText = "AgentID";
+            this.agentIDDataGridViewTextBoxColumn.Name = "agentIDDataGridViewTextBoxColumn";
+            this.agentIDDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // agentNameDataGridViewTextBoxColumn
+            // 
+            this.agentNameDataGridViewTextBoxColumn.DataPropertyName = "AgentName";
+            this.agentNameDataGridViewTextBoxColumn.HeaderText = "AgentName";
+            this.agentNameDataGridViewTextBoxColumn.Name = "agentNameDataGridViewTextBoxColumn";
+            this.agentNameDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // addressDataGridViewTextBoxColumn
+            // 
+            this.addressDataGridViewTextBoxColumn.DataPropertyName = "Address";
+            this.addressDataGridViewTextBoxColumn.HeaderText = "Address";
+            this.addressDataGridViewTextBoxColumn.Name = "addressDataGridViewTextBoxColumn";
+            this.addressDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // telephoneDataGridViewTextBoxColumn
+            // 
+            this.telephoneDataGridViewTextBoxColumn.DataPropertyName = "Telephone";
+            this.telephoneDataGridViewTextBoxColumn.HeaderText = "Telephone";
+            this.telephoneDataGridViewTextBoxColumn.Name = "telephoneDataGridViewTextBoxColumn";
+            this.telephoneDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // debtDataGridViewTextBoxColumn
+            // 
+            this.debtDataGridViewTextBoxColumn.DataPropertyName = "Debt";
+            this.debtDataGridViewTextBoxColumn.HeaderText = "Debt";
+            this.debtDataGridViewTextBoxColumn.Name = "debtDataGridViewTextBoxColumn";
+            this.debtDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // initialDebtDataGridViewTextBoxColumn
+            // 
+            this.initialDebtDataGridViewTextBoxColumn.DataPropertyName = "InitialDebt";
+            this.initialDebtDataGridViewTextBoxColumn.HeaderText = "InitialDebt";
+            this.initialDebtDataGridViewTextBoxColumn.Name = "initialDebtDataGridViewTextBoxColumn";
+            this.initialDebtDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // initialDateDataGridViewTextBoxColumn
+            // 
+            this.initialDateDataGridViewTextBoxColumn.DataPropertyName = "InitialDate";
+            this.initialDateDataGridViewTextBoxColumn.HeaderText = "InitialDate";
+            this.initialDateDataGridViewTextBoxColumn.Name = "initialDateDataGridViewTextBoxColumn";
+            this.initialDateDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
             // agentsBindingSource
             // 
             this.agentsBindingSource.DataMember = "agents";
             this.agentsBindingSource.DataSource = this.storeDataSet;
-            this.agentsBindingSource.AddingNew += new System.ComponentModel.AddingNewEventHandler(this.agentsBindingSource_AddingNew);
-            this.agentsBindingSource.CurrentChanged += new System.EventHandler(this.agentsBindingSource_CurrentChanged);
+            this.agentsBindingSource.DataError += new System.Windows.Forms.BindingManagerDataErrorEventHandler(this.agentsBindingSource_DataError);
             // 
             // storeDataSet
             // 
@@ -194,6 +242,46 @@
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Edit";
             this.tabPage2.UseVisualStyleBackColor = true;
+            // 
+            // dateTimePicker1
+            // 
+            this.dateTimePicker1.Checked = false;
+            this.dateTimePicker1.CustomFormat = "mm-dd-yyyy";
+            this.dateTimePicker1.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.agentsBindingSource, "InitialDate", true, System.Windows.Forms.DataSourceUpdateMode.OnValidation, null, "d"));
+            this.dateTimePicker1.DataBindings.Add(new System.Windows.Forms.Binding("Value", this.agentsBindingSource, "InitialDate", true, System.Windows.Forms.DataSourceUpdateMode.OnValidation, null, "d"));
+            this.dateTimePicker1.Enabled = false;
+            this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dateTimePicker1.Location = new System.Drawing.Point(227, 69);
+            this.dateTimePicker1.Name = "dateTimePicker1";
+            this.dateTimePicker1.Size = new System.Drawing.Size(200, 20);
+            this.dateTimePicker1.TabIndex = 49;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(224, 50);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(59, 13);
+            this.label3.TabIndex = 48;
+            this.label3.Text = "Initial Date";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(24, 311);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(56, 13);
+            this.label2.TabIndex = 47;
+            this.label2.Text = "InitialDebt";
+            // 
+            // Txt_InialDebt
+            // 
+            this.Txt_InialDebt.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.agentsBindingSource, "InitialDebt", true));
+            this.Txt_InialDebt.Enabled = false;
+            this.Txt_InialDebt.Location = new System.Drawing.Point(24, 330);
+            this.Txt_InialDebt.Name = "Txt_InialDebt";
+            this.Txt_InialDebt.Size = new System.Drawing.Size(100, 20);
+            this.Txt_InialDebt.TabIndex = 46;
             // 
             // bindingNavigator1
             // 
@@ -397,95 +485,6 @@
             this.label4.Size = new System.Drawing.Size(67, 13);
             this.label4.TabIndex = 35;
             this.label4.Text = "Agent NAme";
-            // 
-            // agentIDDataGridViewTextBoxColumn
-            // 
-            this.agentIDDataGridViewTextBoxColumn.DataPropertyName = "AgentID";
-            this.agentIDDataGridViewTextBoxColumn.HeaderText = "AgentID";
-            this.agentIDDataGridViewTextBoxColumn.Name = "agentIDDataGridViewTextBoxColumn";
-            this.agentIDDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // agentNameDataGridViewTextBoxColumn
-            // 
-            this.agentNameDataGridViewTextBoxColumn.DataPropertyName = "AgentName";
-            this.agentNameDataGridViewTextBoxColumn.HeaderText = "AgentName";
-            this.agentNameDataGridViewTextBoxColumn.Name = "agentNameDataGridViewTextBoxColumn";
-            this.agentNameDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // addressDataGridViewTextBoxColumn
-            // 
-            this.addressDataGridViewTextBoxColumn.DataPropertyName = "Address";
-            this.addressDataGridViewTextBoxColumn.HeaderText = "Address";
-            this.addressDataGridViewTextBoxColumn.Name = "addressDataGridViewTextBoxColumn";
-            this.addressDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // telephoneDataGridViewTextBoxColumn
-            // 
-            this.telephoneDataGridViewTextBoxColumn.DataPropertyName = "Telephone";
-            this.telephoneDataGridViewTextBoxColumn.HeaderText = "Telephone";
-            this.telephoneDataGridViewTextBoxColumn.Name = "telephoneDataGridViewTextBoxColumn";
-            this.telephoneDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // debtDataGridViewTextBoxColumn
-            // 
-            this.debtDataGridViewTextBoxColumn.DataPropertyName = "Debt";
-            this.debtDataGridViewTextBoxColumn.HeaderText = "Debt";
-            this.debtDataGridViewTextBoxColumn.Name = "debtDataGridViewTextBoxColumn";
-            this.debtDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // initialDebtDataGridViewTextBoxColumn
-            // 
-            this.initialDebtDataGridViewTextBoxColumn.DataPropertyName = "InitialDebt";
-            this.initialDebtDataGridViewTextBoxColumn.HeaderText = "InitialDebt";
-            this.initialDebtDataGridViewTextBoxColumn.Name = "initialDebtDataGridViewTextBoxColumn";
-            this.initialDebtDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // initialDateDataGridViewTextBoxColumn
-            // 
-            this.initialDateDataGridViewTextBoxColumn.DataPropertyName = "InitialDate";
-            this.initialDateDataGridViewTextBoxColumn.HeaderText = "InitialDate";
-            this.initialDateDataGridViewTextBoxColumn.Name = "initialDateDataGridViewTextBoxColumn";
-            this.initialDateDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // Txt_InialDebt
-            // 
-            this.Txt_InialDebt.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.agentsBindingSource, "InitialDebt", true));
-            this.Txt_InialDebt.Enabled = false;
-            this.Txt_InialDebt.Location = new System.Drawing.Point(24, 330);
-            this.Txt_InialDebt.Name = "Txt_InialDebt";
-            this.Txt_InialDebt.Size = new System.Drawing.Size(100, 20);
-            this.Txt_InialDebt.TabIndex = 46;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(24, 311);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(56, 13);
-            this.label2.TabIndex = 47;
-            this.label2.Text = "InitialDebt";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(224, 50);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(59, 13);
-            this.label3.TabIndex = 48;
-            this.label3.Text = "Initial Date";
-            // 
-            // dateTimePicker1
-            // 
-            this.dateTimePicker1.Checked = false;
-            this.dateTimePicker1.CustomFormat = "mm-dd-yyyy";
-            this.dateTimePicker1.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.agentsBindingSource, "InitialDate", true, System.Windows.Forms.DataSourceUpdateMode.OnValidation, null, "d"));
-            this.dateTimePicker1.DataBindings.Add(new System.Windows.Forms.Binding("Value", this.agentsBindingSource, "InitialDate", true, System.Windows.Forms.DataSourceUpdateMode.OnValidation, null, "d"));
-            this.dateTimePicker1.Enabled = false;
-            this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimePicker1.Location = new System.Drawing.Point(227, 69);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(200, 20);
-            this.dateTimePicker1.TabIndex = 49;
             // 
             // Agents
             // 
