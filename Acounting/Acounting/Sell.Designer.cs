@@ -1,6 +1,6 @@
 ﻿namespace Acounting
 {
-    partial class ReturnSell
+    partial class Sell
     {
         /// <summary>
         /// Required designer variable.
@@ -78,7 +78,6 @@
             this.button2 = new System.Windows.Forms.Button();
             this.vaultBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.vaultTableAdapter = new Acounting.storeDataSetTableAdapters.vaultTableAdapter();
-            this.spendingsTableAdapter = new Acounting.storeDataSetTableAdapters.spendingsTableAdapter();
             this.salesDetailsTableAdapter = new Acounting.storeDataSetTableAdapters.SalesDetailsTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.billsBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.storeDataSet)).BeginInit();
@@ -508,15 +507,11 @@
             // 
             this.vaultTableAdapter.ClearBeforeFill = true;
             // 
-            // spendingsTableAdapter
-            // 
-            this.spendingsTableAdapter.ClearBeforeFill = true;
-            // 
             // salesDetailsTableAdapter
             // 
             this.salesDetailsTableAdapter.ClearBeforeFill = true;
             // 
-            // ReturnSell
+            // Sell
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -527,7 +522,7 @@
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
-            this.Name = "ReturnSell";
+            this.Name = "Sell";
             this.Text = "Sell";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.Sell_Load);
@@ -596,7 +591,6 @@
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.BindingSource vaultBindingSource;
         private storeDataSetTableAdapters.vaultTableAdapter vaultTableAdapter;
-        private storeDataSetTableAdapters.spendingsTableAdapter spendingsTableAdapter;
         private System.Windows.Forms.BindingSource salesDetailsBindingSource;
         private storeDataSetTableAdapters.SalesDetailsTableAdapter salesDetailsTableAdapter;
         private System.Windows.Forms.DataGridViewTextBoxColumn itemNameDataGridViewTextBoxColumn;
