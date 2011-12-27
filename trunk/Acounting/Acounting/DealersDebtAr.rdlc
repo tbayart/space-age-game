@@ -1,5 +1,172 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Report xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner" xmlns="http://schemas.microsoft.com/sqlserver/reporting/2008/01/reportdefinition">
+  <DataSources>
+    <DataSource Name="storeDataSet">
+      <ConnectionProperties>
+        <DataProvider>System.Data.DataSet</DataProvider>
+        <ConnectString>/* Local Connection */</ConnectString>
+      </ConnectionProperties>
+      <rd:DataSourceID>41384c1b-2b5c-464c-9cd4-721a078e4e22</rd:DataSourceID>
+    </DataSource>
+  </DataSources>
+  <DataSets>
+    <DataSet Name="DataSet1">
+      <Fields>
+        <Field Name="DealerID">
+          <DataField>DealerID</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="DealerName">
+          <DataField>DealerName</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Adress">
+          <DataField>Adress</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Telephone">
+          <DataField>Telephone</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Debt">
+          <DataField>Debt</DataField>
+          <rd:TypeName>System.Double</rd:TypeName>
+        </Field>
+        <Field Name="InitialDebt">
+          <DataField>InitialDebt</DataField>
+          <rd:TypeName>System.Double</rd:TypeName>
+        </Field>
+        <Field Name="InitialDate">
+          <DataField>InitialDate</DataField>
+          <rd:TypeName>System.DateTime</rd:TypeName>
+        </Field>
+      </Fields>
+      <Query>
+        <DataSourceName>storeDataSet</DataSourceName>
+        <CommandText>/* Local Query */</CommandText>
+      </Query>
+      <rd:DataSetInfo>
+        <rd:DataSetName>storeDataSet</rd:DataSetName>
+        <rd:SchemaPath>C:\Users\cxlick\Desktop\asdasd\storeDataSet.xsd</rd:SchemaPath>
+        <rd:TableName>dealers</rd:TableName>
+        <rd:TableAdapterFillMethod>Fill</rd:TableAdapterFillMethod>
+        <rd:TableAdapterGetDataMethod>GetData</rd:TableAdapterGetDataMethod>
+        <rd:TableAdapterName>dealersTableAdapter</rd:TableAdapterName>
+      </rd:DataSetInfo>
+    </DataSet>
+    <DataSet Name="DataSet2">
+      <Fields>
+        <Field Name="BillID">
+          <DataField>BillID</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="Dealers_DealerID">
+          <DataField>Dealers_DealerID</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="DocDate">
+          <DataField>DocDate</DataField>
+          <rd:TypeName>System.DateTime</rd:TypeName>
+        </Field>
+        <Field Name="TotalBill">
+          <DataField>TotalBill</DataField>
+          <rd:TypeName>System.Double</rd:TypeName>
+        </Field>
+        <Field Name="Paid">
+          <DataField>Paid</DataField>
+          <rd:TypeName>System.Double</rd:TypeName>
+        </Field>
+        <Field Name="Remaining">
+          <DataField>Remaining</DataField>
+          <rd:TypeName>System.Double</rd:TypeName>
+        </Field>
+      </Fields>
+      <Query>
+        <DataSourceName>storeDataSet</DataSourceName>
+        <CommandText>/* Local Query */</CommandText>
+      </Query>
+      <rd:DataSetInfo>
+        <rd:DataSetName>storeDataSet</rd:DataSetName>
+        <rd:SchemaPath>C:\Users\cxlick\Desktop\asdasd\storeDataSet.xsd</rd:SchemaPath>
+        <rd:TableName>purchasebills</rd:TableName>
+        <rd:TableAdapterFillMethod>Fill</rd:TableAdapterFillMethod>
+        <rd:TableAdapterGetDataMethod>GetData</rd:TableAdapterGetDataMethod>
+        <rd:TableAdapterName>purchasebillsTableAdapter</rd:TableAdapterName>
+      </rd:DataSetInfo>
+    </DataSet>
+    <DataSet Name="DataSet3">
+      <Fields>
+        <Field Name="BillID">
+          <DataField>BillID</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="Dealers_DealerID">
+          <DataField>Dealers_DealerID</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="DocDate">
+          <DataField>DocDate</DataField>
+          <rd:TypeName>System.DateTime</rd:TypeName>
+        </Field>
+        <Field Name="TotalBill">
+          <DataField>TotalBill</DataField>
+          <rd:TypeName>System.Double</rd:TypeName>
+        </Field>
+        <Field Name="Paid">
+          <DataField>Paid</DataField>
+          <rd:TypeName>System.Double</rd:TypeName>
+        </Field>
+        <Field Name="Remaining">
+          <DataField>Remaining</DataField>
+          <rd:TypeName>System.Double</rd:TypeName>
+        </Field>
+      </Fields>
+      <Query>
+        <DataSourceName>storeDataSet</DataSourceName>
+        <CommandText>/* Local Query */</CommandText>
+      </Query>
+      <rd:DataSetInfo>
+        <rd:DataSetName>storeDataSet</rd:DataSetName>
+        <rd:SchemaPath>C:\Users\cxlick\Desktop\asdasd\storeDataSet.xsd</rd:SchemaPath>
+        <rd:TableName>purchasebillsreturn</rd:TableName>
+        <rd:TableAdapterFillMethod>Fill</rd:TableAdapterFillMethod>
+        <rd:TableAdapterGetDataMethod>GetData</rd:TableAdapterGetDataMethod>
+        <rd:TableAdapterName>purchasebillsreturnTableAdapter</rd:TableAdapterName>
+      </rd:DataSetInfo>
+    </DataSet>
+    <DataSet Name="DataSet4">
+      <Fields>
+        <Field Name="PaymentID">
+          <DataField>PaymentID</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="DocDate">
+          <DataField>DocDate</DataField>
+          <rd:TypeName>System.DateTime</rd:TypeName>
+        </Field>
+        <Field Name="Ammount">
+          <DataField>Ammount</DataField>
+          <rd:TypeName>System.Double</rd:TypeName>
+        </Field>
+        <Field Name="Dealers_DealerID">
+          <DataField>Dealers_DealerID</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+      </Fields>
+      <Query>
+        <DataSourceName>storeDataSet</DataSourceName>
+        <CommandText>/* Local Query */</CommandText>
+      </Query>
+      <rd:DataSetInfo>
+        <rd:DataSetName>storeDataSet</rd:DataSetName>
+        <rd:SchemaPath>C:\Users\cxlick\Desktop\asdasd\storeDataSet.xsd</rd:SchemaPath>
+        <rd:TableName>dealerpayments</rd:TableName>
+        <rd:TableAdapterFillMethod>Fill</rd:TableAdapterFillMethod>
+        <rd:TableAdapterGetDataMethod>GetData</rd:TableAdapterGetDataMethod>
+        <rd:TableAdapterName>dealerpaymentsTableAdapter</rd:TableAdapterName>
+      </rd:DataSetInfo>
+    </DataSet>
+  </DataSets>
   <Body>
     <ReportItems>
       <Tablix Name="Tablix1">
@@ -189,7 +356,7 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>أسم العميل</Value>
+                              <Value>أسم المورد</Value>
                               <Style>
                                 <FontFamily>Tahoma</FontFamily>
                                 <FontSize>11pt</FontSize>
@@ -346,13 +513,6 @@
                                 <Color>#4d4d4d</Color>
                               </Style>
                             </TextRun>
-                            <TextRun>
-                              <Value>ذ</Value>
-                              <Style>
-                                <FontFamily>Tahoma</FontFamily>
-                                <Color>#4d4d4d</Color>
-                              </Style>
-                            </TextRun>
                           </TextRuns>
                           <Style>
                             <TextAlign>Right</TextAlign>
@@ -410,14 +570,14 @@
                 </TablixCell>
                 <TablixCell>
                   <CellContents>
-                    <Textbox Name="AgentName1">
+                    <Textbox Name="DealerName">
                       <CanGrow>true</CanGrow>
                       <KeepTogether>true</KeepTogether>
                       <Paragraphs>
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>=Fields!AgentName.Value</Value>
+                              <Value>=Fields!DealerName.Value</Value>
                               <Style>
                                 <FontFamily>Tahoma</FontFamily>
                                 <Color>#4d4d4d</Color>
@@ -429,7 +589,7 @@
                           </Style>
                         </Paragraph>
                       </Paragraphs>
-                      <rd:DefaultName>AgentName1</rd:DefaultName>
+                      <rd:DefaultName>DealerName</rd:DefaultName>
                       <Style>
                         <Border>
                           <Color>#e5e5e5</Color>
@@ -445,14 +605,14 @@
                 </TablixCell>
                 <TablixCell>
                   <CellContents>
-                    <Textbox Name="AgentID1">
+                    <Textbox Name="DealerID">
                       <CanGrow>true</CanGrow>
                       <KeepTogether>true</KeepTogether>
                       <Paragraphs>
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>=Fields!AgentID.Value</Value>
+                              <Value>=Fields!DealerID.Value</Value>
                               <Style>
                                 <FontFamily>Tahoma</FontFamily>
                                 <Color>#4d4d4d</Color>
@@ -464,7 +624,7 @@
                           </Style>
                         </Paragraph>
                       </Paragraphs>
-                      <rd:DefaultName>AgentID1</rd:DefaultName>
+                      <rd:DefaultName>DealerID</rd:DefaultName>
                       <Style>
                         <Border>
                           <Color>#e5e5e5</Color>
@@ -627,7 +787,7 @@
           <Paragraph>
             <TextRuns>
               <TextRun>
-                <Value>كشف االعميل</Value>
+                <Value>كشف المورد</Value>
                 <Style>
                   <FontFamily>Tahoma</FontFamily>
                   <FontSize>11pt</FontSize>
@@ -688,7 +848,7 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>فواتير بيع</Value>
+                              <Value>فواتير شراء</Value>
                               <Style>
                                 <FontFamily>Tahoma</FontFamily>
                                 <FontSize>11pt</FontSize>
@@ -1455,7 +1615,7 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>فواتير بيع مرجع</Value>
+                              <Value>فواتير شراء مرجع</Value>
                               <Style>
                                 <FontStyle>Normal</FontStyle>
                                 <FontFamily>Tahoma</FontFamily>
@@ -2242,14 +2402,14 @@
               <TablixCells>
                 <TablixCell>
                   <CellContents>
-                    <Textbox Name="Amount">
+                    <Textbox Name="Ammount">
                       <CanGrow>true</CanGrow>
                       <KeepTogether>true</KeepTogether>
                       <Paragraphs>
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>=Fields!Amount.Value</Value>
+                              <Value>=Fields!Ammount.Value</Value>
                               <Style />
                             </TextRun>
                           </TextRuns>
@@ -2258,7 +2418,7 @@
                           </Style>
                         </Paragraph>
                       </Paragraphs>
-                      <rd:DefaultName>Amount</rd:DefaultName>
+                      <rd:DefaultName>Ammount</rd:DefaultName>
                       <Style>
                         <Border>
                           <Color>LightGrey</Color>
@@ -2306,14 +2466,14 @@
                 </TablixCell>
                 <TablixCell>
                   <CellContents>
-                    <Textbox Name="ID">
+                    <Textbox Name="PaymentID">
                       <CanGrow>true</CanGrow>
                       <KeepTogether>true</KeepTogether>
                       <Paragraphs>
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>=Fields!ID.Value</Value>
+                              <Value>=Fields!PaymentID.Value</Value>
                               <Style />
                             </TextRun>
                           </TextRuns>
@@ -2322,7 +2482,7 @@
                           </Style>
                         </Paragraph>
                       </Paragraphs>
-                      <rd:DefaultName>ID</rd:DefaultName>
+                      <rd:DefaultName>PaymentID</rd:DefaultName>
                       <Style>
                         <Border>
                           <Color>LightGrey</Color>
