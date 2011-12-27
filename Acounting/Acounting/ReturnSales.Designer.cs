@@ -42,6 +42,8 @@
             this.Txt_AgentID = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
             this.Cmb_AgentName = new System.Windows.Forms.ComboBox();
+            this.agentsBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.storeDataSet = new Acounting.storeDataSet();
             this.label9 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
@@ -56,29 +58,35 @@
             this.Txt_SellPrice = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.Cmb_ItemName = new System.Windows.Forms.ComboBox();
+            this.itemsBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.Txt_BillID = new System.Windows.Forms.TextBox();
             this.button2 = new System.Windows.Forms.Button();
-            this.storeDataSet = new Acounting.storeDataSet();
-            this.itemsBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.itemsTableAdapter = new Acounting.storeDataSetTableAdapters.itemsTableAdapter();
-            this.agentsBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.agentsTableAdapter = new Acounting.storeDataSetTableAdapters.agentsTableAdapter();
             this.billsreturnBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.billsreturnTableAdapter = new Acounting.storeDataSetTableAdapters.billsreturnTableAdapter();
             this.salesitemsreturnBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.salesitemsreturnTableAdapter = new Acounting.storeDataSetTableAdapters.salesitemsreturnTableAdapter();
+            this.vaultBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.vaultTableAdapter = new Acounting.storeDataSetTableAdapters.vaultTableAdapter();
+            this.salesReturnDetailsBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.salesReturnDetailsTableAdapter = new Acounting.storeDataSetTableAdapters.SalesReturnDetailsTableAdapter();
+            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             this.groupBox4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.groupBox3.SuspendLayout();
-            this.groupBox2.SuspendLayout();
-            this.groupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.storeDataSet)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.itemsBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.agentsBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.storeDataSet)).BeginInit();
+            this.groupBox2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.itemsBindingSource)).BeginInit();
+            this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.billsreturnBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.salesitemsreturnBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.vaultBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.salesReturnDetailsBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
             // 
             // label8
@@ -180,6 +188,7 @@
             this.Txt_Paid.Size = new System.Drawing.Size(97, 20);
             this.Txt_Paid.TabIndex = 5;
             this.Txt_Paid.Text = "0";
+            this.Txt_Paid.TextChanged += new System.EventHandler(this.Txt_Paid_TextChanged);
             // 
             // Txt_AgentID
             // 
@@ -210,6 +219,17 @@
             this.Cmb_AgentName.Size = new System.Drawing.Size(178, 21);
             this.Cmb_AgentName.TabIndex = 4;
             this.Cmb_AgentName.ValueMember = "AgentName";
+            this.Cmb_AgentName.TextChanged += new System.EventHandler(this.Cmb_AgentName_TextChanged);
+            // 
+            // agentsBindingSource
+            // 
+            this.agentsBindingSource.DataMember = "agents";
+            this.agentsBindingSource.DataSource = this.storeDataSet;
+            // 
+            // storeDataSet
+            // 
+            this.storeDataSet.DataSetName = "storeDataSet";
+            this.storeDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // label9
             // 
@@ -237,15 +257,16 @@
             this.button1.TabIndex = 12;
             this.button1.Text = "Add To Bill";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // label5
             // 
             this.label5.AutoSize = true;
             this.label5.Location = new System.Drawing.Point(453, 25);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(81, 16);
+            this.label5.Size = new System.Drawing.Size(97, 16);
             this.label5.TabIndex = 6;
-            this.label5.Text = "Units To Sell";
+            this.label5.Text = "Units To Return";
             // 
             // Txt_ToSell
             // 
@@ -320,7 +341,7 @@
             // 
             // Txt_SellPrice
             // 
-            this.Txt_SellPrice.Location = new System.Drawing.Point(544, 44);
+            this.Txt_SellPrice.Location = new System.Drawing.Point(559, 44);
             this.Txt_SellPrice.Name = "Txt_SellPrice";
             this.Txt_SellPrice.Size = new System.Drawing.Size(61, 22);
             this.Txt_SellPrice.TabIndex = 3;
@@ -328,11 +349,11 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(541, 25);
+            this.label6.Location = new System.Drawing.Point(556, 25);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(81, 16);
+            this.label6.Size = new System.Drawing.Size(80, 16);
             this.label6.TabIndex = 8;
-            this.label6.Text = "Selling Price";
+            this.label6.Text = "Return Price";
             // 
             // Cmb_ItemName
             // 
@@ -345,6 +366,12 @@
             this.Cmb_ItemName.Name = "Cmb_ItemName";
             this.Cmb_ItemName.Size = new System.Drawing.Size(178, 24);
             this.Cmb_ItemName.TabIndex = 1;
+            this.Cmb_ItemName.TextChanged += new System.EventHandler(this.Cmb_ItemName_TextChanged);
+            // 
+            // itemsBindingSource
+            // 
+            this.itemsBindingSource.DataMember = "items";
+            this.itemsBindingSource.DataSource = this.storeDataSet;
             // 
             // label1
             // 
@@ -384,25 +411,11 @@
             this.button2.TabIndex = 15;
             this.button2.Text = "Save";
             this.button2.UseVisualStyleBackColor = true;
-            // 
-            // storeDataSet
-            // 
-            this.storeDataSet.DataSetName = "storeDataSet";
-            this.storeDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // itemsBindingSource
-            // 
-            this.itemsBindingSource.DataMember = "items";
-            this.itemsBindingSource.DataSource = this.storeDataSet;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // itemsTableAdapter
             // 
             this.itemsTableAdapter.ClearBeforeFill = true;
-            // 
-            // agentsBindingSource
-            // 
-            this.agentsBindingSource.DataMember = "agents";
-            this.agentsBindingSource.DataSource = this.storeDataSet;
             // 
             // agentsTableAdapter
             // 
@@ -426,6 +439,28 @@
             // 
             this.salesitemsreturnTableAdapter.ClearBeforeFill = true;
             // 
+            // vaultBindingSource
+            // 
+            this.vaultBindingSource.DataMember = "vault";
+            this.vaultBindingSource.DataSource = this.storeDataSet;
+            // 
+            // vaultTableAdapter
+            // 
+            this.vaultTableAdapter.ClearBeforeFill = true;
+            // 
+            // salesReturnDetailsBindingSource
+            // 
+            this.salesReturnDetailsBindingSource.DataMember = "SalesReturnDetails";
+            this.salesReturnDetailsBindingSource.DataSource = this.storeDataSet;
+            // 
+            // salesReturnDetailsTableAdapter
+            // 
+            this.salesReturnDetailsTableAdapter.ClearBeforeFill = true;
+            // 
+            // errorProvider1
+            // 
+            this.errorProvider1.ContainerControl = this;
+            // 
             // ReturnSales
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -444,15 +479,18 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.agentsBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.storeDataSet)).EndInit();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.itemsBindingSource)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.storeDataSet)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.itemsBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.agentsBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.billsreturnBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.salesitemsreturnBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.vaultBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.salesReturnDetailsBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -499,5 +537,10 @@
         private storeDataSetTableAdapters.billsreturnTableAdapter billsreturnTableAdapter;
         private System.Windows.Forms.BindingSource salesitemsreturnBindingSource;
         private storeDataSetTableAdapters.salesitemsreturnTableAdapter salesitemsreturnTableAdapter;
+        private System.Windows.Forms.BindingSource vaultBindingSource;
+        private storeDataSetTableAdapters.vaultTableAdapter vaultTableAdapter;
+        private System.Windows.Forms.BindingSource salesReturnDetailsBindingSource;
+        private storeDataSetTableAdapters.SalesReturnDetailsTableAdapter salesReturnDetailsTableAdapter;
+        private System.Windows.Forms.ErrorProvider errorProvider1;
     }
 }

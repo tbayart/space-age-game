@@ -203,5 +203,12 @@ namespace Acounting
             returnbuy.MdiParent = this;
             returnbuy.Show();
         }
+
+        private void returnSaleToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ReturnSales returnsales = new ReturnSales();
+            returnsales.MdiParent = this;
+            returnsales.Show();
+        }
     }
 }

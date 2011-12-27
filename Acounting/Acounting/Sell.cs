@@ -285,6 +285,7 @@ namespace Acounting
                 billrow[3] = totalbill;
                 billrow[4] = paid;
                 billrow[5] = remaining;
+
                 storeDataSet.bills.Rows.Add(billrow);
 
 

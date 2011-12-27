@@ -42,10 +42,11 @@
             this.sellToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.paymentsToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.vaultToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.returnBuyToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.reportsToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.agentDebtToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.itemsTableAdapter = new Acounting.storeDataSetTableAdapters.itemsTableAdapter();
-            this.returnBuyToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.returnSaleToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.itemsBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.storeDataSet)).BeginInit();
             this.menuStrip1.SuspendLayout();
@@ -119,7 +120,8 @@
             this.sellToolStripMenuItem1,
             this.paymentsToolStripMenuItem1,
             this.vaultToolStripMenuItem1,
-            this.returnBuyToolStripMenuItem});
+            this.returnBuyToolStripMenuItem,
+            this.returnSaleToolStripMenuItem});
             this.storageToolStripMenuItem.Name = "storageToolStripMenuItem";
             this.storageToolStripMenuItem.Size = new System.Drawing.Size(59, 20);
             this.storageToolStripMenuItem.Text = "Storage";
@@ -152,6 +154,13 @@
             this.vaultToolStripMenuItem1.Text = "Vault";
             this.vaultToolStripMenuItem1.Click += new System.EventHandler(this.vaultToolStripMenuItem1_Click);
             // 
+            // returnBuyToolStripMenuItem
+            // 
+            this.returnBuyToolStripMenuItem.Name = "returnBuyToolStripMenuItem";
+            this.returnBuyToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.returnBuyToolStripMenuItem.Text = "Return Buy";
+            this.returnBuyToolStripMenuItem.Click += new System.EventHandler(this.returnBuyToolStripMenuItem_Click);
+            // 
             // reportsToolStripMenuItem1
             // 
             this.reportsToolStripMenuItem1.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -171,12 +180,12 @@
             // 
             this.itemsTableAdapter.ClearBeforeFill = true;
             // 
-            // returnBuyToolStripMenuItem
+            // returnSaleToolStripMenuItem
             // 
-            this.returnBuyToolStripMenuItem.Name = "returnBuyToolStripMenuItem";
-            this.returnBuyToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
-            this.returnBuyToolStripMenuItem.Text = "Return Buy";
-            this.returnBuyToolStripMenuItem.Click += new System.EventHandler(this.returnBuyToolStripMenuItem_Click);
+            this.returnSaleToolStripMenuItem.Name = "returnSaleToolStripMenuItem";
+            this.returnSaleToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.returnSaleToolStripMenuItem.Text = "Return Sale";
+            this.returnSaleToolStripMenuItem.Click += new System.EventHandler(this.returnSaleToolStripMenuItem_Click);
             // 
             // Main
             // 
@@ -218,6 +227,7 @@
         private System.Windows.Forms.ToolStripMenuItem agentDebtToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem staticAssetsToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem returnBuyToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem returnSaleToolStripMenuItem;
     }
 }
 
