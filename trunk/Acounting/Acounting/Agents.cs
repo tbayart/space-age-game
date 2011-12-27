@@ -50,16 +50,7 @@ namespace Acounting
             }
         }
 
-        private void agentsBindingSource_CurrentChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void agentsBindingSource_AddingNew(object sender, AddingNewEventArgs e)
-        {
-            
-        }
-
+ 
         private void Txt_Debt_TextChanged(object sender, EventArgs e)
         {
             if (canchange)
@@ -72,6 +63,11 @@ namespace Acounting
         private void bindingNavigatorMovePreviousItem_Click(object sender, EventArgs e)
         {
             canchange = false;
+        }
+
+        private void agentsBindingSource_DataError(object sender, BindingManagerDataErrorEventArgs e)
+        {
+            MessageBox.Show(e.Exception.Message);
         }
 
  

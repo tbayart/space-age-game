@@ -154,14 +154,7 @@ namespace Acounting
             }
 
             double originalqty;
-            double.TryParse(itemrow["Qty"].ToString(), out originalqty);
-
-            if (sellqty>originalqty)
-            {
-                errorProvider1.SetError(Txt_ToSell, "Not enough items in stock");
-                Txt_ToSell.Focus();
-                return;
-            }
+            
 
 
             double sellprice;
