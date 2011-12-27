@@ -206,6 +206,7 @@
     <EmbeddedResource Include="Dealers.resx">
       <DependentUpon>Dealers.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="DealersDebtAr.rdlc" />
     <EmbeddedResource Include="Main.resx">
       <DependentUpon>Main.cs</DependentUpon>
     </EmbeddedResource>
