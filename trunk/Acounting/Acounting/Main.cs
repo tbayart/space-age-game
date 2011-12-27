@@ -170,7 +170,7 @@ namespace Acounting
 
         private void sellToolStripMenuItem1_Click(object sender, EventArgs e)
         {
-            ReturnSell sell = new ReturnSell();
+            Sell sell = new Sell();
             sell.MdiParent = this;
             sell.Show();
         }

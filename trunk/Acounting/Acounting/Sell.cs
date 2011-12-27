@@ -10,7 +10,7 @@ using MySql.Data.MySqlClient;
 using   System.Configuration;
 namespace Acounting
 {
-    public partial class ReturnSell : Form
+    public partial class Sell : Form
     {
         double totalbill = 0;
         int billID;
@@ -23,7 +23,7 @@ namespace Acounting
   
 
 
-        public ReturnSell()
+        public Sell()
         {
             InitializeComponent();
         }
@@ -31,8 +31,7 @@ namespace Acounting
         private void Sell_Load(object sender, EventArgs e)
         {
             // TODO: This line of code loads data into the 'storeDataSet.SalesDetails' table. You can move, or remove it, as needed.
-            this.salesDetailsTableAdapter.Fill(this.storeDataSet.SalesDetails);     
-            this.spendingsTableAdapter.Fill(this.storeDataSet.spendings);
+            this.salesDetailsTableAdapter.Fill(this.storeDataSet.SalesDetails);              
             this.vaultTableAdapter.Fill(this.storeDataSet.vault);
             this.salesitemsTableAdapter.Fill(this.storeDataSet.salesitems);
             this.billsTableAdapter.Fill(this.storeDataSet.bills);
