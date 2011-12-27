@@ -31,20 +31,24 @@
             this.components = new System.ComponentModel.Container();
             Microsoft.Reporting.WinForms.ReportDataSource reportDataSource1 = new Microsoft.Reporting.WinForms.ReportDataSource();
             Microsoft.Reporting.WinForms.ReportDataSource reportDataSource2 = new Microsoft.Reporting.WinForms.ReportDataSource();
+            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource3 = new Microsoft.Reporting.WinForms.ReportDataSource();
             this.agentsBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.storeDataSet = new Acounting.storeDataSet();
+            this.billsBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage3 = new System.Windows.Forms.TabPage();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.reportViewer3 = new Microsoft.Reporting.WinForms.ReportViewer();
             this.agentsTableAdapter = new Acounting.storeDataSetTableAdapters.agentsTableAdapter();
-            this.billsBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.billsTableAdapter = new Acounting.storeDataSetTableAdapters.billsTableAdapter();
+            this.billsreturnBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.billsreturnTableAdapter = new Acounting.storeDataSetTableAdapters.billsreturnTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.agentsBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.storeDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.billsBindingSource)).BeginInit();
             this.tabControl1.SuspendLayout();
             this.tabPage3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.billsBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.billsreturnBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // agentsBindingSource
@@ -56,6 +60,11 @@
             // 
             this.storeDataSet.DataSetName = "storeDataSet";
             this.storeDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // billsBindingSource
+            // 
+            this.billsBindingSource.DataMember = "bills";
+            this.billsBindingSource.DataSource = this.storeDataSet;
             // 
             // tabControl1
             // 
@@ -99,26 +108,34 @@
             reportDataSource1.Value = this.agentsBindingSource;
             reportDataSource2.Name = "DataSet2";
             reportDataSource2.Value = this.billsBindingSource;
+            reportDataSource3.Name = "DataSet3";
+            reportDataSource3.Value = this.billsreturnBindingSource;
             this.reportViewer3.LocalReport.DataSources.Add(reportDataSource1);
             this.reportViewer3.LocalReport.DataSources.Add(reportDataSource2);
+            this.reportViewer3.LocalReport.DataSources.Add(reportDataSource3);
             this.reportViewer3.LocalReport.ReportEmbeddedResource = "Acounting.AgentsDebtAr.rdlc";
             this.reportViewer3.Location = new System.Drawing.Point(3, 3);
             this.reportViewer3.Name = "reportViewer3";
             this.reportViewer3.Size = new System.Drawing.Size(848, 488);
             this.reportViewer3.TabIndex = 0;
+            this.reportViewer3.Load += new System.EventHandler(this.reportViewer3_Load);
             // 
             // agentsTableAdapter
             // 
             this.agentsTableAdapter.ClearBeforeFill = true;
             // 
-            // billsBindingSource
-            // 
-            this.billsBindingSource.DataMember = "bills";
-            this.billsBindingSource.DataSource = this.storeDataSet;
-            // 
             // billsTableAdapter
             // 
             this.billsTableAdapter.ClearBeforeFill = true;
+            // 
+            // billsreturnBindingSource
+            // 
+            this.billsreturnBindingSource.DataMember = "billsreturn";
+            this.billsreturnBindingSource.DataSource = this.storeDataSet;
+            // 
+            // billsreturnTableAdapter
+            // 
+            this.billsreturnTableAdapter.ClearBeforeFill = true;
             // 
             // Reports
             // 
@@ -131,9 +148,10 @@
             this.Load += new System.EventHandler(this.Reports_Load);
             ((System.ComponentModel.ISupportInitialize)(this.agentsBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.storeDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.billsBindingSource)).EndInit();
             this.tabControl1.ResumeLayout(false);
             this.tabPage3.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.billsBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.billsreturnBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -149,5 +167,7 @@
         private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.BindingSource billsBindingSource;
         private storeDataSetTableAdapters.billsTableAdapter billsTableAdapter;
+        private System.Windows.Forms.BindingSource billsreturnBindingSource;
+        private storeDataSetTableAdapters.billsreturnTableAdapter billsreturnTableAdapter;
     }
 }

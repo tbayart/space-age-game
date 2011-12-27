@@ -18,6 +18,8 @@ namespace Acounting
 
         private void Reports_Load(object sender, EventArgs e)
         {
+            // TODO: This line of code loads data into the 'storeDataSet.billsreturn' table. You can move, or remove it, as needed.
+            this.billsreturnTableAdapter.Fill(this.storeDataSet.billsreturn);
             // TODO: This line of code loads data into the 'storeDataSet.bills' table. You can move, or remove it, as needed.
             this.billsTableAdapter.Fill(this.storeDataSet.bills);
             // TODO: This line of code loads data into the 'storeDataSet.agents' table. You can move, or remove it, as needed.
@@ -44,6 +46,7 @@ namespace Acounting
                 //filter the data
                 billsBindingSource.Filter = "Agents_AgentID = '" + agentid.ToString() + "'";
                 agentsBindingSource.Filter = "AgentName = '" + comboBox1.Text + "'";
+                billsreturnBindingSource.Filter = "Agents_AgentID = '" + agentid.ToString() + "'";
                 //refresh the report
                 reportViewer3.RefreshReport();
             }
@@ -51,6 +54,11 @@ namespace Acounting
             {
                 MessageBox.Show(ee.Message);   
             }
+        }
+
+        private void reportViewer3_Load(object sender, EventArgs e)
+        {
+
         }
  
     }

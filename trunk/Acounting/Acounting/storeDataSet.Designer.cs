@@ -86,13 +86,13 @@ namespace Acounting {
         
         private global::System.Data.DataRelation relationfk_purchasesitems_purchasebills1;
         
-        private global::System.Data.DataRelation relationfk_purchasesitems_items10;
-        
-        private global::System.Data.DataRelation relationfk_purchasesitemsreturn_purchasebillsreturn1;
-        
         private global::System.Data.DataRelation relationfk_salesitems_bills1;
         
         private global::System.Data.DataRelation relationfk_salesitems_items1;
+        
+        private global::System.Data.DataRelation relationfk_purchasesitems_items10;
+        
+        private global::System.Data.DataRelation relationfk_purchasesitemsreturn_purchasebillsreturn1;
         
         private global::System.Data.DataRelation relationfk_salesitems_items10;
         
@@ -758,10 +758,10 @@ namespace Acounting {
             this.relationfk_purchasebills_dealers10 = this.Relations["fk_purchasebills_dealers10"];
             this.relationfk_purchasesitems_items1 = this.Relations["fk_purchasesitems_items1"];
             this.relationfk_purchasesitems_purchasebills1 = this.Relations["fk_purchasesitems_purchasebills1"];
-            this.relationfk_purchasesitems_items10 = this.Relations["fk_purchasesitems_items10"];
-            this.relationfk_purchasesitemsreturn_purchasebillsreturn1 = this.Relations["fk_purchasesitemsreturn_purchasebillsreturn1"];
             this.relationfk_salesitems_bills1 = this.Relations["fk_salesitems_bills1"];
             this.relationfk_salesitems_items1 = this.Relations["fk_salesitems_items1"];
+            this.relationfk_purchasesitems_items10 = this.Relations["fk_purchasesitems_items10"];
+            this.relationfk_purchasesitemsreturn_purchasebillsreturn1 = this.Relations["fk_purchasesitemsreturn_purchasebillsreturn1"];
             this.relationfk_salesitems_items10 = this.Relations["fk_salesitems_items10"];
             this.relationfk_salesitemsreturn_billsreturn1 = this.Relations["fk_salesitemsreturn_billsreturn1"];
         }
@@ -852,14 +852,6 @@ namespace Acounting {
                         this.tablepurchasebills.BillIDColumn}, new global::System.Data.DataColumn[] {
                         this.tablepurchasesitems.PurchaseBills_BillIDColumn}, false);
             this.Relations.Add(this.relationfk_purchasesitems_purchasebills1);
-            this.relationfk_purchasesitems_items10 = new global::System.Data.DataRelation("fk_purchasesitems_items10", new global::System.Data.DataColumn[] {
-                        this.tableitems.ItemIDColumn}, new global::System.Data.DataColumn[] {
-                        this.tablepurchasesitemsreturn.ItemIDColumn}, false);
-            this.Relations.Add(this.relationfk_purchasesitems_items10);
-            this.relationfk_purchasesitemsreturn_purchasebillsreturn1 = new global::System.Data.DataRelation("fk_purchasesitemsreturn_purchasebillsreturn1", new global::System.Data.DataColumn[] {
-                        this.tablepurchasebillsreturn.BillIDColumn}, new global::System.Data.DataColumn[] {
-                        this.tablepurchasesitemsreturn.PurchaseBillsreturn_BillIDColumn}, false);
-            this.Relations.Add(this.relationfk_purchasesitemsreturn_purchasebillsreturn1);
             this.relationfk_salesitems_bills1 = new global::System.Data.DataRelation("fk_salesitems_bills1", new global::System.Data.DataColumn[] {
                         this.tablebills.BillIDColumn}, new global::System.Data.DataColumn[] {
                         this.tablesalesitems.Bills_BillIDColumn}, false);
@@ -868,6 +860,14 @@ namespace Acounting {
                         this.tableitems.ItemIDColumn}, new global::System.Data.DataColumn[] {
                         this.tablesalesitems.ItemIDColumn}, false);
             this.Relations.Add(this.relationfk_salesitems_items1);
+            this.relationfk_purchasesitems_items10 = new global::System.Data.DataRelation("fk_purchasesitems_items10", new global::System.Data.DataColumn[] {
+                        this.tableitems.ItemIDColumn}, new global::System.Data.DataColumn[] {
+                        this.tablepurchasesitemsreturn.ItemIDColumn}, false);
+            this.Relations.Add(this.relationfk_purchasesitems_items10);
+            this.relationfk_purchasesitemsreturn_purchasebillsreturn1 = new global::System.Data.DataRelation("fk_purchasesitemsreturn_purchasebillsreturn1", new global::System.Data.DataColumn[] {
+                        this.tablepurchasebillsreturn.BillIDColumn}, new global::System.Data.DataColumn[] {
+                        this.tablepurchasesitemsreturn.PurchaseBillsreturn_BillIDColumn}, false);
+            this.Relations.Add(this.relationfk_purchasesitemsreturn_purchasebillsreturn1);
             this.relationfk_salesitems_items10 = new global::System.Data.DataRelation("fk_salesitems_items10", new global::System.Data.DataColumn[] {
                         this.tableitems.ItemIDColumn}, new global::System.Data.DataColumn[] {
                         this.tablesalesitemsreturn.ItemIDColumn}, false);
@@ -4780,9 +4780,9 @@ namespace Acounting {
             
             private global::System.Data.DataColumn columnID;
             
-            private global::System.Data.DataColumn columnItemID;
-            
             private global::System.Data.DataColumn columnPurchaseBillsreturn_BillID;
+            
+            private global::System.Data.DataColumn columnItemID;
             
             private global::System.Data.DataColumn columnQty;
             
@@ -4833,17 +4833,17 @@ namespace Acounting {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn ItemIDColumn {
+            public global::System.Data.DataColumn PurchaseBillsreturn_BillIDColumn {
                 get {
-                    return this.columnItemID;
+                    return this.columnPurchaseBillsreturn_BillID;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn PurchaseBillsreturn_BillIDColumn {
+            public global::System.Data.DataColumn ItemIDColumn {
                 get {
-                    return this.columnPurchaseBillsreturn_BillID;
+                    return this.columnItemID;
                 }
             }
             
@@ -4908,7 +4908,7 @@ namespace Acounting {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public purchasesitemsreturnRow AddpurchasesitemsreturnRow(uint ID, itemsRow parentitemsRowByfk_purchasesitems_items10, purchasebillsreturnRow parentpurchasebillsreturnRowByfk_purchasesitemsreturn_purchasebillsreturn1, double Qty, double Cost, double Total) {
+            public purchasesitemsreturnRow AddpurchasesitemsreturnRow(uint ID, purchasebillsreturnRow parentpurchasebillsreturnRowByfk_purchasesitemsreturn_purchasebillsreturn1, itemsRow parentitemsRowByfk_purchasesitems_items10, double Qty, double Cost, double Total) {
                 purchasesitemsreturnRow rowpurchasesitemsreturnRow = ((purchasesitemsreturnRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         ID,
@@ -4917,11 +4917,11 @@ namespace Acounting {
                         Qty,
                         Cost,
                         Total};
-                if ((parentitemsRowByfk_purchasesitems_items10 != null)) {
-                    columnValuesArray[1] = parentitemsRowByfk_purchasesitems_items10[0];
-                }
                 if ((parentpurchasebillsreturnRowByfk_purchasesitemsreturn_purchasebillsreturn1 != null)) {
-                    columnValuesArray[2] = parentpurchasebillsreturnRowByfk_purchasesitemsreturn_purchasebillsreturn1[0];
+                    columnValuesArray[1] = parentpurchasebillsreturnRowByfk_purchasesitemsreturn_purchasebillsreturn1[0];
+                }
+                if ((parentitemsRowByfk_purchasesitems_items10 != null)) {
+                    columnValuesArray[2] = parentitemsRowByfk_purchasesitems_items10[0];
                 }
                 rowpurchasesitemsreturnRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowpurchasesitemsreturnRow);
@@ -4953,8 +4953,8 @@ namespace Acounting {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             internal void InitVars() {
                 this.columnID = base.Columns["ID"];
-                this.columnItemID = base.Columns["ItemID"];
                 this.columnPurchaseBillsreturn_BillID = base.Columns["PurchaseBillsreturn_BillID"];
+                this.columnItemID = base.Columns["ItemID"];
                 this.columnQty = base.Columns["Qty"];
                 this.columnCost = base.Columns["Cost"];
                 this.columnTotal = base.Columns["Total"];
@@ -4965,10 +4965,10 @@ namespace Acounting {
             private void InitClass() {
                 this.columnID = new global::System.Data.DataColumn("ID", typeof(uint), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnID);
-                this.columnItemID = new global::System.Data.DataColumn("ItemID", typeof(int), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnItemID);
                 this.columnPurchaseBillsreturn_BillID = new global::System.Data.DataColumn("PurchaseBillsreturn_BillID", typeof(int), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnPurchaseBillsreturn_BillID);
+                this.columnItemID = new global::System.Data.DataColumn("ItemID", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnItemID);
                 this.columnQty = new global::System.Data.DataColumn("Qty", typeof(double), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnQty);
                 this.columnCost = new global::System.Data.DataColumn("Cost", typeof(double), null, global::System.Data.MappingType.Element);
@@ -4979,8 +4979,8 @@ namespace Acounting {
                                 this.columnID}, true));
                 this.columnID.AllowDBNull = false;
                 this.columnID.Unique = true;
-                this.columnItemID.AllowDBNull = false;
                 this.columnPurchaseBillsreturn_BillID.AllowDBNull = false;
+                this.columnItemID.AllowDBNull = false;
                 this.columnQty.AllowDBNull = false;
                 this.columnCost.AllowDBNull = false;
                 this.columnTotal.AllowDBNull = false;
@@ -5488,9 +5488,9 @@ namespace Acounting {
             
             private global::System.Data.DataColumn columnID;
             
-            private global::System.Data.DataColumn columnItemID;
-            
             private global::System.Data.DataColumn columnBillsReturn_BillID;
+            
+            private global::System.Data.DataColumn columnItemID;
             
             private global::System.Data.DataColumn columnQty;
             
@@ -5543,17 +5543,17 @@ namespace Acounting {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn ItemIDColumn {
+            public global::System.Data.DataColumn BillsReturn_BillIDColumn {
                 get {
-                    return this.columnItemID;
+                    return this.columnBillsReturn_BillID;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn BillsReturn_BillIDColumn {
+            public global::System.Data.DataColumn ItemIDColumn {
                 get {
-                    return this.columnBillsReturn_BillID;
+                    return this.columnItemID;
                 }
             }
             
@@ -5626,7 +5626,7 @@ namespace Acounting {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public salesitemsreturnRow AddsalesitemsreturnRow(uint ID, itemsRow parentitemsRowByfk_salesitems_items10, billsreturnRow parentbillsreturnRowByfk_salesitemsreturn_billsreturn1, double Qty, double SellPrice, double Cost, double TotalPrice) {
+            public salesitemsreturnRow AddsalesitemsreturnRow(uint ID, billsreturnRow parentbillsreturnRowByfk_salesitemsreturn_billsreturn1, itemsRow parentitemsRowByfk_salesitems_items10, double Qty, double SellPrice, double Cost, double TotalPrice) {
                 salesitemsreturnRow rowsalesitemsreturnRow = ((salesitemsreturnRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         ID,
@@ -5636,11 +5636,11 @@ namespace Acounting {
                         SellPrice,
                         Cost,
                         TotalPrice};
-                if ((parentitemsRowByfk_salesitems_items10 != null)) {
-                    columnValuesArray[1] = parentitemsRowByfk_salesitems_items10[0];
-                }
                 if ((parentbillsreturnRowByfk_salesitemsreturn_billsreturn1 != null)) {
-                    columnValuesArray[2] = parentbillsreturnRowByfk_salesitemsreturn_billsreturn1[0];
+                    columnValuesArray[1] = parentbillsreturnRowByfk_salesitemsreturn_billsreturn1[0];
+                }
+                if ((parentitemsRowByfk_salesitems_items10 != null)) {
+                    columnValuesArray[2] = parentitemsRowByfk_salesitems_items10[0];
                 }
                 rowsalesitemsreturnRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowsalesitemsreturnRow);
@@ -5672,8 +5672,8 @@ namespace Acounting {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             internal void InitVars() {
                 this.columnID = base.Columns["ID"];
-                this.columnItemID = base.Columns["ItemID"];
                 this.columnBillsReturn_BillID = base.Columns["BillsReturn_BillID"];
+                this.columnItemID = base.Columns["ItemID"];
                 this.columnQty = base.Columns["Qty"];
                 this.columnSellPrice = base.Columns["SellPrice"];
                 this.columnCost = base.Columns["Cost"];
@@ -5685,10 +5685,10 @@ namespace Acounting {
             private void InitClass() {
                 this.columnID = new global::System.Data.DataColumn("ID", typeof(uint), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnID);
-                this.columnItemID = new global::System.Data.DataColumn("ItemID", typeof(int), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnItemID);
                 this.columnBillsReturn_BillID = new global::System.Data.DataColumn("BillsReturn_BillID", typeof(int), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnBillsReturn_BillID);
+                this.columnItemID = new global::System.Data.DataColumn("ItemID", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnItemID);
                 this.columnQty = new global::System.Data.DataColumn("Qty", typeof(double), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnQty);
                 this.columnSellPrice = new global::System.Data.DataColumn("SellPrice", typeof(double), null, global::System.Data.MappingType.Element);
@@ -5701,8 +5701,8 @@ namespace Acounting {
                                 this.columnID}, true));
                 this.columnID.AllowDBNull = false;
                 this.columnID.Unique = true;
-                this.columnItemID.AllowDBNull = false;
                 this.columnBillsReturn_BillID.AllowDBNull = false;
+                this.columnItemID.AllowDBNull = false;
                 this.columnQty.AllowDBNull = false;
                 this.columnSellPrice.AllowDBNull = false;
                 this.columnCost.AllowDBNull = false;
@@ -9106,23 +9106,23 @@ namespace Acounting {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public purchasesitemsreturnRow[] GetpurchasesitemsreturnRows() {
-                if ((this.Table.ChildRelations["fk_purchasesitems_items10"] == null)) {
-                    return new purchasesitemsreturnRow[0];
-                }
-                else {
-                    return ((purchasesitemsreturnRow[])(base.GetChildRows(this.Table.ChildRelations["fk_purchasesitems_items10"])));
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public salesitemsRow[] GetsalesitemsRows() {
                 if ((this.Table.ChildRelations["fk_salesitems_items1"] == null)) {
                     return new salesitemsRow[0];
                 }
                 else {
                     return ((salesitemsRow[])(base.GetChildRows(this.Table.ChildRelations["fk_salesitems_items1"])));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public purchasesitemsreturnRow[] GetpurchasesitemsreturnRows() {
+                if ((this.Table.ChildRelations["fk_purchasesitems_items10"] == null)) {
+                    return new purchasesitemsreturnRow[0];
+                }
+                else {
+                    return ((purchasesitemsreturnRow[])(base.GetChildRows(this.Table.ChildRelations["fk_purchasesitems_items10"])));
                 }
             }
             
@@ -9631,23 +9631,23 @@ namespace Acounting {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public int ItemID {
-                get {
-                    return ((int)(this[this.tablepurchasesitemsreturn.ItemIDColumn]));
-                }
-                set {
-                    this[this.tablepurchasesitemsreturn.ItemIDColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public int PurchaseBillsreturn_BillID {
                 get {
                     return ((int)(this[this.tablepurchasesitemsreturn.PurchaseBillsreturn_BillIDColumn]));
                 }
                 set {
                     this[this.tablepurchasesitemsreturn.PurchaseBillsreturn_BillIDColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public int ItemID {
+                get {
+                    return ((int)(this[this.tablepurchasesitemsreturn.ItemIDColumn]));
+                }
+                set {
+                    this[this.tablepurchasesitemsreturn.ItemIDColumn] = value;
                 }
             }
             
@@ -9859,23 +9859,23 @@ namespace Acounting {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public int ItemID {
-                get {
-                    return ((int)(this[this.tablesalesitemsreturn.ItemIDColumn]));
-                }
-                set {
-                    this[this.tablesalesitemsreturn.ItemIDColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public int BillsReturn_BillID {
                 get {
                     return ((int)(this[this.tablesalesitemsreturn.BillsReturn_BillIDColumn]));
                 }
                 set {
                     this[this.tablesalesitemsreturn.BillsReturn_BillIDColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public int ItemID {
+                get {
+                    return ((int)(this[this.tablesalesitemsreturn.ItemIDColumn]));
+                }
+                set {
+                    this[this.tablesalesitemsreturn.ItemIDColumn] = value;
                 }
             }
             
@@ -16988,15 +16988,15 @@ namespace Acounting.storeDataSetTableAdapters {
             tableMapping.SourceTable = "Table";
             tableMapping.DataSetTable = "purchasesitemsreturn";
             tableMapping.ColumnMappings.Add("ID", "ID");
-            tableMapping.ColumnMappings.Add("ItemID", "ItemID");
             tableMapping.ColumnMappings.Add("PurchaseBillsreturn_BillID", "PurchaseBillsreturn_BillID");
+            tableMapping.ColumnMappings.Add("ItemID", "ItemID");
             tableMapping.ColumnMappings.Add("Qty", "Qty");
             tableMapping.ColumnMappings.Add("Cost", "Cost");
             tableMapping.ColumnMappings.Add("Total", "Total");
             this._adapter.TableMappings.Add(tableMapping);
             this._adapter.DeleteCommand = new global::MySql.Data.MySqlClient.MySqlCommand();
             this._adapter.DeleteCommand.Connection = this.Connection;
-            this._adapter.DeleteCommand.CommandText = @"DELETE FROM `purchasesitemsreturn` WHERE ((`ID` = @Original_ID) AND (`ItemID` = @Original_ItemID) AND (`PurchaseBillsreturn_BillID` = @Original_PurchaseBillsreturn_BillID) AND (`Qty` = @Original_Qty) AND (`Cost` = @Original_Cost) AND (`Total` = @Original_Total))";
+            this._adapter.DeleteCommand.CommandText = @"DELETE FROM `purchasesitemsreturn` WHERE ((`ID` = @Original_ID) AND (`PurchaseBillsreturn_BillID` = @Original_PurchaseBillsreturn_BillID) AND (`ItemID` = @Original_ItemID) AND (`Qty` = @Original_Qty) AND (`Cost` = @Original_Cost) AND (`Total` = @Original_Total))";
             this._adapter.DeleteCommand.CommandType = global::System.Data.CommandType.Text;
             global::MySql.Data.MySqlClient.MySqlParameter param = new global::MySql.Data.MySqlClient.MySqlParameter();
             param.ParameterName = "@Original_ID";
@@ -17007,19 +17007,19 @@ namespace Acounting.storeDataSetTableAdapters {
             param.SourceVersion = global::System.Data.DataRowVersion.Original;
             this._adapter.DeleteCommand.Parameters.Add(param);
             param = new global::MySql.Data.MySqlClient.MySqlParameter();
-            param.ParameterName = "@Original_ItemID";
-            param.DbType = global::System.Data.DbType.Int32;
-            param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.Int32;
-            param.IsNullable = true;
-            param.SourceColumn = "ItemID";
-            param.SourceVersion = global::System.Data.DataRowVersion.Original;
-            this._adapter.DeleteCommand.Parameters.Add(param);
-            param = new global::MySql.Data.MySqlClient.MySqlParameter();
             param.ParameterName = "@Original_PurchaseBillsreturn_BillID";
             param.DbType = global::System.Data.DbType.Int32;
             param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.Int32;
             param.IsNullable = true;
             param.SourceColumn = "PurchaseBillsreturn_BillID";
+            param.SourceVersion = global::System.Data.DataRowVersion.Original;
+            this._adapter.DeleteCommand.Parameters.Add(param);
+            param = new global::MySql.Data.MySqlClient.MySqlParameter();
+            param.ParameterName = "@Original_ItemID";
+            param.DbType = global::System.Data.DbType.Int32;
+            param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.Int32;
+            param.IsNullable = true;
+            param.SourceColumn = "ItemID";
             param.SourceVersion = global::System.Data.DataRowVersion.Original;
             this._adapter.DeleteCommand.Parameters.Add(param);
             param = new global::MySql.Data.MySqlClient.MySqlParameter();
@@ -17048,8 +17048,8 @@ namespace Acounting.storeDataSetTableAdapters {
             this._adapter.DeleteCommand.Parameters.Add(param);
             this._adapter.InsertCommand = new global::MySql.Data.MySqlClient.MySqlCommand();
             this._adapter.InsertCommand.Connection = this.Connection;
-            this._adapter.InsertCommand.CommandText = "INSERT INTO `purchasesitemsreturn` (`ID`, `ItemID`, `PurchaseBillsreturn_BillID`," +
-                " `Qty`, `Cost`, `Total`) VALUES (@ID, @ItemID, @PurchaseBillsreturn_BillID, @Qty" +
+            this._adapter.InsertCommand.CommandText = "INSERT INTO `purchasesitemsreturn` (`ID`, `PurchaseBillsreturn_BillID`, `ItemID`," +
+                " `Qty`, `Cost`, `Total`) VALUES (@ID, @PurchaseBillsreturn_BillID, @ItemID, @Qty" +
                 ", @Cost, @Total)";
             this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
             param = new global::MySql.Data.MySqlClient.MySqlParameter();
@@ -17060,18 +17060,18 @@ namespace Acounting.storeDataSetTableAdapters {
             param.SourceColumn = "ID";
             this._adapter.InsertCommand.Parameters.Add(param);
             param = new global::MySql.Data.MySqlClient.MySqlParameter();
-            param.ParameterName = "@ItemID";
-            param.DbType = global::System.Data.DbType.Int32;
-            param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.Int32;
-            param.IsNullable = true;
-            param.SourceColumn = "ItemID";
-            this._adapter.InsertCommand.Parameters.Add(param);
-            param = new global::MySql.Data.MySqlClient.MySqlParameter();
             param.ParameterName = "@PurchaseBillsreturn_BillID";
             param.DbType = global::System.Data.DbType.Int32;
             param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.Int32;
             param.IsNullable = true;
             param.SourceColumn = "PurchaseBillsreturn_BillID";
+            this._adapter.InsertCommand.Parameters.Add(param);
+            param = new global::MySql.Data.MySqlClient.MySqlParameter();
+            param.ParameterName = "@ItemID";
+            param.DbType = global::System.Data.DbType.Int32;
+            param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.Int32;
+            param.IsNullable = true;
+            param.SourceColumn = "ItemID";
             this._adapter.InsertCommand.Parameters.Add(param);
             param = new global::MySql.Data.MySqlClient.MySqlParameter();
             param.ParameterName = "@Qty";
@@ -17096,7 +17096,7 @@ namespace Acounting.storeDataSetTableAdapters {
             this._adapter.InsertCommand.Parameters.Add(param);
             this._adapter.UpdateCommand = new global::MySql.Data.MySqlClient.MySqlCommand();
             this._adapter.UpdateCommand.Connection = this.Connection;
-            this._adapter.UpdateCommand.CommandText = @"UPDATE `purchasesitemsreturn` SET `ID` = @ID, `ItemID` = @ItemID, `PurchaseBillsreturn_BillID` = @PurchaseBillsreturn_BillID, `Qty` = @Qty, `Cost` = @Cost, `Total` = @Total WHERE ((`ID` = @Original_ID) AND (`ItemID` = @Original_ItemID) AND (`PurchaseBillsreturn_BillID` = @Original_PurchaseBillsreturn_BillID) AND (`Qty` = @Original_Qty) AND (`Cost` = @Original_Cost) AND (`Total` = @Original_Total))";
+            this._adapter.UpdateCommand.CommandText = @"UPDATE `purchasesitemsreturn` SET `ID` = @ID, `PurchaseBillsreturn_BillID` = @PurchaseBillsreturn_BillID, `ItemID` = @ItemID, `Qty` = @Qty, `Cost` = @Cost, `Total` = @Total WHERE ((`ID` = @Original_ID) AND (`PurchaseBillsreturn_BillID` = @Original_PurchaseBillsreturn_BillID) AND (`ItemID` = @Original_ItemID) AND (`Qty` = @Original_Qty) AND (`Cost` = @Original_Cost) AND (`Total` = @Original_Total))";
             this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
             param = new global::MySql.Data.MySqlClient.MySqlParameter();
             param.ParameterName = "@ID";
@@ -17106,18 +17106,18 @@ namespace Acounting.storeDataSetTableAdapters {
             param.SourceColumn = "ID";
             this._adapter.UpdateCommand.Parameters.Add(param);
             param = new global::MySql.Data.MySqlClient.MySqlParameter();
-            param.ParameterName = "@ItemID";
-            param.DbType = global::System.Data.DbType.Int32;
-            param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.Int32;
-            param.IsNullable = true;
-            param.SourceColumn = "ItemID";
-            this._adapter.UpdateCommand.Parameters.Add(param);
-            param = new global::MySql.Data.MySqlClient.MySqlParameter();
             param.ParameterName = "@PurchaseBillsreturn_BillID";
             param.DbType = global::System.Data.DbType.Int32;
             param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.Int32;
             param.IsNullable = true;
             param.SourceColumn = "PurchaseBillsreturn_BillID";
+            this._adapter.UpdateCommand.Parameters.Add(param);
+            param = new global::MySql.Data.MySqlClient.MySqlParameter();
+            param.ParameterName = "@ItemID";
+            param.DbType = global::System.Data.DbType.Int32;
+            param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.Int32;
+            param.IsNullable = true;
+            param.SourceColumn = "ItemID";
             this._adapter.UpdateCommand.Parameters.Add(param);
             param = new global::MySql.Data.MySqlClient.MySqlParameter();
             param.ParameterName = "@Qty";
@@ -17149,19 +17149,19 @@ namespace Acounting.storeDataSetTableAdapters {
             param.SourceVersion = global::System.Data.DataRowVersion.Original;
             this._adapter.UpdateCommand.Parameters.Add(param);
             param = new global::MySql.Data.MySqlClient.MySqlParameter();
-            param.ParameterName = "@Original_ItemID";
-            param.DbType = global::System.Data.DbType.Int32;
-            param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.Int32;
-            param.IsNullable = true;
-            param.SourceColumn = "ItemID";
-            param.SourceVersion = global::System.Data.DataRowVersion.Original;
-            this._adapter.UpdateCommand.Parameters.Add(param);
-            param = new global::MySql.Data.MySqlClient.MySqlParameter();
             param.ParameterName = "@Original_PurchaseBillsreturn_BillID";
             param.DbType = global::System.Data.DbType.Int32;
             param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.Int32;
             param.IsNullable = true;
             param.SourceColumn = "PurchaseBillsreturn_BillID";
+            param.SourceVersion = global::System.Data.DataRowVersion.Original;
+            this._adapter.UpdateCommand.Parameters.Add(param);
+            param = new global::MySql.Data.MySqlClient.MySqlParameter();
+            param.ParameterName = "@Original_ItemID";
+            param.DbType = global::System.Data.DbType.Int32;
+            param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.Int32;
+            param.IsNullable = true;
+            param.SourceColumn = "ItemID";
             param.SourceVersion = global::System.Data.DataRowVersion.Original;
             this._adapter.UpdateCommand.Parameters.Add(param);
             param = new global::MySql.Data.MySqlClient.MySqlParameter();
@@ -17203,8 +17203,7 @@ namespace Acounting.storeDataSetTableAdapters {
             this._commandCollection = new global::MySql.Data.MySqlClient.MySqlCommand[1];
             this._commandCollection[0] = new global::MySql.Data.MySqlClient.MySqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "SELECT `ID`, `ItemID`, `PurchaseBillsreturn_BillID`, `Qty`, `Cost`, `Total` FROM " +
-                "`purchasesitemsreturn`";
+            this._commandCollection[0].CommandText = "SELECT        purchasesitemsreturn.*\r\nFROM            purchasesitemsreturn";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
         }
         
@@ -17265,10 +17264,10 @@ namespace Acounting.storeDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Delete, true)]
-        public virtual int Delete(uint Original_ID, int Original_ItemID, int Original_PurchaseBillsreturn_BillID, double Original_Qty, double Original_Cost, double Original_Total) {
+        public virtual int Delete(uint Original_ID, int Original_PurchaseBillsreturn_BillID, int Original_ItemID, double Original_Qty, double Original_Cost, double Original_Total) {
             this.Adapter.DeleteCommand.Parameters[0].Value = ((uint)(Original_ID));
-            this.Adapter.DeleteCommand.Parameters[1].Value = ((int)(Original_ItemID));
-            this.Adapter.DeleteCommand.Parameters[2].Value = ((int)(Original_PurchaseBillsreturn_BillID));
+            this.Adapter.DeleteCommand.Parameters[1].Value = ((int)(Original_PurchaseBillsreturn_BillID));
+            this.Adapter.DeleteCommand.Parameters[2].Value = ((int)(Original_ItemID));
             this.Adapter.DeleteCommand.Parameters[3].Value = ((double)(Original_Qty));
             this.Adapter.DeleteCommand.Parameters[4].Value = ((double)(Original_Cost));
             this.Adapter.DeleteCommand.Parameters[5].Value = ((double)(Original_Total));
@@ -17292,10 +17291,10 @@ namespace Acounting.storeDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, true)]
-        public virtual int Insert(uint ID, int ItemID, int PurchaseBillsreturn_BillID, double Qty, double Cost, double Total) {
+        public virtual int Insert(uint ID, int PurchaseBillsreturn_BillID, int ItemID, double Qty, double Cost, double Total) {
             this.Adapter.InsertCommand.Parameters[0].Value = ((uint)(ID));
-            this.Adapter.InsertCommand.Parameters[1].Value = ((int)(ItemID));
-            this.Adapter.InsertCommand.Parameters[2].Value = ((int)(PurchaseBillsreturn_BillID));
+            this.Adapter.InsertCommand.Parameters[1].Value = ((int)(PurchaseBillsreturn_BillID));
+            this.Adapter.InsertCommand.Parameters[2].Value = ((int)(ItemID));
             this.Adapter.InsertCommand.Parameters[3].Value = ((double)(Qty));
             this.Adapter.InsertCommand.Parameters[4].Value = ((double)(Cost));
             this.Adapter.InsertCommand.Parameters[5].Value = ((double)(Total));
@@ -17319,16 +17318,16 @@ namespace Acounting.storeDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(uint ID, int ItemID, int PurchaseBillsreturn_BillID, double Qty, double Cost, double Total, uint Original_ID, int Original_ItemID, int Original_PurchaseBillsreturn_BillID, double Original_Qty, double Original_Cost, double Original_Total) {
+        public virtual int Update(uint ID, int PurchaseBillsreturn_BillID, int ItemID, double Qty, double Cost, double Total, uint Original_ID, int Original_PurchaseBillsreturn_BillID, int Original_ItemID, double Original_Qty, double Original_Cost, double Original_Total) {
             this.Adapter.UpdateCommand.Parameters[0].Value = ((uint)(ID));
-            this.Adapter.UpdateCommand.Parameters[1].Value = ((int)(ItemID));
-            this.Adapter.UpdateCommand.Parameters[2].Value = ((int)(PurchaseBillsreturn_BillID));
+            this.Adapter.UpdateCommand.Parameters[1].Value = ((int)(PurchaseBillsreturn_BillID));
+            this.Adapter.UpdateCommand.Parameters[2].Value = ((int)(ItemID));
             this.Adapter.UpdateCommand.Parameters[3].Value = ((double)(Qty));
             this.Adapter.UpdateCommand.Parameters[4].Value = ((double)(Cost));
             this.Adapter.UpdateCommand.Parameters[5].Value = ((double)(Total));
             this.Adapter.UpdateCommand.Parameters[6].Value = ((uint)(Original_ID));
-            this.Adapter.UpdateCommand.Parameters[7].Value = ((int)(Original_ItemID));
-            this.Adapter.UpdateCommand.Parameters[8].Value = ((int)(Original_PurchaseBillsreturn_BillID));
+            this.Adapter.UpdateCommand.Parameters[7].Value = ((int)(Original_PurchaseBillsreturn_BillID));
+            this.Adapter.UpdateCommand.Parameters[8].Value = ((int)(Original_ItemID));
             this.Adapter.UpdateCommand.Parameters[9].Value = ((double)(Original_Qty));
             this.Adapter.UpdateCommand.Parameters[10].Value = ((double)(Original_Cost));
             this.Adapter.UpdateCommand.Parameters[11].Value = ((double)(Original_Total));
@@ -17352,8 +17351,8 @@ namespace Acounting.storeDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(int ItemID, int PurchaseBillsreturn_BillID, double Qty, double Cost, double Total, uint Original_ID, int Original_ItemID, int Original_PurchaseBillsreturn_BillID, double Original_Qty, double Original_Cost, double Original_Total) {
-            return this.Update(Original_ID, ItemID, PurchaseBillsreturn_BillID, Qty, Cost, Total, Original_ID, Original_ItemID, Original_PurchaseBillsreturn_BillID, Original_Qty, Original_Cost, Original_Total);
+        public virtual int Update(int PurchaseBillsreturn_BillID, int ItemID, double Qty, double Cost, double Total, uint Original_ID, int Original_PurchaseBillsreturn_BillID, int Original_ItemID, double Original_Qty, double Original_Cost, double Original_Total) {
+            return this.Update(Original_ID, PurchaseBillsreturn_BillID, ItemID, Qty, Cost, Total, Original_ID, Original_PurchaseBillsreturn_BillID, Original_ItemID, Original_Qty, Original_Cost, Original_Total);
         }
     }
     
@@ -18056,8 +18055,8 @@ namespace Acounting.storeDataSetTableAdapters {
             tableMapping.SourceTable = "Table";
             tableMapping.DataSetTable = "salesitemsreturn";
             tableMapping.ColumnMappings.Add("ID", "ID");
-            tableMapping.ColumnMappings.Add("ItemID", "ItemID");
             tableMapping.ColumnMappings.Add("BillsReturn_BillID", "BillsReturn_BillID");
+            tableMapping.ColumnMappings.Add("ItemID", "ItemID");
             tableMapping.ColumnMappings.Add("Qty", "Qty");
             tableMapping.ColumnMappings.Add("SellPrice", "SellPrice");
             tableMapping.ColumnMappings.Add("Cost", "Cost");
@@ -18065,7 +18064,7 @@ namespace Acounting.storeDataSetTableAdapters {
             this._adapter.TableMappings.Add(tableMapping);
             this._adapter.DeleteCommand = new global::MySql.Data.MySqlClient.MySqlCommand();
             this._adapter.DeleteCommand.Connection = this.Connection;
-            this._adapter.DeleteCommand.CommandText = @"DELETE FROM `salesitemsreturn` WHERE ((`ID` = @Original_ID) AND (`ItemID` = @Original_ItemID) AND (`BillsReturn_BillID` = @Original_BillsReturn_BillID) AND (`Qty` = @Original_Qty) AND (`SellPrice` = @Original_SellPrice) AND (`Cost` = @Original_Cost) AND (`TotalPrice` = @Original_TotalPrice))";
+            this._adapter.DeleteCommand.CommandText = @"DELETE FROM `salesitemsreturn` WHERE ((`ID` = @Original_ID) AND (`BillsReturn_BillID` = @Original_BillsReturn_BillID) AND (`ItemID` = @Original_ItemID) AND (`Qty` = @Original_Qty) AND (`SellPrice` = @Original_SellPrice) AND (`Cost` = @Original_Cost) AND (`TotalPrice` = @Original_TotalPrice))";
             this._adapter.DeleteCommand.CommandType = global::System.Data.CommandType.Text;
             global::MySql.Data.MySqlClient.MySqlParameter param = new global::MySql.Data.MySqlClient.MySqlParameter();
             param.ParameterName = "@Original_ID";
@@ -18076,19 +18075,19 @@ namespace Acounting.storeDataSetTableAdapters {
             param.SourceVersion = global::System.Data.DataRowVersion.Original;
             this._adapter.DeleteCommand.Parameters.Add(param);
             param = new global::MySql.Data.MySqlClient.MySqlParameter();
-            param.ParameterName = "@Original_ItemID";
-            param.DbType = global::System.Data.DbType.Int32;
-            param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.Int32;
-            param.IsNullable = true;
-            param.SourceColumn = "ItemID";
-            param.SourceVersion = global::System.Data.DataRowVersion.Original;
-            this._adapter.DeleteCommand.Parameters.Add(param);
-            param = new global::MySql.Data.MySqlClient.MySqlParameter();
             param.ParameterName = "@Original_BillsReturn_BillID";
             param.DbType = global::System.Data.DbType.Int32;
             param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.Int32;
             param.IsNullable = true;
             param.SourceColumn = "BillsReturn_BillID";
+            param.SourceVersion = global::System.Data.DataRowVersion.Original;
+            this._adapter.DeleteCommand.Parameters.Add(param);
+            param = new global::MySql.Data.MySqlClient.MySqlParameter();
+            param.ParameterName = "@Original_ItemID";
+            param.DbType = global::System.Data.DbType.Int32;
+            param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.Int32;
+            param.IsNullable = true;
+            param.SourceColumn = "ItemID";
             param.SourceVersion = global::System.Data.DataRowVersion.Original;
             this._adapter.DeleteCommand.Parameters.Add(param);
             param = new global::MySql.Data.MySqlClient.MySqlParameter();
@@ -18125,8 +18124,8 @@ namespace Acounting.storeDataSetTableAdapters {
             this._adapter.DeleteCommand.Parameters.Add(param);
             this._adapter.InsertCommand = new global::MySql.Data.MySqlClient.MySqlCommand();
             this._adapter.InsertCommand.Connection = this.Connection;
-            this._adapter.InsertCommand.CommandText = "INSERT INTO `salesitemsreturn` (`ID`, `ItemID`, `BillsReturn_BillID`, `Qty`, `Sel" +
-                "lPrice`, `Cost`, `TotalPrice`) VALUES (@ID, @ItemID, @BillsReturn_BillID, @Qty, " +
+            this._adapter.InsertCommand.CommandText = "INSERT INTO `salesitemsreturn` (`ID`, `BillsReturn_BillID`, `ItemID`, `Qty`, `Sel" +
+                "lPrice`, `Cost`, `TotalPrice`) VALUES (@ID, @BillsReturn_BillID, @ItemID, @Qty, " +
                 "@SellPrice, @Cost, @TotalPrice)";
             this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
             param = new global::MySql.Data.MySqlClient.MySqlParameter();
@@ -18137,18 +18136,18 @@ namespace Acounting.storeDataSetTableAdapters {
             param.SourceColumn = "ID";
             this._adapter.InsertCommand.Parameters.Add(param);
             param = new global::MySql.Data.MySqlClient.MySqlParameter();
-            param.ParameterName = "@ItemID";
-            param.DbType = global::System.Data.DbType.Int32;
-            param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.Int32;
-            param.IsNullable = true;
-            param.SourceColumn = "ItemID";
-            this._adapter.InsertCommand.Parameters.Add(param);
-            param = new global::MySql.Data.MySqlClient.MySqlParameter();
             param.ParameterName = "@BillsReturn_BillID";
             param.DbType = global::System.Data.DbType.Int32;
             param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.Int32;
             param.IsNullable = true;
             param.SourceColumn = "BillsReturn_BillID";
+            this._adapter.InsertCommand.Parameters.Add(param);
+            param = new global::MySql.Data.MySqlClient.MySqlParameter();
+            param.ParameterName = "@ItemID";
+            param.DbType = global::System.Data.DbType.Int32;
+            param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.Int32;
+            param.IsNullable = true;
+            param.SourceColumn = "ItemID";
             this._adapter.InsertCommand.Parameters.Add(param);
             param = new global::MySql.Data.MySqlClient.MySqlParameter();
             param.ParameterName = "@Qty";
@@ -18180,7 +18179,7 @@ namespace Acounting.storeDataSetTableAdapters {
             this._adapter.InsertCommand.Parameters.Add(param);
             this._adapter.UpdateCommand = new global::MySql.Data.MySqlClient.MySqlCommand();
             this._adapter.UpdateCommand.Connection = this.Connection;
-            this._adapter.UpdateCommand.CommandText = @"UPDATE `salesitemsreturn` SET `ID` = @ID, `ItemID` = @ItemID, `BillsReturn_BillID` = @BillsReturn_BillID, `Qty` = @Qty, `SellPrice` = @SellPrice, `Cost` = @Cost, `TotalPrice` = @TotalPrice WHERE ((`ID` = @Original_ID) AND (`ItemID` = @Original_ItemID) AND (`BillsReturn_BillID` = @Original_BillsReturn_BillID) AND (`Qty` = @Original_Qty) AND (`SellPrice` = @Original_SellPrice) AND (`Cost` = @Original_Cost) AND (`TotalPrice` = @Original_TotalPrice))";
+            this._adapter.UpdateCommand.CommandText = @"UPDATE `salesitemsreturn` SET `ID` = @ID, `BillsReturn_BillID` = @BillsReturn_BillID, `ItemID` = @ItemID, `Qty` = @Qty, `SellPrice` = @SellPrice, `Cost` = @Cost, `TotalPrice` = @TotalPrice WHERE ((`ID` = @Original_ID) AND (`BillsReturn_BillID` = @Original_BillsReturn_BillID) AND (`ItemID` = @Original_ItemID) AND (`Qty` = @Original_Qty) AND (`SellPrice` = @Original_SellPrice) AND (`Cost` = @Original_Cost) AND (`TotalPrice` = @Original_TotalPrice))";
             this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
             param = new global::MySql.Data.MySqlClient.MySqlParameter();
             param.ParameterName = "@ID";
@@ -18190,18 +18189,18 @@ namespace Acounting.storeDataSetTableAdapters {
             param.SourceColumn = "ID";
             this._adapter.UpdateCommand.Parameters.Add(param);
             param = new global::MySql.Data.MySqlClient.MySqlParameter();
-            param.ParameterName = "@ItemID";
-            param.DbType = global::System.Data.DbType.Int32;
-            param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.Int32;
-            param.IsNullable = true;
-            param.SourceColumn = "ItemID";
-            this._adapter.UpdateCommand.Parameters.Add(param);
-            param = new global::MySql.Data.MySqlClient.MySqlParameter();
             param.ParameterName = "@BillsReturn_BillID";
             param.DbType = global::System.Data.DbType.Int32;
             param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.Int32;
             param.IsNullable = true;
             param.SourceColumn = "BillsReturn_BillID";
+            this._adapter.UpdateCommand.Parameters.Add(param);
+            param = new global::MySql.Data.MySqlClient.MySqlParameter();
+            param.ParameterName = "@ItemID";
+            param.DbType = global::System.Data.DbType.Int32;
+            param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.Int32;
+            param.IsNullable = true;
+            param.SourceColumn = "ItemID";
             this._adapter.UpdateCommand.Parameters.Add(param);
             param = new global::MySql.Data.MySqlClient.MySqlParameter();
             param.ParameterName = "@Qty";
@@ -18240,19 +18239,19 @@ namespace Acounting.storeDataSetTableAdapters {
             param.SourceVersion = global::System.Data.DataRowVersion.Original;
             this._adapter.UpdateCommand.Parameters.Add(param);
             param = new global::MySql.Data.MySqlClient.MySqlParameter();
-            param.ParameterName = "@Original_ItemID";
-            param.DbType = global::System.Data.DbType.Int32;
-            param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.Int32;
-            param.IsNullable = true;
-            param.SourceColumn = "ItemID";
-            param.SourceVersion = global::System.Data.DataRowVersion.Original;
-            this._adapter.UpdateCommand.Parameters.Add(param);
-            param = new global::MySql.Data.MySqlClient.MySqlParameter();
             param.ParameterName = "@Original_BillsReturn_BillID";
             param.DbType = global::System.Data.DbType.Int32;
             param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.Int32;
             param.IsNullable = true;
             param.SourceColumn = "BillsReturn_BillID";
+            param.SourceVersion = global::System.Data.DataRowVersion.Original;
+            this._adapter.UpdateCommand.Parameters.Add(param);
+            param = new global::MySql.Data.MySqlClient.MySqlParameter();
+            param.ParameterName = "@Original_ItemID";
+            param.DbType = global::System.Data.DbType.Int32;
+            param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.Int32;
+            param.IsNullable = true;
+            param.SourceColumn = "ItemID";
             param.SourceVersion = global::System.Data.DataRowVersion.Original;
             this._adapter.UpdateCommand.Parameters.Add(param);
             param = new global::MySql.Data.MySqlClient.MySqlParameter();
@@ -18302,8 +18301,7 @@ namespace Acounting.storeDataSetTableAdapters {
             this._commandCollection = new global::MySql.Data.MySqlClient.MySqlCommand[1];
             this._commandCollection[0] = new global::MySql.Data.MySqlClient.MySqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "SELECT `ID`, `ItemID`, `BillsReturn_BillID`, `Qty`, `SellPrice`, `Cost`, `TotalPr" +
-                "ice` FROM `salesitemsreturn`";
+            this._commandCollection[0].CommandText = "SELECT        salesitemsreturn.*\r\nFROM            salesitemsreturn";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
         }
         
@@ -18364,10 +18362,10 @@ namespace Acounting.storeDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Delete, true)]
-        public virtual int Delete(uint Original_ID, int Original_ItemID, int Original_BillsReturn_BillID, double Original_Qty, double Original_SellPrice, double Original_Cost, double Original_TotalPrice) {
+        public virtual int Delete(uint Original_ID, int Original_BillsReturn_BillID, int Original_ItemID, double Original_Qty, double Original_SellPrice, double Original_Cost, double Original_TotalPrice) {
             this.Adapter.DeleteCommand.Parameters[0].Value = ((uint)(Original_ID));
-            this.Adapter.DeleteCommand.Parameters[1].Value = ((int)(Original_ItemID));
-            this.Adapter.DeleteCommand.Parameters[2].Value = ((int)(Original_BillsReturn_BillID));
+            this.Adapter.DeleteCommand.Parameters[1].Value = ((int)(Original_BillsReturn_BillID));
+            this.Adapter.DeleteCommand.Parameters[2].Value = ((int)(Original_ItemID));
             this.Adapter.DeleteCommand.Parameters[3].Value = ((double)(Original_Qty));
             this.Adapter.DeleteCommand.Parameters[4].Value = ((double)(Original_SellPrice));
             this.Adapter.DeleteCommand.Parameters[5].Value = ((double)(Original_Cost));
@@ -18392,10 +18390,10 @@ namespace Acounting.storeDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, true)]
-        public virtual int Insert(uint ID, int ItemID, int BillsReturn_BillID, double Qty, double SellPrice, double Cost, double TotalPrice) {
+        public virtual int Insert(uint ID, int BillsReturn_BillID, int ItemID, double Qty, double SellPrice, double Cost, double TotalPrice) {
             this.Adapter.InsertCommand.Parameters[0].Value = ((uint)(ID));
-            this.Adapter.InsertCommand.Parameters[1].Value = ((int)(ItemID));
-            this.Adapter.InsertCommand.Parameters[2].Value = ((int)(BillsReturn_BillID));
+            this.Adapter.InsertCommand.Parameters[1].Value = ((int)(BillsReturn_BillID));
+            this.Adapter.InsertCommand.Parameters[2].Value = ((int)(ItemID));
             this.Adapter.InsertCommand.Parameters[3].Value = ((double)(Qty));
             this.Adapter.InsertCommand.Parameters[4].Value = ((double)(SellPrice));
             this.Adapter.InsertCommand.Parameters[5].Value = ((double)(Cost));
@@ -18420,17 +18418,17 @@ namespace Acounting.storeDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(uint ID, int ItemID, int BillsReturn_BillID, double Qty, double SellPrice, double Cost, double TotalPrice, uint Original_ID, int Original_ItemID, int Original_BillsReturn_BillID, double Original_Qty, double Original_SellPrice, double Original_Cost, double Original_TotalPrice) {
+        public virtual int Update(uint ID, int BillsReturn_BillID, int ItemID, double Qty, double SellPrice, double Cost, double TotalPrice, uint Original_ID, int Original_BillsReturn_BillID, int Original_ItemID, double Original_Qty, double Original_SellPrice, double Original_Cost, double Original_TotalPrice) {
             this.Adapter.UpdateCommand.Parameters[0].Value = ((uint)(ID));
-            this.Adapter.UpdateCommand.Parameters[1].Value = ((int)(ItemID));
-            this.Adapter.UpdateCommand.Parameters[2].Value = ((int)(BillsReturn_BillID));
+            this.Adapter.UpdateCommand.Parameters[1].Value = ((int)(BillsReturn_BillID));
+            this.Adapter.UpdateCommand.Parameters[2].Value = ((int)(ItemID));
             this.Adapter.UpdateCommand.Parameters[3].Value = ((double)(Qty));
             this.Adapter.UpdateCommand.Parameters[4].Value = ((double)(SellPrice));
             this.Adapter.UpdateCommand.Parameters[5].Value = ((double)(Cost));
             this.Adapter.UpdateCommand.Parameters[6].Value = ((double)(TotalPrice));
             this.Adapter.UpdateCommand.Parameters[7].Value = ((uint)(Original_ID));
-            this.Adapter.UpdateCommand.Parameters[8].Value = ((int)(Original_ItemID));
-            this.Adapter.UpdateCommand.Parameters[9].Value = ((int)(Original_BillsReturn_BillID));
+            this.Adapter.UpdateCommand.Parameters[8].Value = ((int)(Original_BillsReturn_BillID));
+            this.Adapter.UpdateCommand.Parameters[9].Value = ((int)(Original_ItemID));
             this.Adapter.UpdateCommand.Parameters[10].Value = ((double)(Original_Qty));
             this.Adapter.UpdateCommand.Parameters[11].Value = ((double)(Original_SellPrice));
             this.Adapter.UpdateCommand.Parameters[12].Value = ((double)(Original_Cost));
@@ -18455,8 +18453,8 @@ namespace Acounting.storeDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(int ItemID, int BillsReturn_BillID, double Qty, double SellPrice, double Cost, double TotalPrice, uint Original_ID, int Original_ItemID, int Original_BillsReturn_BillID, double Original_Qty, double Original_SellPrice, double Original_Cost, double Original_TotalPrice) {
-            return this.Update(Original_ID, ItemID, BillsReturn_BillID, Qty, SellPrice, Cost, TotalPrice, Original_ID, Original_ItemID, Original_BillsReturn_BillID, Original_Qty, Original_SellPrice, Original_Cost, Original_TotalPrice);
+        public virtual int Update(int BillsReturn_BillID, int ItemID, double Qty, double SellPrice, double Cost, double TotalPrice, uint Original_ID, int Original_BillsReturn_BillID, int Original_ItemID, double Original_Qty, double Original_SellPrice, double Original_Cost, double Original_TotalPrice) {
+            return this.Update(Original_ID, BillsReturn_BillID, ItemID, Qty, SellPrice, Cost, TotalPrice, Original_ID, Original_BillsReturn_BillID, Original_ItemID, Original_Qty, Original_SellPrice, Original_Cost, Original_TotalPrice);
         }
     }
     
