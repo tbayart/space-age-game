@@ -246,6 +246,9 @@
   <data name="groupBox1.Size" type="System.Drawing.Size, System.Drawing">
     <value>885, 76</value>
   </data>
+  <data name="totalDataGridViewTextBoxColumn.HeaderText" xml:space="preserve">
+    <value>اجمالي</value>
+  </data>
   <data name="label3.Location" type="System.Drawing.Point, System.Drawing">
     <value>302, 16</value>
   </data>
@@ -456,6 +459,9 @@
   <data name="label8.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
     <value>MiddleRight</value>
   </data>
+  <data name="&gt;&gt;qtyDataGridViewTextBoxColumn.Name" xml:space="preserve">
+    <value>qtyDataGridViewTextBoxColumn</value>
+  </data>
   <data name="label9.Location" type="System.Drawing.Point, System.Drawing">
     <value>22, 16</value>
   </data>
@@ -464,6 +470,9 @@
   </data>
   <data name="dataGridView1.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
+  </data>
+  <data name="&gt;&gt;itemNameDataGridViewTextBoxColumn.Name" xml:space="preserve">
+    <value>itemNameDataGridViewTextBoxColumn</value>
   </data>
   <data name="Txt_BillID.Error" xml:space="preserve">
     <value />
@@ -530,6 +539,9 @@
   </data>
   <data name="Cmb_ItemName.IconPadding" type="System.Int32, mscorlib">
     <value>0</value>
+  </data>
+  <data name="qtyDataGridViewTextBoxColumn.HeaderText" xml:space="preserve">
+    <value>الكمية</value>
   </data>
   <data name="label1.Size" type="System.Drawing.Size, System.Drawing">
     <value>46, 16</value>
@@ -705,6 +717,9 @@
   <data name="Txt_TotalBill.Size" type="System.Drawing.Size, System.Drawing">
     <value>86, 20</value>
   </data>
+  <data name="&gt;&gt;totalDataGridViewTextBoxColumn.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
   <data name="label5.TabIndex" type="System.Int32, mscorlib">
     <value>6</value>
   </data>
@@ -731,6 +746,9 @@
   </data>
   <data name="groupBox3.Location" type="System.Drawing.Point, System.Drawing">
     <value>12, 189</value>
+  </data>
+  <data name="&gt;&gt;costDataGridViewTextBoxColumn.Name" xml:space="preserve">
+    <value>costDataGridViewTextBoxColumn</value>
   </data>
   <data name="label3.TabIndex" type="System.Int32, mscorlib">
     <value>15</value>
@@ -774,6 +792,9 @@
   <data name="&gt;&gt;button1.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
+  <data name="costDataGridViewTextBoxColumn.HeaderText" xml:space="preserve">
+    <value>السعر</value>
+  </data>
   <data name="Txt_ItemID.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
     <value>MiddleRight</value>
   </data>
@@ -816,8 +837,14 @@
   <data name="&gt;&gt;purchasesitemsreturnTableAdapter.Type" xml:space="preserve">
     <value>Acounting.storeDataSetTableAdapters.purchasesitemsreturnTableAdapter, storeDataSet.Designer.cs, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
+  <data name="&gt;&gt;itemNameDataGridViewTextBoxColumn.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
   <data name="Txt_BuyPrice.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
     <value>MiddleRight</value>
+  </data>
+  <data name="&gt;&gt;qtyDataGridViewTextBoxColumn.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;purchasesitemsreturnBindingSource.Type" xml:space="preserve">
     <value>System.Windows.Forms.BindingSource, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
@@ -890,6 +917,9 @@
   </data>
   <data name="label13.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
+  </data>
+  <data name="&gt;&gt;totalDataGridViewTextBoxColumn.Name" xml:space="preserve">
+    <value>totalDataGridViewTextBoxColumn</value>
   </data>
   <data name="Txt_TotalBill.IconPadding" type="System.Int32, mscorlib">
     <value>0</value>
@@ -1052,6 +1082,9 @@
   </data>
   <data name="&gt;&gt;label4.Type" xml:space="preserve">
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;costDataGridViewTextBoxColumn.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;Txt_ToBuy.Type" xml:space="preserve">
     <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
@@ -1250,6 +1283,9 @@
   </data>
   <data name="&gt;&gt;label12.Parent" xml:space="preserve">
     <value>groupBox3</value>
+  </data>
+  <data name="itemNameDataGridViewTextBoxColumn.HeaderText" xml:space="preserve">
+    <value>اسم الصنف</value>
   </data>
   <data name="label9.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
