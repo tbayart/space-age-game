@@ -68,5 +68,10 @@ namespace Acounting
                 Txt_ttc.Text = totalasset.ToString();
             }
         }
+
+        private void Txt_TotalCost_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

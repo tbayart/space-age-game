@@ -118,171 +118,27 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="groupBox1.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Top, Right</value>
-  </data>
-  <data name="label1.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+  <data name="label8.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Right</value>
   </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
-    <value>639, 620</value>
+    <value>642, 620</value>
   </data>
   <data name="groupBox4.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Right</value>
   </data>
   <data name="dataGridView1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>612, 280</value>
+    <value>622, 280</value>
   </data>
   <data name="groupBox4.Location" type="System.Drawing.Point, System.Drawing">
-    <value>11, 261</value>
+    <value>4, 267</value>
   </data>
   <data name="groupBox4.Size" type="System.Drawing.Size, System.Drawing">
-    <value>618, 299</value>
+    <value>628, 299</value>
   </data>
   <data name="groupBox4.Text" xml:space="preserve">
     <value>تفاصيل الفاتورة</value>
-  </data>
-  <data name="button2.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Top, Right</value>
-  </data>
-  <data name="button2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>110, 566</value>
-  </data>
-  <data name="button2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>112, 42</value>
-  </data>
-  <data name="button2.Text" xml:space="preserve">
-    <value>حفظ</value>
-  </data>
-  <data name="button1.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Top, Right</value>
-  </data>
-  <data name="button1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>14, 566</value>
-  </data>
-  <data name="button1.Text" xml:space="preserve">
-    <value>اضافة للفاتورة</value>
-  </data>
-  <data name="groupBox2.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Top, Right</value>
-  </data>
-  <data name="Txt_Cost.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Top, Right</value>
-  </data>
-  <data name="Txt_Cost.Location" type="System.Drawing.Point, System.Drawing">
-    <value>211, 40</value>
-  </data>
-  <data name="label11.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Top, Right</value>
-  </data>
-  <data name="label11.Location" type="System.Drawing.Point, System.Drawing">
-    <value>232, 21</value>
-  </data>
-  <data name="label11.Size" type="System.Drawing.Size, System.Drawing">
-    <value>32, 16</value>
-  </data>
-  <data name="label11.Text" xml:space="preserve">
-    <value>السعر</value>
-  </data>
-  <data name="Txt_ItemID.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Top, Right</value>
-  </data>
-  <data name="Txt_ItemID.Location" type="System.Drawing.Point, System.Drawing">
-    <value>359, 40</value>
-  </data>
-  <data name="label8.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Top, Right</value>
-  </data>
-  <data name="label8.Location" type="System.Drawing.Point, System.Drawing">
-    <value>362, 21</value>
-  </data>
-  <data name="label8.Size" type="System.Drawing.Size, System.Drawing">
-    <value>55, 16</value>
-  </data>
-  <data name="label8.Text" xml:space="preserve">
-    <value>رقم الصبف</value>
-  </data>
-  <data name="Txt_InStock.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Top, Right</value>
-  </data>
-  <data name="Txt_InStock.Location" type="System.Drawing.Point, System.Drawing">
-    <value>277, 40</value>
-  </data>
-  <data name="label7.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Top, Right</value>
-  </data>
-  <data name="label7.Location" type="System.Drawing.Point, System.Drawing">
-    <value>307, 21</value>
-  </data>
-  <data name="label7.Size" type="System.Drawing.Size, System.Drawing">
-    <value>32, 16</value>
-  </data>
-  <data name="label7.Text" xml:space="preserve">
-    <value>الكمية</value>
-  </data>
-  <data name="Txt_BuyPrice.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Top, Right</value>
-  </data>
-  <data name="Txt_BuyPrice.Location" type="System.Drawing.Point, System.Drawing">
-    <value>61, 40</value>
-  </data>
-  <data name="label6.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Top, Right</value>
-  </data>
-  <data name="label6.Location" type="System.Drawing.Point, System.Drawing">
-    <value>65, 21</value>
-  </data>
-  <data name="label6.Size" type="System.Drawing.Size, System.Drawing">
-    <value>57, 16</value>
-  </data>
-  <data name="label6.Text" xml:space="preserve">
-    <value>سعر الشراء</value>
-  </data>
-  <data name="Txt_ToBuy.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Top, Right</value>
-  </data>
-  <data name="Txt_ToBuy.Location" type="System.Drawing.Point, System.Drawing">
-    <value>136, 40</value>
-  </data>
-  <data name="label5.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Top, Right</value>
-  </data>
-  <data name="label5.Location" type="System.Drawing.Point, System.Drawing">
-    <value>141, 21</value>
-  </data>
-  <data name="label5.Size" type="System.Drawing.Size, System.Drawing">
-    <value>57, 16</value>
-  </data>
-  <data name="label5.Text" xml:space="preserve">
-    <value>كمية الشراء</value>
-  </data>
-  <data name="label4.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Top, Right</value>
-  </data>
-  <data name="label4.Location" type="System.Drawing.Point, System.Drawing">
-    <value>553, 21</value>
-  </data>
-  <data name="label4.Size" type="System.Drawing.Size, System.Drawing">
-    <value>56, 16</value>
-  </data>
-  <data name="label4.Text" xml:space="preserve">
-    <value>اسم الصنف</value>
-  </data>
-  <data name="Cmb_ItemName.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Top, Right</value>
-  </data>
-  <data name="Cmb_ItemName.Location" type="System.Drawing.Point, System.Drawing">
-    <value>431, 38</value>
-  </data>
-  <data name="groupBox2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>11, 88</value>
-  </data>
-  <data name="groupBox2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>618, 86</value>
-  </data>
-  <data name="groupBox2.Text" xml:space="preserve">
-    <value>الاصناف</value>
   </data>
   <data name="groupBox3.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Right</value>
@@ -291,13 +147,16 @@
     <value>Top, Right</value>
   </data>
   <data name="Txt_Remaining.Location" type="System.Drawing.Point, System.Drawing">
-    <value>19, 39</value>
+    <value>97, 39</value>
+  </data>
+  <data name="Txt_Remaining.Size" type="System.Drawing.Size, System.Drawing">
+    <value>77, 20</value>
   </data>
   <data name="label13.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Right</value>
   </data>
   <data name="label13.Location" type="System.Drawing.Point, System.Drawing">
-    <value>50, 16</value>
+    <value>110, 19</value>
   </data>
   <data name="label13.Size" type="System.Drawing.Size, System.Drawing">
     <value>64, 13</value>
@@ -309,13 +168,16 @@
     <value>Top, Right</value>
   </data>
   <data name="Txt_TotalBill.Location" type="System.Drawing.Point, System.Drawing">
-    <value>246, 39</value>
+    <value>270, 42</value>
+  </data>
+  <data name="Txt_TotalBill.Size" type="System.Drawing.Size, System.Drawing">
+    <value>76, 20</value>
   </data>
   <data name="label12.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Right</value>
   </data>
   <data name="label12.Location" type="System.Drawing.Point, System.Drawing">
-    <value>259, 16</value>
+    <value>270, 19</value>
   </data>
   <data name="label12.Size" type="System.Drawing.Size, System.Drawing">
     <value>76, 13</value>
@@ -327,86 +189,199 @@
     <value>Top, Right</value>
   </data>
   <data name="label3.Location" type="System.Drawing.Point, System.Drawing">
-    <value>195, 16</value>
+    <value>212, 19</value>
   </data>
   <data name="label3.Size" type="System.Drawing.Size, System.Drawing">
-    <value>36, 13</value>
+    <value>43, 13</value>
   </data>
   <data name="label3.Text" xml:space="preserve">
-    <value>الدفعة</value>
+    <value>المدفوع</value>
   </data>
   <data name="Txt_Paid.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Right</value>
   </data>
   <data name="Txt_Paid.Location" type="System.Drawing.Point, System.Drawing">
-    <value>131, 38</value>
+    <value>194, 41</value>
   </data>
-  <data name="Txt_DealerID.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+  <data name="Txt_Paid.Size" type="System.Drawing.Size, System.Drawing">
+    <value>61, 20</value>
+  </data>
+  <data name="Txt_AgentID.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Right</value>
   </data>
-  <data name="Txt_DealerID.Location" type="System.Drawing.Point, System.Drawing">
-    <value>359, 39</value>
+  <data name="Txt_AgentID.Location" type="System.Drawing.Point, System.Drawing">
+    <value>369, 42</value>
   </data>
-  <data name="Txt_DealerID.Size" type="System.Drawing.Size, System.Drawing">
-    <value>51, 20</value>
+  <data name="Txt_AgentID.Size" type="System.Drawing.Size, System.Drawing">
+    <value>69, 20</value>
   </data>
   <data name="label10.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Right</value>
   </data>
   <data name="label10.Location" type="System.Drawing.Point, System.Drawing">
-    <value>395, 16</value>
+    <value>369, 19</value>
   </data>
   <data name="label10.Size" type="System.Drawing.Size, System.Drawing">
-    <value>15, 13</value>
+    <value>58, 13</value>
   </data>
   <data name="label10.Text" xml:space="preserve">
-    <value>#</value>
+    <value>رقم العميل</value>
   </data>
-  <data name="Cmb_DealerName.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+  <data name="Cmb_AgentName.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Right</value>
   </data>
-  <data name="Cmb_DealerName.Location" type="System.Drawing.Point, System.Drawing">
-    <value>431, 38</value>
+  <data name="Cmb_AgentName.Location" type="System.Drawing.Point, System.Drawing">
+    <value>444, 41</value>
   </data>
   <data name="label9.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Right</value>
   </data>
   <data name="label9.Location" type="System.Drawing.Point, System.Drawing">
-    <value>553, 16</value>
+    <value>559, 19</value>
   </data>
   <data name="label9.Size" type="System.Drawing.Size, System.Drawing">
-    <value>59, 13</value>
+    <value>63, 13</value>
   </data>
   <data name="label9.Text" xml:space="preserve">
-    <value>اسم المورد</value>
+    <value>اسم العميل</value>
   </data>
   <data name="groupBox3.Location" type="System.Drawing.Point, System.Drawing">
-    <value>11, 183</value>
+    <value>2, 189</value>
   </data>
   <data name="groupBox3.Size" type="System.Drawing.Size, System.Drawing">
-    <value>618, 72</value>
+    <value>628, 72</value>
   </data>
   <data name="groupBox3.Text" xml:space="preserve">
-    <value>المورد</value>
+    <value>العميل</value>
   </data>
-  <data name="$this.RightToLeft" type="System.Windows.Forms.RightToLeft, System.Windows.Forms">
-    <value>Yes</value>
+  <data name="button1.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Right</value>
   </data>
-  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="$this.RightToLeftLayout" type="System.Boolean, mscorlib">
-    <value>True</value>
+  <data name="button1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>12, 572</value>
   </data>
-  <data name="$this.Text" xml:space="preserve">
-    <value>شراء</value>
+  <data name="button1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>112, 39</value>
   </data>
-  <data name="errorProvider1.RightToLeft" type="System.Boolean, mscorlib">
-    <value>True</value>
+  <data name="button1.Text" xml:space="preserve">
+    <value>اضافة للفاتورة</value>
   </data>
-  <data name="label1.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
+  <data name="groupBox2.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Right</value>
+  </data>
+  <data name="Txt_Cost.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Right</value>
+  </data>
+  <data name="Txt_Cost.Location" type="System.Drawing.Point, System.Drawing">
+    <value>202, 44</value>
+  </data>
+  <data name="label11.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Right</value>
+  </data>
+  <data name="label11.Location" type="System.Drawing.Point, System.Drawing">
+    <value>194, 25</value>
+  </data>
+  <data name="label11.Size" type="System.Drawing.Size, System.Drawing">
+    <value>61, 16</value>
+  </data>
+  <data name="label11.Text" xml:space="preserve">
+    <value>سعر المخزن</value>
+  </data>
+  <data name="Txt_ItemID.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Right</value>
+  </data>
+  <data name="Txt_ItemID.Location" type="System.Drawing.Point, System.Drawing">
+    <value>369, 44</value>
+  </data>
+  <data name="Txt_InStock.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Right</value>
+  </data>
+  <data name="Txt_InStock.Location" type="System.Drawing.Point, System.Drawing">
+    <value>281, 44</value>
+  </data>
+  <data name="label7.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Right</value>
+  </data>
+  <data name="label7.Location" type="System.Drawing.Point, System.Drawing">
+    <value>282, 25</value>
+  </data>
+  <data name="label7.Size" type="System.Drawing.Size, System.Drawing">
+    <value>61, 16</value>
+  </data>
+  <data name="label7.Text" xml:space="preserve">
+    <value>كمية المخزن</value>
+  </data>
+  <data name="Txt_SellPrice.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Right</value>
+  </data>
+  <data name="Txt_SellPrice.Location" type="System.Drawing.Point, System.Drawing">
+    <value>26, 44</value>
+  </data>
+  <data name="label6.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Right</value>
+  </data>
+  <data name="label6.Location" type="System.Drawing.Point, System.Drawing">
+    <value>27, 25</value>
+  </data>
+  <data name="label6.Size" type="System.Drawing.Size, System.Drawing">
+    <value>60, 16</value>
+  </data>
+  <data name="label6.Text" xml:space="preserve">
+    <value>سعر المرجع</value>
+  </data>
+  <data name="Txt_ToSell.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Right</value>
+  </data>
+  <data name="Txt_ToSell.Location" type="System.Drawing.Point, System.Drawing">
+    <value>112, 44</value>
+  </data>
+  <data name="label5.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Right</value>
+  </data>
+  <data name="label5.Location" type="System.Drawing.Point, System.Drawing">
+    <value>114, 25</value>
+  </data>
+  <data name="label5.Size" type="System.Drawing.Size, System.Drawing">
+    <value>60, 16</value>
+  </data>
+  <data name="label5.Text" xml:space="preserve">
+    <value>كمية المرجع</value>
+  </data>
+  <data name="label4.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Right</value>
+  </data>
+  <data name="label4.Location" type="System.Drawing.Point, System.Drawing">
+    <value>566, 25</value>
+  </data>
+  <data name="label4.Size" type="System.Drawing.Size, System.Drawing">
+    <value>56, 16</value>
+  </data>
+  <data name="label4.Text" xml:space="preserve">
+    <value>اسم الصنف</value>
+  </data>
+  <data name="Cmb_ItemName.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Right</value>
+  </data>
+  <data name="Cmb_ItemName.Location" type="System.Drawing.Point, System.Drawing">
+    <value>444, 42</value>
+  </data>
+  <data name="groupBox2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>2, 94</value>
+  </data>
+  <data name="groupBox2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>628, 86</value>
+  </data>
+  <data name="groupBox2.Text" xml:space="preserve">
+    <value>الاصناف</value>
+  </data>
+  <data name="groupBox1.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Right</value>
+  </data>
+  <data name="label1.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Right</value>
   </data>
   <data name="label1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>594, 18</value>
+    <value>607, 18</value>
   </data>
   <data name="label1.Size" type="System.Drawing.Size, System.Drawing">
     <value>15, 16</value>
@@ -418,15 +393,43 @@
     <value>Top, Right</value>
   </data>
   <data name="Txt_BillID.Location" type="System.Drawing.Point, System.Drawing">
-    <value>509, 34</value>
+    <value>522, 34</value>
   </data>
   <data name="groupBox1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>11, 6</value>
+    <value>2, 12</value>
   </data>
   <data name="groupBox1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>618, 76</value>
+    <value>628, 76</value>
   </data>
   <data name="groupBox1.Text" xml:space="preserve">
-    <value>فاتورة</value>
+    <value>الفاتورة</value>
+  </data>
+  <data name="button2.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Right</value>
+  </data>
+  <data name="button2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>130, 572</value>
+  </data>
+  <data name="button2.Text" xml:space="preserve">
+    <value>حفظ الفاتورة</value>
+  </data>
+  <data name="$this.RightToLeft" type="System.Windows.Forms.RightToLeft, System.Windows.Forms">
+    <value>Yes</value>
+  </data>
+  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="$this.RightToLeftLayout" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="$this.Text" xml:space="preserve">
+    <value>مرجع مبيعات</value>
+  </data>
+  <data name="label8.Location" type="System.Drawing.Point, System.Drawing">
+    <value>372, 25</value>
+  </data>
+  <data name="label8.Size" type="System.Drawing.Size, System.Drawing">
+    <value>55, 16</value>
+  </data>
+  <data name="label8.Text" xml:space="preserve">
+    <value>رقم الصنف</value>
   </data>
 </root>

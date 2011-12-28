@@ -114,6 +114,26 @@ namespace Acounting
 
         }
 
+
+
+        private void clear_items()
+        {
+
+            //clear items data
+            Txt_ToBuy.Text = "";
+            Txt_BuyPrice.Text = "";
+            Cmb_DealerName.Enabled = false;
+            button2.Enabled = true;
+        }
+        private void reset_back()
+        {
+            Cmb_DealerName.Enabled = true;
+            Txt_BuyPrice.Text = "";
+            Txt_ToBuy.Text = "";
+            Txt_Paid.Text = "";
+        }
+
+
         private void button1_Click(object sender, EventArgs e)
         {
             #region check and make sure everything ok
@@ -234,6 +254,8 @@ namespace Acounting
             Cmb_ItemName_TextChanged(null, null);
             Cmb_DealerName_TextChanged(null, null);
             #endregion
+
+            clear_items();
  
 
         }
@@ -326,6 +348,8 @@ namespace Acounting
 
 
                     #endregion
+
+                    reset_back();
                 }
 
             }
