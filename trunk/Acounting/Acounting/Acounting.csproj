@@ -121,6 +121,12 @@
     <Compile Include="Buy.Designer.cs">
       <DependentUpon>Buy.cs</DependentUpon>
     </Compile>
+    <Compile Include="CreateDB.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CreateDB.Designer.cs">
+      <DependentUpon>CreateDB.cs</DependentUpon>
+    </Compile>
     <Compile Include="Dealers.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -203,6 +209,9 @@
     <EmbeddedResource Include="Buy.resx">
       <DependentUpon>Buy.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="CreateDB.resx">
+      <DependentUpon>CreateDB.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Dealers.resx">
       <DependentUpon>Dealers.cs</DependentUpon>
     </EmbeddedResource>
@@ -269,49 +278,49 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Sql\store_agents.sql">
+    <Content Include="Sql\b2store_agents.sql">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Sql\store_bills.sql">
+    <Content Include="Sql\d4store_bills.sql">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Sql\store_billsreturn.sql">
+    <Content Include="Sql\f6store_billsreturn.sql">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Sql\store_dealerpayments.sql">
+    <Content Include="Sql\h9store_dealerpayments.sql">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Sql\store_dealers.sql">
+    <Content Include="Sql\c3store_dealers.sql">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Sql\store_items.sql">
+    <Content Include="Sql\a1store_items.sql">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="Sql\store_moves.sql">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Sql\store_payments.sql">
+    <Content Include="Sql\e5store_payments.sql">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Sql\store_purchasebills.sql">
+    <Content Include="Sql\j10store_purchasebills.sql">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Sql\store_purchasebillsreturn.sql">
+    <Content Include="Sql\k11store_purchasebillsreturn.sql">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Sql\store_purchasesitems.sql">
+    <Content Include="Sql\l12store_purchasesitems.sql">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Sql\store_purchasesitemsreturn.sql">
+    <Content Include="Sql\m13store_purchasesitemsreturn.sql">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="Sql\store_routines.sql">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Sql\store_salesitems.sql">
+    <Content Include="Sql\g7store_salesitems.sql">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Sql\store_salesitemsreturn.sql">
+    <Content Include="Sql\h8store_salesitemsreturn.sql">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="Sql\store_spendings.sql">

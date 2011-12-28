@@ -8,16 +8,18 @@ USE `store`;
 
 
 --
--- Table structure for table `spendings`
+-- Table structure for table `items`
 --
 
-DROP TABLE IF EXISTS `spendings`;
-CREATE TABLE `spendings` (
-  `ID` int(11) NOT NULL DEFAULT '0',
-  `DocDate` date NOT NULL,
-  `Amount` double NOT NULL,
-  PRIMARY KEY (`ID`)
+DROP TABLE IF EXISTS `items`;
+CREATE TABLE `items` (
+  `ItemID` int(11) NOT NULL DEFAULT '0',
+  `ItemName` varchar(255) CHARACTER SET utf8 NOT NULL,
+  `Cost` double NOT NULL,
+  `Qty` double NOT NULL,
+  `TotalCost` double NOT NULL,
+  PRIMARY KEY (`ItemID`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_general_ci CHECKSUM=1 DELAY_KEY_WRITE=1 ROW_FORMAT=DYNAMIC;
 
 
--- Dump completed on 2011-12-28  6:57:29
+-- Dump completed on 2011-12-28  6:57:30
