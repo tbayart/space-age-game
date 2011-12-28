@@ -129,7 +129,7 @@
     <value>Top, Right</value>
   </data>
   <data name="button2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>109, 572</value>
+    <value>109, 569</value>
   </data>
   <data name="button2.Text" xml:space="preserve">
     <value>حفظ الفاتورة</value>
@@ -138,7 +138,7 @@
     <value>Top, Right</value>
   </data>
   <data name="button1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>13, 572</value>
+    <value>13, 569</value>
   </data>
   <data name="button1.Size" type="System.Drawing.Size, System.Drawing">
     <value>90, 39</value>
