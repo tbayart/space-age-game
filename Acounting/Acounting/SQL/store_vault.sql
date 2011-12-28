@@ -26,8 +26,8 @@ DROP TABLE IF EXISTS `vault`;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `vault` (
   `idVault` int(11) NOT NULL,
-  `In_Hand` int(11) NOT NULL,
-  `Opennings` int(11) NOT NULL,
+  `In_Hand` double NOT NULL,
+  `Opennings` double NOT NULL,
   PRIMARY KEY (`idVault`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
@@ -41,4 +41,4 @@ CREATE TABLE `vault` (
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2011-12-25 22:13:05
+-- Dump completed on 2011-12-28  6:57:32

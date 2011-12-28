@@ -26,8 +26,8 @@ DROP TABLE IF EXISTS `salesitemsreturn`;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `salesitemsreturn` (
   `ID` int(11) unsigned NOT NULL DEFAULT '0',
-  `ItemID` int(11) NOT NULL,
   `BillsReturn_BillID` int(11) NOT NULL,
+  `ItemID` int(11) NOT NULL,
   `Qty` double NOT NULL,
   `SellPrice` double NOT NULL,
   `Cost` double NOT NULL,
@@ -49,4 +49,4 @@ CREATE TABLE `salesitemsreturn` (
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2011-12-25 22:13:02
+-- Dump completed on 2011-12-28  6:57:29

@@ -26,8 +26,8 @@ DROP TABLE IF EXISTS `purchasesitemsreturn`;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `purchasesitemsreturn` (
   `ID` int(11) unsigned NOT NULL DEFAULT '0',
-  `ItemID` int(11) NOT NULL,
   `PurchaseBillsreturn_BillID` int(11) NOT NULL,
+  `ItemID` int(11) NOT NULL,
   `Qty` double NOT NULL,
   `Cost` double NOT NULL,
   `Total` double NOT NULL,
@@ -48,4 +48,4 @@ CREATE TABLE `purchasesitemsreturn` (
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2011-12-25 22:13:01
+-- Dump completed on 2011-12-28  6:57:28

@@ -1,23 +1,18 @@
-﻿// MySQL Backup & Restore V1.1
-// Release Date: 20 Sep 2011
-// Project Site: http://www.codeproject.com/KB/database/mysqlbackuprestore.aspx
-// License: This article, along with any associated source code and files, 
-//          is licensed under The Apache License, Version 2.0
-
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Linq;
 using System.Text;
 using System.Windows.Forms;
-using System.IO;
 using MySql.Data.MySqlClient;
-
+using System.Configuration;
 
 namespace MySQL_Backup_and_Restore
 {
-    public partial class Form1 : Form
+    public partial class BackupAr : Form
+        
     {
         public bool Construct_SQL_In_One_Line_From_Same_Table = true;
         public bool DropAndRecreateTable = false;
@@ -27,7 +22,7 @@ namespace MySQL_Backup_and_Restore
         string backupFile = "";
         public string FileExtension = "backup";
 
-        public Form1(string[] args)
+        public BackupAr(string[] args)
         {
             InitializeComponent();
             checkBox_ConstructSQLIn1Line.CheckedChanged += new EventHandler(checkBox_CheckedChanged);
@@ -35,14 +30,7 @@ namespace MySQL_Backup_and_Restore
             checkBox_DropDatabase.CheckedChanged += new EventHandler(checkBox_CheckedChanged);
             checkBox_encryption.CheckedChanged += new EventHandler(checkBox_encryption_CheckedChanged);
         }
-
-        private void Form1_Load(object sender, EventArgs e)
-        {
-          
-
-        }
-
-      
+     
  
         void checkBox_CheckedChanged(object sender, EventArgs e)
         {
@@ -101,7 +89,7 @@ namespace MySQL_Backup_and_Restore
 
                 
                     SaveFileDialog saveFileDialog1 = new SaveFileDialog();
-                    saveFileDialog1.Title = "Save Database Backup File";
+                    saveFileDialog1.Title = "حفظ الملف";
                     saveFileDialog1.Filter = filter;
                     if (DialogResult.OK != saveFileDialog1.ShowDialog())
                         return;
@@ -134,11 +122,11 @@ namespace MySQL_Backup_and_Restore
                 Encrypt(backupFile);
                 // End of Backup Process
 
-                MessageBox.Show("Backup Successfully.\n\nYour backup file is created at:\r\n" + backupFile, "Backup", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("تم حفظ  النسخة في الملف  :\r\n" + backupFile, "حفظ", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             catch (Exception ex) // Log any error that occur during the backup process
             {
-                string errorMessage = "Backup fail.\r\n\r\n" + ex.ToString();
+                string errorMessage = "فشل الحفظ .\r\n\r\n" + ex.ToString();
                 MessageBox.Show(errorMessage, "Error");
             }
         }
@@ -155,7 +143,7 @@ namespace MySQL_Backup_and_Restore
 
             string filename = "";
             OpenFileDialog f2 = new OpenFileDialog();
-            f2.Title = "Open Database Backup File";
+            f2.Title = "فتح ملف الحفظ";
             f2.Filter = "*." + FileExtension + "|*." + FileExtension + "|All Files|*.*";
             if (DialogResult.OK != f2.ShowDialog())
                 return;
@@ -177,13 +165,16 @@ namespace MySQL_Backup_and_Restore
                     mb.Restore(filename);
                 }
 
-                MessageBox.Show("Restore successfull.", "Restore");
+                MessageBox.Show("تم الاسترجاع بنجاح ", "استرجاع");
             }
             catch (Exception ex) // Log any error that occur during the backup process
             {
-                string errorMessage = "Restore fail.\r\n\r\n" + ex.ToString();
+                string errorMessage = "فشل الاسترجاع.\r\n\r\n" + ex.ToString();
                 MessageBox.Show(errorMessage, "Error");
             }
         }
+
+  
+         
     }
 }

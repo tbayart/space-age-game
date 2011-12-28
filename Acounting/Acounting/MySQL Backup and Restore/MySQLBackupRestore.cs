@@ -12,7 +12,7 @@ using System.IO;
 using System.Data;
 using System.Drawing;
 using System.Windows.Forms;
-using XCrypt;
+
 
 namespace MySql.Data.MySqlClient
 {
@@ -35,7 +35,7 @@ namespace MySql.Data.MySqlClient
         public string myDatabase = "";
         public string myPort = "";
         public string myOther = "";
-
+ 
         Form f = null;
         ProgressBar progressBar1 = null;
 
@@ -226,28 +226,13 @@ namespace MySql.Data.MySqlClient
             string[] output = null;
             output = new string[SQLs.Count];
 
-            #region Encryption | Encrypt the output SQL text
 
-            if (EncryptBackupFile)
-            {
-                XCryptEngine xe = new XCryptEngine();
-                xe.InitializeEngine(XCryptEngine.AlgorithmType.Rijndael);
-                xe.Key = EncryptionKey;
-
-                for (int i = 0; i < SQLs.Count; i++)
-                {
-                    output[i] = xe.Encrypt(SQLs[i]);
-                }
-            }
-            else
-            {
                 for (int i = 0; i < SQLs.Count; i++)
                 {
                     output[i] = SQLs[i];
                 }
-            }
 
-            #endregion
+
 
             File.WriteAllLines(Filename, output, Encoding.UTF8);
         }
@@ -285,16 +270,7 @@ namespace MySql.Data.MySqlClient
 
             string[] sqls = File.ReadAllLines(Filename, Encoding.UTF8);
 
-            if (EncryptBackupFile)
-            {
-                XCryptEngine xe = new XCryptEngine();
-                xe.InitializeEngine(XCryptEngine.AlgorithmType.Rijndael);
-                xe.Key = EncryptionKey;
-                for (int i = 0; i < sqls.Length; i++)
-                {
-                    sqls[i] = xe.Decrypt(sqls[i]);
-                }
-            }
+   
 
             NewProgressForm();
             progressBar1.Maximum = sqls.Length;
