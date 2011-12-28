@@ -17,8 +17,17 @@ namespace Acounting
         [STAThread]
         static void Main()
         {
-
-            string lang = Application.UserAppDataRegistry.GetValue("Language").ToString();
+            string lang="";
+            try
+            {
+                lang = Application.UserAppDataRegistry.GetValue("Language").ToString();
+            }
+            catch (Exception ee)
+            {
+                Console.WriteLine(ee.Message);
+                 
+            }
+            
             cul = new CultureInfo(lang);
 
             Thread.CurrentThread.CurrentCulture = cul;

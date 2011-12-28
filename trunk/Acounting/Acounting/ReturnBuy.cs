@@ -44,14 +44,14 @@ namespace Acounting
 
 
             //make a ghost table
-            virtualdata = storeDataSet.PurchaseDetails.Clone();
+            virtualdata = storeDataSet.PurchaseReturnDetails.Clone();
             dataGridView1.DataSource = virtualdata;
 
             //get purchase lastid
-            purchaseID = storeDataSet.purchasesitems.Rows.Count;
+            purchaseID = storeDataSet.purchasesitemsreturn.Rows.Count;
 
             //new bill id      
-            billID = storeDataSet.purchasebills.Count + 1;
+            billID = storeDataSet.purchasebillsreturn.Count + 1;
 
             Txt_BillID.Text = billID.ToString();
 
@@ -169,7 +169,7 @@ namespace Acounting
             #region dealers
 
 
-            double totalprice = buyprice * buyqty;
+            totalprice = buyprice * buyqty;
 
 
             double billpaid;
@@ -188,14 +188,14 @@ namespace Acounting
             #region add items sales
 
             // add items sales  
-            DataRow newrow = storeDataSet.purchasesitems.NewRow();
+            DataRow newrow = storeDataSet.purchasesitemsreturn.NewRow();
             newrow[0] = purchaseID;
             newrow[1] = billID;
             newrow[2] = itemid;
             newrow[3] = buyqty;
             newrow[4] = buyprice;
             newrow[5] = totalprice;
-            storeDataSet.purchasesitems.Rows.Add(newrow);
+            storeDataSet.purchasesitemsreturn.Rows.Add(newrow);
 
             //add virtual data to datagrid
 
@@ -276,7 +276,7 @@ namespace Acounting
                     Txt_Paid_TextChanged(null, null);
 
                     //add bill
-                    DataRow billrow = storeDataSet.purchasebills.NewRow();
+                    DataRow billrow = storeDataSet.purchasebillsreturn.NewRow();
 
                     billrow[0] = billID;
                     billrow[1] = dealerId;
@@ -284,7 +284,7 @@ namespace Acounting
                     billrow[3] = totalbill;
                     billrow[4] = paid;
                     billrow[5] = remaining;
-                    storeDataSet.purchasebills.Rows.Add(billrow);
+                    storeDataSet.purchasebillsreturn.Rows.Add(billrow);
 
 
                     // get vault row for manipulation
@@ -320,7 +320,7 @@ namespace Acounting
                     virtualdata.Clear();
 
 
-                    billID = storeDataSet.purchasebills.Count + 1;
+                    billID = storeDataSet.purchasebillsreturn.Count + 1;
 
                     Txt_BillID.Text = billID.ToString();
 

@@ -29,6 +29,10 @@ namespace Acounting
 
         private void Form1_Load(object sender, EventArgs e)
         {
+            // TODO: This line of code loads data into the 'storeDataSet.vault' table. You can move, or remove it, as needed.
+            this.vaultTableAdapter.Fill(this.storeDataSet.vault);
+
+
             try
             {
 
@@ -58,6 +62,19 @@ namespace Acounting
         }
         
         #region menu items
+
+        private void exitToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void كشفموردToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            DealersDebt dealersdebt = new DealersDebt();
+            dealersdebt.MdiParent = this;
+            dealersdebt.Show();
+        }
+
         private void itemToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Items items = new Items();
@@ -69,7 +86,7 @@ namespace Acounting
         private void agentDebtToolStripMenuItem_Click(object sender, EventArgs e)
         {
 
-            Reports reports = new Reports();
+            AgentsDebt reports = new AgentsDebt();
             reports.MdiParent = this;
             reports.Show();
         }
@@ -182,9 +199,6 @@ namespace Acounting
             }
         }
 
-        private void exitToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            Application.Exit();
-        }
+
     }
 }
