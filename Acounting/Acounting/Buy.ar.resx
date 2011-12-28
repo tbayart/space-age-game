@@ -296,10 +296,13 @@
   <data name="$this.RightToLeft" type="System.Windows.Forms.RightToLeft, System.Windows.Forms">
     <value>Yes</value>
   </data>
+  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="$this.RightToLeftLayout" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
   <data name="$this.Text" xml:space="preserve">
     <value>شراء</value>
   </data>
-  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="errorProvider1.RightToLeft" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
@@ -320,8 +323,5 @@
   </data>
   <data name="groupBox1.Text" xml:space="preserve">
     <value>فاتورة</value>
-  </data>
-  <data name="DealerIDerr" xml:space="preserve">
-    <value>خطا في اسم المورد</value>
   </data>
 </root>
