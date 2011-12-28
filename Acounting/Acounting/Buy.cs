@@ -6,6 +6,9 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Windows.Forms;
+using System.Threading;
+using System.Resources;
+using System.Globalization;
 
 namespace Acounting
 {
@@ -19,8 +22,8 @@ namespace Acounting
         double totalprice;
         double remaining;
         int dealerId;
-  
 
+        ResourceManager rm;
 
 
         public Buy()
@@ -38,7 +41,7 @@ namespace Acounting
             this.purchasebillsTableAdapter.Fill(this.storeDataSet.purchasebills);
             this.itemsTableAdapter.Fill(this.storeDataSet.items);
 
-
+            
 
             Cmb_ItemName_TextChanged(null, null);
             Cmb_DealerName_TextChanged(null,null);
@@ -55,8 +58,9 @@ namespace Acounting
             billID = storeDataSet.purchasebills.Count + 1;
 
             Txt_BillID.Text = billID.ToString();
-  
- 
+             
+            rm = new ResourceManager(typeof(Buy));
+            Console.WriteLine(rm.BaseName);
         }
 
         private void Cmb_ItemName_TextChanged(object sender, EventArgs e)
@@ -91,13 +95,23 @@ namespace Acounting
 
                 if (!int.TryParse(Txt_DealerID.Text, out dealerId))
                 {
-                    errorProvider1.SetError(Txt_DealerID, "Error With DealerID");
+
+                    errorProvider1.SetError(Txt_DealerID, rm.GetString("DealerIDerr", Program.cul));
                     return;
                 }
             }
             catch (Exception ee)
             {
-                errorProvider1.SetError(Cmb_DealerName, ee.Message);
+                if (ee is NullReferenceException)
+                {
+                    if (rm!=null)
+                    {
+                        
+                        errorProvider1.SetError(Txt_DealerID, rm.GetString("DealerIDerr",Program.cul));
+                    }
+                     
+                }
+           //     errorProvider1.SetError(Cmb_DealerName, ee.Message);
 
 
             }
@@ -124,14 +138,14 @@ namespace Acounting
 
             if (Txt_DealerID.Text == "")
             {
-                errorProvider1.SetError(Cmb_DealerName, "Error with dealerID");
+                errorProvider1.SetError(Cmb_DealerName, rm.GetString("DealerIDerr", Program.cul));
                 return;
             }
 
             int itemid;
             if (!int.TryParse(Txt_ItemID.Text, out itemid))
             {
-                errorProvider1.SetError(Txt_ItemID, "Error With ItemID");
+                errorProvider1.SetError(Txt_DealerID, rm.GetString("DealerIDerr", Program.cul));
                 return;
             }
 
@@ -170,7 +184,7 @@ namespace Acounting
             #region dealers
 
 
-            double totalprice = buyprice * buyqty;
+            totalprice = buyprice * buyqty;
 
 
             double billpaid;
@@ -331,6 +345,11 @@ namespace Acounting
                 }
 
             }
+        }
+
+        private void Cmb_DealerName_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
  
 

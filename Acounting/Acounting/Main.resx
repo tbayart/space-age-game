@@ -117,15 +117,18 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="staticAssetsToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>136, 22</value>
+  <data name="&gt;&gt;sellToolStripMenuItem1.Name" xml:space="preserve">
+    <value>sellToolStripMenuItem1</value>
   </data>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="agentsToolStripMenuItem1.Size" type="System.Drawing.Size, System.Drawing">
     <value>136, 22</value>
   </data>
   <data name="&gt;&gt;storeDataSet.Type" xml:space="preserve">
     <value>Acounting.storeDataSet, storeDataSet.Designer.cs, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;agentsToolStripMenuItem1.Name" xml:space="preserve">
+    <value>agentsToolStripMenuItem1</value>
   </data>
   <data name="&gt;&gt;عربيToolStripMenuItem1.Name" xml:space="preserve">
     <value>عربيToolStripMenuItem1</value>
@@ -136,8 +139,9 @@
   <data name="&gt;&gt;returnSaleToolStripMenuItem.Name" xml:space="preserve">
     <value>returnSaleToolStripMenuItem</value>
   </data>
-  <data name="agentsToolStripMenuItem1.Text" xml:space="preserve">
-    <value>Agents</value>
+  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="menuStrip1.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
   </data>
   <data name="&gt;&gt;agentDebtToolStripMenuItem.Name" xml:space="preserve">
     <value>agentDebtToolStripMenuItem</value>
@@ -146,8 +150,8 @@
   <data name="$this.RightToLeft" type="System.Windows.Forms.RightToLeft, System.Windows.Forms">
     <value>No</value>
   </data>
-  <data name="agentDebtToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>129, 22</value>
+  <data name="عربيToolStripMenuItem1.Text" xml:space="preserve">
+    <value>عربي</value>
   </data>
   <data name="&gt;&gt;returnSaleToolStripMenuItem.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
@@ -176,15 +180,11 @@
   <data name="&gt;&gt;agentsToolStripMenuItem1.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;sellToolStripMenuItem1.Name" xml:space="preserve">
-    <value>sellToolStripMenuItem1</value>
+  <data name="&gt;&gt;reportsToolStripMenuItem1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="dealersToolStripMenuItem1.Text" xml:space="preserve">
-    <value>Dealers</value>
-  </data>
-  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="menuStrip1.TabIndex" type="System.Int32, mscorlib">
-    <value>1</value>
+  <data name="عربيToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>66, 20</value>
   </data>
   <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
     <value>6, 13</value>
@@ -213,11 +213,14 @@
   <data name="&gt;&gt;dataToolStripMenuItem.Name" xml:space="preserve">
     <value>dataToolStripMenuItem</value>
   </data>
-  <data name="buyToolStripMenuItem1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>130, 22</value>
+  <data name="&gt;&gt;paymentsToolStripMenuItem1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;menuStrip1.ZOrder" xml:space="preserve">
     <value>0</value>
+  </data>
+  <data name="agentsToolStripMenuItem1.Text" xml:space="preserve">
+    <value>Agents</value>
   </data>
   <data name="&gt;&gt;عربيToolStripMenuItem.Name" xml:space="preserve">
     <value>عربيToolStripMenuItem</value>
@@ -231,9 +234,6 @@
   <data name="&gt;&gt;itemsBindingSource.Type" xml:space="preserve">
     <value>System.Windows.Forms.BindingSource, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;reportsToolStripMenuItem1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
   <data name="itemToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
     <value>136, 22</value>
   </data>
@@ -242,12 +242,6 @@
   </data>
   <data name="englshToolStripMenuItem.Text" xml:space="preserve">
     <value>English</value>
-  </data>
-  <data name="dataToolStripMenuItem.Text" xml:space="preserve">
-    <value>Data</value>
-  </data>
-  <data name="&gt;&gt;paymentsToolStripMenuItem1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;menuStrip1.Parent" xml:space="preserve">
     <value>$this</value>
@@ -282,11 +276,8 @@
   <data name="agentDebtToolStripMenuItem.Text" xml:space="preserve">
     <value>Agent Debt</value>
   </data>
-  <data name="عربيToolStripMenuItem1.Text" xml:space="preserve">
-    <value>عربي</value>
-  </data>
-  <data name="&gt;&gt;itemsTableAdapter.Name" xml:space="preserve">
-    <value>itemsTableAdapter</value>
+  <data name="dataToolStripMenuItem.Text" xml:space="preserve">
+    <value>Data</value>
   </data>
   <data name="عربيToolStripMenuItem.Text" xml:space="preserve">
     <value>Language</value>
@@ -309,8 +300,8 @@
   <data name="&gt;&gt;itemToolStripMenuItem.Name" xml:space="preserve">
     <value>itemToolStripMenuItem</value>
   </data>
-  <data name="&gt;&gt;agentsToolStripMenuItem1.Name" xml:space="preserve">
-    <value>agentsToolStripMenuItem1</value>
+  <data name="&gt;&gt;itemsTableAdapter.Name" xml:space="preserve">
+    <value>itemsTableAdapter</value>
   </data>
   <data name="storageToolStripMenuItem.Text" xml:space="preserve">
     <value>Storage</value>
@@ -336,6 +327,9 @@
   <data name="&gt;&gt;عربيToolStripMenuItem1.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
+  <data name="staticAssetsToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>136, 22</value>
+  </data>
   <data name="menuStrip1.Text" xml:space="preserve">
     <value>menuStrip1</value>
   </data>
@@ -348,17 +342,20 @@
   <data name="storageToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
     <value>57, 20</value>
   </data>
+  <data name="buyToolStripMenuItem1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>130, 22</value>
+  </data>
   <data name="menuStrip1.Location" type="System.Drawing.Point, System.Drawing">
     <value>0, 0</value>
   </data>
   <data name="&gt;&gt;storageToolStripMenuItem.Name" xml:space="preserve">
     <value>storageToolStripMenuItem</value>
   </data>
-  <data name="عربيToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>66, 20</value>
+  <data name="dealersToolStripMenuItem1.Text" xml:space="preserve">
+    <value>Dealers</value>
   </data>
-  <data name="sellToolStripMenuItem1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>130, 22</value>
+  <data name="agentDebtToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>129, 22</value>
   </data>
   <data name="&gt;&gt;englshToolStripMenuItem.Name" xml:space="preserve">
     <value>englshToolStripMenuItem</value>
@@ -384,11 +381,11 @@
   <data name="&gt;&gt;returnBuyToolStripMenuItem.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
+  <data name="sellToolStripMenuItem1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>130, 22</value>
+  </data>
   <metadata name="$this.Language" type="System.Globalization.CultureInfo, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>ar</value>
-  </metadata>
-  <metadata name="menuStrip1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>17, 17</value>
   </metadata>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
@@ -398,6 +395,9 @@
   </metadata>
   <metadata name="storeDataSet.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>126, 17</value>
+  </metadata>
+  <metadata name="menuStrip1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
   </metadata>
   <metadata name="itemsBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>242, 17</value>
