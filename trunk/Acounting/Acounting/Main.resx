@@ -151,6 +151,10 @@
   <data name="staticAssetsToolStripMenuItem.Text" xml:space="preserve">
     <value>Static Assets</value>
   </data>
+  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="حفظاسترجعToolStripMenuItem.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
   <data name="حفظاسترجعToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
     <value>157, 22</value>
   </data>
@@ -170,37 +174,37 @@
     <value>Data</value>
   </data>
   <data name="buyToolStripMenuItem1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>133, 22</value>
+    <value>152, 22</value>
   </data>
   <data name="buyToolStripMenuItem1.Text" xml:space="preserve">
     <value>Buy</value>
   </data>
   <data name="sellToolStripMenuItem1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>133, 22</value>
+    <value>152, 22</value>
   </data>
   <data name="sellToolStripMenuItem1.Text" xml:space="preserve">
     <value>Sell</value>
   </data>
   <data name="paymentsToolStripMenuItem1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>133, 22</value>
+    <value>152, 22</value>
   </data>
   <data name="paymentsToolStripMenuItem1.Text" xml:space="preserve">
     <value>Payments</value>
   </data>
   <data name="vaultToolStripMenuItem1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>133, 22</value>
+    <value>152, 22</value>
   </data>
   <data name="vaultToolStripMenuItem1.Text" xml:space="preserve">
     <value>Vault</value>
   </data>
   <data name="returnBuyToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>133, 22</value>
+    <value>152, 22</value>
   </data>
   <data name="returnBuyToolStripMenuItem.Text" xml:space="preserve">
     <value>Return Buy</value>
   </data>
   <data name="returnSaleToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>133, 22</value>
+    <value>152, 22</value>
   </data>
   <data name="returnSaleToolStripMenuItem.Text" xml:space="preserve">
     <value>Return Sale</value>
@@ -212,13 +216,13 @@
     <value>Storage</value>
   </data>
   <data name="agentDebtToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>152, 22</value>
+    <value>135, 22</value>
   </data>
   <data name="agentDebtToolStripMenuItem.Text" xml:space="preserve">
     <value>Agent Debt</value>
   </data>
   <data name="كشفموردToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>152, 22</value>
+    <value>135, 22</value>
   </data>
   <data name="كشفموردToolStripMenuItem.Text" xml:space="preserve">
     <value>Dealer Debt</value>
@@ -253,7 +257,6 @@
   <data name="menuStrip1.Size" type="System.Drawing.Size, System.Drawing">
     <value>785, 24</value>
   </data>
-  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="menuStrip1.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
   </data>
