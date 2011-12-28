@@ -196,6 +196,13 @@ namespace Acounting
             }
         }
 
+        private void اجمالياصنافToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            TotalItems totalitems = new TotalItems();
+            totalitems.MdiParent = this;
+            totalitems.Show();
+        }
+
 
     }
 }
