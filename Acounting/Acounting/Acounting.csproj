@@ -6,7 +6,7 @@
     <ProductVersion>8.0.30703</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>{36F32678-D7C3-45A6-856A-DC942895A727}</ProjectGuid>
-    <OutputType>Exe</OutputType>
+    <OutputType>WinExe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>Acounting</RootNamespace>
     <AssemblyName>Acounting</AssemblyName>
@@ -50,13 +50,16 @@
     <UseVSHostingProcess>false</UseVSHostingProcess>
   </PropertyGroup>
   <PropertyGroup>
-    <StartupObject />
+    <StartupObject>Acounting.Program</StartupObject>
   </PropertyGroup>
   <PropertyGroup>
     <NoWin32Manifest>true</NoWin32Manifest>
   </PropertyGroup>
   <PropertyGroup>
     <SignAssembly>false</SignAssembly>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>icon.ico</ApplicationIcon>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Microsoft.ReportViewer.Common, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
@@ -206,6 +209,9 @@
     <EmbeddedResource Include="Agents.resx">
       <DependentUpon>Agents.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Reports\DealersDebt.ar.resx">
+      <DependentUpon>DealersDebt.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Reports\DealersDebt.resx">
       <DependentUpon>DealersDebt.cs</DependentUpon>
     </EmbeddedResource>
@@ -325,6 +331,7 @@
     </None>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="icon.ico" />
     <Content Include="Sql\b2store_agents.sql">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>

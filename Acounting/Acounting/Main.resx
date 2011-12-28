@@ -174,37 +174,37 @@
     <value>Data</value>
   </data>
   <data name="buyToolStripMenuItem1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>152, 22</value>
+    <value>133, 22</value>
   </data>
   <data name="buyToolStripMenuItem1.Text" xml:space="preserve">
     <value>Buy</value>
   </data>
   <data name="sellToolStripMenuItem1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>152, 22</value>
+    <value>133, 22</value>
   </data>
   <data name="sellToolStripMenuItem1.Text" xml:space="preserve">
     <value>Sell</value>
   </data>
   <data name="paymentsToolStripMenuItem1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>152, 22</value>
+    <value>133, 22</value>
   </data>
   <data name="paymentsToolStripMenuItem1.Text" xml:space="preserve">
     <value>Payments</value>
   </data>
   <data name="vaultToolStripMenuItem1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>152, 22</value>
+    <value>133, 22</value>
   </data>
   <data name="vaultToolStripMenuItem1.Text" xml:space="preserve">
     <value>Vault</value>
   </data>
   <data name="returnBuyToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>152, 22</value>
+    <value>133, 22</value>
   </data>
   <data name="returnBuyToolStripMenuItem.Text" xml:space="preserve">
     <value>Return Buy</value>
   </data>
   <data name="returnSaleToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>152, 22</value>
+    <value>133, 22</value>
   </data>
   <data name="returnSaleToolStripMenuItem.Text" xml:space="preserve">
     <value>Return Sale</value>
@@ -286,6 +286,9 @@
   </metadata>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
+  </metadata>
+  <metadata name="$this.Language" type="System.Globalization.CultureInfo, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>ar</value>
   </metadata>
   <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
     <value>6, 13</value>

@@ -29,10 +29,11 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource5 = new Microsoft.Reporting.WinForms.ReportDataSource();
-            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource6 = new Microsoft.Reporting.WinForms.ReportDataSource();
-            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource7 = new Microsoft.Reporting.WinForms.ReportDataSource();
-            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource8 = new Microsoft.Reporting.WinForms.ReportDataSource();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(DealersDebt));
+            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource1 = new Microsoft.Reporting.WinForms.ReportDataSource();
+            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource2 = new Microsoft.Reporting.WinForms.ReportDataSource();
+            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource3 = new Microsoft.Reporting.WinForms.ReportDataSource();
+            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource4 = new Microsoft.Reporting.WinForms.ReportDataSource();
             this.dealersBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.storeDataSet = new Acounting.storeDataSet();
             this.purchasebillsBindingSource = new System.Windows.Forms.BindingSource(this.components);
@@ -78,16 +79,13 @@
             // 
             // comboBox1
             // 
+            resources.ApplyResources(this.comboBox1, "comboBox1");
             this.comboBox1.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
             this.comboBox1.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
-            this.comboBox1.DataBindings.Add(new System.Windows.Forms.Binding("SelectedValue", this.dealersBindingSource, "DealerName", true));
             this.comboBox1.DataSource = this.storeDataSet;
             this.comboBox1.DisplayMember = "dealers.DealerName";
             this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(481, 0);
             this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(121, 21);
-            this.comboBox1.TabIndex = 0;
             this.comboBox1.ValueMember = "dealers.DealerName";
             this.comboBox1.TextChanged += new System.EventHandler(this.comboBox1_TextChanged);
             // 
@@ -97,24 +95,21 @@
             // 
             // reportViewer1
             // 
-            this.reportViewer1.Dock = System.Windows.Forms.DockStyle.Fill;
-            reportDataSource5.Name = "DataSet1";
-            reportDataSource5.Value = this.dealersBindingSource;
-            reportDataSource6.Name = "DataSet2";
-            reportDataSource6.Value = this.purchasebillsBindingSource;
-            reportDataSource7.Name = "DataSet3";
-            reportDataSource7.Value = this.purchasebillsreturnBindingSource;
-            reportDataSource8.Name = "DataSet4";
-            reportDataSource8.Value = this.dealerpaymentsBindingSource;
-            this.reportViewer1.LocalReport.DataSources.Add(reportDataSource5);
-            this.reportViewer1.LocalReport.DataSources.Add(reportDataSource6);
-            this.reportViewer1.LocalReport.DataSources.Add(reportDataSource7);
-            this.reportViewer1.LocalReport.DataSources.Add(reportDataSource8);
+            resources.ApplyResources(this.reportViewer1, "reportViewer1");
+            reportDataSource1.Name = "DataSet1";
+            reportDataSource1.Value = this.dealersBindingSource;
+            reportDataSource2.Name = "DataSet2";
+            reportDataSource2.Value = this.purchasebillsBindingSource;
+            reportDataSource3.Name = "DataSet3";
+            reportDataSource3.Value = this.purchasebillsreturnBindingSource;
+            reportDataSource4.Name = "DataSet4";
+            reportDataSource4.Value = this.dealerpaymentsBindingSource;
+            this.reportViewer1.LocalReport.DataSources.Add(reportDataSource1);
+            this.reportViewer1.LocalReport.DataSources.Add(reportDataSource2);
+            this.reportViewer1.LocalReport.DataSources.Add(reportDataSource3);
+            this.reportViewer1.LocalReport.DataSources.Add(reportDataSource4);
             this.reportViewer1.LocalReport.ReportEmbeddedResource = "Acounting.Reports.DealersDebtAr.rdlc";
-            this.reportViewer1.Location = new System.Drawing.Point(0, 0);
             this.reportViewer1.Name = "reportViewer1";
-            this.reportViewer1.Size = new System.Drawing.Size(614, 407);
-            this.reportViewer1.TabIndex = 2;
             // 
             // purchasebillsTableAdapter
             // 
@@ -130,13 +125,11 @@
             // 
             // DealersDebt
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(614, 407);
             this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.reportViewer1);
             this.Name = "DealersDebt";
-            this.Text = "DealersDebt";
             this.Load += new System.EventHandler(this.DealersDebt_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dealersBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.storeDataSet)).EndInit();
