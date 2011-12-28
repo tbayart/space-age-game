@@ -86,6 +86,7 @@
             // 
             // dataGridView1
             // 
+            resources.ApplyResources(this.dataGridView1, "dataGridView1");
             this.dataGridView1.AllowUserToAddRows = false;
             this.dataGridView1.AllowUserToDeleteRows = false;
             this.dataGridView1.AutoGenerateColumns = false;
@@ -99,7 +100,6 @@
             this.initialDebtDataGridViewTextBoxColumn,
             this.initialDateDataGridViewTextBoxColumn});
             this.dataGridView1.DataSource = this.agentsBindingSource;
-            resources.ApplyResources(this.dataGridView1, "dataGridView1");
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
             // 
@@ -165,23 +165,23 @@
             // 
             // menuStrip1
             // 
+            resources.ApplyResources(this.menuStrip1, "menuStrip1");
             this.menuStrip1.AllowMerge = false;
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.exitToolStripMenuItem,
             this.saveToolStripMenuItem});
-            resources.ApplyResources(this.menuStrip1, "menuStrip1");
             this.menuStrip1.Name = "menuStrip1";
             // 
             // exitToolStripMenuItem
             // 
-            this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
             resources.ApplyResources(this.exitToolStripMenuItem, "exitToolStripMenuItem");
+            this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
             this.exitToolStripMenuItem.Click += new System.EventHandler(this.exitToolStripMenuItem_Click);
             // 
             // saveToolStripMenuItem
             // 
-            this.saveToolStripMenuItem.Name = "saveToolStripMenuItem";
             resources.ApplyResources(this.saveToolStripMenuItem, "saveToolStripMenuItem");
+            this.saveToolStripMenuItem.Name = "saveToolStripMenuItem";
             this.saveToolStripMenuItem.Click += new System.EventHandler(this.saveToolStripMenuItem_Click);
             // 
             // agentsTableAdapter
@@ -190,21 +190,22 @@
             // 
             // tabControl1
             // 
+            resources.ApplyResources(this.tabControl1, "tabControl1");
             this.tabControl1.Controls.Add(this.tabPage1);
             this.tabControl1.Controls.Add(this.tabPage2);
-            resources.ApplyResources(this.tabControl1, "tabControl1");
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
             // 
             // tabPage1
             // 
-            this.tabPage1.Controls.Add(this.dataGridView1);
             resources.ApplyResources(this.tabPage1, "tabPage1");
+            this.tabPage1.Controls.Add(this.dataGridView1);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.UseVisualStyleBackColor = true;
             // 
             // tabPage2
             // 
+            resources.ApplyResources(this.tabPage2, "tabPage2");
             this.tabPage2.Controls.Add(this.dateTimePicker1);
             this.tabPage2.Controls.Add(this.label3);
             this.tabPage2.Controls.Add(this.label2);
@@ -220,14 +221,13 @@
             this.tabPage2.Controls.Add(this.Txt_Telephone);
             this.tabPage2.Controls.Add(this.label5);
             this.tabPage2.Controls.Add(this.label4);
-            resources.ApplyResources(this.tabPage2, "tabPage2");
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.UseVisualStyleBackColor = true;
             // 
             // dateTimePicker1
             // 
-            this.dateTimePicker1.Checked = false;
             resources.ApplyResources(this.dateTimePicker1, "dateTimePicker1");
+            this.dateTimePicker1.Checked = false;
             this.dateTimePicker1.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.agentsBindingSource, "InitialDate", true, System.Windows.Forms.DataSourceUpdateMode.OnValidation, null, "d"));
             this.dateTimePicker1.DataBindings.Add(new System.Windows.Forms.Binding("Value", this.agentsBindingSource, "InitialDate", true, System.Windows.Forms.DataSourceUpdateMode.OnValidation, null, "d"));
             this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Short;
@@ -245,12 +245,13 @@
             // 
             // Txt_InialDebt
             // 
-            this.Txt_InialDebt.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.agentsBindingSource, "InitialDebt", true));
             resources.ApplyResources(this.Txt_InialDebt, "Txt_InialDebt");
+            this.Txt_InialDebt.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.agentsBindingSource, "InitialDebt", true));
             this.Txt_InialDebt.Name = "Txt_InialDebt";
             // 
             // bindingNavigator1
             // 
+            resources.ApplyResources(this.bindingNavigator1, "bindingNavigator1");
             this.bindingNavigator1.AddNewItem = this.bindingNavigatorAddNewItem;
             this.bindingNavigator1.BindingSource = this.agentsBindingSource;
             this.bindingNavigator1.CountItem = this.bindingNavigatorCountItem;
@@ -267,7 +268,6 @@
             this.bindingNavigatorSeparator2,
             this.bindingNavigatorAddNewItem,
             this.bindingNavigatorDeleteItem});
-            resources.ApplyResources(this.bindingNavigator1, "bindingNavigator1");
             this.bindingNavigator1.MoveFirstItem = this.bindingNavigatorMoveFirstItem;
             this.bindingNavigator1.MoveLastItem = this.bindingNavigatorMoveLastItem;
             this.bindingNavigator1.MoveNextItem = this.bindingNavigatorMoveNextItem;
@@ -277,39 +277,39 @@
             // 
             // bindingNavigatorAddNewItem
             // 
-            this.bindingNavigatorAddNewItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
             resources.ApplyResources(this.bindingNavigatorAddNewItem, "bindingNavigatorAddNewItem");
+            this.bindingNavigatorAddNewItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
             this.bindingNavigatorAddNewItem.Name = "bindingNavigatorAddNewItem";
             this.bindingNavigatorAddNewItem.Click += new System.EventHandler(this.bindingNavigatorAddNewItem_Click);
             // 
             // bindingNavigatorCountItem
             // 
-            this.bindingNavigatorCountItem.Name = "bindingNavigatorCountItem";
             resources.ApplyResources(this.bindingNavigatorCountItem, "bindingNavigatorCountItem");
+            this.bindingNavigatorCountItem.Name = "bindingNavigatorCountItem";
             // 
             // bindingNavigatorDeleteItem
             // 
-            this.bindingNavigatorDeleteItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
             resources.ApplyResources(this.bindingNavigatorDeleteItem, "bindingNavigatorDeleteItem");
+            this.bindingNavigatorDeleteItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
             this.bindingNavigatorDeleteItem.Name = "bindingNavigatorDeleteItem";
             // 
             // bindingNavigatorMoveFirstItem
             // 
-            this.bindingNavigatorMoveFirstItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
             resources.ApplyResources(this.bindingNavigatorMoveFirstItem, "bindingNavigatorMoveFirstItem");
+            this.bindingNavigatorMoveFirstItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
             this.bindingNavigatorMoveFirstItem.Name = "bindingNavigatorMoveFirstItem";
             // 
             // bindingNavigatorMovePreviousItem
             // 
-            this.bindingNavigatorMovePreviousItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
             resources.ApplyResources(this.bindingNavigatorMovePreviousItem, "bindingNavigatorMovePreviousItem");
+            this.bindingNavigatorMovePreviousItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
             this.bindingNavigatorMovePreviousItem.Name = "bindingNavigatorMovePreviousItem";
             this.bindingNavigatorMovePreviousItem.Click += new System.EventHandler(this.bindingNavigatorMovePreviousItem_Click);
             // 
             // bindingNavigatorSeparator
             // 
-            this.bindingNavigatorSeparator.Name = "bindingNavigatorSeparator";
             resources.ApplyResources(this.bindingNavigatorSeparator, "bindingNavigatorSeparator");
+            this.bindingNavigatorSeparator.Name = "bindingNavigatorSeparator";
             // 
             // bindingNavigatorPositionItem
             // 
@@ -318,30 +318,30 @@
             // 
             // bindingNavigatorSeparator1
             // 
-            this.bindingNavigatorSeparator1.Name = "bindingNavigatorSeparator1";
             resources.ApplyResources(this.bindingNavigatorSeparator1, "bindingNavigatorSeparator1");
+            this.bindingNavigatorSeparator1.Name = "bindingNavigatorSeparator1";
             // 
             // bindingNavigatorMoveNextItem
             // 
-            this.bindingNavigatorMoveNextItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
             resources.ApplyResources(this.bindingNavigatorMoveNextItem, "bindingNavigatorMoveNextItem");
+            this.bindingNavigatorMoveNextItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
             this.bindingNavigatorMoveNextItem.Name = "bindingNavigatorMoveNextItem";
             // 
             // bindingNavigatorMoveLastItem
             // 
-            this.bindingNavigatorMoveLastItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
             resources.ApplyResources(this.bindingNavigatorMoveLastItem, "bindingNavigatorMoveLastItem");
+            this.bindingNavigatorMoveLastItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
             this.bindingNavigatorMoveLastItem.Name = "bindingNavigatorMoveLastItem";
             // 
             // bindingNavigatorSeparator2
             // 
-            this.bindingNavigatorSeparator2.Name = "bindingNavigatorSeparator2";
             resources.ApplyResources(this.bindingNavigatorSeparator2, "bindingNavigatorSeparator2");
+            this.bindingNavigatorSeparator2.Name = "bindingNavigatorSeparator2";
             // 
             // Txt_Debt
             // 
-            this.Txt_Debt.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.agentsBindingSource, "Debt", true, System.Windows.Forms.DataSourceUpdateMode.OnValidation, null, "N0"));
             resources.ApplyResources(this.Txt_Debt, "Txt_Debt");
+            this.Txt_Debt.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.agentsBindingSource, "Debt", true, System.Windows.Forms.DataSourceUpdateMode.OnValidation, null, "N0"));
             this.Txt_Debt.Name = "Txt_Debt";
             this.Txt_Debt.TextChanged += new System.EventHandler(this.Txt_Debt_TextChanged);
             // 
@@ -352,14 +352,14 @@
             // 
             // Txt_AgentName
             // 
-            this.Txt_AgentName.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.agentsBindingSource, "AgentName", true));
             resources.ApplyResources(this.Txt_AgentName, "Txt_AgentName");
+            this.Txt_AgentName.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.agentsBindingSource, "AgentName", true));
             this.Txt_AgentName.Name = "Txt_AgentName";
             // 
             // Txt_Adress
             // 
-            this.Txt_Adress.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.agentsBindingSource, "Address", true));
             resources.ApplyResources(this.Txt_Adress, "Txt_Adress");
+            this.Txt_Adress.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.agentsBindingSource, "Address", true));
             this.Txt_Adress.Name = "Txt_Adress";
             // 
             // label11
@@ -369,8 +369,8 @@
             // 
             // Txt_AgentID
             // 
-            this.Txt_AgentID.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.agentsBindingSource, "AgentID", true));
             resources.ApplyResources(this.Txt_AgentID, "Txt_AgentID");
+            this.Txt_AgentID.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.agentsBindingSource, "AgentID", true));
             this.Txt_AgentID.Name = "Txt_AgentID";
             this.Txt_AgentID.ReadOnly = true;
             // 
@@ -381,8 +381,8 @@
             // 
             // Txt_Telephone
             // 
-            this.Txt_Telephone.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.agentsBindingSource, "Telephone", true, System.Windows.Forms.DataSourceUpdateMode.OnValidation, null, "N0"));
             resources.ApplyResources(this.Txt_Telephone, "Txt_Telephone");
+            this.Txt_Telephone.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.agentsBindingSource, "Telephone", true, System.Windows.Forms.DataSourceUpdateMode.OnValidation, null, "N0"));
             this.Txt_Telephone.Name = "Txt_Telephone";
             // 
             // label5

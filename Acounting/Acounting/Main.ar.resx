@@ -118,18 +118,6 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="dataToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>44, 20</value>
-  </data>
-  <data name="dataToolStripMenuItem.Text" xml:space="preserve">
-    <value>بيانات</value>
-  </data>
-  <data name="عربيToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>41, 20</value>
-  </data>
-  <data name="عربيToolStripMenuItem.Text" xml:space="preserve">
-    <value>اللغة</value>
-  </data>
   <data name="itemToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
     <value>152, 22</value>
   </data>
@@ -154,14 +142,77 @@
   <data name="staticAssetsToolStripMenuItem.Text" xml:space="preserve">
     <value>الاصول الثابتة</value>
   </data>
+  <data name="dataToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>44, 20</value>
+  </data>
+  <data name="dataToolStripMenuItem.Text" xml:space="preserve">
+    <value>بيانات</value>
+  </data>
+  <data name="buyToolStripMenuItem1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>152, 22</value>
+  </data>
+  <data name="buyToolStripMenuItem1.Text" xml:space="preserve">
+    <value>بيع</value>
+  </data>
+  <data name="sellToolStripMenuItem1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>152, 22</value>
+  </data>
+  <data name="sellToolStripMenuItem1.Text" xml:space="preserve">
+    <value>شراء</value>
+  </data>
+  <data name="paymentsToolStripMenuItem1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>152, 22</value>
+  </data>
+  <data name="paymentsToolStripMenuItem1.Text" xml:space="preserve">
+    <value>دفعات</value>
+  </data>
+  <data name="vaultToolStripMenuItem1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>152, 22</value>
+  </data>
+  <data name="vaultToolStripMenuItem1.Text" xml:space="preserve">
+    <value>الخزنة</value>
+  </data>
+  <data name="returnBuyToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>152, 22</value>
+  </data>
+  <data name="returnBuyToolStripMenuItem.Text" xml:space="preserve">
+    <value>مرجع بيع</value>
+  </data>
+  <data name="returnSaleToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>152, 22</value>
+  </data>
+  <data name="returnSaleToolStripMenuItem.Text" xml:space="preserve">
+    <value>مرجع شراء</value>
+  </data>
+  <data name="storageToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>51, 20</value>
+  </data>
+  <data name="storageToolStripMenuItem.Text" xml:space="preserve">
+    <value>المخزن</value>
+  </data>
   <data name="agentDebtToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
     <value>152, 22</value>
   </data>
-  <data name="عربيToolStripMenuItem1.Text" xml:space="preserve">
-    <value>عربي</value>
+  <data name="reportsToolStripMenuItem1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>50, 20</value>
+  </data>
+  <data name="reportsToolStripMenuItem1.Text" xml:space="preserve">
+    <value>التقارير</value>
+  </data>
+  <data name="عربيToolStripMenuItem1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>105, 22</value>
+  </data>
+  <data name="englshToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>105, 22</value>
   </data>
   <data name="englshToolStripMenuItem.Text" xml:space="preserve">
     <value>Englsh</value>
+  </data>
+  <data name="عربيToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>41, 20</value>
+  </data>
+  <data name="عربيToolStripMenuItem.Text" xml:space="preserve">
+    <value>اللغة</value>
   </data>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="$this.RightToLeft" type="System.Windows.Forms.RightToLeft, System.Windows.Forms">
