@@ -10,6 +10,11 @@ using System.IO;
 using MySql.Data.Common;
 using MySql.Data.Types;
 using MySql.Data.MySqlClient;
+using System.Globalization;
+using System.Threading;
+using System.Resources;
+using System.Reflection;
+
 
 namespace Acounting
 {
@@ -19,8 +24,7 @@ namespace Acounting
         {
             InitializeComponent();
         }
-
-       
+              
 
         private void Form1_Load(object sender, EventArgs e)
         {
@@ -50,11 +54,8 @@ namespace Acounting
             }
 
         }
-
-
-
-
-        //
+        
+        #region menu items
         private void itemToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Items items = new Items();
@@ -135,6 +136,28 @@ namespace Acounting
             ReturnSales returnsales = new ReturnSales();
             returnsales.MdiParent = this;
             returnsales.Show();
+        }
+
+        #endregion
+
+        public CultureInfo m_cultureInfo { get; set; }
+
+        private void عربيToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+  
+            m_cultureInfo = new CultureInfo("ar");
+
+            FormLanguageSwitchSingleton.Instance.ChangeCurrentThreadUICulture(m_cultureInfo);
+            FormLanguageSwitchSingleton.Instance.ChangeLanguage(this);
+            
+        }
+
+        private void englshToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            m_cultureInfo = new CultureInfo("");
+
+            FormLanguageSwitchSingleton.Instance.ChangeCurrentThreadUICulture(m_cultureInfo);
+            FormLanguageSwitchSingleton.Instance.ChangeLanguage(this);
         }
     }
 }
