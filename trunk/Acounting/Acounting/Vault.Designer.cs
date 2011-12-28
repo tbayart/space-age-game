@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Vault));
             this.Cmd_Add = new System.Windows.Forms.Button();
             this.Txt_AddOpenning = new System.Windows.Forms.TextBox();
             this.vaultBindingSource = new System.Windows.Forms.BindingSource(this.components);
@@ -46,29 +47,31 @@
             this.textBox4 = new System.Windows.Forms.TextBox();
             this.collectedTableAdapter = new Acounting.storeDataSetTableAdapters.collectedTableAdapter();
             this.paidTableAdapter = new Acounting.storeDataSetTableAdapters.paidTableAdapter();
+            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.vaultBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.storeDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.collectedBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.paidBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
             // 
             // Cmd_Add
             // 
-            this.Cmd_Add.Location = new System.Drawing.Point(149, 14);
+            resources.ApplyResources(this.Cmd_Add, "Cmd_Add");
+            this.errorProvider1.SetError(this.Cmd_Add, resources.GetString("Cmd_Add.Error"));
+            this.errorProvider1.SetIconAlignment(this.Cmd_Add, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("Cmd_Add.IconAlignment"))));
+            this.errorProvider1.SetIconPadding(this.Cmd_Add, ((int)(resources.GetObject("Cmd_Add.IconPadding"))));
             this.Cmd_Add.Name = "Cmd_Add";
-            this.Cmd_Add.Size = new System.Drawing.Size(69, 29);
-            this.Cmd_Add.TabIndex = 0;
-            this.Cmd_Add.Text = "Add";
             this.Cmd_Add.UseVisualStyleBackColor = true;
             this.Cmd_Add.Click += new System.EventHandler(this.Cmd_Add_Click);
             // 
             // Txt_AddOpenning
             // 
-            this.Txt_AddOpenning.Location = new System.Drawing.Point(32, 19);
+            resources.ApplyResources(this.Txt_AddOpenning, "Txt_AddOpenning");
+            this.errorProvider1.SetError(this.Txt_AddOpenning, resources.GetString("Txt_AddOpenning.Error"));
+            this.errorProvider1.SetIconAlignment(this.Txt_AddOpenning, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("Txt_AddOpenning.IconAlignment"))));
+            this.errorProvider1.SetIconPadding(this.Txt_AddOpenning, ((int)(resources.GetObject("Txt_AddOpenning.IconPadding"))));
             this.Txt_AddOpenning.Name = "Txt_AddOpenning";
-            this.Txt_AddOpenning.Size = new System.Drawing.Size(111, 20);
-            this.Txt_AddOpenning.TabIndex = 1;
-            this.Txt_AddOpenning.Text = "0";
             // 
             // vaultBindingSource
             // 
@@ -86,57 +89,55 @@
             // 
             // label1
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(12, 81);
+            resources.ApplyResources(this.label1, "label1");
+            this.errorProvider1.SetError(this.label1, resources.GetString("label1.Error"));
+            this.errorProvider1.SetIconAlignment(this.label1, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("label1.IconAlignment"))));
+            this.errorProvider1.SetIconPadding(this.label1, ((int)(resources.GetObject("label1.IconPadding"))));
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(53, 13);
-            this.label1.TabIndex = 2;
-            this.label1.Text = "Openning";
             // 
             // label2
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(91, 81);
+            resources.ApplyResources(this.label2, "label2");
+            this.errorProvider1.SetError(this.label2, resources.GetString("label2.Error"));
+            this.errorProvider1.SetIconAlignment(this.label2, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("label2.IconAlignment"))));
+            this.errorProvider1.SetIconPadding(this.label2, ((int)(resources.GetObject("label2.IconPadding"))));
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(51, 13);
-            this.label2.TabIndex = 3;
-            this.label2.Text = "Collected";
             // 
             // label3
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(169, 81);
+            resources.ApplyResources(this.label3, "label3");
+            this.errorProvider1.SetError(this.label3, resources.GetString("label3.Error"));
+            this.errorProvider1.SetIconAlignment(this.label3, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("label3.IconAlignment"))));
+            this.errorProvider1.SetIconPadding(this.label3, ((int)(resources.GetObject("label3.IconPadding"))));
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(27, 13);
-            this.label3.TabIndex = 4;
-            this.label3.Text = "Paid";
             // 
             // label4
             // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(244, 81);
+            resources.ApplyResources(this.label4, "label4");
+            this.errorProvider1.SetError(this.label4, resources.GetString("label4.Error"));
+            this.errorProvider1.SetIconAlignment(this.label4, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("label4.IconAlignment"))));
+            this.errorProvider1.SetIconPadding(this.label4, ((int)(resources.GetObject("label4.IconPadding"))));
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(44, 13);
-            this.label4.TabIndex = 5;
-            this.label4.Text = "Current";
             // 
             // textBox1
             // 
+            resources.ApplyResources(this.textBox1, "textBox1");
             this.textBox1.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.vaultBindingSource, "Opennings", true));
-            this.textBox1.Location = new System.Drawing.Point(12, 106);
+            this.errorProvider1.SetError(this.textBox1, resources.GetString("textBox1.Error"));
+            this.errorProvider1.SetIconAlignment(this.textBox1, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("textBox1.IconAlignment"))));
+            this.errorProvider1.SetIconPadding(this.textBox1, ((int)(resources.GetObject("textBox1.IconPadding"))));
             this.textBox1.Name = "textBox1";
             this.textBox1.ReadOnly = true;
-            this.textBox1.Size = new System.Drawing.Size(48, 20);
-            this.textBox1.TabIndex = 6;
             // 
             // textBox2
             // 
+            resources.ApplyResources(this.textBox2, "textBox2");
             this.textBox2.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.collectedBindingSource, "CollectedTotal", true));
-            this.textBox2.Location = new System.Drawing.Point(91, 107);
+            this.errorProvider1.SetError(this.textBox2, resources.GetString("textBox2.Error"));
+            this.errorProvider1.SetIconAlignment(this.textBox2, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("textBox2.IconAlignment"))));
+            this.errorProvider1.SetIconPadding(this.textBox2, ((int)(resources.GetObject("textBox2.IconPadding"))));
             this.textBox2.Name = "textBox2";
             this.textBox2.ReadOnly = true;
-            this.textBox2.Size = new System.Drawing.Size(52, 20);
-            this.textBox2.TabIndex = 7;
             // 
             // collectedBindingSource
             // 
@@ -145,12 +146,13 @@
             // 
             // textBox3
             // 
+            resources.ApplyResources(this.textBox3, "textBox3");
             this.textBox3.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.paidBindingSource, "PaidTotal", true));
-            this.textBox3.Location = new System.Drawing.Point(169, 107);
+            this.errorProvider1.SetError(this.textBox3, resources.GetString("textBox3.Error"));
+            this.errorProvider1.SetIconAlignment(this.textBox3, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("textBox3.IconAlignment"))));
+            this.errorProvider1.SetIconPadding(this.textBox3, ((int)(resources.GetObject("textBox3.IconPadding"))));
             this.textBox3.Name = "textBox3";
             this.textBox3.ReadOnly = true;
-            this.textBox3.Size = new System.Drawing.Size(52, 20);
-            this.textBox3.TabIndex = 7;
             // 
             // paidBindingSource
             // 
@@ -159,12 +161,13 @@
             // 
             // textBox4
             // 
+            resources.ApplyResources(this.textBox4, "textBox4");
             this.textBox4.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.vaultBindingSource, "In_Hand", true));
-            this.textBox4.Location = new System.Drawing.Point(244, 106);
+            this.errorProvider1.SetError(this.textBox4, resources.GetString("textBox4.Error"));
+            this.errorProvider1.SetIconAlignment(this.textBox4, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("textBox4.IconAlignment"))));
+            this.errorProvider1.SetIconPadding(this.textBox4, ((int)(resources.GetObject("textBox4.IconPadding"))));
             this.textBox4.Name = "textBox4";
             this.textBox4.ReadOnly = true;
-            this.textBox4.Size = new System.Drawing.Size(52, 20);
-            this.textBox4.TabIndex = 7;
             // 
             // collectedTableAdapter
             // 
@@ -174,11 +177,15 @@
             // 
             this.paidTableAdapter.ClearBeforeFill = true;
             // 
+            // errorProvider1
+            // 
+            this.errorProvider1.ContainerControl = this;
+            resources.ApplyResources(this.errorProvider1, "errorProvider1");
+            // 
             // Vault
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(308, 162);
             this.Controls.Add(this.textBox4);
             this.Controls.Add(this.textBox3);
             this.Controls.Add(this.textBox2);
@@ -190,12 +197,12 @@
             this.Controls.Add(this.Txt_AddOpenning);
             this.Controls.Add(this.Cmd_Add);
             this.Name = "Vault";
-            this.Text = "Vault";
             this.Load += new System.EventHandler(this.Vault_Load);
             ((System.ComponentModel.ISupportInitialize)(this.vaultBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.storeDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.collectedBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.paidBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -220,5 +227,6 @@
         private storeDataSetTableAdapters.collectedTableAdapter collectedTableAdapter;
         private System.Windows.Forms.BindingSource paidBindingSource;
         private storeDataSetTableAdapters.paidTableAdapter paidTableAdapter;
+        private System.Windows.Forms.ErrorProvider errorProvider1;
     }
 }

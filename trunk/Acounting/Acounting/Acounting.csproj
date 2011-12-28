@@ -264,8 +264,14 @@
     <EmbeddedResource Include="Sell.resx">
       <DependentUpon>Sell.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="StaticAssets.ar.resx">
+      <DependentUpon>StaticAssets.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="StaticAssets.resx">
       <DependentUpon>StaticAssets.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vault.ar.resx">
+      <DependentUpon>Vault.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Vault.resx">
       <DependentUpon>Vault.cs</DependentUpon>

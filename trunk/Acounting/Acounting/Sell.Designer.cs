@@ -252,7 +252,7 @@
             this.label5.AutoSize = true;
             this.label5.Location = new System.Drawing.Point(453, 25);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(81, 16);
+            this.label5.Size = new System.Drawing.Size(82, 16);
             this.label5.TabIndex = 6;
             this.label5.Text = "Units To Sell";
             // 

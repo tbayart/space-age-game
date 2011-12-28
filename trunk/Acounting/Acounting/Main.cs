@@ -147,21 +147,20 @@ namespace Acounting
         private void عربيToolStripMenuItem1_Click(object sender, EventArgs e)
         {
   
-            m_cultureInfo = new CultureInfo("ar");
+            Program.cul = new CultureInfo("ar");
 
-            Application.UserAppDataRegistry.SetValue("Language",
-           "ar");
+            Application.UserAppDataRegistry.SetValue("Language","ar");
 
-            FormLanguageSwitchSingleton.Instance.ChangeCurrentThreadUICulture(m_cultureInfo);
+            FormLanguageSwitchSingleton.Instance.ChangeCurrentThreadUICulture(Program.cul);
             FormLanguageSwitchSingleton.Instance.ChangeLanguage(this);
             
         }
 
         private void englshToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            m_cultureInfo = new CultureInfo("");
+            Program.cul = new CultureInfo("");
 
-            FormLanguageSwitchSingleton.Instance.ChangeCurrentThreadUICulture(m_cultureInfo);
+            FormLanguageSwitchSingleton.Instance.ChangeCurrentThreadUICulture(Program.cul);
             FormLanguageSwitchSingleton.Instance.ChangeLanguage(this);
             Application.UserAppDataRegistry.SetValue("Language",
           "");
