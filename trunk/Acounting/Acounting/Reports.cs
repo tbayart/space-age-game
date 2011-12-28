@@ -34,10 +34,8 @@ namespace Acounting
             this.billsTableAdapter.Fill(this.storeDataSet.bills);
             // TODO: This line of code loads data into the 'storeDataSet.agents' table. You can move, or remove it, as needed.
             this.agentsTableAdapter.Fill(this.storeDataSet.agents);
-                
-            this.reportViewer3.RefreshReport();
 
-            this.reportViewer1.RefreshReport();
+           reportViewer1.RefreshReport();
         }
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)

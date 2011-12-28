@@ -42,36 +42,36 @@
             this.billsBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.billsreturnBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.paymentsBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.dealersBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.purchasebillsBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.purchasebillsreturnBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.dealerpaymentsBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage3 = new System.Windows.Forms.TabPage();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.reportViewer3 = new Microsoft.Reporting.WinForms.ReportViewer();
+            this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
             this.agentsTableAdapter = new Acounting.storeDataSetTableAdapters.agentsTableAdapter();
             this.billsTableAdapter = new Acounting.storeDataSetTableAdapters.billsTableAdapter();
             this.billsreturnTableAdapter = new Acounting.storeDataSetTableAdapters.billsreturnTableAdapter();
             this.paymentsTableAdapter = new Acounting.storeDataSetTableAdapters.paymentsTableAdapter();
-            this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
-            this.dealersBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.dealersTableAdapter = new Acounting.storeDataSetTableAdapters.dealersTableAdapter();
-            this.purchasebillsBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.purchasebillsTableAdapter = new Acounting.storeDataSetTableAdapters.purchasebillsTableAdapter();
-            this.purchasebillsreturnBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.purchasebillsreturnTableAdapter = new Acounting.storeDataSetTableAdapters.purchasebillsreturnTableAdapter();
-            this.dealerpaymentsBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.dealerpaymentsTableAdapter = new Acounting.storeDataSetTableAdapters.dealerpaymentsTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.agentsBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.storeDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.billsBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.billsreturnBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.paymentsBindingSource)).BeginInit();
-            this.tabControl1.SuspendLayout();
-            this.tabPage3.SuspendLayout();
-            this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dealersBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.purchasebillsBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.purchasebillsreturnBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dealerpaymentsBindingSource)).BeginInit();
+            this.tabControl1.SuspendLayout();
+            this.tabPage3.SuspendLayout();
+            this.tabPage1.SuspendLayout();
             this.SuspendLayout();
             // 
             // agentsBindingSource
@@ -98,6 +98,26 @@
             // 
             this.paymentsBindingSource.DataMember = "payments";
             this.paymentsBindingSource.DataSource = this.storeDataSet;
+            // 
+            // dealersBindingSource
+            // 
+            this.dealersBindingSource.DataMember = "dealers";
+            this.dealersBindingSource.DataSource = this.storeDataSet;
+            // 
+            // purchasebillsBindingSource
+            // 
+            this.purchasebillsBindingSource.DataMember = "purchasebills";
+            this.purchasebillsBindingSource.DataSource = this.storeDataSet;
+            // 
+            // purchasebillsreturnBindingSource
+            // 
+            this.purchasebillsreturnBindingSource.DataMember = "purchasebillsreturn";
+            this.purchasebillsreturnBindingSource.DataSource = this.storeDataSet;
+            // 
+            // dealerpaymentsBindingSource
+            // 
+            this.dealerpaymentsBindingSource.DataMember = "dealerpayments";
+            this.dealerpaymentsBindingSource.DataSource = this.storeDataSet;
             // 
             // tabControl1
             // 
@@ -150,27 +170,14 @@
             this.reportViewer3.LocalReport.DataSources.Add(reportDataSource2);
             this.reportViewer3.LocalReport.DataSources.Add(reportDataSource3);
             this.reportViewer3.LocalReport.DataSources.Add(reportDataSource4);
-            this.reportViewer3.LocalReport.ReportEmbeddedResource = "Acounting.AgentsDebtAr.rdlc";
+            this.reportViewer3.LocalReport.EnableExternalImages = true;
+            this.reportViewer3.LocalReport.EnableHyperlinks = true;
+            this.reportViewer3.LocalReport.ReportEmbeddedResource = "";
+            this.reportViewer3.LocalReport.ReportPath = "Reports\\AgentsDebtAr.rdlc";
             this.reportViewer3.Location = new System.Drawing.Point(3, 3);
             this.reportViewer3.Name = "reportViewer3";
             this.reportViewer3.Size = new System.Drawing.Size(848, 488);
             this.reportViewer3.TabIndex = 0;
-            // 
-            // agentsTableAdapter
-            // 
-            this.agentsTableAdapter.ClearBeforeFill = true;
-            // 
-            // billsTableAdapter
-            // 
-            this.billsTableAdapter.ClearBeforeFill = true;
-            // 
-            // billsreturnTableAdapter
-            // 
-            this.billsreturnTableAdapter.ClearBeforeFill = true;
-            // 
-            // paymentsTableAdapter
-            // 
-            this.paymentsTableAdapter.ClearBeforeFill = true;
             // 
             // tabPage1
             // 
@@ -204,37 +211,33 @@
             this.reportViewer1.Size = new System.Drawing.Size(848, 488);
             this.reportViewer1.TabIndex = 0;
             // 
-            // dealersBindingSource
+            // agentsTableAdapter
             // 
-            this.dealersBindingSource.DataMember = "dealers";
-            this.dealersBindingSource.DataSource = this.storeDataSet;
+            this.agentsTableAdapter.ClearBeforeFill = true;
+            // 
+            // billsTableAdapter
+            // 
+            this.billsTableAdapter.ClearBeforeFill = true;
+            // 
+            // billsreturnTableAdapter
+            // 
+            this.billsreturnTableAdapter.ClearBeforeFill = true;
+            // 
+            // paymentsTableAdapter
+            // 
+            this.paymentsTableAdapter.ClearBeforeFill = true;
             // 
             // dealersTableAdapter
             // 
             this.dealersTableAdapter.ClearBeforeFill = true;
             // 
-            // purchasebillsBindingSource
-            // 
-            this.purchasebillsBindingSource.DataMember = "purchasebills";
-            this.purchasebillsBindingSource.DataSource = this.storeDataSet;
-            // 
             // purchasebillsTableAdapter
             // 
             this.purchasebillsTableAdapter.ClearBeforeFill = true;
             // 
-            // purchasebillsreturnBindingSource
-            // 
-            this.purchasebillsreturnBindingSource.DataMember = "purchasebillsreturn";
-            this.purchasebillsreturnBindingSource.DataSource = this.storeDataSet;
-            // 
             // purchasebillsreturnTableAdapter
             // 
             this.purchasebillsreturnTableAdapter.ClearBeforeFill = true;
-            // 
-            // dealerpaymentsBindingSource
-            // 
-            this.dealerpaymentsBindingSource.DataMember = "dealerpayments";
-            this.dealerpaymentsBindingSource.DataSource = this.storeDataSet;
             // 
             // dealerpaymentsTableAdapter
             // 
@@ -254,13 +257,13 @@
             ((System.ComponentModel.ISupportInitialize)(this.billsBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.billsreturnBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.paymentsBindingSource)).EndInit();
-            this.tabControl1.ResumeLayout(false);
-            this.tabPage3.ResumeLayout(false);
-            this.tabPage1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dealersBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.purchasebillsBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.purchasebillsreturnBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dealerpaymentsBindingSource)).EndInit();
+            this.tabControl1.ResumeLayout(false);
+            this.tabPage3.ResumeLayout(false);
+            this.tabPage1.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
