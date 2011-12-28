@@ -240,9 +240,27 @@ namespace Acounting
            Cmb_AgentName_TextChanged(null, null);
            #endregion
 
+           clear_items();
+
+
       
         }
 
+        private void clear_items()
+        {
+
+            //clear items data
+            Txt_ToSell.Text = "";
+            Txt_SellPrice.Text = "";
+            Cmb_AgentName.Enabled = false;
+        }
+        private void reset_back()
+        {
+            Cmb_AgentName.Enabled = true;
+            Txt_SellPrice.Text = "";
+            Txt_ToSell.Text = "";
+            Txt_Paid.Text = "";
+        }
 
 
         private void updatedataset()
@@ -331,9 +349,14 @@ namespace Acounting
  
 
             #endregion 
+
+                //reset back 
+                reset_back();
             }
             
         }
+
+       
 
         private void groupBox3_Enter(object sender, EventArgs e)
         {
