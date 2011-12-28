@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Main));
             this.itemsBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.storeDataSet = new Acounting.storeDataSet();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
@@ -43,10 +44,13 @@
             this.paymentsToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.vaultToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.returnBuyToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.returnSaleToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.reportsToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.agentDebtToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.عربيToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.عربيToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.englshToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.itemsTableAdapter = new Acounting.storeDataSetTableAdapters.itemsTableAdapter();
-            this.returnSaleToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.itemsBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.storeDataSet)).BeginInit();
             this.menuStrip1.SuspendLayout();
@@ -67,12 +71,10 @@
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.dataToolStripMenuItem,
             this.storageToolStripMenuItem,
-            this.reportsToolStripMenuItem1});
-            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
+            this.reportsToolStripMenuItem1,
+            this.عربيToolStripMenuItem});
+            resources.ApplyResources(this.menuStrip1, "menuStrip1");
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(785, 24);
-            this.menuStrip1.TabIndex = 1;
-            this.menuStrip1.Text = "menuStrip1";
             // 
             // dataToolStripMenuItem
             // 
@@ -82,35 +84,30 @@
             this.dealersToolStripMenuItem1,
             this.staticAssetsToolStripMenuItem});
             this.dataToolStripMenuItem.Name = "dataToolStripMenuItem";
-            this.dataToolStripMenuItem.Size = new System.Drawing.Size(43, 20);
-            this.dataToolStripMenuItem.Text = "Data";
+            resources.ApplyResources(this.dataToolStripMenuItem, "dataToolStripMenuItem");
             // 
             // itemToolStripMenuItem
             // 
             this.itemToolStripMenuItem.Name = "itemToolStripMenuItem";
-            this.itemToolStripMenuItem.Size = new System.Drawing.Size(139, 22);
-            this.itemToolStripMenuItem.Text = "Items";
+            resources.ApplyResources(this.itemToolStripMenuItem, "itemToolStripMenuItem");
             this.itemToolStripMenuItem.Click += new System.EventHandler(this.itemToolStripMenuItem_Click);
             // 
             // agentsToolStripMenuItem1
             // 
             this.agentsToolStripMenuItem1.Name = "agentsToolStripMenuItem1";
-            this.agentsToolStripMenuItem1.Size = new System.Drawing.Size(139, 22);
-            this.agentsToolStripMenuItem1.Text = "Agents";
+            resources.ApplyResources(this.agentsToolStripMenuItem1, "agentsToolStripMenuItem1");
             this.agentsToolStripMenuItem1.Click += new System.EventHandler(this.agentsToolStripMenuItem1_Click);
             // 
             // dealersToolStripMenuItem1
             // 
             this.dealersToolStripMenuItem1.Name = "dealersToolStripMenuItem1";
-            this.dealersToolStripMenuItem1.Size = new System.Drawing.Size(139, 22);
-            this.dealersToolStripMenuItem1.Text = "Dealers";
+            resources.ApplyResources(this.dealersToolStripMenuItem1, "dealersToolStripMenuItem1");
             this.dealersToolStripMenuItem1.Click += new System.EventHandler(this.dealersToolStripMenuItem1_Click);
             // 
             // staticAssetsToolStripMenuItem
             // 
             this.staticAssetsToolStripMenuItem.Name = "staticAssetsToolStripMenuItem";
-            this.staticAssetsToolStripMenuItem.Size = new System.Drawing.Size(139, 22);
-            this.staticAssetsToolStripMenuItem.Text = "Static Assets";
+            resources.ApplyResources(this.staticAssetsToolStripMenuItem, "staticAssetsToolStripMenuItem");
             this.staticAssetsToolStripMenuItem.Click += new System.EventHandler(this.staticAssetsToolStripMenuItem_Click);
             // 
             // storageToolStripMenuItem
@@ -123,80 +120,89 @@
             this.returnBuyToolStripMenuItem,
             this.returnSaleToolStripMenuItem});
             this.storageToolStripMenuItem.Name = "storageToolStripMenuItem";
-            this.storageToolStripMenuItem.Size = new System.Drawing.Size(59, 20);
-            this.storageToolStripMenuItem.Text = "Storage";
+            resources.ApplyResources(this.storageToolStripMenuItem, "storageToolStripMenuItem");
             // 
             // buyToolStripMenuItem1
             // 
             this.buyToolStripMenuItem1.Name = "buyToolStripMenuItem1";
-            this.buyToolStripMenuItem1.Size = new System.Drawing.Size(152, 22);
-            this.buyToolStripMenuItem1.Text = "Buy";
+            resources.ApplyResources(this.buyToolStripMenuItem1, "buyToolStripMenuItem1");
             this.buyToolStripMenuItem1.Click += new System.EventHandler(this.buyToolStripMenuItem1_Click);
             // 
             // sellToolStripMenuItem1
             // 
             this.sellToolStripMenuItem1.Name = "sellToolStripMenuItem1";
-            this.sellToolStripMenuItem1.Size = new System.Drawing.Size(152, 22);
-            this.sellToolStripMenuItem1.Text = "Sell";
+            resources.ApplyResources(this.sellToolStripMenuItem1, "sellToolStripMenuItem1");
             this.sellToolStripMenuItem1.Click += new System.EventHandler(this.sellToolStripMenuItem1_Click);
             // 
             // paymentsToolStripMenuItem1
             // 
             this.paymentsToolStripMenuItem1.Name = "paymentsToolStripMenuItem1";
-            this.paymentsToolStripMenuItem1.Size = new System.Drawing.Size(152, 22);
-            this.paymentsToolStripMenuItem1.Text = "Payments";
+            resources.ApplyResources(this.paymentsToolStripMenuItem1, "paymentsToolStripMenuItem1");
             this.paymentsToolStripMenuItem1.Click += new System.EventHandler(this.paymentsToolStripMenuItem1_Click);
             // 
             // vaultToolStripMenuItem1
             // 
             this.vaultToolStripMenuItem1.Name = "vaultToolStripMenuItem1";
-            this.vaultToolStripMenuItem1.Size = new System.Drawing.Size(152, 22);
-            this.vaultToolStripMenuItem1.Text = "Vault";
+            resources.ApplyResources(this.vaultToolStripMenuItem1, "vaultToolStripMenuItem1");
             this.vaultToolStripMenuItem1.Click += new System.EventHandler(this.vaultToolStripMenuItem1_Click);
             // 
             // returnBuyToolStripMenuItem
             // 
             this.returnBuyToolStripMenuItem.Name = "returnBuyToolStripMenuItem";
-            this.returnBuyToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
-            this.returnBuyToolStripMenuItem.Text = "Return Buy";
+            resources.ApplyResources(this.returnBuyToolStripMenuItem, "returnBuyToolStripMenuItem");
             this.returnBuyToolStripMenuItem.Click += new System.EventHandler(this.returnBuyToolStripMenuItem_Click);
+            // 
+            // returnSaleToolStripMenuItem
+            // 
+            this.returnSaleToolStripMenuItem.Name = "returnSaleToolStripMenuItem";
+            resources.ApplyResources(this.returnSaleToolStripMenuItem, "returnSaleToolStripMenuItem");
+            this.returnSaleToolStripMenuItem.Click += new System.EventHandler(this.returnSaleToolStripMenuItem_Click);
             // 
             // reportsToolStripMenuItem1
             // 
             this.reportsToolStripMenuItem1.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.agentDebtToolStripMenuItem});
             this.reportsToolStripMenuItem1.Name = "reportsToolStripMenuItem1";
-            this.reportsToolStripMenuItem1.Size = new System.Drawing.Size(59, 20);
-            this.reportsToolStripMenuItem1.Text = "Reports";
+            resources.ApplyResources(this.reportsToolStripMenuItem1, "reportsToolStripMenuItem1");
             // 
             // agentDebtToolStripMenuItem
             // 
             this.agentDebtToolStripMenuItem.Name = "agentDebtToolStripMenuItem";
-            this.agentDebtToolStripMenuItem.Size = new System.Drawing.Size(134, 22);
-            this.agentDebtToolStripMenuItem.Text = "Agent Debt";
+            resources.ApplyResources(this.agentDebtToolStripMenuItem, "agentDebtToolStripMenuItem");
             this.agentDebtToolStripMenuItem.Click += new System.EventHandler(this.agentDebtToolStripMenuItem_Click);
+            // 
+            // عربيToolStripMenuItem
+            // 
+            this.عربيToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.عربيToolStripMenuItem1,
+            this.englshToolStripMenuItem});
+            this.عربيToolStripMenuItem.Name = "عربيToolStripMenuItem";
+            resources.ApplyResources(this.عربيToolStripMenuItem, "عربيToolStripMenuItem");
+            // 
+            // عربيToolStripMenuItem1
+            // 
+            this.عربيToolStripMenuItem1.Name = "عربيToolStripMenuItem1";
+            resources.ApplyResources(this.عربيToolStripMenuItem1, "عربيToolStripMenuItem1");
+            this.عربيToolStripMenuItem1.Click += new System.EventHandler(this.عربيToolStripMenuItem1_Click);
+            // 
+            // englshToolStripMenuItem
+            // 
+            this.englshToolStripMenuItem.Name = "englshToolStripMenuItem";
+            resources.ApplyResources(this.englshToolStripMenuItem, "englshToolStripMenuItem");
+            this.englshToolStripMenuItem.Click += new System.EventHandler(this.englshToolStripMenuItem_Click);
             // 
             // itemsTableAdapter
             // 
             this.itemsTableAdapter.ClearBeforeFill = true;
             // 
-            // returnSaleToolStripMenuItem
-            // 
-            this.returnSaleToolStripMenuItem.Name = "returnSaleToolStripMenuItem";
-            this.returnSaleToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
-            this.returnSaleToolStripMenuItem.Text = "Return Sale";
-            this.returnSaleToolStripMenuItem.Click += new System.EventHandler(this.returnSaleToolStripMenuItem_Click);
-            // 
             // Main
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(785, 363);
             this.Controls.Add(this.menuStrip1);
             this.IsMdiContainer = true;
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "Main";
-            this.Text = "Main";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.itemsBindingSource)).EndInit();
@@ -228,6 +234,9 @@
         private System.Windows.Forms.ToolStripMenuItem staticAssetsToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem returnBuyToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem returnSaleToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem عربيToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem عربيToolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem englshToolStripMenuItem;
     }
 }
 

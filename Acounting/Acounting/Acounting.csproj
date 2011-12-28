@@ -6,7 +6,7 @@
     <ProductVersion>8.0.30703</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>{36F32678-D7C3-45A6-856A-DC942895A727}</ProjectGuid>
-    <OutputType>WinExe</OutputType>
+    <OutputType>Exe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>Acounting</RootNamespace>
     <AssemblyName>Acounting</AssemblyName>
@@ -194,6 +194,9 @@
     <Compile Include="Vault.Designer.cs">
       <DependentUpon>Vault.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Agents.ar.resx">
+      <DependentUpon>Agents.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Agents.resx">
       <DependentUpon>Agents.cs</DependentUpon>
     </EmbeddedResource>
@@ -216,6 +219,9 @@
       <DependentUpon>Dealers.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="DealersDebtAr.rdlc" />
+    <EmbeddedResource Include="Main.ar.resx">
+      <DependentUpon>Main.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Main.resx">
       <DependentUpon>Main.cs</DependentUpon>
     </EmbeddedResource>
@@ -354,6 +360,12 @@
       <ProductName>Windows Installer 3.1</ProductName>
       <Install>true</Install>
     </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="FormLanguageSwitch\FormLanguageSwitch.csproj">
+      <Project>{787B600C-9A56-41C7-A3C8-9553630FE3C1}</Project>
+      <Name>FormLanguageSwitch</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
