@@ -6,7 +6,7 @@
     <ProductVersion>8.0.30703</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>{64DD89FF-55A5-47D1-BBC4-48EFF6916087}</ProjectGuid>
-    <OutputType>WinExe</OutputType>
+    <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>MySQL_Backup_and_Restore</RootNamespace>
     <AssemblyName>MySQL Backup and Restore</AssemblyName>
