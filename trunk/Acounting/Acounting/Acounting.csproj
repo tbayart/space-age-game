@@ -384,6 +384,10 @@
       <Project>{787B600C-9A56-41C7-A3C8-9553630FE3C1}</Project>
       <Name>FormLanguageSwitch</Name>
     </ProjectReference>
+    <ProjectReference Include="MySQL Backup and Restore\MySQL Backup and Restore.csproj">
+      <Project>{64DD89FF-55A5-47D1-BBC4-48EFF6916087}</Project>
+      <Name>MySQL Backup and Restore</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

@@ -38,6 +38,8 @@
             this.agentsToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.dealersToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.staticAssetsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.حفظاسترجعToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.storageToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.buyToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.sellToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
@@ -83,7 +85,9 @@
             this.itemToolStripMenuItem,
             this.agentsToolStripMenuItem1,
             this.dealersToolStripMenuItem1,
-            this.staticAssetsToolStripMenuItem});
+            this.staticAssetsToolStripMenuItem,
+            this.حفظاسترجعToolStripMenuItem,
+            this.exitToolStripMenuItem});
             this.dataToolStripMenuItem.Name = "dataToolStripMenuItem";
             // 
             // itemToolStripMenuItem
@@ -109,6 +113,18 @@
             resources.ApplyResources(this.staticAssetsToolStripMenuItem, "staticAssetsToolStripMenuItem");
             this.staticAssetsToolStripMenuItem.Name = "staticAssetsToolStripMenuItem";
             this.staticAssetsToolStripMenuItem.Click += new System.EventHandler(this.staticAssetsToolStripMenuItem_Click);
+            // 
+            // حفظاسترجعToolStripMenuItem
+            // 
+            resources.ApplyResources(this.حفظاسترجعToolStripMenuItem, "حفظاسترجعToolStripMenuItem");
+            this.حفظاسترجعToolStripMenuItem.Name = "حفظاسترجعToolStripMenuItem";
+            this.حفظاسترجعToolStripMenuItem.Click += new System.EventHandler(this.حفظاسترجعToolStripMenuItem_Click);
+            // 
+            // exitToolStripMenuItem
+            // 
+            resources.ApplyResources(this.exitToolStripMenuItem, "exitToolStripMenuItem");
+            this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
+            this.exitToolStripMenuItem.Click += new System.EventHandler(this.exitToolStripMenuItem_Click);
             // 
             // storageToolStripMenuItem
             // 
@@ -237,6 +253,8 @@
         private System.Windows.Forms.ToolStripMenuItem عربيToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem عربيToolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem englshToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem حفظاسترجعToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem exitToolStripMenuItem;
     }
 }
 
