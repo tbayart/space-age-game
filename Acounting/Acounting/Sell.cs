@@ -235,7 +235,7 @@ namespace Acounting
            itemrow["Qty"] = newqty;
 
 
-           button2.Enabled = true;
+
            Cmb_ItemName_TextChanged(null, null);
            Cmb_AgentName_TextChanged(null, null);
            #endregion
@@ -253,6 +253,7 @@ namespace Acounting
             Txt_ToSell.Text = "";
             Txt_SellPrice.Text = "";
             Cmb_AgentName.Enabled = false;
+            button2.Enabled = true;
         }
         private void reset_back()
         {

@@ -117,6 +117,22 @@ namespace Acounting
             }
         }
 
+        private void clear_items()
+        {
+
+            //clear items data
+            Txt_ToBuy.Text = "";
+            Txt_BuyPrice.Text = "";
+            Cmb_DealerName.Enabled = false;
+            button2.Enabled = true;
+        }
+        private void reset_back()
+        {
+            Cmb_DealerName.Enabled = true;
+            Txt_BuyPrice.Text = "";
+            Txt_ToBuy.Text = "";
+            Txt_Paid.Text = "";
+        }
 
 
         private void updatedataset()
@@ -250,7 +266,9 @@ namespace Acounting
             Cmb_DealerName_TextChanged(null, null);
             #endregion
 
-            button2.Enabled = true;
+
+            clear_items();
+            
 
         }
 
@@ -342,19 +360,14 @@ namespace Acounting
  
 
                     #endregion
+
+                    clear_items();
                 }
 
             }
         }
 
-        private void Cmb_DealerName_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
  
-
-
-
 
     }
 }

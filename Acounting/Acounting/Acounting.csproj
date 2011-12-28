@@ -275,6 +275,9 @@
     <EmbeddedResource Include="ReturnBuy.resx">
       <DependentUpon>ReturnBuy.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="ReturnSales.ar.resx">
+      <DependentUpon>ReturnSales.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ReturnSales.resx">
       <DependentUpon>ReturnSales.cs</DependentUpon>
     </EmbeddedResource>

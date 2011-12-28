@@ -102,7 +102,24 @@ namespace Acounting
 
             }
         }
-        
+
+
+        private void clear_items()
+        {
+
+            //clear items data
+            Txt_ToSell.Text = "";
+            Txt_SellPrice.Text = "";
+            Cmb_AgentName.Enabled = false;
+            button2.Enabled = true;
+        }
+        private void reset_back()
+        {
+            Cmb_AgentName.Enabled = true;
+            Txt_SellPrice.Text = "";
+            Txt_ToSell.Text = "";
+            Txt_Paid.Text = "";
+        }
 
 
 
@@ -233,6 +250,7 @@ namespace Acounting
            Cmb_AgentName_TextChanged(null, null);
            #endregion
 
+           clear_items();
       
         }
 
@@ -323,6 +341,8 @@ namespace Acounting
  
 
             #endregion 
+
+                reset_back();
             }
             
         }

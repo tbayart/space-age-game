@@ -402,7 +402,6 @@
             this.errorProvider1.SetIconPadding(this.Cmb_DealerName, ((int)(resources.GetObject("Cmb_DealerName.IconPadding"))));
             this.Cmb_DealerName.Name = "Cmb_DealerName";
             this.Cmb_DealerName.ValueMember = "DealerName";
-            this.Cmb_DealerName.SelectedIndexChanged += new System.EventHandler(this.Cmb_DealerName_SelectedIndexChanged);
             this.Cmb_DealerName.TextChanged += new System.EventHandler(this.Cmb_DealerName_TextChanged);
             // 
             // dealersBindingSource
