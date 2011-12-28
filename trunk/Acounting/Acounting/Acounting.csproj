@@ -225,6 +225,9 @@
       <DependentUpon>Dealers.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="DealersDebtAr.rdlc" />
+    <EmbeddedResource Include="Items.ar.resx">
+      <DependentUpon>Items.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Main.ar.resx">
       <DependentUpon>Main.cs</DependentUpon>
     </EmbeddedResource>
@@ -233,6 +236,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Items.resx">
       <DependentUpon>Items.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Payments.ar.resx">
+      <DependentUpon>Payments.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Payments.resx">
       <DependentUpon>Payments.cs</DependentUpon>
