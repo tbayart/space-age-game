@@ -6,11 +6,13 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Windows.Forms;
+using System.Resources;
 
 namespace Acounting
 {
     public partial class Vault : Form
     {
+        ResourceManager rm;
         public Vault()
         {
             InitializeComponent();
@@ -30,6 +32,8 @@ namespace Acounting
             double DatabaseOpenning;
 
             Console.WriteLine(Txt_AddOpenning.Text);
+
+            rm = new ResourceManager(this.GetType());
 
             DataRow row1 = storeDataSet.vault.FindByidVault(0);
             if (row1 == null)
@@ -57,7 +61,7 @@ namespace Acounting
 
         private void Cmd_Add_Click(object sender, EventArgs e)
         {
-
+             
             double Openning;
             
             DataRow row1 = storeDataSet.vault.FindByidVault(0);
@@ -69,6 +73,10 @@ namespace Acounting
                     Cmd_Add.Enabled = false;
                     Txt_AddOpenning.ReadOnly = true;
 
+                }
+                else
+                {
+                    errorProvider1.SetError(Txt_AddOpenning,rm.GetString("AddOpenningerr",Program.cul));
                 }
                 
                 
