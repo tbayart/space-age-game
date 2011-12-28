@@ -200,15 +200,15 @@
     <EmbeddedResource Include="Agents.resx">
       <DependentUpon>Agents.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="AgentsDebtAr.rdlc">
+    <None Include="Reports\AgentsDebtAr.rdlc">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </EmbeddedResource>
-    <EmbeddedResource Include="AgentsDebtTotalAr.rdlc">
+    </None>
+    <None Include="Reports\AgentsDebtTotalAr.rdlc">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </EmbeddedResource>
-    <EmbeddedResource Include="AgentsDebtTotalEn.rdlc">
+    </None>
+    <None Include="Reports\AgentsDebtTotalEn.rdlc">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </EmbeddedResource>
+    </None>
     <EmbeddedResource Include="Buy.ar.resx">
       <DependentUpon>Buy.cs</DependentUpon>
     </EmbeddedResource>
@@ -224,7 +224,9 @@
     <EmbeddedResource Include="Dealers.resx">
       <DependentUpon>Dealers.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="DealersDebtAr.rdlc" />
+    <None Include="Reports\DealersDebtAr.rdlc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
     <EmbeddedResource Include="Items.ar.resx">
       <DependentUpon>Items.cs</DependentUpon>
     </EmbeddedResource>
@@ -279,7 +281,7 @@
     <None Include="app.config">
       <SubType>Designer</SubType>
     </None>
-    <None Include="asd.mwb" />
+    <None Include="Sql\asd.mwb" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
