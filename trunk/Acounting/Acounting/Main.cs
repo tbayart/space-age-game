@@ -20,6 +20,7 @@ namespace Acounting
 {
     public partial class Main : Form
     {
+        
         public Main()
         {
             InitializeComponent();
@@ -30,6 +31,14 @@ namespace Acounting
         {
             try
             {
+                string lang = Application.UserAppDataRegistry.GetValue("Language").ToString();
+
+
+                m_cultureInfo = new CultureInfo(lang);
+
+                FormLanguageSwitchSingleton.Instance.ChangeCurrentThreadUICulture(m_cultureInfo);
+                FormLanguageSwitchSingleton.Instance.ChangeLanguage(this);
+
 
                 // Create a connection string without passing a database 
                 string ConnectionString =
@@ -147,6 +156,9 @@ namespace Acounting
   
             m_cultureInfo = new CultureInfo("ar");
 
+            Application.UserAppDataRegistry.SetValue("Language",
+           "ar");
+
             FormLanguageSwitchSingleton.Instance.ChangeCurrentThreadUICulture(m_cultureInfo);
             FormLanguageSwitchSingleton.Instance.ChangeLanguage(this);
             
@@ -158,6 +170,8 @@ namespace Acounting
 
             FormLanguageSwitchSingleton.Instance.ChangeCurrentThreadUICulture(m_cultureInfo);
             FormLanguageSwitchSingleton.Instance.ChangeLanguage(this);
+            Application.UserAppDataRegistry.SetValue("Language",
+          "");
         }
     }
 }
