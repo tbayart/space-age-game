@@ -20,80 +20,7 @@ namespace Acounting
             InitializeComponent();
         }
 
-        public bool RunScript(string FileName)
-        {
-
-
-            using (StreamReader reader = new StreamReader(FileName))
-            {
-
-                MySqlCommand command;
-                // Create a connection string without passing a database 
-                string ConnectionString =
-                                "server=localhost;User Id=root";
-
-                MySqlConnection Connection = new MySqlConnection(ConnectionString);
-                Connection.Open();
-                try
-                {
-
-
-                    string line = "";
-                    string l;
-                    while (true)
-                    {
-                        // Clear line if its been used already 
-                        if (line.EndsWith(";"))
-                            line = "";
-
-                        l = reader.ReadLine();
-
-                        // is this eof? 
-                        if (l == null) break;
-                        // Trim off rubbish at end 
-                        l = l.TrimEnd();
-                        // Don't call if it's empty 
-                        if (l == "") continue;
-                        // If it's a comment dont call 
-                        if (l.StartsWith("--")) continue;
-
-                        // Add l to line 
-                        line += l;
-                        // Test for end of line character and continue reading if needed 
-                        if (!line.EndsWith(";")) continue;
-
-                        // mysql generated files start and end with series of commented out 
-                        // lines. 
-                        // These are not true comment out but are parsed by mysql to determine 
-                        // the version number. If version higher than current version then they're 
-                        // not run. So we need to remove the comment marks and pass the command 
-                        // in. Im using mysql 5, so all valid 
-                        if (line.StartsWith("/*!"))
-                        {
-                            if (line.EndsWith("*/;"))
-                            {
-                                int start = line.IndexOf(" ");
-                                if (start == -1)
-                                    continue;
-                                line = line.Substring(start + 1);
-                                line = line.Remove(line.Length - 4) + ";";
-                            }
-                            else continue;
-                        }//if (line.StartsWith("/*!")) 
-
-                        // Now we have a full line, run it in mysql 
-                        command = new MySqlCommand(line, Connection);
-                        command.ExecuteNonQuery();
-                    }// while true 
-                }
-                finally
-                {
-                    Connection.Close();
-                }
-            }// using 
-
-            return true;
-        }// function
+       
 
         private void Form1_Load(object sender, EventArgs e)
         {
@@ -114,10 +41,9 @@ namespace Acounting
                 if (ee.Message == "Unknown database 'store'")
                 {
 
-                    foreach (string item in Directory.EnumerateFiles("Sql"))
-                    {
-                        RunScript(item);
-                    }
+                    CreateDB create = new CreateDB();
+                    create.MdiParent = this;
+                    create.Show();
 
                 }
 

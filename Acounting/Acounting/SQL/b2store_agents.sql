@@ -7,17 +7,18 @@ USE `store`;
 -- Server version	5.5.19
 
 --
--- Table structure for table `moves`
+-- Table structure for table `agents`
 --
 
-DROP TABLE IF EXISTS `moves`;
-CREATE TABLE `moves` (
-  `idMoves` int(11) NOT NULL,
-  `Date` date NOT NULL,
-  `MoveName` varchar(45) CHARACTER SET armscii8 NOT NULL,
-  `MoveData` varchar(45) NOT NULL,
-  `MoveData2` varchar(45) DEFAULT NULL,
-  PRIMARY KEY (`idMoves`)
+DROP TABLE IF EXISTS `agents`;
+CREATE TABLE `agents` (
+  `AgentID` int(11) NOT NULL,
+  `AgentName` varchar(45) NOT NULL,
+  `Address` varchar(45) DEFAULT NULL,
+  `Telephone` varchar(45) DEFAULT NULL,
+  `Debt` double NOT NULL,
+  `InitialDebt` double NOT NULL,
+  `InitialDate` date NOT NULL,
+  PRIMARY KEY (`AgentID`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-
 -- Dump completed on 2011-12-28  6:57:29
