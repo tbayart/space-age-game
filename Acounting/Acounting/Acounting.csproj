@@ -281,6 +281,7 @@
     <EmbeddedResource Include="Reports\AgentsDebt.resx">
       <DependentUpon>AgentsDebt.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Reports\SalesItemsDetailsAr.rdlc" />
     <EmbeddedResource Include="Reports\TotalItems.resx">
       <DependentUpon>TotalItems.cs</DependentUpon>
     </EmbeddedResource>
