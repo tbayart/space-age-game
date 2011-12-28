@@ -2510,7 +2510,7 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>=Sum(Fields!Amount.Value, "DataSet4")</Value>
+                              <Value>=Sum(Fields!Ammount.Value, "DataSet4")</Value>
                               <Style>
                                 <FontFamily>Tahoma</FontFamily>
                                 <FontSize>11pt</FontSize>
@@ -2662,7 +2662,7 @@
           <Paragraph>
             <TextRuns>
               <TextRun>
-                <Value>=Sum(Fields!Amount.Value, "DataSet4")</Value>
+                <Value>=Sum(Fields!Ammount.Value, "DataSet4")</Value>
                 <Style />
               </TextRun>
             </TextRuns>
@@ -2800,7 +2800,7 @@
           <Paragraph>
             <TextRuns>
               <TextRun>
-                <Value>=((((Sum(Fields!Remaining.Value, "DataSet2") *-1)-Sum(Fields!Remaining.Value, "DataSet3") *-1)-Sum(Fields!Amount.Value, "DataSet4"))+Sum(Fields!InitialDebt.Value, "DataSet1") *-1)</Value>
+                <Value>=((((Sum(Fields!Remaining.Value, "DataSet2") *-1)-Sum(Fields!Remaining.Value, "DataSet3") *-1)-Sum(Fields!Ammount.Value, "DataSet4"))+Sum(Fields!InitialDebt.Value, "DataSet1") *-1)</Value>
                 <Style />
               </TextRun>
             </TextRuns>
