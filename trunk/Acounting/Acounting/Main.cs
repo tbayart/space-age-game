@@ -31,13 +31,6 @@ namespace Acounting
         {
             try
             {
-                string lang = Application.UserAppDataRegistry.GetValue("Language").ToString();
-
-
-                m_cultureInfo = new CultureInfo(lang);
-
-                FormLanguageSwitchSingleton.Instance.ChangeCurrentThreadUICulture(m_cultureInfo);
-                FormLanguageSwitchSingleton.Instance.ChangeLanguage(this);
 
 
                 // Create a connection string without passing a database 

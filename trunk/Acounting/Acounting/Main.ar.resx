@@ -119,25 +119,25 @@
   </resheader>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="itemToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>152, 22</value>
+    <value>134, 22</value>
   </data>
   <data name="itemToolStripMenuItem.Text" xml:space="preserve">
     <value>المخزن</value>
   </data>
   <data name="agentsToolStripMenuItem1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>152, 22</value>
+    <value>134, 22</value>
   </data>
   <data name="agentsToolStripMenuItem1.Text" xml:space="preserve">
     <value>العملاء</value>
   </data>
   <data name="dealersToolStripMenuItem1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>152, 22</value>
+    <value>134, 22</value>
   </data>
   <data name="dealersToolStripMenuItem1.Text" xml:space="preserve">
     <value>الموردون</value>
   </data>
   <data name="staticAssetsToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>152, 22</value>
+    <value>134, 22</value>
   </data>
   <data name="staticAssetsToolStripMenuItem.Text" xml:space="preserve">
     <value>الاصول الثابتة</value>
@@ -152,13 +152,13 @@
     <value>152, 22</value>
   </data>
   <data name="buyToolStripMenuItem1.Text" xml:space="preserve">
-    <value>بيع</value>
+    <value>شراء</value>
   </data>
   <data name="sellToolStripMenuItem1.Size" type="System.Drawing.Size, System.Drawing">
     <value>152, 22</value>
   </data>
   <data name="sellToolStripMenuItem1.Text" xml:space="preserve">
-    <value>شراء</value>
+    <value>بيع</value>
   </data>
   <data name="paymentsToolStripMenuItem1.Size" type="System.Drawing.Size, System.Drawing">
     <value>152, 22</value>
@@ -189,9 +189,6 @@
   </data>
   <data name="storageToolStripMenuItem.Text" xml:space="preserve">
     <value>المخزن</value>
-  </data>
-  <data name="agentDebtToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>152, 22</value>
   </data>
   <data name="reportsToolStripMenuItem1.Size" type="System.Drawing.Size, System.Drawing">
     <value>50, 20</value>

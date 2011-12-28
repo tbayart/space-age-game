@@ -209,11 +209,17 @@
     <EmbeddedResource Include="AgentsDebtTotalEn.rdlc">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </EmbeddedResource>
+    <EmbeddedResource Include="Buy.ar.resx">
+      <DependentUpon>Buy.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Buy.resx">
       <DependentUpon>Buy.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="CreateDB.resx">
       <DependentUpon>CreateDB.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dealers.ar.resx">
+      <DependentUpon>Dealers.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Dealers.resx">
       <DependentUpon>Dealers.cs</DependentUpon>
