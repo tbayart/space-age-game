@@ -50,13 +50,14 @@
             this.reportsToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.agentDebtToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.كشفموردToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.اجمالياصنافToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.عربيToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.عربيToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.englshToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.itemsTableAdapter = new Acounting.storeDataSetTableAdapters.itemsTableAdapter();
             this.vaultBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.vaultTableAdapter = new Acounting.storeDataSetTableAdapters.vaultTableAdapter();
-            this.اجمالياصنافToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.itemsBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.storeDataSet)).BeginInit();
             this.menuStrip1.SuspendLayout();
@@ -92,6 +93,7 @@
             this.dealersToolStripMenuItem1,
             this.staticAssetsToolStripMenuItem,
             this.حفظاسترجعToolStripMenuItem,
+            this.toolStripMenuItem1,
             this.exitToolStripMenuItem});
             this.dataToolStripMenuItem.Name = "dataToolStripMenuItem";
             // 
@@ -200,6 +202,12 @@
             this.كشفموردToolStripMenuItem.Name = "كشفموردToolStripMenuItem";
             this.كشفموردToolStripMenuItem.Click += new System.EventHandler(this.كشفموردToolStripMenuItem_Click);
             // 
+            // اجمالياصنافToolStripMenuItem
+            // 
+            resources.ApplyResources(this.اجمالياصنافToolStripMenuItem, "اجمالياصنافToolStripMenuItem");
+            this.اجمالياصنافToolStripMenuItem.Name = "اجمالياصنافToolStripMenuItem";
+            this.اجمالياصنافToolStripMenuItem.Click += new System.EventHandler(this.اجمالياصنافToolStripMenuItem_Click);
+            // 
             // عربيToolStripMenuItem
             // 
             resources.ApplyResources(this.عربيToolStripMenuItem, "عربيToolStripMenuItem");
@@ -233,11 +241,11 @@
             // 
             this.vaultTableAdapter.ClearBeforeFill = true;
             // 
-            // اجمالياصنافToolStripMenuItem
+            // toolStripMenuItem1
             // 
-            resources.ApplyResources(this.اجمالياصنافToolStripMenuItem, "اجمالياصنافToolStripMenuItem");
-            this.اجمالياصنافToolStripMenuItem.Name = "اجمالياصنافToolStripMenuItem";
-            this.اجمالياصنافToolStripMenuItem.Click += new System.EventHandler(this.اجمالياصنافToolStripMenuItem_Click);
+            resources.ApplyResources(this.toolStripMenuItem1, "toolStripMenuItem1");
+            this.toolStripMenuItem1.Name = "toolStripMenuItem1";
+            this.toolStripMenuItem1.Click += new System.EventHandler(this.toolStripMenuItem1_Click);
             // 
             // Main
             // 
@@ -288,6 +296,7 @@
         private System.Windows.Forms.BindingSource vaultBindingSource;
         private storeDataSetTableAdapters.vaultTableAdapter vaultTableAdapter;
         private System.Windows.Forms.ToolStripMenuItem اجمالياصنافToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem1;
     }
 }
 

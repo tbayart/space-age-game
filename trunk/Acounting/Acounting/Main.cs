@@ -203,6 +203,33 @@ namespace Acounting
             totalitems.Show();
         }
 
+        private void toolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            
+            try
+            {
+
+ 
+
+                MySqlCommand command;
+                // Create a connection string without passing a database 
+                string ConnectionString =
+                                "server=localhost;User Id=root";
+
+                MySqlConnection Connection = new MySqlConnection(ConnectionString);
+                Connection.Open();
+                string line = "drop schema store";
+                command = new MySqlCommand(line, Connection);
+                command.ExecuteNonQuery();
+            }
+ 
+            catch (Exception ee)
+            {
+
+                MessageBox.Show(ee.Message);
+            }
+        }
+
 
     }
 }
