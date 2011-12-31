@@ -73,6 +73,7 @@
             this.Txt_Telephone = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dealersBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.storeDataSet)).BeginInit();
@@ -228,8 +229,8 @@
             // 
             resources.ApplyResources(this.dateTimePicker1, "dateTimePicker1");
             this.dateTimePicker1.Checked = false;
-            this.dateTimePicker1.DataBindings.Add(new System.Windows.Forms.Binding("Value", this.dealersBindingSource, "InitialDate", true));
             this.dateTimePicker1.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.dealersBindingSource, "InitialDate", true));
+            this.dateTimePicker1.DataBindings.Add(new System.Windows.Forms.Binding("Value", this.dealersBindingSource, "InitialDate", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
             this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dateTimePicker1.Name = "dateTimePicker1";
             // 
@@ -246,7 +247,7 @@
             // Txt_InialDebt
             // 
             resources.ApplyResources(this.Txt_InialDebt, "Txt_InialDebt");
-            this.Txt_InialDebt.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.dealersBindingSource, "InitialDebt", true));
+            this.Txt_InialDebt.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.dealersBindingSource, "InitialDebt", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
             this.Txt_InialDebt.Name = "Txt_InialDebt";
             this.Txt_InialDebt.ReadOnly = true;
             // 
@@ -342,7 +343,7 @@
             // Txt_Debt
             // 
             resources.ApplyResources(this.Txt_Debt, "Txt_Debt");
-            this.Txt_Debt.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.dealersBindingSource, "Debt", true));
+            this.Txt_Debt.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.dealersBindingSource, "Debt", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
             this.Txt_Debt.Name = "Txt_Debt";
             this.Txt_Debt.TextChanged += new System.EventHandler(this.Txt_Debt_TextChanged);
             // 
@@ -354,13 +355,13 @@
             // Txt_DealerName
             // 
             resources.ApplyResources(this.Txt_DealerName, "Txt_DealerName");
-            this.Txt_DealerName.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.dealersBindingSource, "DealerName", true));
+            this.Txt_DealerName.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.dealersBindingSource, "DealerName", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
             this.Txt_DealerName.Name = "Txt_DealerName";
             // 
             // Txt_Adress
             // 
             resources.ApplyResources(this.Txt_Adress, "Txt_Adress");
-            this.Txt_Adress.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.dealersBindingSource, "Adress", true));
+            this.Txt_Adress.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.dealersBindingSource, "Adress", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
             this.Txt_Adress.Name = "Txt_Adress";
             // 
             // label11
@@ -371,7 +372,7 @@
             // Txt_DealerID
             // 
             resources.ApplyResources(this.Txt_DealerID, "Txt_DealerID");
-            this.Txt_DealerID.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.dealersBindingSource, "DealerID", true));
+            this.Txt_DealerID.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.dealersBindingSource, "DealerID", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged, null, "N0"));
             this.Txt_DealerID.Name = "Txt_DealerID";
             this.Txt_DealerID.ReadOnly = true;
             // 
@@ -383,7 +384,7 @@
             // Txt_Telephone
             // 
             resources.ApplyResources(this.Txt_Telephone, "Txt_Telephone");
-            this.Txt_Telephone.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.dealersBindingSource, "Telephone", true));
+            this.Txt_Telephone.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.dealersBindingSource, "Telephone", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
             this.Txt_Telephone.Name = "Txt_Telephone";
             // 
             // label5
@@ -395,6 +396,10 @@
             // 
             resources.ApplyResources(this.label4, "label4");
             this.label4.Name = "label4";
+            // 
+            // timer1
+            // 
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
             // Dealers
             // 
@@ -468,5 +473,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn debtDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn initialDebtDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn initialDateDataGridViewTextBoxColumn;
+        private System.Windows.Forms.Timer timer1;
     }
 }
