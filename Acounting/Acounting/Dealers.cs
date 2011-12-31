@@ -6,7 +6,7 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Windows.Forms;
-
+using System.Threading;
 namespace Acounting
 {
     public partial class Dealers : Form
@@ -25,9 +25,28 @@ namespace Acounting
 
         }
 
-   
+     
         private void saveToolStripMenuItem_Click_1(object sender, EventArgs e)
         {
+
+            savedata();
+
+            timer1.Enabled = true;
+
+           
+        }
+
+        private void savedata()
+        {
+
+            tabControl1.SelectedTab = tabPage1;
+            tabControl1.Refresh();
+            dataGridView1.Focus();
+
+            SendKeys.Send("{UP}");
+
+            SendKeys.Send("{DOWN}");
+
             dealersTableAdapter.Update(storeDataSet);
         }
 
@@ -61,6 +80,12 @@ namespace Acounting
             {
                 canchange = true;
             }
+        }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            savedata();
+            timer1.Enabled = false;
         }
  
     }

@@ -29,6 +29,7 @@ namespace Acounting
 
         private void Form1_Load(object sender, EventArgs e)
         {
+            #region check for database
 
             try
             {
@@ -55,6 +56,14 @@ namespace Acounting
                 }
 
             }
+            #endregion
+
+            #region check for vault
+
+            
+
+            #endregion
+
 
         }
         

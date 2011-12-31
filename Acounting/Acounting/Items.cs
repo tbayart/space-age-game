@@ -68,7 +68,33 @@ namespace Acounting
 
         private void saveToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            itemsTableAdapter.Update(storeDataSet);
+
+            savedata();
+
+            timer1.Enabled = true;
+        }
+
+        private void savedata()
+        {
+
+ 
+                tabControl1.SelectedTab = tabPage1;
+                tabControl1.Refresh();
+                dataGridView1.Focus();
+
+                SendKeys.Send("{UP}");
+
+                SendKeys.Send("{DOWN}");
+
+                itemsTableAdapter.Update(storeDataSet);
+            
+        }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            savedata();
+
+            timer1.Enabled = false;
         }
 
  

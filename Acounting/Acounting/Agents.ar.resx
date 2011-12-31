@@ -143,13 +143,13 @@
     <value>759, 410</value>
   </data>
   <data name="saveToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>40, 20</value>
+    <value>38, 20</value>
   </data>
   <data name="saveToolStripMenuItem.Text" xml:space="preserve">
     <value>حفظ</value>
   </data>
   <data name="exitToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>43, 20</value>
+    <value>44, 20</value>
   </data>
   <data name="exitToolStripMenuItem.Text" xml:space="preserve">
     <value>خروج</value>
@@ -213,6 +213,9 @@
         +9+arE+6Ad3pumD/gnB9nBHpBrQkGfxviDf8XxNr/L8y2oR0A0hO++RqAAAkI9ieo+gjUwAAAABJRU5E
         rkJggg==
 </value>
+  </data>
+  <data name="bindingNavigatorCountItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>35, 22</value>
   </data>
   <data name="bindingNavigatorDeleteItem.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>

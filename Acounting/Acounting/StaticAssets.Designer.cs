@@ -69,6 +69,7 @@
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.saveToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -82,22 +83,21 @@
             // 
             // tabControl1
             // 
-            resources.ApplyResources(this.tabControl1, "tabControl1");
             this.tabControl1.Controls.Add(this.tabPage1);
             this.tabControl1.Controls.Add(this.tabPage2);
+            resources.ApplyResources(this.tabControl1, "tabControl1");
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
             // 
             // tabPage1
             // 
-            resources.ApplyResources(this.tabPage1, "tabPage1");
             this.tabPage1.Controls.Add(this.dataGridView1);
+            resources.ApplyResources(this.tabPage1, "tabPage1");
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.UseVisualStyleBackColor = true;
             // 
             // dataGridView1
             // 
-            resources.ApplyResources(this.dataGridView1, "dataGridView1");
             this.dataGridView1.AllowUserToAddRows = false;
             this.dataGridView1.AllowUserToDeleteRows = false;
             this.dataGridView1.AutoGenerateColumns = false;
@@ -109,6 +109,7 @@
             this.costDataGridViewTextBoxColumn,
             this.totalCostDataGridViewTextBoxColumn});
             this.dataGridView1.DataSource = this.staticassestsBindingSource;
+            resources.ApplyResources(this.dataGridView1, "dataGridView1");
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.Paint += new System.Windows.Forms.PaintEventHandler(this.dataGridView1_Paint);
@@ -160,7 +161,6 @@
             // 
             // tabPage2
             // 
-            resources.ApplyResources(this.tabPage2, "tabPage2");
             this.tabPage2.Controls.Add(this.Txt_ttc);
             this.tabPage2.Controls.Add(this.label2);
             this.tabPage2.Controls.Add(this.bindingNavigator1);
@@ -174,6 +174,7 @@
             this.tabPage2.Controls.Add(this.Txt_Cost);
             this.tabPage2.Controls.Add(this.label5);
             this.tabPage2.Controls.Add(this.label4);
+            resources.ApplyResources(this.tabPage2, "tabPage2");
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.UseVisualStyleBackColor = true;
             // 
@@ -189,7 +190,6 @@
             // 
             // bindingNavigator1
             // 
-            resources.ApplyResources(this.bindingNavigator1, "bindingNavigator1");
             this.bindingNavigator1.AddNewItem = this.bindingNavigatorAddNewItem;
             this.bindingNavigator1.BindingSource = this.staticassestsBindingSource;
             this.bindingNavigator1.CountItem = this.bindingNavigatorCountItem;
@@ -206,6 +206,7 @@
             this.bindingNavigatorSeparator2,
             this.bindingNavigatorAddNewItem,
             this.bindingNavigatorDeleteItem});
+            resources.ApplyResources(this.bindingNavigator1, "bindingNavigator1");
             this.bindingNavigator1.MoveFirstItem = this.bindingNavigatorMoveFirstItem;
             this.bindingNavigator1.MoveLastItem = this.bindingNavigatorMoveLastItem;
             this.bindingNavigator1.MoveNextItem = this.bindingNavigatorMoveNextItem;
@@ -215,38 +216,38 @@
             // 
             // bindingNavigatorAddNewItem
             // 
-            resources.ApplyResources(this.bindingNavigatorAddNewItem, "bindingNavigatorAddNewItem");
             this.bindingNavigatorAddNewItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            resources.ApplyResources(this.bindingNavigatorAddNewItem, "bindingNavigatorAddNewItem");
             this.bindingNavigatorAddNewItem.Name = "bindingNavigatorAddNewItem";
             this.bindingNavigatorAddNewItem.Click += new System.EventHandler(this.bindingNavigatorAddNewItem_Click);
             // 
             // bindingNavigatorCountItem
             // 
-            resources.ApplyResources(this.bindingNavigatorCountItem, "bindingNavigatorCountItem");
             this.bindingNavigatorCountItem.Name = "bindingNavigatorCountItem";
+            resources.ApplyResources(this.bindingNavigatorCountItem, "bindingNavigatorCountItem");
             // 
             // bindingNavigatorDeleteItem
             // 
-            resources.ApplyResources(this.bindingNavigatorDeleteItem, "bindingNavigatorDeleteItem");
             this.bindingNavigatorDeleteItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            resources.ApplyResources(this.bindingNavigatorDeleteItem, "bindingNavigatorDeleteItem");
             this.bindingNavigatorDeleteItem.Name = "bindingNavigatorDeleteItem";
             // 
             // bindingNavigatorMoveFirstItem
             // 
-            resources.ApplyResources(this.bindingNavigatorMoveFirstItem, "bindingNavigatorMoveFirstItem");
             this.bindingNavigatorMoveFirstItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            resources.ApplyResources(this.bindingNavigatorMoveFirstItem, "bindingNavigatorMoveFirstItem");
             this.bindingNavigatorMoveFirstItem.Name = "bindingNavigatorMoveFirstItem";
             // 
             // bindingNavigatorMovePreviousItem
             // 
-            resources.ApplyResources(this.bindingNavigatorMovePreviousItem, "bindingNavigatorMovePreviousItem");
             this.bindingNavigatorMovePreviousItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            resources.ApplyResources(this.bindingNavigatorMovePreviousItem, "bindingNavigatorMovePreviousItem");
             this.bindingNavigatorMovePreviousItem.Name = "bindingNavigatorMovePreviousItem";
             // 
             // bindingNavigatorSeparator
             // 
-            resources.ApplyResources(this.bindingNavigatorSeparator, "bindingNavigatorSeparator");
             this.bindingNavigatorSeparator.Name = "bindingNavigatorSeparator";
+            resources.ApplyResources(this.bindingNavigatorSeparator, "bindingNavigatorSeparator");
             // 
             // bindingNavigatorPositionItem
             // 
@@ -255,32 +256,31 @@
             // 
             // bindingNavigatorSeparator1
             // 
-            resources.ApplyResources(this.bindingNavigatorSeparator1, "bindingNavigatorSeparator1");
             this.bindingNavigatorSeparator1.Name = "bindingNavigatorSeparator1";
+            resources.ApplyResources(this.bindingNavigatorSeparator1, "bindingNavigatorSeparator1");
             // 
             // bindingNavigatorMoveNextItem
             // 
-            resources.ApplyResources(this.bindingNavigatorMoveNextItem, "bindingNavigatorMoveNextItem");
             this.bindingNavigatorMoveNextItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            resources.ApplyResources(this.bindingNavigatorMoveNextItem, "bindingNavigatorMoveNextItem");
             this.bindingNavigatorMoveNextItem.Name = "bindingNavigatorMoveNextItem";
             // 
             // bindingNavigatorMoveLastItem
             // 
-            resources.ApplyResources(this.bindingNavigatorMoveLastItem, "bindingNavigatorMoveLastItem");
             this.bindingNavigatorMoveLastItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            resources.ApplyResources(this.bindingNavigatorMoveLastItem, "bindingNavigatorMoveLastItem");
             this.bindingNavigatorMoveLastItem.Name = "bindingNavigatorMoveLastItem";
             // 
             // bindingNavigatorSeparator2
             // 
-            resources.ApplyResources(this.bindingNavigatorSeparator2, "bindingNavigatorSeparator2");
             this.bindingNavigatorSeparator2.Name = "bindingNavigatorSeparator2";
+            resources.ApplyResources(this.bindingNavigatorSeparator2, "bindingNavigatorSeparator2");
             // 
             // Txt_TotalCost
             // 
+            this.Txt_TotalCost.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.staticassestsBindingSource, "TotalCost", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
             resources.ApplyResources(this.Txt_TotalCost, "Txt_TotalCost");
-            this.Txt_TotalCost.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.staticassestsBindingSource, "TotalCost", true));
             this.Txt_TotalCost.Name = "Txt_TotalCost";
-            this.Txt_TotalCost.TextChanged += new System.EventHandler(this.Txt_TotalCost_TextChanged);
             // 
             // label1
             // 
@@ -289,14 +289,14 @@
             // 
             // Txt_AssetName
             // 
+            this.Txt_AssetName.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.staticassestsBindingSource, "ItemName", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
             resources.ApplyResources(this.Txt_AssetName, "Txt_AssetName");
-            this.Txt_AssetName.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.staticassestsBindingSource, "ItemName", true));
             this.Txt_AssetName.Name = "Txt_AssetName";
             // 
             // Txt_Qty
             // 
+            this.Txt_Qty.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.staticassestsBindingSource, "Qty", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
             resources.ApplyResources(this.Txt_Qty, "Txt_Qty");
-            this.Txt_Qty.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.staticassestsBindingSource, "Qty", true));
             this.Txt_Qty.Name = "Txt_Qty";
             // 
             // label11
@@ -306,8 +306,8 @@
             // 
             // Txt_AssetID
             // 
+            this.Txt_AssetID.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.staticassestsBindingSource, "Id", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
             resources.ApplyResources(this.Txt_AssetID, "Txt_AssetID");
-            this.Txt_AssetID.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.staticassestsBindingSource, "Id", true));
             this.Txt_AssetID.Name = "Txt_AssetID";
             this.Txt_AssetID.ReadOnly = true;
             // 
@@ -318,8 +318,8 @@
             // 
             // Txt_Cost
             // 
+            this.Txt_Cost.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.staticassestsBindingSource, "Cost", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
             resources.ApplyResources(this.Txt_Cost, "Txt_Cost");
-            this.Txt_Cost.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.staticassestsBindingSource, "Cost", true));
             this.Txt_Cost.Name = "Txt_Cost";
             this.Txt_Cost.TextChanged += new System.EventHandler(this.Txt_Cost_TextChanged);
             // 
@@ -339,24 +339,28 @@
             // 
             // menuStrip1
             // 
-            resources.ApplyResources(this.menuStrip1, "menuStrip1");
             this.menuStrip1.AllowMerge = false;
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.saveToolStripMenuItem,
             this.exitToolStripMenuItem});
+            resources.ApplyResources(this.menuStrip1, "menuStrip1");
             this.menuStrip1.Name = "menuStrip1";
             // 
             // saveToolStripMenuItem
             // 
-            resources.ApplyResources(this.saveToolStripMenuItem, "saveToolStripMenuItem");
             this.saveToolStripMenuItem.Name = "saveToolStripMenuItem";
+            resources.ApplyResources(this.saveToolStripMenuItem, "saveToolStripMenuItem");
             this.saveToolStripMenuItem.Click += new System.EventHandler(this.saveToolStripMenuItem_Click);
             // 
             // exitToolStripMenuItem
             // 
-            resources.ApplyResources(this.exitToolStripMenuItem, "exitToolStripMenuItem");
             this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
+            resources.ApplyResources(this.exitToolStripMenuItem, "exitToolStripMenuItem");
             this.exitToolStripMenuItem.Click += new System.EventHandler(this.exitToolStripMenuItem_Click);
+            // 
+            // timer1
+            // 
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
             // StaticAssets
             // 
@@ -424,5 +428,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn qtyDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn costDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn totalCostDataGridViewTextBoxColumn;
+        private System.Windows.Forms.Timer timer1;
     }
 }

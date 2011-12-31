@@ -68,6 +68,7 @@
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.itemsBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.storeDataSet)).BeginInit();
@@ -82,7 +83,6 @@
             // 
             // dataGridView1
             // 
-            resources.ApplyResources(this.dataGridView1, "dataGridView1");
             this.dataGridView1.AllowUserToAddRows = false;
             this.dataGridView1.AllowUserToDeleteRows = false;
             this.dataGridView1.AutoGenerateColumns = false;
@@ -94,9 +94,7 @@
             this.qtyDataGridViewTextBoxColumn,
             this.totalCostDataGridViewTextBoxColumn});
             this.dataGridView1.DataSource = this.itemsBindingSource;
-            this.errorProvider1.SetError(this.dataGridView1, resources.GetString("dataGridView1.Error"));
-            this.errorProvider1.SetIconAlignment(this.dataGridView1, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("dataGridView1.IconAlignment"))));
-            this.errorProvider1.SetIconPadding(this.dataGridView1, ((int)(resources.GetObject("dataGridView1.IconPadding"))));
+            resources.ApplyResources(this.dataGridView1, "dataGridView1");
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.CellEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellEnter);
@@ -152,52 +150,42 @@
             // 
             // menuStrip1
             // 
-            resources.ApplyResources(this.menuStrip1, "menuStrip1");
             this.menuStrip1.AllowMerge = false;
-            this.errorProvider1.SetError(this.menuStrip1, resources.GetString("menuStrip1.Error"));
-            this.errorProvider1.SetIconAlignment(this.menuStrip1, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("menuStrip1.IconAlignment"))));
-            this.errorProvider1.SetIconPadding(this.menuStrip1, ((int)(resources.GetObject("menuStrip1.IconPadding"))));
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.saveToolStripMenuItem,
             this.exitToolStripMenuItem});
+            resources.ApplyResources(this.menuStrip1, "menuStrip1");
             this.menuStrip1.Name = "menuStrip1";
             // 
             // saveToolStripMenuItem
             // 
-            resources.ApplyResources(this.saveToolStripMenuItem, "saveToolStripMenuItem");
             this.saveToolStripMenuItem.Name = "saveToolStripMenuItem";
+            resources.ApplyResources(this.saveToolStripMenuItem, "saveToolStripMenuItem");
             this.saveToolStripMenuItem.Click += new System.EventHandler(this.saveToolStripMenuItem_Click);
             // 
             // exitToolStripMenuItem
             // 
-            resources.ApplyResources(this.exitToolStripMenuItem, "exitToolStripMenuItem");
             this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
+            resources.ApplyResources(this.exitToolStripMenuItem, "exitToolStripMenuItem");
             this.exitToolStripMenuItem.Click += new System.EventHandler(this.exitToolStripMenuItem_Click);
             // 
             // tabControl1
             // 
-            resources.ApplyResources(this.tabControl1, "tabControl1");
             this.tabControl1.Controls.Add(this.tabPage1);
             this.tabControl1.Controls.Add(this.tabPage2);
-            this.errorProvider1.SetError(this.tabControl1, resources.GetString("tabControl1.Error"));
-            this.errorProvider1.SetIconAlignment(this.tabControl1, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("tabControl1.IconAlignment"))));
-            this.errorProvider1.SetIconPadding(this.tabControl1, ((int)(resources.GetObject("tabControl1.IconPadding"))));
+            resources.ApplyResources(this.tabControl1, "tabControl1");
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
             // 
             // tabPage1
             // 
-            resources.ApplyResources(this.tabPage1, "tabPage1");
             this.tabPage1.Controls.Add(this.dataGridView1);
-            this.errorProvider1.SetError(this.tabPage1, resources.GetString("tabPage1.Error"));
-            this.errorProvider1.SetIconAlignment(this.tabPage1, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("tabPage1.IconAlignment"))));
-            this.errorProvider1.SetIconPadding(this.tabPage1, ((int)(resources.GetObject("tabPage1.IconPadding"))));
+            resources.ApplyResources(this.tabPage1, "tabPage1");
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.UseVisualStyleBackColor = true;
             // 
             // tabPage2
             // 
-            resources.ApplyResources(this.tabPage2, "tabPage2");
             this.tabPage2.Controls.Add(this.Txt_Totalcost);
             this.tabPage2.Controls.Add(this.label1);
             this.tabPage2.Controls.Add(this.bindingNavigator1);
@@ -209,40 +197,28 @@
             this.tabPage2.Controls.Add(this.Txt_Qty);
             this.tabPage2.Controls.Add(this.label5);
             this.tabPage2.Controls.Add(this.label4);
-            this.errorProvider1.SetError(this.tabPage2, resources.GetString("tabPage2.Error"));
-            this.errorProvider1.SetIconAlignment(this.tabPage2, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("tabPage2.IconAlignment"))));
-            this.errorProvider1.SetIconPadding(this.tabPage2, ((int)(resources.GetObject("tabPage2.IconPadding"))));
+            resources.ApplyResources(this.tabPage2, "tabPage2");
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.UseVisualStyleBackColor = true;
             // 
             // Txt_Totalcost
             // 
+            this.Txt_Totalcost.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.itemsBindingSource, "TotalCost", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
             resources.ApplyResources(this.Txt_Totalcost, "Txt_Totalcost");
-            this.Txt_Totalcost.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.itemsBindingSource, "TotalCost", true));
-            this.errorProvider1.SetError(this.Txt_Totalcost, resources.GetString("Txt_Totalcost.Error"));
-            this.errorProvider1.SetIconAlignment(this.Txt_Totalcost, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("Txt_Totalcost.IconAlignment"))));
-            this.errorProvider1.SetIconPadding(this.Txt_Totalcost, ((int)(resources.GetObject("Txt_Totalcost.IconPadding"))));
             this.Txt_Totalcost.Name = "Txt_Totalcost";
             this.Txt_Totalcost.ReadOnly = true;
             // 
             // label1
             // 
             resources.ApplyResources(this.label1, "label1");
-            this.errorProvider1.SetError(this.label1, resources.GetString("label1.Error"));
-            this.errorProvider1.SetIconAlignment(this.label1, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("label1.IconAlignment"))));
-            this.errorProvider1.SetIconPadding(this.label1, ((int)(resources.GetObject("label1.IconPadding"))));
             this.label1.Name = "label1";
             // 
             // bindingNavigator1
             // 
-            resources.ApplyResources(this.bindingNavigator1, "bindingNavigator1");
             this.bindingNavigator1.AddNewItem = this.bindingNavigatorAddNewItem;
             this.bindingNavigator1.BindingSource = this.itemsBindingSource;
             this.bindingNavigator1.CountItem = this.bindingNavigatorCountItem;
             this.bindingNavigator1.DeleteItem = this.bindingNavigatorDeleteItem;
-            this.errorProvider1.SetError(this.bindingNavigator1, resources.GetString("bindingNavigator1.Error"));
-            this.errorProvider1.SetIconAlignment(this.bindingNavigator1, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("bindingNavigator1.IconAlignment"))));
-            this.errorProvider1.SetIconPadding(this.bindingNavigator1, ((int)(resources.GetObject("bindingNavigator1.IconPadding"))));
             this.bindingNavigator1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.bindingNavigatorMoveFirstItem,
             this.bindingNavigatorMovePreviousItem,
@@ -255,6 +231,7 @@
             this.bindingNavigatorSeparator2,
             this.bindingNavigatorAddNewItem,
             this.bindingNavigatorDeleteItem});
+            resources.ApplyResources(this.bindingNavigator1, "bindingNavigator1");
             this.bindingNavigator1.MoveFirstItem = this.bindingNavigatorMoveFirstItem;
             this.bindingNavigator1.MoveLastItem = this.bindingNavigatorMoveLastItem;
             this.bindingNavigator1.MoveNextItem = this.bindingNavigatorMoveNextItem;
@@ -264,38 +241,38 @@
             // 
             // bindingNavigatorAddNewItem
             // 
-            resources.ApplyResources(this.bindingNavigatorAddNewItem, "bindingNavigatorAddNewItem");
             this.bindingNavigatorAddNewItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            resources.ApplyResources(this.bindingNavigatorAddNewItem, "bindingNavigatorAddNewItem");
             this.bindingNavigatorAddNewItem.Name = "bindingNavigatorAddNewItem";
             this.bindingNavigatorAddNewItem.Click += new System.EventHandler(this.bindingNavigatorAddNewItem_Click);
             // 
             // bindingNavigatorCountItem
             // 
-            resources.ApplyResources(this.bindingNavigatorCountItem, "bindingNavigatorCountItem");
             this.bindingNavigatorCountItem.Name = "bindingNavigatorCountItem";
+            resources.ApplyResources(this.bindingNavigatorCountItem, "bindingNavigatorCountItem");
             // 
             // bindingNavigatorDeleteItem
             // 
-            resources.ApplyResources(this.bindingNavigatorDeleteItem, "bindingNavigatorDeleteItem");
             this.bindingNavigatorDeleteItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            resources.ApplyResources(this.bindingNavigatorDeleteItem, "bindingNavigatorDeleteItem");
             this.bindingNavigatorDeleteItem.Name = "bindingNavigatorDeleteItem";
             // 
             // bindingNavigatorMoveFirstItem
             // 
-            resources.ApplyResources(this.bindingNavigatorMoveFirstItem, "bindingNavigatorMoveFirstItem");
             this.bindingNavigatorMoveFirstItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            resources.ApplyResources(this.bindingNavigatorMoveFirstItem, "bindingNavigatorMoveFirstItem");
             this.bindingNavigatorMoveFirstItem.Name = "bindingNavigatorMoveFirstItem";
             // 
             // bindingNavigatorMovePreviousItem
             // 
-            resources.ApplyResources(this.bindingNavigatorMovePreviousItem, "bindingNavigatorMovePreviousItem");
             this.bindingNavigatorMovePreviousItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            resources.ApplyResources(this.bindingNavigatorMovePreviousItem, "bindingNavigatorMovePreviousItem");
             this.bindingNavigatorMovePreviousItem.Name = "bindingNavigatorMovePreviousItem";
             // 
             // bindingNavigatorSeparator
             // 
-            resources.ApplyResources(this.bindingNavigatorSeparator, "bindingNavigatorSeparator");
             this.bindingNavigatorSeparator.Name = "bindingNavigatorSeparator";
+            resources.ApplyResources(this.bindingNavigatorSeparator, "bindingNavigatorSeparator");
             // 
             // bindingNavigatorPositionItem
             // 
@@ -304,100 +281,79 @@
             // 
             // bindingNavigatorSeparator1
             // 
-            resources.ApplyResources(this.bindingNavigatorSeparator1, "bindingNavigatorSeparator1");
             this.bindingNavigatorSeparator1.Name = "bindingNavigatorSeparator1";
+            resources.ApplyResources(this.bindingNavigatorSeparator1, "bindingNavigatorSeparator1");
             // 
             // bindingNavigatorMoveNextItem
             // 
-            resources.ApplyResources(this.bindingNavigatorMoveNextItem, "bindingNavigatorMoveNextItem");
             this.bindingNavigatorMoveNextItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            resources.ApplyResources(this.bindingNavigatorMoveNextItem, "bindingNavigatorMoveNextItem");
             this.bindingNavigatorMoveNextItem.Name = "bindingNavigatorMoveNextItem";
             // 
             // bindingNavigatorMoveLastItem
             // 
-            resources.ApplyResources(this.bindingNavigatorMoveLastItem, "bindingNavigatorMoveLastItem");
             this.bindingNavigatorMoveLastItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            resources.ApplyResources(this.bindingNavigatorMoveLastItem, "bindingNavigatorMoveLastItem");
             this.bindingNavigatorMoveLastItem.Name = "bindingNavigatorMoveLastItem";
             // 
             // bindingNavigatorSeparator2
             // 
-            resources.ApplyResources(this.bindingNavigatorSeparator2, "bindingNavigatorSeparator2");
             this.bindingNavigatorSeparator2.Name = "bindingNavigatorSeparator2";
+            resources.ApplyResources(this.bindingNavigatorSeparator2, "bindingNavigatorSeparator2");
             // 
             // Txt_ItemName
             // 
+            this.Txt_ItemName.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.itemsBindingSource, "ItemName", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
             resources.ApplyResources(this.Txt_ItemName, "Txt_ItemName");
-            this.Txt_ItemName.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.itemsBindingSource, "ItemName", true));
-            this.errorProvider1.SetError(this.Txt_ItemName, resources.GetString("Txt_ItemName.Error"));
-            this.errorProvider1.SetIconAlignment(this.Txt_ItemName, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("Txt_ItemName.IconAlignment"))));
-            this.errorProvider1.SetIconPadding(this.Txt_ItemName, ((int)(resources.GetObject("Txt_ItemName.IconPadding"))));
             this.Txt_ItemName.Name = "Txt_ItemName";
             // 
             // Txt_Cost
             // 
+            this.Txt_Cost.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.itemsBindingSource, "Cost", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
             resources.ApplyResources(this.Txt_Cost, "Txt_Cost");
-            this.Txt_Cost.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.itemsBindingSource, "Cost", true));
-            this.errorProvider1.SetError(this.Txt_Cost, resources.GetString("Txt_Cost.Error"));
-            this.errorProvider1.SetIconAlignment(this.Txt_Cost, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("Txt_Cost.IconAlignment"))));
-            this.errorProvider1.SetIconPadding(this.Txt_Cost, ((int)(resources.GetObject("Txt_Cost.IconPadding"))));
             this.Txt_Cost.Name = "Txt_Cost";
             // 
             // label11
             // 
             resources.ApplyResources(this.label11, "label11");
-            this.errorProvider1.SetError(this.label11, resources.GetString("label11.Error"));
-            this.errorProvider1.SetIconAlignment(this.label11, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("label11.IconAlignment"))));
-            this.errorProvider1.SetIconPadding(this.label11, ((int)(resources.GetObject("label11.IconPadding"))));
             this.label11.Name = "label11";
             // 
             // Txt_ItemID
             // 
+            this.Txt_ItemID.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.itemsBindingSource, "ItemID", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
             resources.ApplyResources(this.Txt_ItemID, "Txt_ItemID");
-            this.Txt_ItemID.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.itemsBindingSource, "ItemID", true));
-            this.errorProvider1.SetError(this.Txt_ItemID, resources.GetString("Txt_ItemID.Error"));
-            this.errorProvider1.SetIconAlignment(this.Txt_ItemID, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("Txt_ItemID.IconAlignment"))));
-            this.errorProvider1.SetIconPadding(this.Txt_ItemID, ((int)(resources.GetObject("Txt_ItemID.IconPadding"))));
             this.Txt_ItemID.Name = "Txt_ItemID";
             this.Txt_ItemID.ReadOnly = true;
             // 
             // label8
             // 
             resources.ApplyResources(this.label8, "label8");
-            this.errorProvider1.SetError(this.label8, resources.GetString("label8.Error"));
-            this.errorProvider1.SetIconAlignment(this.label8, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("label8.IconAlignment"))));
-            this.errorProvider1.SetIconPadding(this.label8, ((int)(resources.GetObject("label8.IconPadding"))));
             this.label8.Name = "label8";
             // 
             // Txt_Qty
             // 
+            this.Txt_Qty.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.itemsBindingSource, "Qty", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
             resources.ApplyResources(this.Txt_Qty, "Txt_Qty");
-            this.Txt_Qty.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.itemsBindingSource, "Qty", true));
-            this.errorProvider1.SetError(this.Txt_Qty, resources.GetString("Txt_Qty.Error"));
-            this.errorProvider1.SetIconAlignment(this.Txt_Qty, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("Txt_Qty.IconAlignment"))));
-            this.errorProvider1.SetIconPadding(this.Txt_Qty, ((int)(resources.GetObject("Txt_Qty.IconPadding"))));
             this.Txt_Qty.Name = "Txt_Qty";
             this.Txt_Qty.TextChanged += new System.EventHandler(this.Txt_Qty_TextChanged);
             // 
             // label5
             // 
             resources.ApplyResources(this.label5, "label5");
-            this.errorProvider1.SetError(this.label5, resources.GetString("label5.Error"));
-            this.errorProvider1.SetIconAlignment(this.label5, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("label5.IconAlignment"))));
-            this.errorProvider1.SetIconPadding(this.label5, ((int)(resources.GetObject("label5.IconPadding"))));
             this.label5.Name = "label5";
             // 
             // label4
             // 
             resources.ApplyResources(this.label4, "label4");
-            this.errorProvider1.SetError(this.label4, resources.GetString("label4.Error"));
-            this.errorProvider1.SetIconAlignment(this.label4, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("label4.IconAlignment"))));
-            this.errorProvider1.SetIconPadding(this.label4, ((int)(resources.GetObject("label4.IconPadding"))));
             this.label4.Name = "label4";
             // 
             // errorProvider1
             // 
             this.errorProvider1.ContainerControl = this;
-            resources.ApplyResources(this.errorProvider1, "errorProvider1");
+            // 
+            // timer1
+            // 
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
             // Items
             // 
@@ -467,5 +423,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn costDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn qtyDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn totalCostDataGridViewTextBoxColumn;
+        private System.Windows.Forms.Timer timer1;
     }
 }
