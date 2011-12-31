@@ -187,6 +187,12 @@
     <Compile Include="Reports\AgentsDebt.Designer.cs">
       <DependentUpon>AgentsDebt.cs</DependentUpon>
     </Compile>
+    <Compile Include="Reports\SalesItemsDetails.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reports\SalesItemsDetails.Designer.cs">
+      <DependentUpon>SalesItemsDetails.cs</DependentUpon>
+    </Compile>
     <Compile Include="Reports\TotalItems.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -300,11 +306,24 @@
     <EmbeddedResource Include="Reports\AgentsDebt.resx">
       <DependentUpon>AgentsDebt.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Reports\SalesItemsDetailsAr.rdlc" />
+    <EmbeddedResource Include="Reports\SalesItemsDetails.ar.resx">
+      <DependentUpon>SalesItemsDetails.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\SalesItemsDetails.resx">
+      <DependentUpon>SalesItemsDetails.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\SalesItemsDetailsAr.rdlc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\TotalItems.ar.resx">
+      <DependentUpon>TotalItems.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Reports\TotalItems.resx">
       <DependentUpon>TotalItems.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Reports\TotalItemsAr.rdlc" />
+    <EmbeddedResource Include="Reports\TotalItemsAr.rdlc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
     <EmbeddedResource Include="ReturnBuy.ar.resx">
       <DependentUpon>ReturnBuy.cs</DependentUpon>
     </EmbeddedResource>

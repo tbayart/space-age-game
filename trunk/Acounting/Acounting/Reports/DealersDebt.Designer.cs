@@ -34,6 +34,10 @@
             Microsoft.Reporting.WinForms.ReportDataSource reportDataSource2 = new Microsoft.Reporting.WinForms.ReportDataSource();
             Microsoft.Reporting.WinForms.ReportDataSource reportDataSource3 = new Microsoft.Reporting.WinForms.ReportDataSource();
             Microsoft.Reporting.WinForms.ReportDataSource reportDataSource4 = new Microsoft.Reporting.WinForms.ReportDataSource();
+            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource5 = new Microsoft.Reporting.WinForms.ReportDataSource();
+            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource6 = new Microsoft.Reporting.WinForms.ReportDataSource();
+            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource7 = new Microsoft.Reporting.WinForms.ReportDataSource();
+            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource8 = new Microsoft.Reporting.WinForms.ReportDataSource();
             this.dealersBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.storeDataSet = new Acounting.storeDataSet();
             this.purchasebillsBindingSource = new System.Windows.Forms.BindingSource(this.components);
@@ -104,11 +108,26 @@
             reportDataSource3.Value = this.purchasebillsreturnBindingSource;
             reportDataSource4.Name = "DataSet4";
             reportDataSource4.Value = this.dealerpaymentsBindingSource;
+            reportDataSource5.Name = "DataSet1";
+            reportDataSource5.Value = this.dealersBindingSource;
+            reportDataSource6.Name = "DataSet2";
+            reportDataSource6.Value = this.purchasebillsBindingSource;
+            reportDataSource7.Name = "DataSet3";
+            reportDataSource7.Value = this.purchasebillsreturnBindingSource;
+            reportDataSource8.Name = "DataSet4";
+            reportDataSource8.Value = this.dealerpaymentsBindingSource;
             this.reportViewer1.LocalReport.DataSources.Add(reportDataSource1);
             this.reportViewer1.LocalReport.DataSources.Add(reportDataSource2);
             this.reportViewer1.LocalReport.DataSources.Add(reportDataSource3);
             this.reportViewer1.LocalReport.DataSources.Add(reportDataSource4);
-            this.reportViewer1.LocalReport.ReportEmbeddedResource = "Acounting.Reports.DealersDebtAr.rdlc";
+            this.reportViewer1.LocalReport.DataSources.Add(reportDataSource5);
+            this.reportViewer1.LocalReport.DataSources.Add(reportDataSource6);
+            this.reportViewer1.LocalReport.DataSources.Add(reportDataSource7);
+            this.reportViewer1.LocalReport.DataSources.Add(reportDataSource8);
+            this.reportViewer1.LocalReport.EnableExternalImages = true;
+            this.reportViewer1.LocalReport.EnableHyperlinks = true;
+            this.reportViewer1.LocalReport.ReportEmbeddedResource = "";
+            this.reportViewer1.LocalReport.ReportPath = "Reports\\DealersDebtAr.rdlc";
             this.reportViewer1.Name = "reportViewer1";
             // 
             // purchasebillsTableAdapter

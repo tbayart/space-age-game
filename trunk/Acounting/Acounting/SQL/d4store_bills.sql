@@ -14,7 +14,7 @@ DROP TABLE IF EXISTS `bills`;
 CREATE TABLE `bills` (
   `BillID` int(11) NOT NULL,
   `Agents_AgentID` int(11) NOT NULL,
-  `DocDate` datetime NOT NULL,
+  `DocDate` date NOT NULL,
   `TotalBill` double NOT NULL,
   `Paid` double NOT NULL,
   `Remaining` double NOT NULL,

@@ -13,7 +13,7 @@ USE `store`;
 DROP TABLE IF EXISTS `dealerpayments`;
 CREATE TABLE `dealerpayments` (
   `PaymentID` int(11) NOT NULL,
-  `DocDate` datetime DEFAULT NULL,
+  `DocDate` date DEFAULT NULL,
   `Ammount` double NOT NULL,
   `Dealers_DealerID` int(11) NOT NULL,
   PRIMARY KEY (`PaymentID`),

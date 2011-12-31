@@ -62,7 +62,8 @@ namespace Acounting
             }
             #endregion
 
-            #region check for vault
+            #region check for values
+
 
 
             if (continuedata)
@@ -75,6 +76,18 @@ namespace Acounting
 
                     vaultToolStripMenuItem1_Click(null, null);
                 }
+
+                string imagepath = "";
+                try
+                {
+                    imagepath = Application.UserAppDataRegistry.GetValue("Image").ToString();
+                    pictureBox1.ImageLocation = imagepath;
+                }
+                catch (Exception ee)
+                {
+                    Console.WriteLine(ee.Message);
+
+                }
             }
            
             
@@ -85,6 +98,13 @@ namespace Acounting
         
         #region menu items
 
+
+        private void itemsSalesDetailsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            SalesItemsDetails salesitemsdetails = new SalesItemsDetails();
+            salesitemsdetails.MdiParent = this;
+            salesitemsdetails.Show();
+        }
         private void exitToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Application.Exit();
@@ -259,7 +279,32 @@ namespace Acounting
 
         public CultureInfo m_cultureInfo { get; set; }
 
+        private void changeImageToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            DialogResult = openFileDialog1.ShowDialog();
+            if (DialogResult == System.Windows.Forms.DialogResult.OK || DialogResult == System.Windows.Forms.DialogResult.Yes)
+            {
+                string filename;
+                filename = openFileDialog1.FileName;
+                pictureBox1.ImageLocation = filename;
+                Application.UserAppDataRegistry.SetValue("Image", filename);
+ 
+            }
+           
+        }
 
+
+
+        /*
+         use store;
+set character set utf8;
+
+load DATA local infile 'e:\\ahmed.csv'
+into table items 
+
+fields terminated by ';' 
+lines terminated by '\n';
+         */
 
     }
 }
