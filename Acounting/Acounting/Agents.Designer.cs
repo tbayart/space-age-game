@@ -30,6 +30,7 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Agents));
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.agentIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.agentNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -149,6 +150,9 @@
             // initialDateDataGridViewTextBoxColumn
             // 
             this.initialDateDataGridViewTextBoxColumn.DataPropertyName = "InitialDate";
+            dataGridViewCellStyle1.Format = "dd/MM/yyyy";
+            dataGridViewCellStyle1.NullValue = null;
+            this.initialDateDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle1;
             resources.ApplyResources(this.initialDateDataGridViewTextBoxColumn, "initialDateDataGridViewTextBoxColumn");
             this.initialDateDataGridViewTextBoxColumn.Name = "initialDateDataGridViewTextBoxColumn";
             this.initialDateDataGridViewTextBoxColumn.ReadOnly = true;
@@ -231,7 +235,7 @@
             resources.ApplyResources(this.dateTimePicker1, "dateTimePicker1");
             this.dateTimePicker1.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.agentsBindingSource, "InitialDate", true, System.Windows.Forms.DataSourceUpdateMode.OnValidation, null, "d"));
             this.dateTimePicker1.DataBindings.Add(new System.Windows.Forms.Binding("Value", this.agentsBindingSource, "InitialDate", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged, null, "d"));
-            this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.dateTimePicker1.Name = "dateTimePicker1";
             // 
             // label3
@@ -465,6 +469,7 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox Txt_InialDebt;
+        private System.Windows.Forms.Timer timer1;
         private System.Windows.Forms.DataGridViewTextBoxColumn agentIDDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn agentNameDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn addressDataGridViewTextBoxColumn;
@@ -472,6 +477,5 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn debtDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn initialDebtDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn initialDateDataGridViewTextBoxColumn;
-        private System.Windows.Forms.Timer timer1;
     }
 }

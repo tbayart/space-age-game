@@ -14,7 +14,7 @@ DROP TABLE IF EXISTS `purchasebills`;
 CREATE TABLE `purchasebills` (
   `BillID` int(11) NOT NULL,
   `Dealers_DealerID` int(11) NOT NULL,
-  `DocDate` datetime NOT NULL,
+  `DocDate` date NOT NULL,
   `TotalBill` double NOT NULL,
   `Paid` double NOT NULL,
   `Remaining` double NOT NULL,

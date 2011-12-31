@@ -30,14 +30,8 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Dealers));
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.dealerIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dealerNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.adressDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.telephoneDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.debtDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.initialDebtDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.initialDateDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dealersBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.storeDataSet = new Acounting.storeDataSet();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
@@ -74,6 +68,13 @@
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.dealerIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dealerNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.adressDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.telephoneDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.debtDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.initialDebtDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.initialDateDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dealersBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.storeDataSet)).BeginInit();
@@ -104,55 +105,6 @@
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.RowTemplate.DefaultCellStyle.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
-            // 
-            // dealerIDDataGridViewTextBoxColumn
-            // 
-            this.dealerIDDataGridViewTextBoxColumn.DataPropertyName = "DealerID";
-            resources.ApplyResources(this.dealerIDDataGridViewTextBoxColumn, "dealerIDDataGridViewTextBoxColumn");
-            this.dealerIDDataGridViewTextBoxColumn.Name = "dealerIDDataGridViewTextBoxColumn";
-            this.dealerIDDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // dealerNameDataGridViewTextBoxColumn
-            // 
-            this.dealerNameDataGridViewTextBoxColumn.DataPropertyName = "DealerName";
-            resources.ApplyResources(this.dealerNameDataGridViewTextBoxColumn, "dealerNameDataGridViewTextBoxColumn");
-            this.dealerNameDataGridViewTextBoxColumn.Name = "dealerNameDataGridViewTextBoxColumn";
-            this.dealerNameDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // adressDataGridViewTextBoxColumn
-            // 
-            this.adressDataGridViewTextBoxColumn.DataPropertyName = "Adress";
-            resources.ApplyResources(this.adressDataGridViewTextBoxColumn, "adressDataGridViewTextBoxColumn");
-            this.adressDataGridViewTextBoxColumn.Name = "adressDataGridViewTextBoxColumn";
-            this.adressDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // telephoneDataGridViewTextBoxColumn
-            // 
-            this.telephoneDataGridViewTextBoxColumn.DataPropertyName = "Telephone";
-            resources.ApplyResources(this.telephoneDataGridViewTextBoxColumn, "telephoneDataGridViewTextBoxColumn");
-            this.telephoneDataGridViewTextBoxColumn.Name = "telephoneDataGridViewTextBoxColumn";
-            this.telephoneDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // debtDataGridViewTextBoxColumn
-            // 
-            this.debtDataGridViewTextBoxColumn.DataPropertyName = "Debt";
-            resources.ApplyResources(this.debtDataGridViewTextBoxColumn, "debtDataGridViewTextBoxColumn");
-            this.debtDataGridViewTextBoxColumn.Name = "debtDataGridViewTextBoxColumn";
-            this.debtDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // initialDebtDataGridViewTextBoxColumn
-            // 
-            this.initialDebtDataGridViewTextBoxColumn.DataPropertyName = "InitialDebt";
-            resources.ApplyResources(this.initialDebtDataGridViewTextBoxColumn, "initialDebtDataGridViewTextBoxColumn");
-            this.initialDebtDataGridViewTextBoxColumn.Name = "initialDebtDataGridViewTextBoxColumn";
-            this.initialDebtDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // initialDateDataGridViewTextBoxColumn
-            // 
-            this.initialDateDataGridViewTextBoxColumn.DataPropertyName = "InitialDate";
-            resources.ApplyResources(this.initialDateDataGridViewTextBoxColumn, "initialDateDataGridViewTextBoxColumn");
-            this.initialDateDataGridViewTextBoxColumn.Name = "initialDateDataGridViewTextBoxColumn";
-            this.initialDateDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // dealersBindingSource
             // 
@@ -231,7 +183,7 @@
             this.dateTimePicker1.Checked = false;
             this.dateTimePicker1.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.dealersBindingSource, "InitialDate", true));
             this.dateTimePicker1.DataBindings.Add(new System.Windows.Forms.Binding("Value", this.dealersBindingSource, "InitialDate", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
-            this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.dateTimePicker1.Name = "dateTimePicker1";
             // 
             // label3
@@ -401,6 +353,58 @@
             // 
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
+            // dealerIDDataGridViewTextBoxColumn
+            // 
+            this.dealerIDDataGridViewTextBoxColumn.DataPropertyName = "DealerID";
+            resources.ApplyResources(this.dealerIDDataGridViewTextBoxColumn, "dealerIDDataGridViewTextBoxColumn");
+            this.dealerIDDataGridViewTextBoxColumn.Name = "dealerIDDataGridViewTextBoxColumn";
+            this.dealerIDDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // dealerNameDataGridViewTextBoxColumn
+            // 
+            this.dealerNameDataGridViewTextBoxColumn.DataPropertyName = "DealerName";
+            resources.ApplyResources(this.dealerNameDataGridViewTextBoxColumn, "dealerNameDataGridViewTextBoxColumn");
+            this.dealerNameDataGridViewTextBoxColumn.Name = "dealerNameDataGridViewTextBoxColumn";
+            this.dealerNameDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // adressDataGridViewTextBoxColumn
+            // 
+            this.adressDataGridViewTextBoxColumn.DataPropertyName = "Adress";
+            resources.ApplyResources(this.adressDataGridViewTextBoxColumn, "adressDataGridViewTextBoxColumn");
+            this.adressDataGridViewTextBoxColumn.Name = "adressDataGridViewTextBoxColumn";
+            this.adressDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // telephoneDataGridViewTextBoxColumn
+            // 
+            this.telephoneDataGridViewTextBoxColumn.DataPropertyName = "Telephone";
+            resources.ApplyResources(this.telephoneDataGridViewTextBoxColumn, "telephoneDataGridViewTextBoxColumn");
+            this.telephoneDataGridViewTextBoxColumn.Name = "telephoneDataGridViewTextBoxColumn";
+            this.telephoneDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // debtDataGridViewTextBoxColumn
+            // 
+            this.debtDataGridViewTextBoxColumn.DataPropertyName = "Debt";
+            resources.ApplyResources(this.debtDataGridViewTextBoxColumn, "debtDataGridViewTextBoxColumn");
+            this.debtDataGridViewTextBoxColumn.Name = "debtDataGridViewTextBoxColumn";
+            this.debtDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // initialDebtDataGridViewTextBoxColumn
+            // 
+            this.initialDebtDataGridViewTextBoxColumn.DataPropertyName = "InitialDebt";
+            resources.ApplyResources(this.initialDebtDataGridViewTextBoxColumn, "initialDebtDataGridViewTextBoxColumn");
+            this.initialDebtDataGridViewTextBoxColumn.Name = "initialDebtDataGridViewTextBoxColumn";
+            this.initialDebtDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // initialDateDataGridViewTextBoxColumn
+            // 
+            this.initialDateDataGridViewTextBoxColumn.DataPropertyName = "InitialDate";
+            dataGridViewCellStyle1.Format = "dd/MM/yyyy";
+            dataGridViewCellStyle1.NullValue = null;
+            this.initialDateDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle1;
+            resources.ApplyResources(this.initialDateDataGridViewTextBoxColumn, "initialDateDataGridViewTextBoxColumn");
+            this.initialDateDataGridViewTextBoxColumn.Name = "initialDateDataGridViewTextBoxColumn";
+            this.initialDateDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
             // Dealers
             // 
             resources.ApplyResources(this, "$this");
@@ -466,6 +470,7 @@
         private System.Windows.Forms.TextBox Txt_Telephone;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Timer timer1;
         private System.Windows.Forms.DataGridViewTextBoxColumn dealerIDDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn dealerNameDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn adressDataGridViewTextBoxColumn;
@@ -473,6 +478,5 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn debtDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn initialDebtDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn initialDateDataGridViewTextBoxColumn;
-        private System.Windows.Forms.Timer timer1;
     }
 }

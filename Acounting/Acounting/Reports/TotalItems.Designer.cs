@@ -29,36 +29,37 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(TotalItems));
             Microsoft.Reporting.WinForms.ReportDataSource reportDataSource1 = new Microsoft.Reporting.WinForms.ReportDataSource();
-            this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
-            this.storeDataSet = new Acounting.storeDataSet();
             this.itemsBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.storeDataSet = new Acounting.storeDataSet();
+            this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
             this.itemsTableAdapter = new Acounting.storeDataSetTableAdapters.itemsTableAdapter();
-            ((System.ComponentModel.ISupportInitialize)(this.storeDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.itemsBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.storeDataSet)).BeginInit();
             this.SuspendLayout();
             // 
-            // reportViewer1
+            // itemsBindingSource
             // 
-            this.reportViewer1.Dock = System.Windows.Forms.DockStyle.Fill;
-            reportDataSource1.Name = "DataSet1";
-            reportDataSource1.Value = this.itemsBindingSource;
-            this.reportViewer1.LocalReport.DataSources.Add(reportDataSource1);
-            this.reportViewer1.LocalReport.ReportEmbeddedResource = "Acounting.Reports.TotalItemsAr.rdlc";
-            this.reportViewer1.Location = new System.Drawing.Point(0, 0);
-            this.reportViewer1.Name = "reportViewer1";
-            this.reportViewer1.Size = new System.Drawing.Size(539, 453);
-            this.reportViewer1.TabIndex = 0;
+            this.itemsBindingSource.DataMember = "items";
+            this.itemsBindingSource.DataSource = this.storeDataSet;
             // 
             // storeDataSet
             // 
             this.storeDataSet.DataSetName = "storeDataSet";
             this.storeDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
-            // itemsBindingSource
+            // reportViewer1
             // 
-            this.itemsBindingSource.DataMember = "items";
-            this.itemsBindingSource.DataSource = this.storeDataSet;
+            resources.ApplyResources(this.reportViewer1, "reportViewer1");
+            reportDataSource1.Name = "DataSet1";
+            reportDataSource1.Value = this.itemsBindingSource;
+            this.reportViewer1.LocalReport.DataSources.Add(reportDataSource1);
+            this.reportViewer1.LocalReport.EnableExternalImages = true;
+            this.reportViewer1.LocalReport.EnableHyperlinks = true;
+            this.reportViewer1.LocalReport.ReportEmbeddedResource = "";
+            this.reportViewer1.LocalReport.ReportPath = "Reports\\TotalItemsAr.rdlc";
+            this.reportViewer1.Name = "reportViewer1";
             // 
             // itemsTableAdapter
             // 
@@ -66,15 +67,13 @@
             // 
             // TotalItems
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(539, 453);
             this.Controls.Add(this.reportViewer1);
             this.Name = "TotalItems";
-            this.Text = "TotalItems";
             this.Load += new System.EventHandler(this.TotalItems_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.storeDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.itemsBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.storeDataSet)).EndInit();
             this.ResumeLayout(false);
 
         }

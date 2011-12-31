@@ -440,6 +440,7 @@
                               <Value>=Fields!InitialDate.Value</Value>
                               <Style>
                                 <FontFamily>Tahoma</FontFamily>
+                                <Format>dd/MM/yyyy</Format>
                                 <Color>#4d4d4d</Color>
                               </Style>
                             </TextRun>
@@ -461,6 +462,7 @@
                         <PaddingBottom>2pt</PaddingBottom>
                       </Style>
                     </Textbox>
+                    <rd:Selected>true</rd:Selected>
                   </CellContents>
                 </TablixCell>
                 <TablixCell>
@@ -2618,7 +2620,7 @@
         <DataSetName>DataSet4</DataSetName>
         <Top>12.04057cm</Top>
         <Left>0.04438cm</Left>
-        <Height>2.57638cm</Height>
+        <Height>2.57637cm</Height>
         <Width>16.44297cm</Width>
         <ZIndex>11</ZIndex>
         <Style>

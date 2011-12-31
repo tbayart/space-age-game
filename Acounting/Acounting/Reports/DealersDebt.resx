@@ -152,11 +152,11 @@
   <data name="&gt;&gt;purchasebillsBindingSource.Name" xml:space="preserve">
     <value>purchasebillsBindingSource</value>
   </data>
+  <data name="&gt;&gt;comboBox1.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
   <data name="&gt;&gt;dealersBindingSource.Name" xml:space="preserve">
     <value>dealersBindingSource</value>
-  </data>
-  <data name="$this.Text" xml:space="preserve">
-    <value>DealersDebt</value>
   </data>
   <data name="&gt;&gt;comboBox1.Name" xml:space="preserve">
     <value>comboBox1</value>
@@ -225,8 +225,8 @@
   <data name="&gt;&gt;$this.Name" xml:space="preserve">
     <value>DealersDebt</value>
   </data>
-  <data name="&gt;&gt;comboBox1.Parent" xml:space="preserve">
-    <value>$this</value>
+  <data name="$this.Text" xml:space="preserve">
+    <value>DealersDebt</value>
   </data>
   <data name="comboBox1.Location" type="System.Drawing.Point, System.Drawing">
     <value>481, 0</value>
