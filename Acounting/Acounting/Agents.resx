@@ -240,6 +240,33 @@
   <data name="&gt;&gt;tabPage1.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
+  <data name="checkBox1.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="checkBox1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>348, 169</value>
+  </data>
+  <data name="checkBox1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>77, 17</value>
+  </data>
+  <data name="checkBox1.TabIndex" type="System.Int32, mscorlib">
+    <value>50</value>
+  </data>
+  <data name="checkBox1.Text" xml:space="preserve">
+    <value>checkBox1</value>
+  </data>
+  <data name="&gt;&gt;checkBox1.Name" xml:space="preserve">
+    <value>checkBox1</value>
+  </data>
+  <data name="&gt;&gt;checkBox1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;checkBox1.Parent" xml:space="preserve">
+    <value>tabPage2</value>
+  </data>
+  <data name="&gt;&gt;checkBox1.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
   <data name="dateTimePicker1.CustomFormat" xml:space="preserve">
     <value>dd/MM/yyyy</value>
   </data>
@@ -265,7 +292,7 @@
     <value>tabPage2</value>
   </data>
   <data name="&gt;&gt;dateTimePicker1.ZOrder" xml:space="preserve">
-    <value>0</value>
+    <value>1</value>
   </data>
   <data name="label3.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -292,7 +319,7 @@
     <value>tabPage2</value>
   </data>
   <data name="&gt;&gt;label3.ZOrder" xml:space="preserve">
-    <value>1</value>
+    <value>2</value>
   </data>
   <data name="label2.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -319,7 +346,7 @@
     <value>tabPage2</value>
   </data>
   <data name="&gt;&gt;label2.ZOrder" xml:space="preserve">
-    <value>2</value>
+    <value>3</value>
   </data>
   <data name="Txt_InialDebt.Enabled" type="System.Boolean, mscorlib">
     <value>False</value>
@@ -343,7 +370,7 @@
     <value>tabPage2</value>
   </data>
   <data name="&gt;&gt;Txt_InialDebt.ZOrder" xml:space="preserve">
-    <value>3</value>
+    <value>4</value>
   </data>
   <metadata name="bindingNavigator1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>557, 11</value>
@@ -527,7 +554,7 @@
     <value>tabPage2</value>
   </data>
   <data name="&gt;&gt;bindingNavigator1.ZOrder" xml:space="preserve">
-    <value>4</value>
+    <value>5</value>
   </data>
   <data name="Txt_Debt.Location" type="System.Drawing.Point, System.Drawing">
     <value>24, 271</value>
@@ -548,7 +575,7 @@
     <value>tabPage2</value>
   </data>
   <data name="&gt;&gt;Txt_Debt.ZOrder" xml:space="preserve">
-    <value>5</value>
+    <value>6</value>
   </data>
   <data name="label1.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -575,7 +602,7 @@
     <value>tabPage2</value>
   </data>
   <data name="&gt;&gt;label1.ZOrder" xml:space="preserve">
-    <value>6</value>
+    <value>7</value>
   </data>
   <data name="Txt_AgentName.Location" type="System.Drawing.Point, System.Drawing">
     <value>24, 122</value>
@@ -596,7 +623,7 @@
     <value>tabPage2</value>
   </data>
   <data name="&gt;&gt;Txt_AgentName.ZOrder" xml:space="preserve">
-    <value>7</value>
+    <value>8</value>
   </data>
   <data name="Txt_Adress.Location" type="System.Drawing.Point, System.Drawing">
     <value>24, 164</value>
@@ -617,7 +644,7 @@
     <value>tabPage2</value>
   </data>
   <data name="&gt;&gt;Txt_Adress.ZOrder" xml:space="preserve">
-    <value>8</value>
+    <value>9</value>
   </data>
   <data name="label11.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -644,7 +671,7 @@
     <value>tabPage2</value>
   </data>
   <data name="&gt;&gt;label11.ZOrder" xml:space="preserve">
-    <value>9</value>
+    <value>10</value>
   </data>
   <data name="Txt_AgentID.Location" type="System.Drawing.Point, System.Drawing">
     <value>24, 69</value>
@@ -665,7 +692,7 @@
     <value>tabPage2</value>
   </data>
   <data name="&gt;&gt;Txt_AgentID.ZOrder" xml:space="preserve">
-    <value>10</value>
+    <value>11</value>
   </data>
   <data name="label8.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -692,7 +719,7 @@
     <value>tabPage2</value>
   </data>
   <data name="&gt;&gt;label8.ZOrder" xml:space="preserve">
-    <value>11</value>
+    <value>12</value>
   </data>
   <data name="Txt_Telephone.Location" type="System.Drawing.Point, System.Drawing">
     <value>24, 215</value>
@@ -713,7 +740,7 @@
     <value>tabPage2</value>
   </data>
   <data name="&gt;&gt;Txt_Telephone.ZOrder" xml:space="preserve">
-    <value>12</value>
+    <value>13</value>
   </data>
   <data name="label5.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -740,7 +767,7 @@
     <value>tabPage2</value>
   </data>
   <data name="&gt;&gt;label5.ZOrder" xml:space="preserve">
-    <value>13</value>
+    <value>14</value>
   </data>
   <data name="label4.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -767,7 +794,7 @@
     <value>tabPage2</value>
   </data>
   <data name="&gt;&gt;label4.ZOrder" xml:space="preserve">
-    <value>14</value>
+    <value>15</value>
   </data>
   <data name="tabPage2.Location" type="System.Drawing.Point, System.Drawing">
     <value>4, 22</value>

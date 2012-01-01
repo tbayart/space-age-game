@@ -81,7 +81,8 @@ namespace Acounting
                 try
                 {
                     imagepath = Application.UserAppDataRegistry.GetValue("Image").ToString();
-                    pictureBox1.ImageLocation = imagepath;
+                  //  pictureBox1.ImageLocation = imagepath;
+          
                 }
                 catch (Exception ee)
                 {
@@ -286,7 +287,7 @@ namespace Acounting
             {
                 string filename;
                 filename = openFileDialog1.FileName;
-                pictureBox1.ImageLocation = filename;
+            //    pictureBox1.ImageLocation = filename;
                 Application.UserAppDataRegistry.SetValue("Image", filename);
  
             }

@@ -249,8 +249,17 @@
   <data name="reportsToolStripMenuItem1.Text" xml:space="preserve">
     <value>التقارير</value>
   </data>
+  <data name="عربيToolStripMenuItem1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>132, 22</value>
+  </data>
+  <data name="englshToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>132, 22</value>
+  </data>
   <data name="englshToolStripMenuItem.Text" xml:space="preserve">
     <value>Englsh</value>
+  </data>
+  <data name="changeImageToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>132, 22</value>
   </data>
   <data name="changeImageToolStripMenuItem.Text" xml:space="preserve">
     <value>تغيير الصورة</value>
