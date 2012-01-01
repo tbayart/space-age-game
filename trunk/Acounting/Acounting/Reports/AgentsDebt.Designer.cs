@@ -41,7 +41,7 @@
             this.paymentsBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.reportViewer3 = new Microsoft.Reporting.WinForms.ReportViewer();
-            this.agentsTableAdapter = new Acounting.storeDataSetTableAdapters.agentsTableAdapter();
+
             this.billsTableAdapter = new Acounting.storeDataSetTableAdapters.billsTableAdapter();
             this.billsreturnTableAdapter = new Acounting.storeDataSetTableAdapters.billsreturnTableAdapter();
             this.paymentsTableAdapter = new Acounting.storeDataSetTableAdapters.paymentsTableAdapter();
@@ -148,7 +148,7 @@
 
         private System.Windows.Forms.BindingSource agentsBindingSource;
         private storeDataSet storeDataSet;
-        private storeDataSetTableAdapters.agentsTableAdapter agentsTableAdapter;
+
         private Microsoft.Reporting.WinForms.ReportViewer reportViewer3;
         private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.BindingSource billsBindingSource;

@@ -31,14 +31,13 @@ namespace Acounting
 
         private void ReturnSales_Load(object sender, EventArgs e)
         {
-         
+            // TODO: This line of code loads data into the 'storeDataSet.names' table. You can move, or remove it, as needed.
+            this.namesTableAdapter.Fill(this.storeDataSet.names);      
             this.salesReturnDetailsTableAdapter.Fill(this.storeDataSet.SalesReturnDetails); 
             this.vaultTableAdapter.Fill(this.storeDataSet.vault);          
-              
             this.vaultTableAdapter.Fill(this.storeDataSet.vault);
             this.salesitemsreturnTableAdapter.Fill(this.storeDataSet.salesitemsreturn);
             this.billsreturnTableAdapter.Fill(this.storeDataSet.billsreturn);
-            this.agentsTableAdapter.Fill(this.storeDataSet.agents);
             this.itemsTableAdapter.Fill(this.storeDataSet.items);
 
 
@@ -82,12 +81,12 @@ namespace Acounting
 
         private void Cmb_AgentName_TextChanged(object sender, EventArgs e)
         {
-            DataTable agents = storeDataSet.agents;
+            DataTable agents = storeDataSet.names;
             try
             {
-                DataRow filterrow = agents.AsEnumerable().Where(i => i.Field<string>("AgentName") == Cmb_AgentName.Text).FirstOrDefault();
+                DataRow filterrow = agents.AsEnumerable().Where(i => i.Field<string>("Name") == Cmb_AgentName.Text && (i.Field<UInt64>("TypeAgent") != 0)).FirstOrDefault();
                 
-                Txt_AgentID.Text = filterrow["AgentID"].ToString();
+                Txt_AgentID.Text = filterrow["ID"].ToString();
 
                 if (!int.TryParse(Txt_AgentID.Text, out agentid))
                 {
@@ -261,7 +260,7 @@ namespace Acounting
             billsreturnTableAdapter.Update(storeDataSet);
             salesitemsreturnTableAdapter.Update(storeDataSet);            
             itemsTableAdapter.Update(storeDataSet);
-            agentsTableAdapter.Update(storeDataSet);
+            namesTableAdapter.Update(storeDataSet);
             vaultTableAdapter.Update(storeDataSet); 
         }
 
@@ -313,7 +312,7 @@ namespace Acounting
                             
                 //find old debt
                 double debt;
-                DataRow agentrow = storeDataSet.agents.FindByAgentID(agentid);
+                DataRow agentrow = storeDataSet.names.FindByID(agentid);
                 double.TryParse(agentrow["Debt"].ToString(), out debt);
 
                 double newdebt = debt - remaining;

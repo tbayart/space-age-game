@@ -29,11 +29,13 @@ namespace Acounting
 
         private void ReturnBuy_Load(object sender, EventArgs e)
         {
+            // TODO: This line of code loads data into the 'storeDataSet.names' table. You can move, or remove it, as needed.
+            this.namesTableAdapter.Fill(this.storeDataSet.names);
 
             this.purchaseReturnDetailsTableAdapter.Fill(this.storeDataSet.PurchaseReturnDetails);
             this.vaultTableAdapter.Fill(this.storeDataSet.vault);
             this.purchasesitemsreturnTableAdapter.Fill(this.storeDataSet.purchasesitemsreturn);
-            this.dealersTableAdapter.Fill(this.storeDataSet.dealers);
+     
             this.purchasebillsreturnTableAdapter.Fill(this.storeDataSet.purchasebillsreturn);
             this.itemsTableAdapter.Fill(this.storeDataSet.items);
 
@@ -81,12 +83,12 @@ namespace Acounting
 
         private void Cmb_DealerName_TextChanged(object sender, EventArgs e)
         {
-            DataTable dealers = storeDataSet.dealers;
+            DataTable dealers = storeDataSet.names;
             try
             {
-                DataRow filterrow = dealers.AsEnumerable().Where(i => i.Field<string>("DealerName") == Cmb_DealerName.Text).FirstOrDefault();
+                DataRow filterrow = dealers.AsEnumerable().Where(i => i.Field<string>("Name") == Cmb_DealerName.Text && (i.Field<UInt64>("TypeDealer") != 0 )).FirstOrDefault();
 
-                Txt_DealerID.Text = filterrow["DealerID"].ToString();
+                Txt_DealerID.Text = filterrow["ID"].ToString();
 
                 if (!int.TryParse(Txt_DealerID.Text, out dealerId))
                 {
@@ -109,7 +111,7 @@ namespace Acounting
             purchasebillsreturnTableAdapter.Update(storeDataSet);
             purchasesitemsreturnTableAdapter.Update(storeDataSet);
             itemsTableAdapter.Update(storeDataSet);
-            dealersTableAdapter.Update(storeDataSet);
+            namesTableAdapter.Update(storeDataSet);
             vaultTableAdapter.Update(storeDataSet);
 
         }
@@ -270,7 +272,7 @@ namespace Acounting
                 return;
             }
 
-            remaining = billpaid - totalbill;
+            remaining = totalbill - billpaid;
             Txt_Remaining.Text = remaining.ToString();
         }
 
@@ -306,6 +308,7 @@ namespace Acounting
                     billrow[3] = totalbill;
                     billrow[4] = paid;
                     billrow[5] = remaining;
+
                     storeDataSet.purchasebillsreturn.Rows.Add(billrow);
 
 
@@ -317,16 +320,17 @@ namespace Acounting
 
                     Console.WriteLine(oldvalue);
                     newvalue = oldvalue + paid;
+
                     Console.WriteLine(newvalue);
                     vaultrow["In_Hand"] = newvalue;
 
 
                     //find old debt
                     double debt;
-                    DataRow dealerrow = storeDataSet.dealers.FindByDealerID(dealerId);
+                    DataRow dealerrow = storeDataSet.names.FindByID(dealerId);
                     double.TryParse(dealerrow["Debt"].ToString(), out debt);
 
-                    double newdebt = debt - remaining;
+                    double newdebt = debt + remaining;
 
                     //add newdebt to agent
                     dealerrow["Debt"] = newdebt;

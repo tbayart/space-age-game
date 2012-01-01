@@ -128,18 +128,6 @@
   <data name="groupBox4.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Right</value>
   </data>
-  <data name="itemNameDataGridViewTextBoxColumn.HeaderText" xml:space="preserve">
-    <value>اسم الصنف</value>
-  </data>
-  <data name="qtyDataGridViewTextBoxColumn.HeaderText" xml:space="preserve">
-    <value>الكمية</value>
-  </data>
-  <data name="sellPriceDataGridViewTextBoxColumn.HeaderText" xml:space="preserve">
-    <value>السعر</value>
-  </data>
-  <data name="totalPriceDataGridViewTextBoxColumn.HeaderText" xml:space="preserve">
-    <value>اجمالي</value>
-  </data>
   <data name="dataGridView1.Size" type="System.Drawing.Size, System.Drawing">
     <value>622, 280</value>
   </data>

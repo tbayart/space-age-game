@@ -36,6 +36,12 @@
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.itemNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.qtyDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.costDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.totalDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.purchaseDetailsBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.storeDataSet = new Acounting.storeDataSet();
             this.Txt_Remaining = new System.Windows.Forms.TextBox();
             this.label13 = new System.Windows.Forms.Label();
             this.Txt_TotalBill = new System.Windows.Forms.TextBox();
@@ -58,88 +64,71 @@
             this.label4 = new System.Windows.Forms.Label();
             this.Cmb_ItemName = new System.Windows.Forms.ComboBox();
             this.itemsBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.storeDataSet = new Acounting.storeDataSet();
             this.Txt_DealerID = new System.Windows.Forms.TextBox();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.label10 = new System.Windows.Forms.Label();
             this.Cmb_DealerName = new System.Windows.Forms.ComboBox();
-            this.dealersBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.namesBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.label9 = new System.Windows.Forms.Label();
             this.purchasesitemsBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.itemsTableAdapter = new Acounting.storeDataSetTableAdapters.itemsTableAdapter();
             this.purchasebillsBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.purchasebillsTableAdapter = new Acounting.storeDataSetTableAdapters.purchasebillsTableAdapter();
-            this.dealersTableAdapter = new Acounting.storeDataSetTableAdapters.dealersTableAdapter();
             this.purchasesitemsTableAdapter = new Acounting.storeDataSetTableAdapters.purchasesitemsTableAdapter();
             this.vaultBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.vaultTableAdapter = new Acounting.storeDataSetTableAdapters.vaultTableAdapter();
-            this.purchaseDetailsBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.purchaseDetailsTableAdapter = new Acounting.storeDataSetTableAdapters.PurchaseDetailsTableAdapter();
-            this.itemNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.qtyDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.costDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.totalDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.namesTableAdapter = new Acounting.storeDataSetTableAdapters.namesTableAdapter();
+            this.fillBy1ToolStrip = new System.Windows.Forms.ToolStrip();
+            this.fillBy1ToolStripButton = new System.Windows.Forms.ToolStripButton();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.groupBox4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.purchaseDetailsBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.storeDataSet)).BeginInit();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.itemsBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.storeDataSet)).BeginInit();
             this.groupBox3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dealersBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.namesBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.purchasesitemsBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.purchasebillsBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.vaultBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.purchaseDetailsBindingSource)).BeginInit();
+            this.fillBy1ToolStrip.SuspendLayout();
             this.SuspendLayout();
             // 
             // groupBox1
             // 
-            resources.ApplyResources(this.groupBox1, "groupBox1");
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Controls.Add(this.Txt_BillID);
-            this.errorProvider1.SetError(this.groupBox1, resources.GetString("groupBox1.Error"));
-            this.errorProvider1.SetIconAlignment(this.groupBox1, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("groupBox1.IconAlignment"))));
-            this.errorProvider1.SetIconPadding(this.groupBox1, ((int)(resources.GetObject("groupBox1.IconPadding"))));
+            resources.ApplyResources(this.groupBox1, "groupBox1");
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.TabStop = false;
             // 
             // label1
             // 
             resources.ApplyResources(this.label1, "label1");
-            this.errorProvider1.SetError(this.label1, resources.GetString("label1.Error"));
-            this.errorProvider1.SetIconAlignment(this.label1, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("label1.IconAlignment"))));
-            this.errorProvider1.SetIconPadding(this.label1, ((int)(resources.GetObject("label1.IconPadding"))));
             this.label1.Name = "label1";
             // 
             // Txt_BillID
             // 
             resources.ApplyResources(this.Txt_BillID, "Txt_BillID");
-            this.errorProvider1.SetError(this.Txt_BillID, resources.GetString("Txt_BillID.Error"));
-            this.errorProvider1.SetIconAlignment(this.Txt_BillID, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("Txt_BillID.IconAlignment"))));
-            this.errorProvider1.SetIconPadding(this.Txt_BillID, ((int)(resources.GetObject("Txt_BillID.IconPadding"))));
             this.Txt_BillID.Name = "Txt_BillID";
             this.Txt_BillID.ReadOnly = true;
             // 
             // errorProvider1
             // 
             this.errorProvider1.ContainerControl = this;
-            resources.ApplyResources(this.errorProvider1, "errorProvider1");
             // 
             // groupBox4
             // 
-            resources.ApplyResources(this.groupBox4, "groupBox4");
             this.groupBox4.Controls.Add(this.dataGridView1);
-            this.errorProvider1.SetError(this.groupBox4, resources.GetString("groupBox4.Error"));
-            this.errorProvider1.SetIconAlignment(this.groupBox4, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("groupBox4.IconAlignment"))));
-            this.errorProvider1.SetIconPadding(this.groupBox4, ((int)(resources.GetObject("groupBox4.IconPadding"))));
+            resources.ApplyResources(this.groupBox4, "groupBox4");
             this.groupBox4.Name = "groupBox4";
             this.groupBox4.TabStop = false;
             // 
             // dataGridView1
             // 
-            resources.ApplyResources(this.dataGridView1, "dataGridView1");
             this.dataGridView1.AllowUserToAddRows = false;
             this.dataGridView1.AllowUserToDeleteRows = false;
             this.dataGridView1.AutoGenerateColumns = false;
@@ -150,327 +139,9 @@
             this.costDataGridViewTextBoxColumn,
             this.totalDataGridViewTextBoxColumn});
             this.dataGridView1.DataSource = this.purchaseDetailsBindingSource;
-            this.errorProvider1.SetError(this.dataGridView1, resources.GetString("dataGridView1.Error"));
-            this.errorProvider1.SetIconAlignment(this.dataGridView1, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("dataGridView1.IconAlignment"))));
-            this.errorProvider1.SetIconPadding(this.dataGridView1, ((int)(resources.GetObject("dataGridView1.IconPadding"))));
+            resources.ApplyResources(this.dataGridView1, "dataGridView1");
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
-            // 
-            // Txt_Remaining
-            // 
-            resources.ApplyResources(this.Txt_Remaining, "Txt_Remaining");
-            this.errorProvider1.SetError(this.Txt_Remaining, resources.GetString("Txt_Remaining.Error"));
-            this.errorProvider1.SetIconAlignment(this.Txt_Remaining, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("Txt_Remaining.IconAlignment"))));
-            this.errorProvider1.SetIconPadding(this.Txt_Remaining, ((int)(resources.GetObject("Txt_Remaining.IconPadding"))));
-            this.Txt_Remaining.Name = "Txt_Remaining";
-            this.Txt_Remaining.ReadOnly = true;
-            // 
-            // label13
-            // 
-            resources.ApplyResources(this.label13, "label13");
-            this.errorProvider1.SetError(this.label13, resources.GetString("label13.Error"));
-            this.errorProvider1.SetIconAlignment(this.label13, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("label13.IconAlignment"))));
-            this.errorProvider1.SetIconPadding(this.label13, ((int)(resources.GetObject("label13.IconPadding"))));
-            this.label13.Name = "label13";
-            // 
-            // Txt_TotalBill
-            // 
-            resources.ApplyResources(this.Txt_TotalBill, "Txt_TotalBill");
-            this.errorProvider1.SetError(this.Txt_TotalBill, resources.GetString("Txt_TotalBill.Error"));
-            this.errorProvider1.SetIconAlignment(this.Txt_TotalBill, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("Txt_TotalBill.IconAlignment"))));
-            this.errorProvider1.SetIconPadding(this.Txt_TotalBill, ((int)(resources.GetObject("Txt_TotalBill.IconPadding"))));
-            this.Txt_TotalBill.Name = "Txt_TotalBill";
-            this.Txt_TotalBill.ReadOnly = true;
-            // 
-            // button2
-            // 
-            resources.ApplyResources(this.button2, "button2");
-            this.errorProvider1.SetError(this.button2, resources.GetString("button2.Error"));
-            this.errorProvider1.SetIconAlignment(this.button2, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("button2.IconAlignment"))));
-            this.errorProvider1.SetIconPadding(this.button2, ((int)(resources.GetObject("button2.IconPadding"))));
-            this.button2.Name = "button2";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
-            // 
-            // button1
-            // 
-            resources.ApplyResources(this.button1, "button1");
-            this.errorProvider1.SetError(this.button1, resources.GetString("button1.Error"));
-            this.errorProvider1.SetIconAlignment(this.button1, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("button1.IconAlignment"))));
-            this.errorProvider1.SetIconPadding(this.button1, ((int)(resources.GetObject("button1.IconPadding"))));
-            this.button1.Name = "button1";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // label12
-            // 
-            resources.ApplyResources(this.label12, "label12");
-            this.errorProvider1.SetError(this.label12, resources.GetString("label12.Error"));
-            this.errorProvider1.SetIconAlignment(this.label12, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("label12.IconAlignment"))));
-            this.errorProvider1.SetIconPadding(this.label12, ((int)(resources.GetObject("label12.IconPadding"))));
-            this.label12.Name = "label12";
-            // 
-            // label3
-            // 
-            resources.ApplyResources(this.label3, "label3");
-            this.errorProvider1.SetError(this.label3, resources.GetString("label3.Error"));
-            this.errorProvider1.SetIconAlignment(this.label3, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("label3.IconAlignment"))));
-            this.errorProvider1.SetIconPadding(this.label3, ((int)(resources.GetObject("label3.IconPadding"))));
-            this.label3.Name = "label3";
-            // 
-            // Txt_Paid
-            // 
-            resources.ApplyResources(this.Txt_Paid, "Txt_Paid");
-            this.errorProvider1.SetError(this.Txt_Paid, resources.GetString("Txt_Paid.Error"));
-            this.errorProvider1.SetIconAlignment(this.Txt_Paid, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("Txt_Paid.IconAlignment"))));
-            this.errorProvider1.SetIconPadding(this.Txt_Paid, ((int)(resources.GetObject("Txt_Paid.IconPadding"))));
-            this.Txt_Paid.Name = "Txt_Paid";
-            this.Txt_Paid.TextChanged += new System.EventHandler(this.Txt_Paid_TextChanged);
-            // 
-            // Txt_Cost
-            // 
-            resources.ApplyResources(this.Txt_Cost, "Txt_Cost");
-            this.errorProvider1.SetError(this.Txt_Cost, resources.GetString("Txt_Cost.Error"));
-            this.errorProvider1.SetIconAlignment(this.Txt_Cost, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("Txt_Cost.IconAlignment"))));
-            this.errorProvider1.SetIconPadding(this.Txt_Cost, ((int)(resources.GetObject("Txt_Cost.IconPadding"))));
-            this.Txt_Cost.Name = "Txt_Cost";
-            this.Txt_Cost.ReadOnly = true;
-            // 
-            // label11
-            // 
-            resources.ApplyResources(this.label11, "label11");
-            this.errorProvider1.SetError(this.label11, resources.GetString("label11.Error"));
-            this.errorProvider1.SetIconAlignment(this.label11, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("label11.IconAlignment"))));
-            this.errorProvider1.SetIconPadding(this.label11, ((int)(resources.GetObject("label11.IconPadding"))));
-            this.label11.Name = "label11";
-            // 
-            // Txt_ItemID
-            // 
-            resources.ApplyResources(this.Txt_ItemID, "Txt_ItemID");
-            this.errorProvider1.SetError(this.Txt_ItemID, resources.GetString("Txt_ItemID.Error"));
-            this.errorProvider1.SetIconAlignment(this.Txt_ItemID, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("Txt_ItemID.IconAlignment"))));
-            this.errorProvider1.SetIconPadding(this.Txt_ItemID, ((int)(resources.GetObject("Txt_ItemID.IconPadding"))));
-            this.Txt_ItemID.Name = "Txt_ItemID";
-            this.Txt_ItemID.ReadOnly = true;
-            // 
-            // label8
-            // 
-            resources.ApplyResources(this.label8, "label8");
-            this.errorProvider1.SetError(this.label8, resources.GetString("label8.Error"));
-            this.errorProvider1.SetIconAlignment(this.label8, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("label8.IconAlignment"))));
-            this.errorProvider1.SetIconPadding(this.label8, ((int)(resources.GetObject("label8.IconPadding"))));
-            this.label8.Name = "label8";
-            // 
-            // groupBox2
-            // 
-            resources.ApplyResources(this.groupBox2, "groupBox2");
-            this.groupBox2.Controls.Add(this.Txt_Cost);
-            this.groupBox2.Controls.Add(this.label11);
-            this.groupBox2.Controls.Add(this.Txt_ItemID);
-            this.groupBox2.Controls.Add(this.label8);
-            this.groupBox2.Controls.Add(this.Txt_InStock);
-            this.groupBox2.Controls.Add(this.label7);
-            this.groupBox2.Controls.Add(this.Txt_BuyPrice);
-            this.groupBox2.Controls.Add(this.label6);
-            this.groupBox2.Controls.Add(this.Txt_ToBuy);
-            this.groupBox2.Controls.Add(this.label5);
-            this.groupBox2.Controls.Add(this.label4);
-            this.groupBox2.Controls.Add(this.Cmb_ItemName);
-            this.errorProvider1.SetError(this.groupBox2, resources.GetString("groupBox2.Error"));
-            this.errorProvider1.SetIconAlignment(this.groupBox2, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("groupBox2.IconAlignment"))));
-            this.errorProvider1.SetIconPadding(this.groupBox2, ((int)(resources.GetObject("groupBox2.IconPadding"))));
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.TabStop = false;
-            // 
-            // Txt_InStock
-            // 
-            resources.ApplyResources(this.Txt_InStock, "Txt_InStock");
-            this.errorProvider1.SetError(this.Txt_InStock, resources.GetString("Txt_InStock.Error"));
-            this.errorProvider1.SetIconAlignment(this.Txt_InStock, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("Txt_InStock.IconAlignment"))));
-            this.errorProvider1.SetIconPadding(this.Txt_InStock, ((int)(resources.GetObject("Txt_InStock.IconPadding"))));
-            this.Txt_InStock.Name = "Txt_InStock";
-            this.Txt_InStock.ReadOnly = true;
-            // 
-            // label7
-            // 
-            resources.ApplyResources(this.label7, "label7");
-            this.errorProvider1.SetError(this.label7, resources.GetString("label7.Error"));
-            this.errorProvider1.SetIconAlignment(this.label7, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("label7.IconAlignment"))));
-            this.errorProvider1.SetIconPadding(this.label7, ((int)(resources.GetObject("label7.IconPadding"))));
-            this.label7.Name = "label7";
-            // 
-            // Txt_BuyPrice
-            // 
-            resources.ApplyResources(this.Txt_BuyPrice, "Txt_BuyPrice");
-            this.errorProvider1.SetError(this.Txt_BuyPrice, resources.GetString("Txt_BuyPrice.Error"));
-            this.errorProvider1.SetIconAlignment(this.Txt_BuyPrice, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("Txt_BuyPrice.IconAlignment"))));
-            this.errorProvider1.SetIconPadding(this.Txt_BuyPrice, ((int)(resources.GetObject("Txt_BuyPrice.IconPadding"))));
-            this.Txt_BuyPrice.Name = "Txt_BuyPrice";
-            // 
-            // label6
-            // 
-            resources.ApplyResources(this.label6, "label6");
-            this.errorProvider1.SetError(this.label6, resources.GetString("label6.Error"));
-            this.errorProvider1.SetIconAlignment(this.label6, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("label6.IconAlignment"))));
-            this.errorProvider1.SetIconPadding(this.label6, ((int)(resources.GetObject("label6.IconPadding"))));
-            this.label6.Name = "label6";
-            // 
-            // Txt_ToBuy
-            // 
-            resources.ApplyResources(this.Txt_ToBuy, "Txt_ToBuy");
-            this.errorProvider1.SetError(this.Txt_ToBuy, resources.GetString("Txt_ToBuy.Error"));
-            this.errorProvider1.SetIconAlignment(this.Txt_ToBuy, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("Txt_ToBuy.IconAlignment"))));
-            this.errorProvider1.SetIconPadding(this.Txt_ToBuy, ((int)(resources.GetObject("Txt_ToBuy.IconPadding"))));
-            this.Txt_ToBuy.Name = "Txt_ToBuy";
-            // 
-            // label5
-            // 
-            resources.ApplyResources(this.label5, "label5");
-            this.errorProvider1.SetError(this.label5, resources.GetString("label5.Error"));
-            this.errorProvider1.SetIconAlignment(this.label5, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("label5.IconAlignment"))));
-            this.errorProvider1.SetIconPadding(this.label5, ((int)(resources.GetObject("label5.IconPadding"))));
-            this.label5.Name = "label5";
-            // 
-            // label4
-            // 
-            resources.ApplyResources(this.label4, "label4");
-            this.errorProvider1.SetError(this.label4, resources.GetString("label4.Error"));
-            this.errorProvider1.SetIconAlignment(this.label4, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("label4.IconAlignment"))));
-            this.errorProvider1.SetIconPadding(this.label4, ((int)(resources.GetObject("label4.IconPadding"))));
-            this.label4.Name = "label4";
-            // 
-            // Cmb_ItemName
-            // 
-            resources.ApplyResources(this.Cmb_ItemName, "Cmb_ItemName");
-            this.Cmb_ItemName.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
-            this.Cmb_ItemName.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
-            this.Cmb_ItemName.DataSource = this.itemsBindingSource;
-            this.Cmb_ItemName.DisplayMember = "ItemName";
-            this.errorProvider1.SetError(this.Cmb_ItemName, resources.GetString("Cmb_ItemName.Error"));
-            this.Cmb_ItemName.FormattingEnabled = true;
-            this.errorProvider1.SetIconAlignment(this.Cmb_ItemName, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("Cmb_ItemName.IconAlignment"))));
-            this.errorProvider1.SetIconPadding(this.Cmb_ItemName, ((int)(resources.GetObject("Cmb_ItemName.IconPadding"))));
-            this.Cmb_ItemName.Name = "Cmb_ItemName";
-            this.Cmb_ItemName.ValueMember = "ItemName";
-            this.Cmb_ItemName.TextChanged += new System.EventHandler(this.Cmb_ItemName_TextChanged);
-            // 
-            // itemsBindingSource
-            // 
-            this.itemsBindingSource.DataMember = "items";
-            this.itemsBindingSource.DataSource = this.storeDataSet;
-            // 
-            // storeDataSet
-            // 
-            this.storeDataSet.DataSetName = "storeDataSet";
-            this.storeDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // Txt_DealerID
-            // 
-            resources.ApplyResources(this.Txt_DealerID, "Txt_DealerID");
-            this.errorProvider1.SetError(this.Txt_DealerID, resources.GetString("Txt_DealerID.Error"));
-            this.errorProvider1.SetIconAlignment(this.Txt_DealerID, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("Txt_DealerID.IconAlignment"))));
-            this.errorProvider1.SetIconPadding(this.Txt_DealerID, ((int)(resources.GetObject("Txt_DealerID.IconPadding"))));
-            this.Txt_DealerID.Name = "Txt_DealerID";
-            this.Txt_DealerID.ReadOnly = true;
-            // 
-            // groupBox3
-            // 
-            resources.ApplyResources(this.groupBox3, "groupBox3");
-            this.groupBox3.Controls.Add(this.Txt_Remaining);
-            this.groupBox3.Controls.Add(this.label13);
-            this.groupBox3.Controls.Add(this.Txt_TotalBill);
-            this.groupBox3.Controls.Add(this.label12);
-            this.groupBox3.Controls.Add(this.label3);
-            this.groupBox3.Controls.Add(this.Txt_Paid);
-            this.groupBox3.Controls.Add(this.Txt_DealerID);
-            this.groupBox3.Controls.Add(this.label10);
-            this.groupBox3.Controls.Add(this.Cmb_DealerName);
-            this.groupBox3.Controls.Add(this.label9);
-            this.errorProvider1.SetError(this.groupBox3, resources.GetString("groupBox3.Error"));
-            this.errorProvider1.SetIconAlignment(this.groupBox3, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("groupBox3.IconAlignment"))));
-            this.errorProvider1.SetIconPadding(this.groupBox3, ((int)(resources.GetObject("groupBox3.IconPadding"))));
-            this.groupBox3.Name = "groupBox3";
-            this.groupBox3.TabStop = false;
-            // 
-            // label10
-            // 
-            resources.ApplyResources(this.label10, "label10");
-            this.errorProvider1.SetError(this.label10, resources.GetString("label10.Error"));
-            this.errorProvider1.SetIconAlignment(this.label10, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("label10.IconAlignment"))));
-            this.errorProvider1.SetIconPadding(this.label10, ((int)(resources.GetObject("label10.IconPadding"))));
-            this.label10.Name = "label10";
-            // 
-            // Cmb_DealerName
-            // 
-            resources.ApplyResources(this.Cmb_DealerName, "Cmb_DealerName");
-            this.Cmb_DealerName.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
-            this.Cmb_DealerName.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
-            this.Cmb_DealerName.DataSource = this.dealersBindingSource;
-            this.Cmb_DealerName.DisplayMember = "DealerName";
-            this.errorProvider1.SetError(this.Cmb_DealerName, resources.GetString("Cmb_DealerName.Error"));
-            this.Cmb_DealerName.FormattingEnabled = true;
-            this.errorProvider1.SetIconAlignment(this.Cmb_DealerName, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("Cmb_DealerName.IconAlignment"))));
-            this.errorProvider1.SetIconPadding(this.Cmb_DealerName, ((int)(resources.GetObject("Cmb_DealerName.IconPadding"))));
-            this.Cmb_DealerName.Name = "Cmb_DealerName";
-            this.Cmb_DealerName.ValueMember = "DealerName";
-            this.Cmb_DealerName.TextChanged += new System.EventHandler(this.Cmb_DealerName_TextChanged);
-            // 
-            // dealersBindingSource
-            // 
-            this.dealersBindingSource.DataMember = "dealers";
-            this.dealersBindingSource.DataSource = this.storeDataSet;
-            // 
-            // label9
-            // 
-            resources.ApplyResources(this.label9, "label9");
-            this.errorProvider1.SetError(this.label9, resources.GetString("label9.Error"));
-            this.errorProvider1.SetIconAlignment(this.label9, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("label9.IconAlignment"))));
-            this.errorProvider1.SetIconPadding(this.label9, ((int)(resources.GetObject("label9.IconPadding"))));
-            this.label9.Name = "label9";
-            // 
-            // purchasesitemsBindingSource
-            // 
-            this.purchasesitemsBindingSource.DataMember = "purchasesitems";
-            this.purchasesitemsBindingSource.DataSource = this.storeDataSet;
-            // 
-            // itemsTableAdapter
-            // 
-            this.itemsTableAdapter.ClearBeforeFill = true;
-            // 
-            // purchasebillsBindingSource
-            // 
-            this.purchasebillsBindingSource.DataMember = "purchasebills";
-            this.purchasebillsBindingSource.DataSource = this.storeDataSet;
-            // 
-            // purchasebillsTableAdapter
-            // 
-            this.purchasebillsTableAdapter.ClearBeforeFill = true;
-            // 
-            // dealersTableAdapter
-            // 
-            this.dealersTableAdapter.ClearBeforeFill = true;
-            // 
-            // purchasesitemsTableAdapter
-            // 
-            this.purchasesitemsTableAdapter.ClearBeforeFill = true;
-            // 
-            // vaultBindingSource
-            // 
-            this.vaultBindingSource.DataMember = "vault";
-            this.vaultBindingSource.DataSource = this.storeDataSet;
-            // 
-            // vaultTableAdapter
-            // 
-            this.vaultTableAdapter.ClearBeforeFill = true;
-            // 
-            // purchaseDetailsBindingSource
-            // 
-            this.purchaseDetailsBindingSource.DataMember = "PurchaseDetails";
-            this.purchaseDetailsBindingSource.DataSource = this.storeDataSet;
-            // 
-            // purchaseDetailsTableAdapter
-            // 
-            this.purchaseDetailsTableAdapter.ClearBeforeFill = true;
             // 
             // itemNameDataGridViewTextBoxColumn
             // 
@@ -500,10 +171,265 @@
             this.totalDataGridViewTextBoxColumn.Name = "totalDataGridViewTextBoxColumn";
             this.totalDataGridViewTextBoxColumn.ReadOnly = true;
             // 
+            // purchaseDetailsBindingSource
+            // 
+            this.purchaseDetailsBindingSource.DataMember = "PurchaseDetails";
+            this.purchaseDetailsBindingSource.DataSource = this.storeDataSet;
+            // 
+            // storeDataSet
+            // 
+            this.storeDataSet.DataSetName = "storeDataSet";
+            this.storeDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // Txt_Remaining
+            // 
+            resources.ApplyResources(this.Txt_Remaining, "Txt_Remaining");
+            this.Txt_Remaining.Name = "Txt_Remaining";
+            this.Txt_Remaining.ReadOnly = true;
+            // 
+            // label13
+            // 
+            resources.ApplyResources(this.label13, "label13");
+            this.label13.Name = "label13";
+            // 
+            // Txt_TotalBill
+            // 
+            resources.ApplyResources(this.Txt_TotalBill, "Txt_TotalBill");
+            this.Txt_TotalBill.Name = "Txt_TotalBill";
+            this.Txt_TotalBill.ReadOnly = true;
+            // 
+            // button2
+            // 
+            resources.ApplyResources(this.button2, "button2");
+            this.button2.Name = "button2";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
+            // button1
+            // 
+            resources.ApplyResources(this.button1, "button1");
+            this.button1.Name = "button1";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // label12
+            // 
+            resources.ApplyResources(this.label12, "label12");
+            this.label12.Name = "label12";
+            // 
+            // label3
+            // 
+            resources.ApplyResources(this.label3, "label3");
+            this.label3.Name = "label3";
+            // 
+            // Txt_Paid
+            // 
+            resources.ApplyResources(this.Txt_Paid, "Txt_Paid");
+            this.Txt_Paid.Name = "Txt_Paid";
+            this.Txt_Paid.TextChanged += new System.EventHandler(this.Txt_Paid_TextChanged);
+            // 
+            // Txt_Cost
+            // 
+            resources.ApplyResources(this.Txt_Cost, "Txt_Cost");
+            this.Txt_Cost.Name = "Txt_Cost";
+            this.Txt_Cost.ReadOnly = true;
+            // 
+            // label11
+            // 
+            resources.ApplyResources(this.label11, "label11");
+            this.label11.Name = "label11";
+            // 
+            // Txt_ItemID
+            // 
+            resources.ApplyResources(this.Txt_ItemID, "Txt_ItemID");
+            this.Txt_ItemID.Name = "Txt_ItemID";
+            this.Txt_ItemID.ReadOnly = true;
+            // 
+            // label8
+            // 
+            resources.ApplyResources(this.label8, "label8");
+            this.label8.Name = "label8";
+            // 
+            // groupBox2
+            // 
+            this.groupBox2.Controls.Add(this.Txt_Cost);
+            this.groupBox2.Controls.Add(this.label11);
+            this.groupBox2.Controls.Add(this.Txt_ItemID);
+            this.groupBox2.Controls.Add(this.label8);
+            this.groupBox2.Controls.Add(this.Txt_InStock);
+            this.groupBox2.Controls.Add(this.label7);
+            this.groupBox2.Controls.Add(this.Txt_BuyPrice);
+            this.groupBox2.Controls.Add(this.label6);
+            this.groupBox2.Controls.Add(this.Txt_ToBuy);
+            this.groupBox2.Controls.Add(this.label5);
+            this.groupBox2.Controls.Add(this.label4);
+            this.groupBox2.Controls.Add(this.Cmb_ItemName);
+            resources.ApplyResources(this.groupBox2, "groupBox2");
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.TabStop = false;
+            // 
+            // Txt_InStock
+            // 
+            resources.ApplyResources(this.Txt_InStock, "Txt_InStock");
+            this.Txt_InStock.Name = "Txt_InStock";
+            this.Txt_InStock.ReadOnly = true;
+            // 
+            // label7
+            // 
+            resources.ApplyResources(this.label7, "label7");
+            this.label7.Name = "label7";
+            // 
+            // Txt_BuyPrice
+            // 
+            resources.ApplyResources(this.Txt_BuyPrice, "Txt_BuyPrice");
+            this.Txt_BuyPrice.Name = "Txt_BuyPrice";
+            // 
+            // label6
+            // 
+            resources.ApplyResources(this.label6, "label6");
+            this.label6.Name = "label6";
+            // 
+            // Txt_ToBuy
+            // 
+            resources.ApplyResources(this.Txt_ToBuy, "Txt_ToBuy");
+            this.Txt_ToBuy.Name = "Txt_ToBuy";
+            // 
+            // label5
+            // 
+            resources.ApplyResources(this.label5, "label5");
+            this.label5.Name = "label5";
+            // 
+            // label4
+            // 
+            resources.ApplyResources(this.label4, "label4");
+            this.label4.Name = "label4";
+            // 
+            // Cmb_ItemName
+            // 
+            this.Cmb_ItemName.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.Cmb_ItemName.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            this.Cmb_ItemName.DataSource = this.itemsBindingSource;
+            this.Cmb_ItemName.DisplayMember = "ItemName";
+            this.Cmb_ItemName.FormattingEnabled = true;
+            resources.ApplyResources(this.Cmb_ItemName, "Cmb_ItemName");
+            this.Cmb_ItemName.Name = "Cmb_ItemName";
+            this.Cmb_ItemName.ValueMember = "ItemName";
+            this.Cmb_ItemName.TextChanged += new System.EventHandler(this.Cmb_ItemName_TextChanged);
+            // 
+            // itemsBindingSource
+            // 
+            this.itemsBindingSource.DataMember = "items";
+            this.itemsBindingSource.DataSource = this.storeDataSet;
+            // 
+            // Txt_DealerID
+            // 
+            resources.ApplyResources(this.Txt_DealerID, "Txt_DealerID");
+            this.Txt_DealerID.Name = "Txt_DealerID";
+            this.Txt_DealerID.ReadOnly = true;
+            // 
+            // groupBox3
+            // 
+            this.groupBox3.Controls.Add(this.Txt_Remaining);
+            this.groupBox3.Controls.Add(this.label13);
+            this.groupBox3.Controls.Add(this.Txt_TotalBill);
+            this.groupBox3.Controls.Add(this.label12);
+            this.groupBox3.Controls.Add(this.label3);
+            this.groupBox3.Controls.Add(this.Txt_Paid);
+            this.groupBox3.Controls.Add(this.Txt_DealerID);
+            this.groupBox3.Controls.Add(this.label10);
+            this.groupBox3.Controls.Add(this.Cmb_DealerName);
+            this.groupBox3.Controls.Add(this.label9);
+            resources.ApplyResources(this.groupBox3, "groupBox3");
+            this.groupBox3.Name = "groupBox3";
+            this.groupBox3.TabStop = false;
+            // 
+            // label10
+            // 
+            resources.ApplyResources(this.label10, "label10");
+            this.label10.Name = "label10";
+            // 
+            // Cmb_DealerName
+            // 
+            this.Cmb_DealerName.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.Cmb_DealerName.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            this.Cmb_DealerName.DataSource = this.namesBindingSource;
+            this.Cmb_DealerName.DisplayMember = "DealerName";
+            this.Cmb_DealerName.FormattingEnabled = true;
+            resources.ApplyResources(this.Cmb_DealerName, "Cmb_DealerName");
+            this.Cmb_DealerName.Name = "Cmb_DealerName";
+            this.Cmb_DealerName.ValueMember = "DealerName";
+            this.Cmb_DealerName.TextChanged += new System.EventHandler(this.Cmb_DealerName_TextChanged);
+            // 
+            // namesBindingSource
+            // 
+            this.namesBindingSource.DataMember = "names";
+            this.namesBindingSource.DataSource = this.storeDataSet;
+            this.namesBindingSource.Filter = "TypeDealer = 1";
+            // 
+            // label9
+            // 
+            resources.ApplyResources(this.label9, "label9");
+            this.label9.Name = "label9";
+            // 
+            // purchasesitemsBindingSource
+            // 
+            this.purchasesitemsBindingSource.DataMember = "purchasesitems";
+            this.purchasesitemsBindingSource.DataSource = this.storeDataSet;
+            // 
+            // itemsTableAdapter
+            // 
+            this.itemsTableAdapter.ClearBeforeFill = true;
+            // 
+            // purchasebillsBindingSource
+            // 
+            this.purchasebillsBindingSource.DataMember = "purchasebills";
+            this.purchasebillsBindingSource.DataSource = this.storeDataSet;
+            // 
+            // purchasebillsTableAdapter
+            // 
+            this.purchasebillsTableAdapter.ClearBeforeFill = true;
+            // 
+            // purchasesitemsTableAdapter
+            // 
+            this.purchasesitemsTableAdapter.ClearBeforeFill = true;
+            // 
+            // vaultBindingSource
+            // 
+            this.vaultBindingSource.DataMember = "vault";
+            this.vaultBindingSource.DataSource = this.storeDataSet;
+            // 
+            // vaultTableAdapter
+            // 
+            this.vaultTableAdapter.ClearBeforeFill = true;
+            // 
+            // purchaseDetailsTableAdapter
+            // 
+            this.purchaseDetailsTableAdapter.ClearBeforeFill = true;
+            // 
+            // namesTableAdapter
+            // 
+            this.namesTableAdapter.ClearBeforeFill = true;
+            // 
+            // fillBy1ToolStrip
+            // 
+            this.fillBy1ToolStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.fillBy1ToolStripButton});
+            resources.ApplyResources(this.fillBy1ToolStrip, "fillBy1ToolStrip");
+            this.fillBy1ToolStrip.Name = "fillBy1ToolStrip";
+            this.fillBy1ToolStrip.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.fillBy1ToolStrip_ItemClicked);
+            // 
+            // fillBy1ToolStripButton
+            // 
+            this.fillBy1ToolStripButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
+            this.fillBy1ToolStripButton.Name = "fillBy1ToolStripButton";
+            resources.ApplyResources(this.fillBy1ToolStripButton, "fillBy1ToolStripButton");
+            this.fillBy1ToolStripButton.Click += new System.EventHandler(this.fillBy1ToolStripButton_Click);
+            // 
             // Buy
             // 
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.fillBy1ToolStrip);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.groupBox4);
             this.Controls.Add(this.button2);
@@ -517,18 +443,21 @@
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             this.groupBox4.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.purchaseDetailsBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.storeDataSet)).EndInit();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.itemsBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.storeDataSet)).EndInit();
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dealersBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.namesBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.purchasesitemsBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.purchasebillsBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.vaultBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.purchaseDetailsBindingSource)).EndInit();
+            this.fillBy1ToolStrip.ResumeLayout(false);
+            this.fillBy1ToolStrip.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -571,8 +500,7 @@
         private storeDataSetTableAdapters.itemsTableAdapter itemsTableAdapter;
         private System.Windows.Forms.BindingSource purchasebillsBindingSource;
         private storeDataSetTableAdapters.purchasebillsTableAdapter purchasebillsTableAdapter;
-        private System.Windows.Forms.BindingSource dealersBindingSource;
-        private storeDataSetTableAdapters.dealersTableAdapter dealersTableAdapter;
+ 
         private System.Windows.Forms.BindingSource purchasesitemsBindingSource;
         private storeDataSetTableAdapters.purchasesitemsTableAdapter purchasesitemsTableAdapter;
         private System.Windows.Forms.BindingSource vaultBindingSource;
@@ -583,5 +511,9 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn qtyDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn costDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn totalDataGridViewTextBoxColumn;
+        private System.Windows.Forms.BindingSource namesBindingSource;
+        private storeDataSetTableAdapters.namesTableAdapter namesTableAdapter;
+        private System.Windows.Forms.ToolStrip fillBy1ToolStrip;
+        private System.Windows.Forms.ToolStripButton fillBy1ToolStripButton;
     }
 }

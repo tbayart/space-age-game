@@ -139,13 +139,7 @@
     <value>160, 22</value>
   </data>
   <data name="agentsToolStripMenuItem1.Text" xml:space="preserve">
-    <value>العملاء</value>
-  </data>
-  <data name="dealersToolStripMenuItem1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>160, 22</value>
-  </data>
-  <data name="dealersToolStripMenuItem1.Text" xml:space="preserve">
-    <value>الموردون</value>
+    <value>العملاء/الموردون</value>
   </data>
   <data name="staticAssetsToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
     <value>160, 22</value>

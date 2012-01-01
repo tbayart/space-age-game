@@ -20,18 +20,18 @@ namespace Acounting
 
         private void Payments_Load(object sender, EventArgs e)
         {
+            // TODO: This line of code loads data into the 'storeDataSet.names' table. You can move, or remove it, as needed.
+            this.namesTableAdapter.Fill(this.storeDataSet.names);
             // TODO: This line of code loads data into the 'storeDataSet1.vault' table. You can move, or remove it, as needed.
             this.vaultTableAdapter.Fill(this.storeDataSet.vault);
             // TODO: This line of code loads data into the 'storeDataSet1.spendings' table. You can move, or remove it, as needed.
             this.spendingsTableAdapter.Fill(this.storeDataSet.spendings);
-            // TODO: This line of code loads data into the 'storeDataSet.dealers' table. You can move, or remove it, as needed.
-            this.dealersTableAdapter.Fill(this.storeDataSet.dealers);
             // TODO: This line of code loads data into the 'storeDataSet.dealerpayments' table. You can move, or remove it, as needed.
             this.dealerpaymentsTableAdapter.Fill(this.storeDataSet.dealerpayments);
             // TODO: This line of code loads data into the 'storeDataSet.payments' table. You can move, or remove it, as needed.
             this.paymentsTableAdapter.Fill(this.storeDataSet.payments);
-            // TODO: This line of code loads data into the 'storeDataSet.agents' table. You can move, or remove it, as needed.
-            this.agentsTableAdapter.Fill(this.storeDataSet.agents);
+     
+
             comboBox1_TextChanged(null, null);
 
         }
@@ -44,9 +44,9 @@ namespace Acounting
                  
                 if (!(comboBox1.Text == ""))
                 {
-                    DataRow filterrow = storeDataSet.agents.AsEnumerable().Where(i => i.Field<string>("AgentName") == comboBox1.Text).FirstOrDefault();
+                    DataRow filterrow = storeDataSet.names.AsEnumerable().Where(i => i.Field<string>("Name") == comboBox1.Text && (i.Field<UInt64>("TypeAgent") != 0)).FirstOrDefault();
                     Txt_Debt.Text = filterrow["Debt"].ToString();
-                    int.TryParse(filterrow["AgentID"].ToString(), out selectedagentid);
+                    int.TryParse(filterrow["ID"].ToString(), out selectedagentid);
                 }
 
             }
@@ -96,14 +96,15 @@ namespace Acounting
             paymentsTableAdapter.Insert(lastid, DateTime.Now, ammount, selectedagentid);
 
             //decrement agent debt
-            DataRow agentrow = storeDataSet.agents.FindByAgentID(selectedagentid);
+            DataRow agentrow = storeDataSet.names.FindByID(selectedagentid);
 
             double olddebt, newdebt;
             double.TryParse(agentrow["Debt"].ToString(), out olddebt);
-            newdebt = olddebt + ammount;
+
+            newdebt = olddebt - ammount;
 
             agentrow["Debt"] = newdebt;
-            agentsTableAdapter.Update(agentrow);
+            namesTableAdapter.Update(agentrow);
 
             //add mount payed to the vault
             double oldinhand, newinhand;
@@ -119,7 +120,7 @@ namespace Acounting
 
 
             vaultTableAdapter.Fill(storeDataSet.vault);
-            agentsTableAdapter.Fill(storeDataSet.agents);
+            namesTableAdapter.Fill(storeDataSet.names);
             paymentsTableAdapter.Fill(storeDataSet.payments);
 
             Txt_Ammount.Text = "";
@@ -170,14 +171,14 @@ namespace Acounting
             dealerpaymentsTableAdapter.Insert(lastid, DateTime.Now, ammount, selectedDealerID);
 
             //decrement agent debt
-            DataRow dealerrow = storeDataSet.dealers.FindByDealerID(selectedDealerID);
+            DataRow dealerrow = storeDataSet.names.FindByID(selectedDealerID);
 
             double olddebt, newdebt;
             double.TryParse(dealerrow["Debt"].ToString(), out olddebt);
             newdebt = olddebt + ammount;
 
             dealerrow["Debt"] = newdebt;
-            dealersTableAdapter.Update(dealerrow);
+            namesTableAdapter.Update(dealerrow);
 
 
             //add mount payed to the vault
@@ -193,7 +194,7 @@ namespace Acounting
 
 
             vaultTableAdapter.Fill(storeDataSet.vault);
-            dealersTableAdapter.Fill(storeDataSet.dealers);
+            namesTableAdapter.Fill(storeDataSet.names);
             dealerpaymentsTableAdapter.Fill(storeDataSet.dealerpayments);
 
             Txt_DealerAmmount.Text = "";
@@ -212,13 +213,14 @@ namespace Acounting
 
                 if (!(Cmb_Dealer.Text == ""))
                 {
-                    DataRow filterrow = storeDataSet.dealers.AsEnumerable().Where(i => i.Field<string>("DealerName") == Cmb_Dealer.Text).FirstOrDefault();
+                    DataRow filterrow = storeDataSet.names.AsEnumerable().Where(i => i.Field<string>("Name") == Cmb_Dealer.Text && (i.Field<UInt64>("TypeDealer") != 0)).FirstOrDefault();
+                    
                     if (filterrow == null)
                     {
                         return;
                     }
                     Txt_DealerDebt.Text = filterrow["Debt"].ToString();
-                    int.TryParse(filterrow["DealerID"].ToString(), out selectedDealerID);
+                    int.TryParse(filterrow["ID"].ToString(), out selectedDealerID);
                 }
 
             }
