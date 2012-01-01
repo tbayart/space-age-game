@@ -289,12 +289,11 @@ namespace Acounting
                 DataRow billrow = storeDataSet.billsreturn.NewRow();
 
                 billrow[0] = billID;
-                billrow[1] = agentid;
-                billrow[2] = DateTime.Now;
-                billrow[3] = totalbill;
-                billrow[4] = paid;
-                billrow[5] = remaining;
-
+                billrow[1] = DateTime.Now;
+                billrow[2] = totalbill;
+                billrow[3] = paid;
+                billrow[4] = remaining;
+                billrow[5] = agentid;
                 storeDataSet.billsreturn.Rows.Add(billrow);
 
 

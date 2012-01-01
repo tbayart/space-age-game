@@ -49,6 +49,7 @@
             this.Txt_AgentID = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
             this.Cmb_AgentName = new System.Windows.Forms.ComboBox();
+            this.namesBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.label9 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
@@ -77,13 +78,13 @@
             this.vaultTableAdapter = new Acounting.storeDataSetTableAdapters.vaultTableAdapter();
             this.salesReturnDetailsTableAdapter = new Acounting.storeDataSetTableAdapters.SalesReturnDetailsTableAdapter();
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
-            this.namesBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.namesTableAdapter = new Acounting.storeDataSetTableAdapters.namesTableAdapter();
             this.groupBox4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.salesReturnDetailsBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.storeDataSet)).BeginInit();
             this.groupBox3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.namesBindingSource)).BeginInit();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.itemsBindingSource)).BeginInit();
             this.groupBox1.SuspendLayout();
@@ -91,7 +92,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.salesitemsreturnBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.vaultBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.namesBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // label8
@@ -262,13 +262,19 @@
             this.Cmb_AgentName.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
             this.Cmb_AgentName.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
             this.Cmb_AgentName.DataSource = this.namesBindingSource;
+            this.Cmb_AgentName.DisplayMember = "Name";
             this.errorProvider1.SetError(this.Cmb_AgentName, resources.GetString("Cmb_AgentName.Error"));
             this.Cmb_AgentName.FormattingEnabled = true;
             this.errorProvider1.SetIconAlignment(this.Cmb_AgentName, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("Cmb_AgentName.IconAlignment"))));
             this.errorProvider1.SetIconPadding(this.Cmb_AgentName, ((int)(resources.GetObject("Cmb_AgentName.IconPadding"))));
             this.Cmb_AgentName.Name = "Cmb_AgentName";
-            this.Cmb_AgentName.ValueMember = "AgentName";
             this.Cmb_AgentName.TextChanged += new System.EventHandler(this.Cmb_AgentName_TextChanged);
+            // 
+            // namesBindingSource
+            // 
+            this.namesBindingSource.DataMember = "names";
+            this.namesBindingSource.DataSource = this.storeDataSet;
+            this.namesBindingSource.Filter = "TypeAgent = 1";
             // 
             // label9
             // 
@@ -489,12 +495,6 @@
             this.errorProvider1.ContainerControl = this;
             resources.ApplyResources(this.errorProvider1, "errorProvider1");
             // 
-            // namesBindingSource
-            // 
-            this.namesBindingSource.DataMember = "names";
-            this.namesBindingSource.DataSource = this.storeDataSet;
-            this.namesBindingSource.Filter = "TypeAgent = 1";
-            // 
             // namesTableAdapter
             // 
             this.namesTableAdapter.ClearBeforeFill = true;
@@ -517,6 +517,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.storeDataSet)).EndInit();
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.namesBindingSource)).EndInit();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.itemsBindingSource)).EndInit();
@@ -526,7 +527,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.salesitemsreturnBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.vaultBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.namesBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }

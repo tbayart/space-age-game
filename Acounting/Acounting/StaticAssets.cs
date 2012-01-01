@@ -25,12 +25,20 @@ namespace Acounting
 
         private void bindingNavigatorAddNewItem_Click(object sender, EventArgs e)
         {
+  
             Txt_AssetName.Focus();
             int newid;
-            int.TryParse(bindingNavigatorPositionItem.Text, out newid);
 
-            Console.WriteLine(newid);
+            if (dataGridView1.Rows.Count == 1)
+            {
+                newid = 0;
+            }
+            else
+            {
+                int.TryParse(dataGridView1.Rows[dataGridView1.Rows.GetLastRow(DataGridViewElementStates.None) - 1].Cells[0].Value.ToString(), out newid);
+            }
 
+            newid++;
             Txt_AssetID.Text = newid.ToString();
    
         }

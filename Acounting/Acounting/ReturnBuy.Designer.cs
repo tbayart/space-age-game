@@ -45,6 +45,7 @@
             this.label3 = new System.Windows.Forms.Label();
             this.Txt_Paid = new System.Windows.Forms.TextBox();
             this.Cmb_DealerName = new System.Windows.Forms.ComboBox();
+            this.namesBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.label9 = new System.Windows.Forms.Label();
             this.Txt_Cost = new System.Windows.Forms.TextBox();
             this.label11 = new System.Windows.Forms.Label();
@@ -77,12 +78,12 @@
             this.purchasesitemsreturnBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.purchasesitemsreturnTableAdapter = new Acounting.storeDataSetTableAdapters.purchasesitemsreturnTableAdapter();
             this.purchaseReturnDetailsTableAdapter = new Acounting.storeDataSetTableAdapters.PurchaseReturnDetailsTableAdapter();
-            this.namesBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.namesTableAdapter = new Acounting.storeDataSetTableAdapters.namesTableAdapter();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.itemsBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.storeDataSet)).BeginInit();
             this.groupBox3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.namesBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.vaultBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.purchaseReturnDetailsBindingSource)).BeginInit();
@@ -91,7 +92,6 @@
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.purchasebillsreturnBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.purchasesitemsreturnBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.namesBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox1
@@ -225,13 +225,19 @@
             this.Cmb_DealerName.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
             this.Cmb_DealerName.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
             this.Cmb_DealerName.DataSource = this.namesBindingSource;
+            this.Cmb_DealerName.DisplayMember = "Name";
             this.errorProvider1.SetError(this.Cmb_DealerName, resources.GetString("Cmb_DealerName.Error"));
             this.Cmb_DealerName.FormattingEnabled = true;
             this.errorProvider1.SetIconAlignment(this.Cmb_DealerName, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("Cmb_DealerName.IconAlignment"))));
             this.errorProvider1.SetIconPadding(this.Cmb_DealerName, ((int)(resources.GetObject("Cmb_DealerName.IconPadding"))));
             this.Cmb_DealerName.Name = "Cmb_DealerName";
-            this.Cmb_DealerName.ValueMember = "DealerName";
             this.Cmb_DealerName.TextChanged += new System.EventHandler(this.Cmb_DealerName_TextChanged);
+            // 
+            // namesBindingSource
+            // 
+            this.namesBindingSource.DataMember = "names";
+            this.namesBindingSource.DataSource = this.storeDataSet;
+            this.namesBindingSource.Filter = "TypeDealer = 1";
             // 
             // label9
             // 
@@ -490,12 +496,6 @@
             // 
             this.purchaseReturnDetailsTableAdapter.ClearBeforeFill = true;
             // 
-            // namesBindingSource
-            // 
-            this.namesBindingSource.DataMember = "names";
-            this.namesBindingSource.DataSource = this.storeDataSet;
-            this.namesBindingSource.Filter = "TypeDealer = 1";
-            // 
             // namesTableAdapter
             // 
             this.namesTableAdapter.ClearBeforeFill = true;
@@ -518,6 +518,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.storeDataSet)).EndInit();
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.namesBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.vaultBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.purchaseReturnDetailsBindingSource)).EndInit();
@@ -527,7 +528,6 @@
             this.groupBox2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.purchasebillsreturnBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.purchasesitemsreturnBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.namesBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }

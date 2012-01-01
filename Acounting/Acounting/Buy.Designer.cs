@@ -79,8 +79,6 @@
             this.vaultTableAdapter = new Acounting.storeDataSetTableAdapters.vaultTableAdapter();
             this.purchaseDetailsTableAdapter = new Acounting.storeDataSetTableAdapters.PurchaseDetailsTableAdapter();
             this.namesTableAdapter = new Acounting.storeDataSetTableAdapters.namesTableAdapter();
-            this.fillBy1ToolStrip = new System.Windows.Forms.ToolStrip();
-            this.fillBy1ToolStripButton = new System.Windows.Forms.ToolStripButton();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.groupBox4.SuspendLayout();
@@ -94,7 +92,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.purchasesitemsBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.purchasebillsBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.vaultBindingSource)).BeginInit();
-            this.fillBy1ToolStrip.SuspendLayout();
             this.SuspendLayout();
             // 
             // groupBox1
@@ -353,11 +350,10 @@
             this.Cmb_DealerName.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
             this.Cmb_DealerName.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
             this.Cmb_DealerName.DataSource = this.namesBindingSource;
-            this.Cmb_DealerName.DisplayMember = "DealerName";
+            this.Cmb_DealerName.DisplayMember = "Name";
             this.Cmb_DealerName.FormattingEnabled = true;
             resources.ApplyResources(this.Cmb_DealerName, "Cmb_DealerName");
             this.Cmb_DealerName.Name = "Cmb_DealerName";
-            this.Cmb_DealerName.ValueMember = "DealerName";
             this.Cmb_DealerName.TextChanged += new System.EventHandler(this.Cmb_DealerName_TextChanged);
             // 
             // namesBindingSource
@@ -410,26 +406,10 @@
             // 
             this.namesTableAdapter.ClearBeforeFill = true;
             // 
-            // fillBy1ToolStrip
-            // 
-            this.fillBy1ToolStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.fillBy1ToolStripButton});
-            resources.ApplyResources(this.fillBy1ToolStrip, "fillBy1ToolStrip");
-            this.fillBy1ToolStrip.Name = "fillBy1ToolStrip";
-            this.fillBy1ToolStrip.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.fillBy1ToolStrip_ItemClicked);
-            // 
-            // fillBy1ToolStripButton
-            // 
-            this.fillBy1ToolStripButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
-            this.fillBy1ToolStripButton.Name = "fillBy1ToolStripButton";
-            resources.ApplyResources(this.fillBy1ToolStripButton, "fillBy1ToolStripButton");
-            this.fillBy1ToolStripButton.Click += new System.EventHandler(this.fillBy1ToolStripButton_Click);
-            // 
             // Buy
             // 
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.fillBy1ToolStrip);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.groupBox4);
             this.Controls.Add(this.button2);
@@ -454,10 +434,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.purchasesitemsBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.purchasebillsBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.vaultBindingSource)).EndInit();
-            this.fillBy1ToolStrip.ResumeLayout(false);
-            this.fillBy1ToolStrip.PerformLayout();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -513,7 +490,5 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn totalDataGridViewTextBoxColumn;
         private System.Windows.Forms.BindingSource namesBindingSource;
         private storeDataSetTableAdapters.namesTableAdapter namesTableAdapter;
-        private System.Windows.Forms.ToolStrip fillBy1ToolStrip;
-        private System.Windows.Forms.ToolStripButton fillBy1ToolStripButton;
     }
 }
