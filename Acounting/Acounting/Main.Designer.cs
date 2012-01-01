@@ -206,19 +206,16 @@
             // 
             resources.ApplyResources(this.كشفموردToolStripMenuItem, "كشفموردToolStripMenuItem");
             this.كشفموردToolStripMenuItem.Name = "كشفموردToolStripMenuItem";
-            this.كشفموردToolStripMenuItem.Click += new System.EventHandler(this.كشفموردToolStripMenuItem_Click);
             // 
             // اجمالياصنافToolStripMenuItem
             // 
             resources.ApplyResources(this.اجمالياصنافToolStripMenuItem, "اجمالياصنافToolStripMenuItem");
             this.اجمالياصنافToolStripMenuItem.Name = "اجمالياصنافToolStripMenuItem";
-            this.اجمالياصنافToolStripMenuItem.Click += new System.EventHandler(this.اجمالياصنافToolStripMenuItem_Click);
             // 
             // itemsSalesDetailsToolStripMenuItem
             // 
             resources.ApplyResources(this.itemsSalesDetailsToolStripMenuItem, "itemsSalesDetailsToolStripMenuItem");
             this.itemsSalesDetailsToolStripMenuItem.Name = "itemsSalesDetailsToolStripMenuItem";
-            this.itemsSalesDetailsToolStripMenuItem.Click += new System.EventHandler(this.itemsSalesDetailsToolStripMenuItem_Click);
             // 
             // عربيToolStripMenuItem
             // 
