@@ -173,9 +173,6 @@
   <data name="label1.Text" xml:space="preserve">
     <value>رصيد افتتاحي</value>
   </data>
-  <data name="Txt_AddOpenning.Enabled" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="$this.RightToLeft" type="System.Windows.Forms.RightToLeft, System.Windows.Forms">
     <value>Yes</value>
