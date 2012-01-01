@@ -126,13 +126,7 @@ namespace Acounting
         }
 
 
-        private void agentDebtToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-
-            AgentsDebt reports = new AgentsDebt();
-            reports.MdiParent = this;
-            reports.Show();
-        }
+   
 
 
 
@@ -173,10 +167,9 @@ namespace Acounting
 
         private void agentsToolStripMenuItem1_Click(object sender, EventArgs e)
         {
-
-            Agents agents = new Agents();
-            agents.MdiParent = this;
-            agents.Show();
+            Names names = new Names();
+            names.MdiParent = this;
+            names.Show();
         }
 
         private void staticAssetsToolStripMenuItem_Click(object sender, EventArgs e)

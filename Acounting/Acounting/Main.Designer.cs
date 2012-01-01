@@ -36,7 +36,6 @@
             this.dataToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.itemToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.agentsToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.dealersToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.staticAssetsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.حفظاسترجعToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
@@ -98,7 +97,6 @@
             this.dataToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.itemToolStripMenuItem,
             this.agentsToolStripMenuItem1,
-            this.dealersToolStripMenuItem1,
             this.staticAssetsToolStripMenuItem,
             this.حفظاسترجعToolStripMenuItem,
             this.toolStripMenuItem1,
@@ -116,12 +114,6 @@
             resources.ApplyResources(this.agentsToolStripMenuItem1, "agentsToolStripMenuItem1");
             this.agentsToolStripMenuItem1.Name = "agentsToolStripMenuItem1";
             this.agentsToolStripMenuItem1.Click += new System.EventHandler(this.agentsToolStripMenuItem1_Click);
-            // 
-            // dealersToolStripMenuItem1
-            // 
-            resources.ApplyResources(this.dealersToolStripMenuItem1, "dealersToolStripMenuItem1");
-            this.dealersToolStripMenuItem1.Name = "dealersToolStripMenuItem1";
-            this.dealersToolStripMenuItem1.Click += new System.EventHandler(this.dealersToolStripMenuItem1_Click);
             // 
             // staticAssetsToolStripMenuItem
             // 
@@ -209,7 +201,6 @@
             // 
             resources.ApplyResources(this.agentDebtToolStripMenuItem, "agentDebtToolStripMenuItem");
             this.agentDebtToolStripMenuItem.Name = "agentDebtToolStripMenuItem";
-            this.agentDebtToolStripMenuItem.Click += new System.EventHandler(this.agentDebtToolStripMenuItem_Click);
             // 
             // كشفموردToolStripMenuItem
             // 
@@ -308,7 +299,6 @@
         private System.Windows.Forms.ToolStripMenuItem dataToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem itemToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem agentsToolStripMenuItem1;
-        private System.Windows.Forms.ToolStripMenuItem dealersToolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem storageToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem buyToolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem sellToolStripMenuItem1;

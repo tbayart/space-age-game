@@ -33,11 +33,10 @@ namespace Acounting
 
         private void Buy_Load(object sender, EventArgs e)
         {
-
+            this.namesTableAdapter.Fill(this.storeDataSet.names);
             this.purchaseDetailsTableAdapter.Fill(this.storeDataSet.PurchaseDetails);
             this.vaultTableAdapter.Fill(this.storeDataSet.vault);
             this.purchasesitemsTableAdapter.Fill(this.storeDataSet.purchasesitems);
-            this.dealersTableAdapter.Fill(this.storeDataSet.dealers);
             this.purchasebillsTableAdapter.Fill(this.storeDataSet.purchasebills);
             this.itemsTableAdapter.Fill(this.storeDataSet.items);
 
@@ -86,12 +85,12 @@ namespace Acounting
 
         private void Cmb_DealerName_TextChanged(object sender, EventArgs e)
         {
-            DataTable dealers = storeDataSet.dealers ;
+            DataTable dealers = storeDataSet.names ;
             try
             {
-                DataRow filterrow = dealers.AsEnumerable().Where(i => i.Field<string>("DealerName") == Cmb_DealerName.Text).FirstOrDefault();
+                DataRow filterrow = dealers.AsEnumerable().Where(i => i.Field<string>("Name") == Cmb_DealerName.Text && (i.Field<UInt64>("TypeDealer") != 0 )).FirstOrDefault();
 
-                Txt_DealerID.Text = filterrow["DealerID"].ToString();
+                Txt_DealerID.Text = filterrow["ID"].ToString();
 
                 if (!int.TryParse(Txt_DealerID.Text, out dealerId))
                 {
@@ -140,7 +139,7 @@ namespace Acounting
             purchasebillsTableAdapter.Update(storeDataSet);
             purchasesitemsTableAdapter.Update(storeDataSet);
             itemsTableAdapter.Update(storeDataSet);
-            dealersTableAdapter.Update(storeDataSet);
+            namesTableAdapter.Update(storeDataSet);
             vaultTableAdapter.Update(storeDataSet);            
                 
         }
@@ -244,7 +243,7 @@ namespace Acounting
 
             //  update parameters for bill
 
-            remaining = billpaid - totalbill;
+            remaining = billpaid - totalbill ;
 
             Txt_TotalBill.Text = totalbill.ToString();
             Txt_Remaining.Text = remaining.ToString();
@@ -318,6 +317,7 @@ namespace Acounting
                     billrow[3] = totalbill;
                     billrow[4] = paid;
                     billrow[5] = remaining;
+
                     storeDataSet.purchasebills.Rows.Add(billrow);
 
 
@@ -335,7 +335,8 @@ namespace Acounting
 
                     //find old debt
                     double debt;
-                    DataRow dealerrow = storeDataSet.dealers.FindByDealerID(dealerId);
+                    DataRow dealerrow = storeDataSet.names.FindByID(dealerId);
+
                     double.TryParse(dealerrow["Debt"].ToString(), out debt);
 
                     double newdebt = debt + remaining;
@@ -365,6 +366,24 @@ namespace Acounting
                 }
 
             }
+        }
+
+        private void fillBy1ToolStripButton_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                this.namesTableAdapter.FillBy1(this.storeDataSet.names);
+            }
+            catch (System.Exception ex)
+            {
+                System.Windows.Forms.MessageBox.Show(ex.Message);
+            }
+
+        }
+
+        private void fillBy1ToolStrip_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
+        {
+
         }
 
  

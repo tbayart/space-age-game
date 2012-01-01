@@ -44,7 +44,7 @@
             this.purchasebillsreturnBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.dealerpaymentsBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.dealersTableAdapter = new Acounting.storeDataSetTableAdapters.dealersTableAdapter();
+ 
             this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
             this.purchasebillsTableAdapter = new Acounting.storeDataSetTableAdapters.purchasebillsTableAdapter();
             this.purchasebillsreturnTableAdapter = new Acounting.storeDataSetTableAdapters.purchasebillsreturnTableAdapter();
@@ -92,10 +92,7 @@
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.ValueMember = "dealers.DealerName";
             this.comboBox1.TextChanged += new System.EventHandler(this.comboBox1_TextChanged);
-            // 
-            // dealersTableAdapter
-            // 
-            this.dealersTableAdapter.ClearBeforeFill = true;
+ 
             // 
             // reportViewer1
             // 
@@ -164,7 +161,7 @@
         private System.Windows.Forms.ComboBox comboBox1;
         private storeDataSet storeDataSet;
         private System.Windows.Forms.BindingSource dealersBindingSource;
-        private storeDataSetTableAdapters.dealersTableAdapter dealersTableAdapter;
+ 
         private Microsoft.Reporting.WinForms.ReportViewer reportViewer1;
         private System.Windows.Forms.BindingSource purchasebillsBindingSource;
         private System.Windows.Forms.BindingSource purchasebillsreturnBindingSource;

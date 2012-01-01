@@ -45,7 +45,6 @@
             this.label3 = new System.Windows.Forms.Label();
             this.Txt_Paid = new System.Windows.Forms.TextBox();
             this.Cmb_DealerName = new System.Windows.Forms.ComboBox();
-            this.dealersBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.label9 = new System.Windows.Forms.Label();
             this.Txt_Cost = new System.Windows.Forms.TextBox();
             this.label11 = new System.Windows.Forms.Label();
@@ -54,10 +53,14 @@
             this.label8 = new System.Windows.Forms.Label();
             this.vaultBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.vaultTableAdapter = new Acounting.storeDataSetTableAdapters.vaultTableAdapter();
-            this.dealersTableAdapter = new Acounting.storeDataSetTableAdapters.dealersTableAdapter();
             this.itemsTableAdapter = new Acounting.storeDataSetTableAdapters.itemsTableAdapter();
             this.Txt_InStock = new System.Windows.Forms.TextBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.itemNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.qtyDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.costDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.totalDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.purchaseReturnDetailsBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.button2 = new System.Windows.Forms.Button();
@@ -73,25 +76,22 @@
             this.purchasebillsreturnTableAdapter = new Acounting.storeDataSetTableAdapters.purchasebillsreturnTableAdapter();
             this.purchasesitemsreturnBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.purchasesitemsreturnTableAdapter = new Acounting.storeDataSetTableAdapters.purchasesitemsreturnTableAdapter();
-            this.purchaseReturnDetailsBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.purchaseReturnDetailsTableAdapter = new Acounting.storeDataSetTableAdapters.PurchaseReturnDetailsTableAdapter();
-            this.itemNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.qtyDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.costDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.totalDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.namesBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.namesTableAdapter = new Acounting.storeDataSetTableAdapters.namesTableAdapter();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.itemsBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.storeDataSet)).BeginInit();
             this.groupBox3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dealersBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.vaultBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.purchaseReturnDetailsBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.groupBox4.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.purchasebillsreturnBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.purchasesitemsreturnBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.purchaseReturnDetailsBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.namesBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox1
@@ -224,8 +224,7 @@
             resources.ApplyResources(this.Cmb_DealerName, "Cmb_DealerName");
             this.Cmb_DealerName.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
             this.Cmb_DealerName.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
-            this.Cmb_DealerName.DataSource = this.dealersBindingSource;
-            this.Cmb_DealerName.DisplayMember = "DealerName";
+            this.Cmb_DealerName.DataSource = this.namesBindingSource;
             this.errorProvider1.SetError(this.Cmb_DealerName, resources.GetString("Cmb_DealerName.Error"));
             this.Cmb_DealerName.FormattingEnabled = true;
             this.errorProvider1.SetIconAlignment(this.Cmb_DealerName, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("Cmb_DealerName.IconAlignment"))));
@@ -233,11 +232,6 @@
             this.Cmb_DealerName.Name = "Cmb_DealerName";
             this.Cmb_DealerName.ValueMember = "DealerName";
             this.Cmb_DealerName.TextChanged += new System.EventHandler(this.Cmb_DealerName_TextChanged);
-            // 
-            // dealersBindingSource
-            // 
-            this.dealersBindingSource.DataMember = "dealers";
-            this.dealersBindingSource.DataSource = this.storeDataSet;
             // 
             // label9
             // 
@@ -298,10 +292,6 @@
             // 
             this.vaultTableAdapter.ClearBeforeFill = true;
             // 
-            // dealersTableAdapter
-            // 
-            this.dealersTableAdapter.ClearBeforeFill = true;
-            // 
             // itemsTableAdapter
             // 
             this.itemsTableAdapter.ClearBeforeFill = true;
@@ -333,6 +323,39 @@
             this.errorProvider1.SetIconPadding(this.dataGridView1, ((int)(resources.GetObject("dataGridView1.IconPadding"))));
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
+            // 
+            // itemNameDataGridViewTextBoxColumn
+            // 
+            this.itemNameDataGridViewTextBoxColumn.DataPropertyName = "ItemName";
+            resources.ApplyResources(this.itemNameDataGridViewTextBoxColumn, "itemNameDataGridViewTextBoxColumn");
+            this.itemNameDataGridViewTextBoxColumn.Name = "itemNameDataGridViewTextBoxColumn";
+            this.itemNameDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // qtyDataGridViewTextBoxColumn
+            // 
+            this.qtyDataGridViewTextBoxColumn.DataPropertyName = "Qty";
+            resources.ApplyResources(this.qtyDataGridViewTextBoxColumn, "qtyDataGridViewTextBoxColumn");
+            this.qtyDataGridViewTextBoxColumn.Name = "qtyDataGridViewTextBoxColumn";
+            this.qtyDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // costDataGridViewTextBoxColumn
+            // 
+            this.costDataGridViewTextBoxColumn.DataPropertyName = "Cost";
+            resources.ApplyResources(this.costDataGridViewTextBoxColumn, "costDataGridViewTextBoxColumn");
+            this.costDataGridViewTextBoxColumn.Name = "costDataGridViewTextBoxColumn";
+            this.costDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // totalDataGridViewTextBoxColumn
+            // 
+            this.totalDataGridViewTextBoxColumn.DataPropertyName = "Total";
+            resources.ApplyResources(this.totalDataGridViewTextBoxColumn, "totalDataGridViewTextBoxColumn");
+            this.totalDataGridViewTextBoxColumn.Name = "totalDataGridViewTextBoxColumn";
+            this.totalDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // purchaseReturnDetailsBindingSource
+            // 
+            this.purchaseReturnDetailsBindingSource.DataMember = "PurchaseReturnDetails";
+            this.purchaseReturnDetailsBindingSource.DataSource = this.storeDataSet;
             // 
             // errorProvider1
             // 
@@ -463,42 +486,19 @@
             // 
             this.purchasesitemsreturnTableAdapter.ClearBeforeFill = true;
             // 
-            // purchaseReturnDetailsBindingSource
-            // 
-            this.purchaseReturnDetailsBindingSource.DataMember = "PurchaseReturnDetails";
-            this.purchaseReturnDetailsBindingSource.DataSource = this.storeDataSet;
-            // 
             // purchaseReturnDetailsTableAdapter
             // 
             this.purchaseReturnDetailsTableAdapter.ClearBeforeFill = true;
             // 
-            // itemNameDataGridViewTextBoxColumn
+            // namesBindingSource
             // 
-            this.itemNameDataGridViewTextBoxColumn.DataPropertyName = "ItemName";
-            resources.ApplyResources(this.itemNameDataGridViewTextBoxColumn, "itemNameDataGridViewTextBoxColumn");
-            this.itemNameDataGridViewTextBoxColumn.Name = "itemNameDataGridViewTextBoxColumn";
-            this.itemNameDataGridViewTextBoxColumn.ReadOnly = true;
+            this.namesBindingSource.DataMember = "names";
+            this.namesBindingSource.DataSource = this.storeDataSet;
+            this.namesBindingSource.Filter = "TypeDealer = 1";
             // 
-            // qtyDataGridViewTextBoxColumn
+            // namesTableAdapter
             // 
-            this.qtyDataGridViewTextBoxColumn.DataPropertyName = "Qty";
-            resources.ApplyResources(this.qtyDataGridViewTextBoxColumn, "qtyDataGridViewTextBoxColumn");
-            this.qtyDataGridViewTextBoxColumn.Name = "qtyDataGridViewTextBoxColumn";
-            this.qtyDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // costDataGridViewTextBoxColumn
-            // 
-            this.costDataGridViewTextBoxColumn.DataPropertyName = "Cost";
-            resources.ApplyResources(this.costDataGridViewTextBoxColumn, "costDataGridViewTextBoxColumn");
-            this.costDataGridViewTextBoxColumn.Name = "costDataGridViewTextBoxColumn";
-            this.costDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // totalDataGridViewTextBoxColumn
-            // 
-            this.totalDataGridViewTextBoxColumn.DataPropertyName = "Total";
-            resources.ApplyResources(this.totalDataGridViewTextBoxColumn, "totalDataGridViewTextBoxColumn");
-            this.totalDataGridViewTextBoxColumn.Name = "totalDataGridViewTextBoxColumn";
-            this.totalDataGridViewTextBoxColumn.ReadOnly = true;
+            this.namesTableAdapter.ClearBeforeFill = true;
             // 
             // ReturnBuy
             // 
@@ -518,16 +518,16 @@
             ((System.ComponentModel.ISupportInitialize)(this.storeDataSet)).EndInit();
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dealersBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.vaultBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.purchaseReturnDetailsBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             this.groupBox4.ResumeLayout(false);
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.purchasebillsreturnBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.purchasesitemsreturnBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.purchaseReturnDetailsBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.namesBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -549,7 +549,6 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox Txt_Paid;
         private System.Windows.Forms.ComboBox Cmb_DealerName;
-        private System.Windows.Forms.BindingSource dealersBindingSource;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.TextBox Txt_Cost;
         private System.Windows.Forms.Label label11;
@@ -558,7 +557,7 @@
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.BindingSource vaultBindingSource;
         private storeDataSetTableAdapters.vaultTableAdapter vaultTableAdapter;
-        private storeDataSetTableAdapters.dealersTableAdapter dealersTableAdapter;
+ 
         private storeDataSetTableAdapters.itemsTableAdapter itemsTableAdapter;
         private System.Windows.Forms.TextBox Txt_InStock;
         private System.Windows.Forms.DataGridView dataGridView1;
@@ -583,5 +582,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn qtyDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn costDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn totalDataGridViewTextBoxColumn;
+        private System.Windows.Forms.BindingSource namesBindingSource;
+        private storeDataSetTableAdapters.namesTableAdapter namesTableAdapter;
     }
 }

@@ -30,12 +30,12 @@ namespace Acounting
 
         private void Sell_Load(object sender, EventArgs e)
         {
-            // TODO: This line of code loads data into the 'storeDataSet.SalesDetails' table. You can move, or remove it, as needed.
+            // TODO: This line of code loads data into the 'storeDataSet.names' table. You can move, or remove it, as needed.
+            this.namesTableAdapter.Fill(this.storeDataSet.names);
             this.salesDetailsTableAdapter.Fill(this.storeDataSet.SalesDetails);              
             this.vaultTableAdapter.Fill(this.storeDataSet.vault);
             this.salesitemsTableAdapter.Fill(this.storeDataSet.salesitems);
             this.billsTableAdapter.Fill(this.storeDataSet.bills);
-            this.agentsTableAdapter.Fill(this.storeDataSet.agents);
             this.itemsTableAdapter.Fill(this.storeDataSet.items);
 
 
@@ -79,12 +79,12 @@ namespace Acounting
 
         private void Cmb_AgentName_TextChanged(object sender, EventArgs e)
         {
-            DataTable agents = storeDataSet.agents;
+            DataTable agents = storeDataSet.names;
             try
             {
-                DataRow filterrow = agents.AsEnumerable().Where(i => i.Field<string>("AgentName") == Cmb_AgentName.Text).FirstOrDefault();
+                DataRow filterrow = agents.AsEnumerable().Where(i => i.Field<string>("Name") == Cmb_AgentName.Text && (i.Field<UInt64>("TypeAgent") != 0)).FirstOrDefault();
                 
-                Txt_AgentID.Text = filterrow["AgentID"].ToString();
+                Txt_AgentID.Text = filterrow["ID"].ToString();
 
                 if (!int.TryParse(Txt_AgentID.Text, out agentid))
                 {
@@ -219,7 +219,7 @@ namespace Acounting
 
             //  update parameters for bill
 
-            remaining = billpaid - totalbill;
+            remaining = totalbill - billpaid;
         
             Txt_TotalBill.Text = totalbill.ToString();
             Txt_Remaining.Text = remaining.ToString();
@@ -270,7 +270,7 @@ namespace Acounting
             salesitemsTableAdapter.Update(storeDataSet);
             
             itemsTableAdapter.Update(storeDataSet);
-            agentsTableAdapter.Update(storeDataSet);
+            namesTableAdapter.Update(storeDataSet);
             vaultTableAdapter.Update(storeDataSet); 
         }
 
@@ -322,7 +322,7 @@ namespace Acounting
                             
                 //find old debt
                 double debt;
-                DataRow agentrow = storeDataSet.agents.FindByAgentID(agentid);
+                DataRow agentrow = storeDataSet.names.FindByID(agentid);
                 double.TryParse(agentrow["Debt"].ToString(), out debt);
 
                 double newdebt = debt + remaining;
@@ -373,13 +373,26 @@ namespace Acounting
                 errorProvider1.SetError(Txt_Paid,"Error With Paid Value");
                 return;
             }
-     
-            remaining = billpaid - totalbill;
+
+            remaining = totalbill - billpaid;
             Txt_Remaining.Text = remaining.ToString();
         }
 
         private void Cmb_AgentName_SelectedIndexChanged(object sender, EventArgs e)
         {
+
+        }
+
+        private void fillBy3ToolStripButton_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                this.namesTableAdapter.FillBy3(this.storeDataSet.names);
+            }
+            catch (System.Exception ex)
+            {
+                System.Windows.Forms.MessageBox.Show(ex.Message);
+            }
 
         }
 

@@ -91,7 +91,7 @@
         private Microsoft.Reporting.WinForms.ReportViewer reportViewer1;
         private storeDataSet storeDataSet;
         private System.Windows.Forms.BindingSource salesDetailsReportBindingSource;
-        private storeDataSetTableAdapters.SalesDetailsٌReportTableAdapter salesDetailsٌReportTableAdapter;
+ 
         private System.Windows.Forms.BindingSource SalesDetails_ReportBindingSource;
     }
 }

@@ -31,9 +31,7 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Payments));
             this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.agentsBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.storeDataSet = new Acounting.storeDataSet();
-            this.agentsTableAdapter = new Acounting.storeDataSetTableAdapters.agentsTableAdapter();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.button1 = new System.Windows.Forms.Button();
@@ -50,7 +48,6 @@
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.Cmb_Dealer = new System.Windows.Forms.ComboBox();
-            this.dealersBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.tabPage3 = new System.Windows.Forms.TabPage();
             this.button3 = new System.Windows.Forms.Button();
             this.Txt_SpendingsAmmount = new System.Windows.Forms.TextBox();
@@ -60,30 +57,32 @@
             this.paymentsTableAdapter = new Acounting.storeDataSetTableAdapters.paymentsTableAdapter();
             this.dealerpaymentsBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.dealerpaymentsTableAdapter = new Acounting.storeDataSetTableAdapters.dealerpaymentsTableAdapter();
-            this.dealersTableAdapter = new Acounting.storeDataSetTableAdapters.dealersTableAdapter();
             this.spendingsBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.spendingsTableAdapter = new Acounting.storeDataSetTableAdapters.spendingsTableAdapter();
             this.vaultBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.vaultTableAdapter = new Acounting.storeDataSetTableAdapters.vaultTableAdapter();
-            ((System.ComponentModel.ISupportInitialize)(this.agentsBindingSource)).BeginInit();
+            this.agentsBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.namesTableAdapter = new Acounting.storeDataSetTableAdapters.namesTableAdapter();
+            this.dealersBindingSource = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.storeDataSet)).BeginInit();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabPage2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dealersBindingSource)).BeginInit();
             this.tabPage3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.paymentsBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dealerpaymentsBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.spendingsBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.vaultBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.agentsBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dealersBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // comboBox1
             // 
             resources.ApplyResources(this.comboBox1, "comboBox1");
             this.comboBox1.DataSource = this.agentsBindingSource;
-            this.comboBox1.DisplayMember = "AgentName";
+            this.comboBox1.DisplayMember = "Name";
             this.errorProvider1.SetError(this.comboBox1, resources.GetString("comboBox1.Error"));
             this.comboBox1.FormattingEnabled = true;
             this.errorProvider1.SetIconAlignment(this.comboBox1, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("comboBox1.IconAlignment"))));
@@ -91,19 +90,10 @@
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.TextChanged += new System.EventHandler(this.comboBox1_TextChanged);
             // 
-            // agentsBindingSource
-            // 
-            this.agentsBindingSource.DataMember = "agents";
-            this.agentsBindingSource.DataSource = this.storeDataSet;
-            // 
             // storeDataSet
             // 
             this.storeDataSet.DataSetName = "storeDataSet";
             this.storeDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // agentsTableAdapter
-            // 
-            this.agentsTableAdapter.ClearBeforeFill = true;
             // 
             // tabControl1
             // 
@@ -255,18 +245,13 @@
             // 
             resources.ApplyResources(this.Cmb_Dealer, "Cmb_Dealer");
             this.Cmb_Dealer.DataSource = this.dealersBindingSource;
-            this.Cmb_Dealer.DisplayMember = "DealerName";
+            this.Cmb_Dealer.DisplayMember = "Name";
             this.errorProvider1.SetError(this.Cmb_Dealer, resources.GetString("Cmb_Dealer.Error"));
             this.Cmb_Dealer.FormattingEnabled = true;
             this.errorProvider1.SetIconAlignment(this.Cmb_Dealer, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("Cmb_Dealer.IconAlignment"))));
             this.errorProvider1.SetIconPadding(this.Cmb_Dealer, ((int)(resources.GetObject("Cmb_Dealer.IconPadding"))));
             this.Cmb_Dealer.Name = "Cmb_Dealer";
             this.Cmb_Dealer.TextChanged += new System.EventHandler(this.Cmb_Dealer_TextChanged);
-            // 
-            // dealersBindingSource
-            // 
-            this.dealersBindingSource.DataMember = "dealers";
-            this.dealersBindingSource.DataSource = this.storeDataSet;
             // 
             // tabPage3
             // 
@@ -329,10 +314,6 @@
             // 
             this.dealerpaymentsTableAdapter.ClearBeforeFill = true;
             // 
-            // dealersTableAdapter
-            // 
-            this.dealersTableAdapter.ClearBeforeFill = true;
-            // 
             // spendingsBindingSource
             // 
             this.spendingsBindingSource.DataMember = "spendings";
@@ -351,6 +332,22 @@
             // 
             this.vaultTableAdapter.ClearBeforeFill = true;
             // 
+            // agentsBindingSource
+            // 
+            this.agentsBindingSource.DataMember = "names";
+            this.agentsBindingSource.DataSource = this.storeDataSet;
+            this.agentsBindingSource.Filter = "TypeAgent = 1";
+            // 
+            // namesTableAdapter
+            // 
+            this.namesTableAdapter.ClearBeforeFill = true;
+            // 
+            // dealersBindingSource
+            // 
+            this.dealersBindingSource.DataMember = "names";
+            this.dealersBindingSource.DataSource = this.storeDataSet;
+            this.dealersBindingSource.Filter = "TypeDealer = 1";
+            // 
             // Payments
             // 
             resources.ApplyResources(this, "$this");
@@ -358,14 +355,12 @@
             this.Controls.Add(this.tabControl1);
             this.Name = "Payments";
             this.Load += new System.EventHandler(this.Payments_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.agentsBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.storeDataSet)).EndInit();
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             this.tabPage1.PerformLayout();
             this.tabPage2.ResumeLayout(false);
             this.tabPage2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dealersBindingSource)).EndInit();
             this.tabPage3.ResumeLayout(false);
             this.tabPage3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
@@ -373,6 +368,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.dealerpaymentsBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.spendingsBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.vaultBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.agentsBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dealersBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -381,8 +378,7 @@
 
         private System.Windows.Forms.ComboBox comboBox1;
         private storeDataSet storeDataSet;
-        private System.Windows.Forms.BindingSource agentsBindingSource;
-        private storeDataSetTableAdapters.agentsTableAdapter agentsTableAdapter;
+
         private System.Windows.Forms.TabControl tabControl1;
         private System.Windows.Forms.TabPage tabPage1;
         private System.Windows.Forms.Label label1;
@@ -405,8 +401,7 @@
         private System.Windows.Forms.ComboBox Cmb_Dealer;
         private System.Windows.Forms.BindingSource dealerpaymentsBindingSource;
         private storeDataSetTableAdapters.dealerpaymentsTableAdapter dealerpaymentsTableAdapter;
-        private System.Windows.Forms.BindingSource dealersBindingSource;
-        private storeDataSetTableAdapters.dealersTableAdapter dealersTableAdapter;
+ 
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.TextBox Txt_SpendingsAmmount;
         private System.Windows.Forms.Label label7;
@@ -414,5 +409,8 @@
         private storeDataSetTableAdapters.spendingsTableAdapter spendingsTableAdapter;
         private System.Windows.Forms.BindingSource vaultBindingSource;
         private storeDataSetTableAdapters.vaultTableAdapter vaultTableAdapter;
+        private System.Windows.Forms.BindingSource agentsBindingSource;
+        private storeDataSetTableAdapters.namesTableAdapter namesTableAdapter;
+        private System.Windows.Forms.BindingSource dealersBindingSource;
     }
 }

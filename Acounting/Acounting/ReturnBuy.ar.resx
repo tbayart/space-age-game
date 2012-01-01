@@ -248,18 +248,6 @@
   <data name="dataGridView1.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Right</value>
   </data>
-  <data name="itemNameDataGridViewTextBoxColumn.HeaderText" xml:space="preserve">
-    <value>اسم الصنف</value>
-  </data>
-  <data name="qtyDataGridViewTextBoxColumn.HeaderText" xml:space="preserve">
-    <value>الكمية</value>
-  </data>
-  <data name="costDataGridViewTextBoxColumn.HeaderText" xml:space="preserve">
-    <value>السعر</value>
-  </data>
-  <data name="totalDataGridViewTextBoxColumn.HeaderText" xml:space="preserve">
-    <value>اجمالي</value>
-  </data>
   <data name="dataGridView1.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>None</value>
   </data>
@@ -418,9 +406,6 @@
   </data>
   <data name="groupBox2.Text" xml:space="preserve">
     <value>الاصناف</value>
-  </data>
-  <data name="$this.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
   </data>
   <data name="$this.RightToLeft" type="System.Windows.Forms.RightToLeft, System.Windows.Forms">
     <value>Yes</value>
