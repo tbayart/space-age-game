@@ -80,8 +80,6 @@
             this.vaultTableAdapter = new Acounting.storeDataSetTableAdapters.vaultTableAdapter();
             this.salesDetailsTableAdapter = new Acounting.storeDataSetTableAdapters.SalesDetailsTableAdapter();
             this.namesTableAdapter = new Acounting.storeDataSetTableAdapters.namesTableAdapter();
-            this.fillBy3ToolStrip = new System.Windows.Forms.ToolStrip();
-            this.fillBy3ToolStripButton = new System.Windows.Forms.ToolStripButton();
             ((System.ComponentModel.ISupportInitialize)(this.billsBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.storeDataSet)).BeginInit();
             this.groupBox1.SuspendLayout();
@@ -95,7 +93,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.salesDetailsBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.salesitemsBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.vaultBindingSource)).BeginInit();
-            this.fillBy3ToolStrip.SuspendLayout();
             this.SuspendLayout();
             // 
             // Txt_BillID
@@ -289,7 +286,6 @@
             this.Cmb_AgentName.FormattingEnabled = true;
             resources.ApplyResources(this.Cmb_AgentName, "Cmb_AgentName");
             this.Cmb_AgentName.Name = "Cmb_AgentName";
-            this.Cmb_AgentName.ValueMember = "AgentName";
             this.Cmb_AgentName.SelectedIndexChanged += new System.EventHandler(this.Cmb_AgentName_SelectedIndexChanged);
             this.Cmb_AgentName.TextChanged += new System.EventHandler(this.Cmb_AgentName_TextChanged);
             // 
@@ -420,25 +416,10 @@
             // 
             this.namesTableAdapter.ClearBeforeFill = true;
             // 
-            // fillBy3ToolStrip
-            // 
-            this.fillBy3ToolStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.fillBy3ToolStripButton});
-            resources.ApplyResources(this.fillBy3ToolStrip, "fillBy3ToolStrip");
-            this.fillBy3ToolStrip.Name = "fillBy3ToolStrip";
-            // 
-            // fillBy3ToolStripButton
-            // 
-            this.fillBy3ToolStripButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
-            this.fillBy3ToolStripButton.Name = "fillBy3ToolStripButton";
-            resources.ApplyResources(this.fillBy3ToolStripButton, "fillBy3ToolStripButton");
-            this.fillBy3ToolStripButton.Click += new System.EventHandler(this.fillBy3ToolStripButton_Click);
-            // 
             // Sell
             // 
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.fillBy3ToolStrip);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.groupBox4);
@@ -464,10 +445,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.salesDetailsBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.salesitemsBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.vaultBindingSource)).EndInit();
-            this.fillBy3ToolStrip.ResumeLayout(false);
-            this.fillBy3ToolStrip.PerformLayout();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -524,7 +502,5 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn earningsDataGridViewTextBoxColumn;
         private System.Windows.Forms.BindingSource namesBindingSource;
         private storeDataSetTableAdapters.namesTableAdapter namesTableAdapter;
-        private System.Windows.Forms.ToolStrip fillBy3ToolStrip;
-        private System.Windows.Forms.ToolStripButton fillBy3ToolStripButton;
     }
 }

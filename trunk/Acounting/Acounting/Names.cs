@@ -40,6 +40,14 @@ namespace Acounting
             }
             dateTimePicker1.Refresh();
             dateTimePicker1.Invalidate();
+
+            Chk_Agent.Checked = true;
+            Chk_Dealer.Checked = true;
+
+            Chk_Agent.Checked = false;
+            Chk_Dealer.Checked = false;
+
+
             newid++;
             Txt_ID.Text = newid.ToString();
             canchange = true;

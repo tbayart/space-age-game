@@ -33,6 +33,17 @@
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.iDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.addressDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.telephoneDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.debtDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.initialDebtDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.initialDateDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.typeAgentDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.typeDealerDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.namesBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.storeDataSet = new Acounting.storeDataSet();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.Chk_Dealer = new System.Windows.Forms.CheckBox();
             this.Chk_Agent = new System.Windows.Forms.CheckBox();
@@ -66,27 +77,16 @@
             this.saveToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.iDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.addressDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.telephoneDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.debtDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.initialDebtDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.initialDateDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.typeAgentDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewCheckBoxColumn();
-            this.typeDealerDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewCheckBoxColumn();
-            this.namesBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.storeDataSet = new Acounting.storeDataSet();
             this.namesTableAdapter = new Acounting.storeDataSetTableAdapters.namesTableAdapter();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.namesBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.storeDataSet)).BeginInit();
             this.tabPage2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bindingNavigator1)).BeginInit();
             this.bindingNavigator1.SuspendLayout();
             this.menuStrip1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.namesBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.storeDataSet)).BeginInit();
             this.SuspendLayout();
             // 
             // tabControl1
@@ -124,6 +124,87 @@
             this.dataGridView1.DataSource = this.namesBindingSource;
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
+            // 
+            // iDDataGridViewTextBoxColumn
+            // 
+            this.iDDataGridViewTextBoxColumn.DataPropertyName = "ID";
+            resources.ApplyResources(this.iDDataGridViewTextBoxColumn, "iDDataGridViewTextBoxColumn");
+            this.iDDataGridViewTextBoxColumn.Name = "iDDataGridViewTextBoxColumn";
+            this.iDDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // nameDataGridViewTextBoxColumn
+            // 
+            this.nameDataGridViewTextBoxColumn.DataPropertyName = "Name";
+            resources.ApplyResources(this.nameDataGridViewTextBoxColumn, "nameDataGridViewTextBoxColumn");
+            this.nameDataGridViewTextBoxColumn.Name = "nameDataGridViewTextBoxColumn";
+            this.nameDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // addressDataGridViewTextBoxColumn
+            // 
+            this.addressDataGridViewTextBoxColumn.DataPropertyName = "Address";
+            resources.ApplyResources(this.addressDataGridViewTextBoxColumn, "addressDataGridViewTextBoxColumn");
+            this.addressDataGridViewTextBoxColumn.Name = "addressDataGridViewTextBoxColumn";
+            this.addressDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // telephoneDataGridViewTextBoxColumn
+            // 
+            this.telephoneDataGridViewTextBoxColumn.DataPropertyName = "Telephone";
+            resources.ApplyResources(this.telephoneDataGridViewTextBoxColumn, "telephoneDataGridViewTextBoxColumn");
+            this.telephoneDataGridViewTextBoxColumn.Name = "telephoneDataGridViewTextBoxColumn";
+            this.telephoneDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // debtDataGridViewTextBoxColumn
+            // 
+            this.debtDataGridViewTextBoxColumn.DataPropertyName = "Debt";
+            resources.ApplyResources(this.debtDataGridViewTextBoxColumn, "debtDataGridViewTextBoxColumn");
+            this.debtDataGridViewTextBoxColumn.Name = "debtDataGridViewTextBoxColumn";
+            this.debtDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // initialDebtDataGridViewTextBoxColumn
+            // 
+            this.initialDebtDataGridViewTextBoxColumn.DataPropertyName = "InitialDebt";
+            resources.ApplyResources(this.initialDebtDataGridViewTextBoxColumn, "initialDebtDataGridViewTextBoxColumn");
+            this.initialDebtDataGridViewTextBoxColumn.Name = "initialDebtDataGridViewTextBoxColumn";
+            this.initialDebtDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // initialDateDataGridViewTextBoxColumn
+            // 
+            this.initialDateDataGridViewTextBoxColumn.DataPropertyName = "InitialDate";
+            resources.ApplyResources(this.initialDateDataGridViewTextBoxColumn, "initialDateDataGridViewTextBoxColumn");
+            this.initialDateDataGridViewTextBoxColumn.Name = "initialDateDataGridViewTextBoxColumn";
+            this.initialDateDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // typeAgentDataGridViewTextBoxColumn
+            // 
+            this.typeAgentDataGridViewTextBoxColumn.DataPropertyName = "TypeAgent";
+            this.typeAgentDataGridViewTextBoxColumn.FalseValue = "0";
+            resources.ApplyResources(this.typeAgentDataGridViewTextBoxColumn, "typeAgentDataGridViewTextBoxColumn");
+            this.typeAgentDataGridViewTextBoxColumn.Name = "typeAgentDataGridViewTextBoxColumn";
+            this.typeAgentDataGridViewTextBoxColumn.ReadOnly = true;
+            this.typeAgentDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.typeAgentDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.typeAgentDataGridViewTextBoxColumn.TrueValue = "1";
+            // 
+            // typeDealerDataGridViewTextBoxColumn
+            // 
+            this.typeDealerDataGridViewTextBoxColumn.DataPropertyName = "TypeDealer";
+            this.typeDealerDataGridViewTextBoxColumn.FalseValue = "0";
+            resources.ApplyResources(this.typeDealerDataGridViewTextBoxColumn, "typeDealerDataGridViewTextBoxColumn");
+            this.typeDealerDataGridViewTextBoxColumn.Name = "typeDealerDataGridViewTextBoxColumn";
+            this.typeDealerDataGridViewTextBoxColumn.ReadOnly = true;
+            this.typeDealerDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.typeDealerDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.typeDealerDataGridViewTextBoxColumn.TrueValue = "1";
+            // 
+            // namesBindingSource
+            // 
+            this.namesBindingSource.DataMember = "names";
+            this.namesBindingSource.DataSource = this.storeDataSet;
+            // 
+            // storeDataSet
+            // 
+            this.storeDataSet.DataSetName = "storeDataSet";
+            this.storeDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // tabPage2
             // 
@@ -166,7 +247,8 @@
             // 
             resources.ApplyResources(this.dateTimePicker1, "dateTimePicker1");
             this.dateTimePicker1.Checked = false;
-            this.dateTimePicker1.DataBindings.Add(new System.Windows.Forms.Binding("Value", this.namesBindingSource, "InitialDate", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
+            this.dateTimePicker1.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.namesBindingSource, "InitialDate", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged, null, "dd/MM/yyyy"));
+            this.dateTimePicker1.DataBindings.Add(new System.Windows.Forms.Binding("Value", this.namesBindingSource, "InitialDate", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged, null, "dd/MM/yyyy"));
             this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.dateTimePicker1.Name = "dateTimePicker1";
             // 
@@ -358,87 +440,6 @@
             // 
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
-            // iDDataGridViewTextBoxColumn
-            // 
-            this.iDDataGridViewTextBoxColumn.DataPropertyName = "ID";
-            resources.ApplyResources(this.iDDataGridViewTextBoxColumn, "iDDataGridViewTextBoxColumn");
-            this.iDDataGridViewTextBoxColumn.Name = "iDDataGridViewTextBoxColumn";
-            this.iDDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // nameDataGridViewTextBoxColumn
-            // 
-            this.nameDataGridViewTextBoxColumn.DataPropertyName = "Name";
-            resources.ApplyResources(this.nameDataGridViewTextBoxColumn, "nameDataGridViewTextBoxColumn");
-            this.nameDataGridViewTextBoxColumn.Name = "nameDataGridViewTextBoxColumn";
-            this.nameDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // addressDataGridViewTextBoxColumn
-            // 
-            this.addressDataGridViewTextBoxColumn.DataPropertyName = "Address";
-            resources.ApplyResources(this.addressDataGridViewTextBoxColumn, "addressDataGridViewTextBoxColumn");
-            this.addressDataGridViewTextBoxColumn.Name = "addressDataGridViewTextBoxColumn";
-            this.addressDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // telephoneDataGridViewTextBoxColumn
-            // 
-            this.telephoneDataGridViewTextBoxColumn.DataPropertyName = "Telephone";
-            resources.ApplyResources(this.telephoneDataGridViewTextBoxColumn, "telephoneDataGridViewTextBoxColumn");
-            this.telephoneDataGridViewTextBoxColumn.Name = "telephoneDataGridViewTextBoxColumn";
-            this.telephoneDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // debtDataGridViewTextBoxColumn
-            // 
-            this.debtDataGridViewTextBoxColumn.DataPropertyName = "Debt";
-            resources.ApplyResources(this.debtDataGridViewTextBoxColumn, "debtDataGridViewTextBoxColumn");
-            this.debtDataGridViewTextBoxColumn.Name = "debtDataGridViewTextBoxColumn";
-            this.debtDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // initialDebtDataGridViewTextBoxColumn
-            // 
-            this.initialDebtDataGridViewTextBoxColumn.DataPropertyName = "InitialDebt";
-            resources.ApplyResources(this.initialDebtDataGridViewTextBoxColumn, "initialDebtDataGridViewTextBoxColumn");
-            this.initialDebtDataGridViewTextBoxColumn.Name = "initialDebtDataGridViewTextBoxColumn";
-            this.initialDebtDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // initialDateDataGridViewTextBoxColumn
-            // 
-            this.initialDateDataGridViewTextBoxColumn.DataPropertyName = "InitialDate";
-            resources.ApplyResources(this.initialDateDataGridViewTextBoxColumn, "initialDateDataGridViewTextBoxColumn");
-            this.initialDateDataGridViewTextBoxColumn.Name = "initialDateDataGridViewTextBoxColumn";
-            this.initialDateDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // typeAgentDataGridViewTextBoxColumn
-            // 
-            this.typeAgentDataGridViewTextBoxColumn.DataPropertyName = "TypeAgent";
-            this.typeAgentDataGridViewTextBoxColumn.FalseValue = "0";
-            resources.ApplyResources(this.typeAgentDataGridViewTextBoxColumn, "typeAgentDataGridViewTextBoxColumn");
-            this.typeAgentDataGridViewTextBoxColumn.Name = "typeAgentDataGridViewTextBoxColumn";
-            this.typeAgentDataGridViewTextBoxColumn.ReadOnly = true;
-            this.typeAgentDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.typeAgentDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            this.typeAgentDataGridViewTextBoxColumn.TrueValue = "1";
-            // 
-            // typeDealerDataGridViewTextBoxColumn
-            // 
-            this.typeDealerDataGridViewTextBoxColumn.DataPropertyName = "TypeDealer";
-            this.typeDealerDataGridViewTextBoxColumn.FalseValue = "0";
-            resources.ApplyResources(this.typeDealerDataGridViewTextBoxColumn, "typeDealerDataGridViewTextBoxColumn");
-            this.typeDealerDataGridViewTextBoxColumn.Name = "typeDealerDataGridViewTextBoxColumn";
-            this.typeDealerDataGridViewTextBoxColumn.ReadOnly = true;
-            this.typeDealerDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.typeDealerDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            this.typeDealerDataGridViewTextBoxColumn.TrueValue = "1";
-            // 
-            // namesBindingSource
-            // 
-            this.namesBindingSource.DataMember = "names";
-            this.namesBindingSource.DataSource = this.storeDataSet;
-            // 
-            // storeDataSet
-            // 
-            this.storeDataSet.DataSetName = "storeDataSet";
-            this.storeDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
             // namesTableAdapter
             // 
             this.namesTableAdapter.ClearBeforeFill = true;
@@ -455,6 +456,8 @@
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.namesBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.storeDataSet)).EndInit();
             this.tabPage2.ResumeLayout(false);
             this.tabPage2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bindingNavigator1)).EndInit();
@@ -462,8 +465,6 @@
             this.bindingNavigator1.PerformLayout();
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.namesBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.storeDataSet)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
