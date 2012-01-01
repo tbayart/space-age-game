@@ -100,23 +100,12 @@ namespace Acounting
         #region menu items
 
 
-        private void itemsSalesDetailsToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            SalesItemsDetails salesitemsdetails = new SalesItemsDetails();
-            salesitemsdetails.MdiParent = this;
-            salesitemsdetails.Show();
-        }
         private void exitToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Application.Exit();
         }
 
-        private void كشفموردToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            DealersDebt dealersdebt = new DealersDebt();
-            dealersdebt.MdiParent = this;
-            dealersdebt.Show();
-        }
+
 
         private void itemToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -158,13 +147,7 @@ namespace Acounting
             sell.Show();
         }
 
-        private void dealersToolStripMenuItem1_Click(object sender, EventArgs e)
-        {
-            Dealers dealers = new Dealers();
-            dealers.MdiParent = this;
-            dealers.Show();
-        }
-
+     
         private void agentsToolStripMenuItem1_Click(object sender, EventArgs e)
         {
             Names names = new Names();
@@ -210,12 +193,6 @@ namespace Acounting
             }
         }
 
-        private void اجمالياصنافToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            TotalItems totalitems = new TotalItems();
-            totalitems.MdiParent = this;
-            totalitems.Show();
-        }
 
 
         private void عربيToolStripMenuItem1_Click(object sender, EventArgs e)
