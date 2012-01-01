@@ -57,14 +57,25 @@ namespace Acounting
         {
             Txt_AgentName.Focus();
             int newid;
-            int.TryParse(bindingNavigatorPositionItem.Text, out newid);
-            Console.WriteLine(newid);
+
+            try
+            {
+
+                int.TryParse(dataGridView1.Rows[dataGridView1.Rows.GetLastRow(DataGridViewElementStates.None)].Cells[0].Value.ToString(), out newid);
+
+
+            }
+            catch (Exception ee)
+            {
+
+                newid = 0;
+            }
+
+            newid++;
             Txt_AgentID.Text = newid.ToString();
 
-            if (dataGridView1.Rows.Count <= newid)
-            {
-                canchange = true;
-            }
+            canchange = true;
+            
         }
 
  
