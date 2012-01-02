@@ -61,6 +61,7 @@
             this.vaultTableAdapter = new Acounting.storeDataSetTableAdapters.vaultTableAdapter();
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
+            this.showAllBillsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.itemsBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.storeDataSet)).BeginInit();
             this.menuStrip1.SuspendLayout();
@@ -148,7 +149,8 @@
             this.paymentsToolStripMenuItem1,
             this.vaultToolStripMenuItem1,
             this.returnBuyToolStripMenuItem,
-            this.returnSaleToolStripMenuItem});
+            this.returnSaleToolStripMenuItem,
+            this.showAllBillsToolStripMenuItem});
             this.storageToolStripMenuItem.Name = "storageToolStripMenuItem";
             // 
             // buyToolStripMenuItem1
@@ -266,6 +268,12 @@
             // 
             resources.ApplyResources(this.openFileDialog1, "openFileDialog1");
             // 
+            // showAllBillsToolStripMenuItem
+            // 
+            resources.ApplyResources(this.showAllBillsToolStripMenuItem, "showAllBillsToolStripMenuItem");
+            this.showAllBillsToolStripMenuItem.Name = "showAllBillsToolStripMenuItem";
+            this.showAllBillsToolStripMenuItem.Click += new System.EventHandler(this.showAllBillsToolStripMenuItem_Click);
+            // 
             // Main
             // 
             resources.ApplyResources(this, "$this");
@@ -320,6 +328,7 @@
         private System.Windows.Forms.ToolStripMenuItem itemsSalesDetailsToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem changeImageToolStripMenuItem;
         private System.Windows.Forms.OpenFileDialog openFileDialog1;
+        private System.Windows.Forms.ToolStripMenuItem showAllBillsToolStripMenuItem;
     }
 }
 
