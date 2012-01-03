@@ -97,5 +97,36 @@ namespace Acounting
             }
 
         }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void dataGridView1_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            int billID;
+            DateTime date;
+            double totalbill = 0;
+            double paid;
+            double remaining;
+            int type;
+            int name_id;
+            string name_name;
+
+            int.TryParse(dataGridView1.Rows[e.RowIndex].Cells[0].Value.ToString(), out billID);
+
+            DateTime.TryParse(dataGridView1.Rows[e.RowIndex].Cells[0].Value.ToString(),out date);
+
+            double.TryParse(dataGridView1.Rows[e.RowIndex].Cells[2].Value.ToString(), out totalbill);
+            double.TryParse(dataGridView1.Rows[e.RowIndex].Cells[3].Value.ToString(), out paid);
+            double.TryParse(dataGridView1.Rows[e.RowIndex].Cells[4].Value.ToString(), out remaining);
+            int.TryParse(dataGridView1.Rows[e.RowIndex].Cells[5].Value.ToString(), out type);
+            int.TryParse(dataGridView1.Rows[e.RowIndex].Cells[6].Value.ToString(), out name_id);
+            name_name = dataGridView1.Rows[e.RowIndex].Cells[7].Value.ToString();
+
+            EditBills edit = new EditBills(billID, date, totalbill, paid, remaining, type, name_id, name_name);
+            edit.Show();
+        }
     }
 }

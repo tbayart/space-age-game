@@ -12,15 +12,17 @@ namespace Acounting
     public partial class EditBills : Form
     {
 
-        double totalbill = 0;
+
         int billID;
-        double totalprice;
-        double remaining;
+        DateTime date;
+        double totalbill = 0;
         double paid;
+        double remaining;
+        int type;
         int name_id;
         string name_name;
-        int type;
-        DateTime date;
+
+
 
         public EditBills(int billid,DateTime docdate,double totalpill,double paid,double remaining,int type,int names_id,string names_name)
         {
@@ -38,7 +40,11 @@ namespace Acounting
 
         private void EditBills_Load(object sender, EventArgs e)
         {
-   
+            Txt_BillID.Text = billID.ToString();
+            Txt_Name.Text = name_name;
+            Txt_Paid.Text = paid.ToString();
+            Txt_Remaining.Text = remaining.ToString();
+            Txt_TotalBill.Text = totalbill.ToString();
         }
     }
 }
