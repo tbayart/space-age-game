@@ -272,7 +272,7 @@ namespace Acounting
                 return;
             }
 
-            remaining = totalbill - billpaid;
+            remaining = billpaid - totalbill;
             Txt_Remaining.Text = remaining.ToString();
         }
 
@@ -330,7 +330,7 @@ namespace Acounting
                     DataRow dealerrow = storeDataSet.names.FindByID(dealerId);
                     double.TryParse(dealerrow["Debt"].ToString(), out debt);
 
-                    double newdebt = debt + remaining;
+                    double newdebt = debt - remaining;
 
                     //add newdebt to agent
                     dealerrow["Debt"] = newdebt;

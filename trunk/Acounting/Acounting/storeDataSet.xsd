@@ -1196,6 +1196,91 @@ FROM            items INNER JOIN
             </Mappings>
             <Sources />
           </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="TotalBillsTableAdapter" GeneratorDataComponentClassName="TotalBillsTableAdapter" Name="TotalBills" UserDataComponentName="TotalBillsTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="storeConnectionString (Settings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT        SUM(TotalBill) AS TotalToalBills
+FROM            bills</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="TotalToalBills" DataSetColumn="TotalToalBills" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="TotalEarningsTableAdapter" GeneratorDataComponentClassName="TotalEarningsTableAdapter" Name="TotalEarnings" UserDataComponentName="TotalEarningsTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="storeConnectionString (Settings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT        SUM(Earnings) AS TotalEarnings
+FROM            salesitems</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="TotalEarnings" DataSetColumn="TotalEarnings" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="TotalPurchaseTableAdapter" GeneratorDataComponentClassName="TotalPurchaseTableAdapter" Name="TotalPurchase" UserDataComponentName="TotalPurchaseTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="storeConnectionString (Settings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT        SUM(TotalBill) AS TotalPurchase
+FROM            purchasebills</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="TotalPurchase" DataSetColumn="TotalPurchase" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="TotalBillsReturnTableAdapter" GeneratorDataComponentClassName="TotalBillsReturnTableAdapter" Name="TotalBillsReturn" UserDataComponentName="TotalBillsReturnTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="storeConnectionString (Settings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT        SUM(TotalBill) AS Expr1
+FROM            billsreturn</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="Expr1" DataSetColumn="Expr1" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="TotalPurchasesReturnTableAdapter" GeneratorDataComponentClassName="TotalPurchasesReturnTableAdapter" Name="TotalPurchasesReturn" UserDataComponentName="TotalPurchasesReturnTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="storeConnectionString (Settings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT        SUM(TotalBill) AS Expr1
+FROM            purchasebillsreturn</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="Expr1" DataSetColumn="Expr1" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
         </Tables>
         <Sources />
       </DataSource>
@@ -1533,6 +1618,41 @@ FROM            items INNER JOIN
               <xs:element name="Type" msprop:Generator_ColumnVarNameInTable="columnType" msprop:Generator_ColumnPropNameInRow="Type" msprop:Generator_ColumnPropNameInTable="TypeColumn" msprop:Generator_UserColumnName="Type" type="xs:string" minOccurs="0" />
               <xs:element name="Names_ID" msprop:Generator_ColumnVarNameInTable="columnNames_ID" msprop:Generator_ColumnPropNameInRow="Names_ID" msprop:Generator_ColumnPropNameInTable="Names_IDColumn" msprop:Generator_UserColumnName="Names_ID" type="xs:int" minOccurs="0" />
               <xs:element name="Names_Name" msprop:Generator_ColumnVarNameInTable="columnNames_Name" msprop:Generator_ColumnPropNameInRow="Names_Name" msprop:Generator_ColumnPropNameInTable="Names_NameColumn" msprop:Generator_UserColumnName="Names_Name" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="TotalBills" msprop:Generator_TableClassName="TotalBillsDataTable" msprop:Generator_TableVarName="tableTotalBills" msprop:Generator_TablePropName="TotalBills" msprop:Generator_RowDeletingName="TotalBillsRowDeleting" msprop:Generator_UserTableName="TotalBills" msprop:Generator_RowChangingName="TotalBillsRowChanging" msprop:Generator_RowEvHandlerName="TotalBillsRowChangeEventHandler" msprop:Generator_RowDeletedName="TotalBillsRowDeleted" msprop:Generator_RowEvArgName="TotalBillsRowChangeEvent" msprop:Generator_RowChangedName="TotalBillsRowChanged" msprop:Generator_RowClassName="TotalBillsRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="TotalToalBills" msprop:Generator_ColumnVarNameInTable="columnTotalToalBills" msprop:Generator_ColumnPropNameInRow="TotalToalBills" msprop:Generator_ColumnPropNameInTable="TotalToalBillsColumn" msprop:Generator_UserColumnName="TotalToalBills" type="xs:double" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="TotalEarnings" msprop:Generator_TableClassName="TotalEarningsDataTable" msprop:Generator_TableVarName="tableTotalEarnings" msprop:Generator_TablePropName="TotalEarnings" msprop:Generator_RowDeletingName="TotalEarningsRowDeleting" msprop:Generator_UserTableName="TotalEarnings" msprop:Generator_RowChangingName="TotalEarningsRowChanging" msprop:Generator_RowEvHandlerName="TotalEarningsRowChangeEventHandler" msprop:Generator_RowDeletedName="TotalEarningsRowDeleted" msprop:Generator_RowEvArgName="TotalEarningsRowChangeEvent" msprop:Generator_RowChangedName="TotalEarningsRowChanged" msprop:Generator_RowClassName="TotalEarningsRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="TotalEarnings" msprop:Generator_ColumnVarNameInTable="columnTotalEarnings" msprop:Generator_ColumnPropNameInRow="TotalEarnings" msprop:Generator_ColumnPropNameInTable="TotalEarningsColumn" msprop:Generator_UserColumnName="TotalEarnings" type="xs:double" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="TotalPurchase" msprop:Generator_TableClassName="TotalPurchaseDataTable" msprop:Generator_TableVarName="tableTotalPurchase" msprop:Generator_TablePropName="TotalPurchase" msprop:Generator_RowDeletingName="TotalPurchaseRowDeleting" msprop:Generator_UserTableName="TotalPurchase" msprop:Generator_RowChangingName="TotalPurchaseRowChanging" msprop:Generator_RowEvHandlerName="TotalPurchaseRowChangeEventHandler" msprop:Generator_RowDeletedName="TotalPurchaseRowDeleted" msprop:Generator_RowEvArgName="TotalPurchaseRowChangeEvent" msprop:Generator_RowChangedName="TotalPurchaseRowChanged" msprop:Generator_RowClassName="TotalPurchaseRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="TotalPurchase" msprop:Generator_ColumnVarNameInTable="columnTotalPurchase" msprop:Generator_ColumnPropNameInRow="TotalPurchase" msprop:Generator_ColumnPropNameInTable="TotalPurchaseColumn" msprop:Generator_UserColumnName="TotalPurchase" type="xs:double" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="TotalBillsReturn" msprop:Generator_TableClassName="TotalBillsReturnDataTable" msprop:Generator_TableVarName="tableTotalBillsReturn" msprop:Generator_TablePropName="TotalBillsReturn" msprop:Generator_RowDeletingName="TotalBillsReturnRowDeleting" msprop:Generator_UserTableName="TotalBillsReturn" msprop:Generator_RowChangingName="TotalBillsReturnRowChanging" msprop:Generator_RowEvHandlerName="TotalBillsReturnRowChangeEventHandler" msprop:Generator_RowDeletedName="TotalBillsReturnRowDeleted" msprop:Generator_RowEvArgName="TotalBillsReturnRowChangeEvent" msprop:Generator_RowChangedName="TotalBillsReturnRowChanged" msprop:Generator_RowClassName="TotalBillsReturnRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Expr1" msprop:Generator_ColumnVarNameInTable="columnExpr1" msprop:Generator_ColumnPropNameInRow="Expr1" msprop:Generator_ColumnPropNameInTable="Expr1Column" msprop:Generator_UserColumnName="Expr1" type="xs:double" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="TotalPurchasesReturn" msprop:Generator_TableClassName="TotalPurchasesReturnDataTable" msprop:Generator_TableVarName="tableTotalPurchasesReturn" msprop:Generator_TablePropName="TotalPurchasesReturn" msprop:Generator_RowDeletingName="TotalPurchasesReturnRowDeleting" msprop:Generator_UserTableName="TotalPurchasesReturn" msprop:Generator_RowChangingName="TotalPurchasesReturnRowChanging" msprop:Generator_RowEvHandlerName="TotalPurchasesReturnRowChangeEventHandler" msprop:Generator_RowDeletedName="TotalPurchasesReturnRowDeleted" msprop:Generator_RowEvArgName="TotalPurchasesReturnRowChangeEvent" msprop:Generator_RowChangedName="TotalPurchasesReturnRowChanged" msprop:Generator_RowClassName="TotalPurchasesReturnRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Expr1" msprop:Generator_ColumnVarNameInTable="columnExpr1" msprop:Generator_ColumnPropNameInRow="Expr1" msprop:Generator_ColumnPropNameInTable="Expr1Column" msprop:Generator_UserColumnName="Expr1" type="xs:double" minOccurs="0" />
             </xs:sequence>
           </xs:complexType>
         </xs:element>
