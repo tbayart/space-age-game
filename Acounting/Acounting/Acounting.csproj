@@ -219,6 +219,9 @@
     <EmbeddedResource Include="Editing\EditBills.resx">
       <DependentUpon>EditBills.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Editing\ShowAllBills.ar.resx">
+      <DependentUpon>ShowAllBills.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Editing\ShowAllBills.resx">
       <DependentUpon>ShowAllBills.cs</DependentUpon>
     </EmbeddedResource>

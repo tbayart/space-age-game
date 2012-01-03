@@ -32,5 +32,41 @@ namespace Acounting.Properties {
                 return ((string)(this["storeConnectionString"]));
             }
         }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("مبيعات")]
+        public string type1 {
+            get {
+                return ((string)(this["type1"]));
+            }
+        }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("مرجع مبيعات")]
+        public string type2 {
+            get {
+                return ((string)(this["type2"]));
+            }
+        }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("مشتريات")]
+        public string type3 {
+            get {
+                return ((string)(this["type3"]));
+            }
+        }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("مرجع مشتريات")]
+        public string type4 {
+            get {
+                return ((string)(this["type4"]));
+            }
+        }
     }
 }

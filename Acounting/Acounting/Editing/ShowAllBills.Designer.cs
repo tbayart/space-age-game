@@ -29,16 +29,9 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ShowAllBills));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.billIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.docDateDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.totalBillDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.paidDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.remainingDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.typeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.namesIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.namesNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.allBillsBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.storeDataSet = new Acounting.storeDataSet();
             this.billsreturnTableAdapter = new Acounting.storeDataSetTableAdapters.billsreturnTableAdapter();
@@ -51,6 +44,14 @@
             this.purchasebillsreturnBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.namesBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.namesTableAdapter = new Acounting.storeDataSetTableAdapters.namesTableAdapter();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.allBillsBindingSource)).BeginInit();
@@ -64,17 +65,14 @@
             // 
             // groupBox1
             // 
+            resources.ApplyResources(this.groupBox1, "groupBox1");
             this.groupBox1.Controls.Add(this.dataGridView1);
-            this.groupBox1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.groupBox1.Location = new System.Drawing.Point(0, 0);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(833, 513);
-            this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "groupBox1";
             // 
             // dataGridView1
             // 
+            resources.ApplyResources(this.dataGridView1, "dataGridView1");
             this.dataGridView1.AllowUserToAddRows = false;
             this.dataGridView1.AllowUserToDeleteRows = false;
             this.dataGridView1.AutoGenerateColumns = false;
@@ -82,80 +80,19 @@
             this.dataGridView1.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.Raised;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.billIDDataGridViewTextBoxColumn,
-            this.docDateDataGridViewTextBoxColumn,
-            this.totalBillDataGridViewTextBoxColumn,
-            this.paidDataGridViewTextBoxColumn,
-            this.remainingDataGridViewTextBoxColumn,
-            this.typeDataGridViewTextBoxColumn,
-            this.namesIDDataGridViewTextBoxColumn,
-            this.namesNameDataGridViewTextBoxColumn});
+            this.Column1,
+            this.Column6,
+            this.Column2,
+            this.Column3,
+            this.Column4,
+            this.Column5,
+            this.Column8,
+            this.Column7});
             this.dataGridView1.DataSource = this.allBillsBindingSource;
-            this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dataGridView1.GridColor = System.Drawing.SystemColors.ActiveCaption;
-            this.dataGridView1.Location = new System.Drawing.Point(3, 16);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
-            this.dataGridView1.Size = new System.Drawing.Size(827, 494);
-            this.dataGridView1.TabIndex = 0;
-            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             this.dataGridView1.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellDoubleClick);
-            // 
-            // billIDDataGridViewTextBoxColumn
-            // 
-            this.billIDDataGridViewTextBoxColumn.DataPropertyName = "Bill_ID";
-            this.billIDDataGridViewTextBoxColumn.HeaderText = "Bill_ID";
-            this.billIDDataGridViewTextBoxColumn.Name = "billIDDataGridViewTextBoxColumn";
-            this.billIDDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // docDateDataGridViewTextBoxColumn
-            // 
-            this.docDateDataGridViewTextBoxColumn.DataPropertyName = "DocDate";
-            this.docDateDataGridViewTextBoxColumn.HeaderText = "DocDate";
-            this.docDateDataGridViewTextBoxColumn.Name = "docDateDataGridViewTextBoxColumn";
-            this.docDateDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // totalBillDataGridViewTextBoxColumn
-            // 
-            this.totalBillDataGridViewTextBoxColumn.DataPropertyName = "TotalBill";
-            this.totalBillDataGridViewTextBoxColumn.HeaderText = "TotalBill";
-            this.totalBillDataGridViewTextBoxColumn.Name = "totalBillDataGridViewTextBoxColumn";
-            this.totalBillDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // paidDataGridViewTextBoxColumn
-            // 
-            this.paidDataGridViewTextBoxColumn.DataPropertyName = "Paid";
-            this.paidDataGridViewTextBoxColumn.HeaderText = "Paid";
-            this.paidDataGridViewTextBoxColumn.Name = "paidDataGridViewTextBoxColumn";
-            this.paidDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // remainingDataGridViewTextBoxColumn
-            // 
-            this.remainingDataGridViewTextBoxColumn.DataPropertyName = "Remaining";
-            this.remainingDataGridViewTextBoxColumn.HeaderText = "Remaining";
-            this.remainingDataGridViewTextBoxColumn.Name = "remainingDataGridViewTextBoxColumn";
-            this.remainingDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // typeDataGridViewTextBoxColumn
-            // 
-            this.typeDataGridViewTextBoxColumn.DataPropertyName = "Type";
-            this.typeDataGridViewTextBoxColumn.HeaderText = "Type";
-            this.typeDataGridViewTextBoxColumn.Name = "typeDataGridViewTextBoxColumn";
-            this.typeDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // namesIDDataGridViewTextBoxColumn
-            // 
-            this.namesIDDataGridViewTextBoxColumn.DataPropertyName = "Names_ID";
-            this.namesIDDataGridViewTextBoxColumn.HeaderText = "Names_ID";
-            this.namesIDDataGridViewTextBoxColumn.Name = "namesIDDataGridViewTextBoxColumn";
-            this.namesIDDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // namesNameDataGridViewTextBoxColumn
-            // 
-            this.namesNameDataGridViewTextBoxColumn.DataPropertyName = "Names_Name";
-            this.namesNameDataGridViewTextBoxColumn.HeaderText = "Names_Name";
-            this.namesNameDataGridViewTextBoxColumn.Name = "namesNameDataGridViewTextBoxColumn";
-            this.namesNameDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // allBillsBindingSource
             // 
@@ -212,14 +149,68 @@
             // 
             this.namesTableAdapter.ClearBeforeFill = true;
             // 
+            // Column1
+            // 
+            this.Column1.DataPropertyName = "Bill_ID";
+            resources.ApplyResources(this.Column1, "Column1");
+            this.Column1.Name = "Column1";
+            this.Column1.ReadOnly = true;
+            // 
+            // Column6
+            // 
+            this.Column6.DataPropertyName = "Type";
+            resources.ApplyResources(this.Column6, "Column6");
+            this.Column6.Name = "Column6";
+            this.Column6.ReadOnly = true;
+            // 
+            // Column2
+            // 
+            this.Column2.DataPropertyName = "DocDate";
+            resources.ApplyResources(this.Column2, "Column2");
+            this.Column2.Name = "Column2";
+            this.Column2.ReadOnly = true;
+            // 
+            // Column3
+            // 
+            this.Column3.DataPropertyName = "TotalBill";
+            resources.ApplyResources(this.Column3, "Column3");
+            this.Column3.Name = "Column3";
+            this.Column3.ReadOnly = true;
+            // 
+            // Column4
+            // 
+            this.Column4.DataPropertyName = "Paid";
+            resources.ApplyResources(this.Column4, "Column4");
+            this.Column4.Name = "Column4";
+            this.Column4.ReadOnly = true;
+            // 
+            // Column5
+            // 
+            this.Column5.DataPropertyName = "Remaining";
+            resources.ApplyResources(this.Column5, "Column5");
+            this.Column5.Name = "Column5";
+            this.Column5.ReadOnly = true;
+            // 
+            // Column8
+            // 
+            this.Column8.DataPropertyName = "Names_Name";
+            resources.ApplyResources(this.Column8, "Column8");
+            this.Column8.Name = "Column8";
+            this.Column8.ReadOnly = true;
+            // 
+            // Column7
+            // 
+            this.Column7.DataPropertyName = "Names_ID";
+            resources.ApplyResources(this.Column7, "Column7");
+            this.Column7.Name = "Column7";
+            this.Column7.ReadOnly = true;
+            // 
             // ShowAllBills
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(833, 513);
             this.Controls.Add(this.groupBox1);
             this.Name = "ShowAllBills";
-            this.Text = "ShowAllBills";
             this.Load += new System.EventHandler(this.ShowAllBills_Load);
             this.groupBox1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
@@ -249,14 +240,14 @@
         private System.Windows.Forms.BindingSource purchasebillsreturnBindingSource;
         private System.Windows.Forms.BindingSource namesBindingSource;
         private storeDataSetTableAdapters.namesTableAdapter namesTableAdapter;
-        private System.Windows.Forms.DataGridViewTextBoxColumn billIDDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn docDateDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn totalBillDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn paidDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn remainingDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn typeDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn namesIDDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn namesNameDataGridViewTextBoxColumn;
         private System.Windows.Forms.BindingSource allBillsBindingSource;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column6;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column8;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column7;
     }
 }

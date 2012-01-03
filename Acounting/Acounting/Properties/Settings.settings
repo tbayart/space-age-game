@@ -10,5 +10,17 @@
 &lt;/SerializableConnectionString&gt;</DesignTimeValue>
       <Value Profile="(Default)">server=localhost;User Id=root;database=store;charset=utf8</Value>
     </Setting>
+    <Setting Name="type1" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">مبيعات</Value>
+    </Setting>
+    <Setting Name="type2" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">مرجع مبيعات</Value>
+    </Setting>
+    <Setting Name="type3" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">مشتريات</Value>
+    </Setting>
+    <Setting Name="type4" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">مرجع مشتريات</Value>
+    </Setting>
   </Settings>
 </SettingsFile>

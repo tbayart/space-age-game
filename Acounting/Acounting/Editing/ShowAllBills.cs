@@ -20,6 +20,7 @@ namespace Acounting
         {
             virtualtable = storeDataSet.AllBills.Clone();
             dataGridView1.DataSource = virtualtable;
+            
             this.namesTableAdapter.Fill(this.storeDataSet.names);
             this.purchasebillsreturnTableAdapter.Fill(this.storeDataSet.purchasebillsreturn);
             this.purchasebillsTableAdapter.Fill(this.storeDataSet.purchasebills);
@@ -41,7 +42,7 @@ namespace Acounting
                 int.TryParse(row["Names_ID"].ToString(),out id);
                 DataRow names = storeDataSet.names.FindByID(id);
                 row["Names_Name"] = names["Name"];
-                row["Type"] = 1;
+                row["Type"] = Properties.Settings.Default.type1;
                 virtualtable.Rows.Add(row);
             }
 
@@ -58,7 +59,7 @@ namespace Acounting
                 int.TryParse(row["Names_ID"].ToString(), out id);
                 DataRow names = storeDataSet.names.FindByID(id);
                 row["Names_Name"] = names["Name"];
-                row["Type"] = 2;
+                row["Type"] = Properties.Settings.Default.type2;
                 virtualtable.Rows.Add(row);
             }
 
@@ -75,7 +76,7 @@ namespace Acounting
                 int.TryParse(row["Names_ID"].ToString(), out id);
                 DataRow names = storeDataSet.names.FindByID(id);
                 row["Names_Name"] = names["Name"];
-                row["Type"] = 3;
+                row["Type"] = Properties.Settings.Default.type3;
                 virtualtable.Rows.Add(row);
             }
 
@@ -92,16 +93,14 @@ namespace Acounting
                 int.TryParse(row["Names_ID"].ToString(), out id);
                 DataRow names = storeDataSet.names.FindByID(id);
                 row["Names_Name"] = names["Name"];
-                row["Type"] = 4;
+                row["Type"] = Properties.Settings.Default.type4;
+                
                 virtualtable.Rows.Add(row);
             }
 
         }
 
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
+       
 
         private void dataGridView1_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
@@ -110,23 +109,32 @@ namespace Acounting
             double totalbill = 0;
             double paid;
             double remaining;
-            int type;
+            string type;
             int name_id;
             string name_name;
 
-            int.TryParse(dataGridView1.Rows[e.RowIndex].Cells[0].Value.ToString(), out billID);
+            if (e.RowIndex  < 0)
+            {
+                return;
+            }
+            if (int.TryParse(dataGridView1.Rows[e.RowIndex].Cells[0].Value.ToString(), out billID))
+            {
+                type = dataGridView1.Rows[e.RowIndex].Cells[1].Value.ToString();
 
-            DateTime.TryParse(dataGridView1.Rows[e.RowIndex].Cells[0].Value.ToString(),out date);
+                DateTime.TryParse(dataGridView1.Rows[e.RowIndex].Cells[2].Value.ToString(), out date);
 
-            double.TryParse(dataGridView1.Rows[e.RowIndex].Cells[2].Value.ToString(), out totalbill);
-            double.TryParse(dataGridView1.Rows[e.RowIndex].Cells[3].Value.ToString(), out paid);
-            double.TryParse(dataGridView1.Rows[e.RowIndex].Cells[4].Value.ToString(), out remaining);
-            int.TryParse(dataGridView1.Rows[e.RowIndex].Cells[5].Value.ToString(), out type);
-            int.TryParse(dataGridView1.Rows[e.RowIndex].Cells[6].Value.ToString(), out name_id);
-            name_name = dataGridView1.Rows[e.RowIndex].Cells[7].Value.ToString();
+                double.TryParse(dataGridView1.Rows[e.RowIndex].Cells[3].Value.ToString(), out totalbill);
+                double.TryParse(dataGridView1.Rows[e.RowIndex].Cells[4].Value.ToString(), out paid);
+                double.TryParse(dataGridView1.Rows[e.RowIndex].Cells[5].Value.ToString(), out remaining);
 
-            EditBills edit = new EditBills(billID, date, totalbill, paid, remaining, type, name_id, name_name);
-            edit.Show();
+                name_name = dataGridView1.Rows[e.RowIndex].Cells[6].Value.ToString();
+                int.TryParse(dataGridView1.Rows[e.RowIndex].Cells[7].Value.ToString(), out name_id);
+              
+
+                EditBills edit = new EditBills(billID, date, totalbill, paid, remaining, type, name_id, name_name);
+                edit.Show();
+            }
+          
         }
     }
 }
