@@ -231,7 +231,6 @@
             resources.ApplyResources(this.groupBox3, "groupBox3");
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.TabStop = false;
-            this.groupBox3.Enter += new System.EventHandler(this.groupBox3_Enter);
             // 
             // Txt_Remaining
             // 
@@ -286,7 +285,6 @@
             this.Cmb_AgentName.FormattingEnabled = true;
             resources.ApplyResources(this.Cmb_AgentName, "Cmb_AgentName");
             this.Cmb_AgentName.Name = "Cmb_AgentName";
-            this.Cmb_AgentName.SelectedIndexChanged += new System.EventHandler(this.Cmb_AgentName_SelectedIndexChanged);
             this.Cmb_AgentName.TextChanged += new System.EventHandler(this.Cmb_AgentName_TextChanged);
             // 
             // namesBindingSource
