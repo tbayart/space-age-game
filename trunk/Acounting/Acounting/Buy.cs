@@ -368,23 +368,8 @@ namespace Acounting
             }
         }
 
-        private void fillBy1ToolStripButton_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                this.namesTableAdapter.FillBy1(this.storeDataSet.names);
-            }
-            catch (System.Exception ex)
-            {
-                System.Windows.Forms.MessageBox.Show(ex.Message);
-            }
-
-        }
-
-        private void fillBy1ToolStrip_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
-        {
-
-        }
+     
+ 
 
  
 
