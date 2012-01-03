@@ -44,15 +44,17 @@
             this.namesTableAdapter = new Acounting.storeDataSetTableAdapters.namesTableAdapter();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.Txt_Remaining = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.Txt_TotalBill = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.Txt_Paid = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.Txt_BillID = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.label6 = new System.Windows.Forms.Label();
+            this.Txt_Name = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.allBillsBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.storeDataSet)).BeginInit();
@@ -132,12 +134,14 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.Txt_Name);
+            this.groupBox1.Controls.Add(this.label6);
             this.groupBox1.Controls.Add(this.label5);
-            this.groupBox1.Controls.Add(this.textBox3);
+            this.groupBox1.Controls.Add(this.Txt_Remaining);
             this.groupBox1.Controls.Add(this.label3);
-            this.groupBox1.Controls.Add(this.textBox2);
+            this.groupBox1.Controls.Add(this.Txt_TotalBill);
             this.groupBox1.Controls.Add(this.label2);
-            this.groupBox1.Controls.Add(this.textBox1);
+            this.groupBox1.Controls.Add(this.Txt_Paid);
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Controls.Add(this.Txt_BillID);
             this.groupBox1.Controls.Add(this.label4);
@@ -159,12 +163,12 @@
             this.label5.TabIndex = 11;
             this.label5.Text = "Remainning";
             // 
-            // textBox3
+            // Txt_Remaining
             // 
-            this.textBox3.Location = new System.Drawing.Point(487, 44);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(76, 20);
-            this.textBox3.TabIndex = 10;
+            this.Txt_Remaining.Location = new System.Drawing.Point(487, 44);
+            this.Txt_Remaining.Name = "Txt_Remaining";
+            this.Txt_Remaining.Size = new System.Drawing.Size(76, 20);
+            this.Txt_Remaining.TabIndex = 10;
             // 
             // label3
             // 
@@ -176,12 +180,12 @@
             this.label3.TabIndex = 7;
             this.label3.Text = "Total Bill";
             // 
-            // textBox2
+            // Txt_TotalBill
             // 
-            this.textBox2.Location = new System.Drawing.Point(282, 44);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(81, 20);
-            this.textBox2.TabIndex = 6;
+            this.Txt_TotalBill.Location = new System.Drawing.Point(282, 44);
+            this.Txt_TotalBill.Name = "Txt_TotalBill";
+            this.Txt_TotalBill.Size = new System.Drawing.Size(81, 20);
+            this.Txt_TotalBill.TabIndex = 6;
             // 
             // label2
             // 
@@ -193,12 +197,12 @@
             this.label2.TabIndex = 5;
             this.label2.Text = "Paid";
             // 
-            // textBox1
+            // Txt_Paid
             // 
-            this.textBox1.Location = new System.Drawing.Point(397, 44);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(76, 20);
-            this.textBox1.TabIndex = 4;
+            this.Txt_Paid.Location = new System.Drawing.Point(397, 44);
+            this.Txt_Paid.Name = "Txt_Paid";
+            this.Txt_Paid.Size = new System.Drawing.Size(76, 20);
+            this.Txt_Paid.TabIndex = 4;
             // 
             // label1
             // 
@@ -233,6 +237,22 @@
             this.dateTimePicker1.Name = "dateTimePicker1";
             this.dateTimePicker1.Size = new System.Drawing.Size(200, 20);
             this.dateTimePicker1.TabIndex = 8;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(592, 28);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(34, 13);
+            this.label6.TabIndex = 12;
+            this.label6.Text = "Name";
+            // 
+            // Txt_Name
+            // 
+            this.Txt_Name.Location = new System.Drawing.Point(595, 44);
+            this.Txt_Name.Name = "Txt_Name";
+            this.Txt_Name.Size = new System.Drawing.Size(76, 20);
+            this.Txt_Name.TabIndex = 13;
             // 
             // EditBills
             // 
@@ -277,12 +297,14 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox Txt_TotalBill;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox Txt_Paid;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox Txt_BillID;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox Txt_Remaining;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.TextBox Txt_Name;
     }
 }

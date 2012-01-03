@@ -31,6 +31,15 @@
             this.components = new System.ComponentModel.Container();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.billIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.docDateDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.totalBillDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.paidDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.remainingDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.typeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.namesIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.namesNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.allBillsBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.storeDataSet = new Acounting.storeDataSet();
             this.billsreturnTableAdapter = new Acounting.storeDataSetTableAdapters.billsreturnTableAdapter();
             this.purchasebillsreturnTableAdapter = new Acounting.storeDataSetTableAdapters.purchasebillsreturnTableAdapter();
@@ -42,24 +51,15 @@
             this.purchasebillsreturnBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.namesBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.namesTableAdapter = new Acounting.storeDataSetTableAdapters.namesTableAdapter();
-            this.allBillsBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.billIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.docDateDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.totalBillDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.paidDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.remainingDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.typeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.namesIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.namesNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.allBillsBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.storeDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.billsBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.billsreturnBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.purchasebillsBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.purchasebillsreturnBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.namesBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.allBillsBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox1
@@ -98,61 +98,8 @@
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.Size = new System.Drawing.Size(827, 494);
             this.dataGridView1.TabIndex = 0;
-            // 
-            // storeDataSet
-            // 
-            this.storeDataSet.DataSetName = "storeDataSet";
-            this.storeDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // billsreturnTableAdapter
-            // 
-            this.billsreturnTableAdapter.ClearBeforeFill = true;
-            // 
-            // purchasebillsreturnTableAdapter
-            // 
-            this.purchasebillsreturnTableAdapter.ClearBeforeFill = true;
-            // 
-            // billsBindingSource
-            // 
-            this.billsBindingSource.DataMember = "bills";
-            this.billsBindingSource.DataSource = this.storeDataSet;
-            // 
-            // billsTableAdapter
-            // 
-            this.billsTableAdapter.ClearBeforeFill = true;
-            // 
-            // billsreturnBindingSource
-            // 
-            this.billsreturnBindingSource.DataMember = "billsreturn";
-            this.billsreturnBindingSource.DataSource = this.storeDataSet;
-            // 
-            // purchasebillsBindingSource
-            // 
-            this.purchasebillsBindingSource.DataMember = "purchasebills";
-            this.purchasebillsBindingSource.DataSource = this.storeDataSet;
-            // 
-            // purchasebillsTableAdapter
-            // 
-            this.purchasebillsTableAdapter.ClearBeforeFill = true;
-            // 
-            // purchasebillsreturnBindingSource
-            // 
-            this.purchasebillsreturnBindingSource.DataMember = "purchasebillsreturn";
-            this.purchasebillsreturnBindingSource.DataSource = this.storeDataSet;
-            // 
-            // namesBindingSource
-            // 
-            this.namesBindingSource.DataMember = "names";
-            this.namesBindingSource.DataSource = this.storeDataSet;
-            // 
-            // namesTableAdapter
-            // 
-            this.namesTableAdapter.ClearBeforeFill = true;
-            // 
-            // allBillsBindingSource
-            // 
-            this.allBillsBindingSource.DataMember = "AllBills";
-            this.allBillsBindingSource.DataSource = this.storeDataSet;
+            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
+            this.dataGridView1.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellDoubleClick);
             // 
             // billIDDataGridViewTextBoxColumn
             // 
@@ -210,6 +157,61 @@
             this.namesNameDataGridViewTextBoxColumn.Name = "namesNameDataGridViewTextBoxColumn";
             this.namesNameDataGridViewTextBoxColumn.ReadOnly = true;
             // 
+            // allBillsBindingSource
+            // 
+            this.allBillsBindingSource.DataMember = "AllBills";
+            this.allBillsBindingSource.DataSource = this.storeDataSet;
+            // 
+            // storeDataSet
+            // 
+            this.storeDataSet.DataSetName = "storeDataSet";
+            this.storeDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // billsreturnTableAdapter
+            // 
+            this.billsreturnTableAdapter.ClearBeforeFill = true;
+            // 
+            // purchasebillsreturnTableAdapter
+            // 
+            this.purchasebillsreturnTableAdapter.ClearBeforeFill = true;
+            // 
+            // billsBindingSource
+            // 
+            this.billsBindingSource.DataMember = "bills";
+            this.billsBindingSource.DataSource = this.storeDataSet;
+            // 
+            // billsTableAdapter
+            // 
+            this.billsTableAdapter.ClearBeforeFill = true;
+            // 
+            // billsreturnBindingSource
+            // 
+            this.billsreturnBindingSource.DataMember = "billsreturn";
+            this.billsreturnBindingSource.DataSource = this.storeDataSet;
+            // 
+            // purchasebillsBindingSource
+            // 
+            this.purchasebillsBindingSource.DataMember = "purchasebills";
+            this.purchasebillsBindingSource.DataSource = this.storeDataSet;
+            // 
+            // purchasebillsTableAdapter
+            // 
+            this.purchasebillsTableAdapter.ClearBeforeFill = true;
+            // 
+            // purchasebillsreturnBindingSource
+            // 
+            this.purchasebillsreturnBindingSource.DataMember = "purchasebillsreturn";
+            this.purchasebillsreturnBindingSource.DataSource = this.storeDataSet;
+            // 
+            // namesBindingSource
+            // 
+            this.namesBindingSource.DataMember = "names";
+            this.namesBindingSource.DataSource = this.storeDataSet;
+            // 
+            // namesTableAdapter
+            // 
+            this.namesTableAdapter.ClearBeforeFill = true;
+            // 
             // ShowAllBills
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -221,13 +223,13 @@
             this.Load += new System.EventHandler(this.ShowAllBills_Load);
             this.groupBox1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.allBillsBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.storeDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.billsBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.billsreturnBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.purchasebillsBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.purchasebillsreturnBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.namesBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.allBillsBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
