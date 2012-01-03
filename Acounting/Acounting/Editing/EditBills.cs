@@ -12,6 +12,7 @@ namespace Acounting
     public partial class EditBills : Form
     {
 
+        #region statics
 
         int billID;
         DateTime date;
@@ -25,9 +26,8 @@ namespace Acounting
         string name_name;
 
         int selected_row = 0;
-
-
-        public EditBills(int billid,DateTime docdate,double totalbill,double paid,double remaining,string type,int names_id,string names_name)
+ 
+        public EditBills(int billid, DateTime docdate, double totalbill, double paid, double remaining, string type, int names_id, string names_name)
         {
             billID = billid;
             date = docdate;
@@ -40,38 +40,6 @@ namespace Acounting
             this.oldpaid = paid;
             this.oldremaining = remaining;
             InitializeComponent();
-        }
-
-        private void EditBills_Load(object sender, EventArgs e)
-        {
-            // TODO: This line of code loads data into the 'storeDataSet.salesitems' table. You can move, or remove it, as needed.
-            this.salesitemsTableAdapter.Fill(this.storeDataSet.salesitems);
-            this.vaultTableAdapter.Fill(this.storeDataSet.vault);          
-            this.itemsTableAdapter.Fill(this.storeDataSet.items);
-            this.namesTableAdapter.Fill(this.storeDataSet.names);
-            this.vaultTableAdapter.Fill(this.storeDataSet.vault);
-            this.purchasebillsTableAdapter.Fill(this.storeDataSet.purchasebills);
-            this.itemsTableAdapter.Fill(this.storeDataSet.items);
-            this.salesitemsTableAdapter.Fill(this.storeDataSet.salesitems);
-            this.billsTableAdapter.Fill(this.storeDataSet.bills);
-
-
-            Txt_BillID.Text = billID.ToString();
-            Txt_Paid.Text = paid.ToString();
-            Txt_Remaining.Text = remaining.ToString();
-            Txt_TotalBill.Text = totalbill.ToString();
-            Txt_Type.Text = type;
-
-            if (type == Properties.Settings.Default.type1)
-            {
-                dataGridView1.DataSource = salesitemsBindingSource;
-
-                salesitemsBindingSource.Filter = "Bills_BillID = '" + billID + "'";
-
-            }
-
-
-             
         }
 
         private void Cmb_ItemName_TextChanged(object sender, EventArgs e)
@@ -120,59 +88,6 @@ namespace Acounting
             }
         }
 
-
-
-        private void Btn_Update_Click(object sender, EventArgs e)
-        {
-            #region if type1
-            if (type == Properties.Settings.Default.type1)
-            {
-                int qty;
-                int sellprice;
-                int cost;
-                int itemid;
-                //sales items 
-                
-                
-
-                int.TryParse(Txt_ItemID.Text, out itemid);
-
-                DataRow itemrow = storeDataSet.items.FindByItemID(itemid);
-
-                int itemqty;
-                int.TryParse(itemrow["Qty"].ToString(), out itemqty);
-                int.TryParse(itemrow["Cost"].ToString(), out cost);
-
-                DataRow row = storeDataSet.salesitems.FindByID((uint)selected_row);
-
-                int.TryParse(row["Qty"].ToString(), out qty);
-
-                itemrow["Qty"] = itemqty + qty;
-
-                int newqty;
-                int.TryParse(Txt_Units.Text, out newqty);
-
-                int.TryParse(itemrow["Qty"].ToString(), out itemqty);
-
-                itemqty -=newqty;
-                itemrow["Qty"] = itemqty;
-                itemrow["TotalCost"] = itemqty * cost;
-
-                int.TryParse(Txt_Price.Text,out sellprice);
-                row["Qty"] = newqty;
-                row["SellPrice"] = sellprice; 
-                row["Cost"] = cost;
-                row["TotalPrice"] = sellprice * newqty;
-                row["Earnings"] = (sellprice - cost) * newqty;
-
-                Txt_ItemID_TextChanged(null, null);
-                UpdateTotalBill();
-            }
-            #endregion
-
-
-        }
-
         private void UpdateTotalBill()
         {
             totalbill = 0;
@@ -185,6 +100,127 @@ namespace Acounting
             }
             Txt_Paid_TextChanged(null, null);
         }
+
+        private void updatedataset1()
+        {
+            billsTableAdapter.Update(storeDataSet);
+            salesitemsTableAdapter.Update(storeDataSet);
+            itemsTableAdapter.Update(storeDataSet);
+            namesTableAdapter.Update(storeDataSet);
+            vaultTableAdapter.Update(storeDataSet);
+        }
+
+
+        #endregion
+      
+
+        private void EditBills_Load(object sender, EventArgs e)
+        {
+            // TODO: This line of code loads data into the 'storeDataSet.salesitems' table. You can move, or remove it, as needed.
+            this.salesitemsTableAdapter.Fill(this.storeDataSet.salesitems);
+            this.vaultTableAdapter.Fill(this.storeDataSet.vault);          
+            this.itemsTableAdapter.Fill(this.storeDataSet.items);
+            this.namesTableAdapter.Fill(this.storeDataSet.names);
+            this.vaultTableAdapter.Fill(this.storeDataSet.vault);
+            this.purchasebillsTableAdapter.Fill(this.storeDataSet.purchasebills);
+            this.itemsTableAdapter.Fill(this.storeDataSet.items);
+            this.salesitemsTableAdapter.Fill(this.storeDataSet.salesitems);
+            this.billsTableAdapter.Fill(this.storeDataSet.bills);
+
+
+            Txt_BillID.Text = billID.ToString();
+            Txt_Paid.Text = paid.ToString();
+            Txt_Remaining.Text = remaining.ToString();
+            Txt_TotalBill.Text = totalbill.ToString();
+            Txt_Type.Text = type;
+
+            if (type == Properties.Settings.Default.type1)
+            {
+                dataGridView1.DataSource = salesitemsBindingSource;
+
+                salesitemsBindingSource.Filter = "Bills_BillID = '" + billID + "'";
+
+            }
+
+
+             
+        }
+ 
+        private void Btn_Update_Click(object sender, EventArgs e)
+        {
+            errorProvider1.Clear();
+            try
+            {
+
+                #region if type1
+                if (type == Properties.Settings.Default.type1)
+                {
+                    int qty;
+                    int sellprice;
+                    int cost;
+                    int itemid;
+                    //sales items 
+
+                    int newqty;
+
+                    if (!int.TryParse(Txt_Units.Text, out newqty))
+                    {
+                        errorProvider1.SetError(Txt_Units, "Error With Sell Unit");
+                        return;
+                    }
+
+
+                    if (!int.TryParse(Txt_Price.Text, out sellprice))
+                    {
+                        errorProvider1.SetError(Txt_Price, "Error With Sell Price");
+                        return;
+                    }
+
+                    int.TryParse(Txt_ItemID.Text, out itemid);
+
+                    DataRow itemrow = storeDataSet.items.FindByItemID(itemid);
+                    DataRow row = storeDataSet.salesitems.FindByID((uint)selected_row);
+
+
+                    int itemqty;
+                    int.TryParse(itemrow["Qty"].ToString(), out itemqty);
+                    int.TryParse(itemrow["Cost"].ToString(), out cost);
+
+
+                    int.TryParse(row["Qty"].ToString(), out qty);
+
+                    itemrow["Qty"] = itemqty + qty;
+
+
+
+                    int.TryParse(itemrow["Qty"].ToString(), out itemqty);
+
+                    itemqty -= newqty;
+                    itemrow["Qty"] = itemqty;
+                    itemrow["TotalCost"] = itemqty * cost;
+
+
+                    row["Qty"] = newqty;
+                    row["SellPrice"] = sellprice;
+                    row["Cost"] = cost;
+                    row["TotalPrice"] = sellprice * newqty;
+                    row["Earnings"] = (sellprice - cost) * newqty;
+
+                    Txt_ItemID_TextChanged(null, null);
+                    UpdateTotalBill();
+                }
+                #endregion
+
+
+
+            }
+            catch (Exception ee)
+            {
+
+                errorProvider1.SetError(this, ee.Message);
+            }   
+        }
+
 
         private void Btn_Add_Click(object sender, EventArgs e)
         {
@@ -335,7 +371,7 @@ namespace Acounting
                     DataRow billrow = storeDataSet.bills.FindByBillID(billID);
 
                     billrow[0] = billID;
-                    billrow[1] = DateTime.Now;
+                    billrow[1] = date;
                     billrow[2] = totalbill;
                     billrow[3] = paid;
                     billrow[4] = remaining;
@@ -379,14 +415,7 @@ namespace Acounting
             #endregion
         }
 
-        private void updatedataset1()
-        {
-            billsTableAdapter.Update(storeDataSet);
-            salesitemsTableAdapter.Update(storeDataSet);
-            itemsTableAdapter.Update(storeDataSet);
-            namesTableAdapter.Update(storeDataSet);
-            vaultTableAdapter.Update(storeDataSet); 
-        }
+
 
         private void dataGridView1_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {

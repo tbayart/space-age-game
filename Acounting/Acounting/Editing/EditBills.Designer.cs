@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(EditBills));
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.allBillsBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.storeDataSet = new Acounting.storeDataSet();
@@ -98,14 +99,15 @@
             // 
             // dataGridView1
             // 
+            resources.ApplyResources(this.dataGridView1, "dataGridView1");
             this.dataGridView1.AllowUserToAddRows = false;
             this.dataGridView1.AllowUserToDeleteRows = false;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(15, 205);
+            this.errorProvider1.SetError(this.dataGridView1, resources.GetString("dataGridView1.Error"));
+            this.errorProvider1.SetIconAlignment(this.dataGridView1, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("dataGridView1.IconAlignment"))));
+            this.errorProvider1.SetIconPadding(this.dataGridView1, ((int)(resources.GetObject("dataGridView1.IconPadding"))));
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
-            this.dataGridView1.Size = new System.Drawing.Size(882, 344);
-            this.dataGridView1.TabIndex = 0;
             this.dataGridView1.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellDoubleClick);
             // 
             // allBillsBindingSource
@@ -165,6 +167,7 @@
             // 
             // groupBox1
             // 
+            resources.ApplyResources(this.groupBox1, "groupBox1");
             this.groupBox1.Controls.Add(this.Btn_Save);
             this.groupBox1.Controls.Add(this.label17);
             this.groupBox1.Controls.Add(this.Txt_Type);
@@ -178,132 +181,127 @@
             this.groupBox1.Controls.Add(this.Txt_BillID);
             this.groupBox1.Controls.Add(this.label4);
             this.groupBox1.Controls.Add(this.dateTimePicker1);
-            this.groupBox1.Location = new System.Drawing.Point(15, 15);
+            this.errorProvider1.SetError(this.groupBox1, resources.GetString("groupBox1.Error"));
+            this.errorProvider1.SetIconAlignment(this.groupBox1, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("groupBox1.IconAlignment"))));
+            this.errorProvider1.SetIconPadding(this.groupBox1, ((int)(resources.GetObject("groupBox1.IconPadding"))));
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(879, 92);
-            this.groupBox1.TabIndex = 1;
             this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Bill Details";
             // 
             // Btn_Save
             // 
-            this.Btn_Save.Location = new System.Drawing.Point(801, 19);
+            resources.ApplyResources(this.Btn_Save, "Btn_Save");
+            this.errorProvider1.SetError(this.Btn_Save, resources.GetString("Btn_Save.Error"));
+            this.errorProvider1.SetIconAlignment(this.Btn_Save, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("Btn_Save.IconAlignment"))));
+            this.errorProvider1.SetIconPadding(this.Btn_Save, ((int)(resources.GetObject("Btn_Save.IconPadding"))));
             this.Btn_Save.Name = "Btn_Save";
-            this.Btn_Save.Size = new System.Drawing.Size(72, 37);
-            this.Btn_Save.TabIndex = 14;
-            this.Btn_Save.Text = "Save";
             this.Btn_Save.UseVisualStyleBackColor = true;
             this.Btn_Save.Click += new System.EventHandler(this.Btn_Save_Click);
             // 
             // label17
             // 
-            this.label17.AutoSize = true;
-            this.label17.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label17.Location = new System.Drawing.Point(584, 28);
+            resources.ApplyResources(this.label17, "label17");
+            this.errorProvider1.SetError(this.label17, resources.GetString("label17.Error"));
+            this.errorProvider1.SetIconAlignment(this.label17, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("label17.IconAlignment"))));
+            this.errorProvider1.SetIconPadding(this.label17, ((int)(resources.GetObject("label17.IconPadding"))));
             this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(31, 13);
-            this.label17.TabIndex = 13;
-            this.label17.Text = "Type";
             // 
             // Txt_Type
             // 
-            this.Txt_Type.Location = new System.Drawing.Point(587, 43);
+            resources.ApplyResources(this.Txt_Type, "Txt_Type");
+            this.errorProvider1.SetError(this.Txt_Type, resources.GetString("Txt_Type.Error"));
+            this.errorProvider1.SetIconAlignment(this.Txt_Type, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("Txt_Type.IconAlignment"))));
+            this.errorProvider1.SetIconPadding(this.Txt_Type, ((int)(resources.GetObject("Txt_Type.IconPadding"))));
             this.Txt_Type.Name = "Txt_Type";
             this.Txt_Type.ReadOnly = true;
-            this.Txt_Type.Size = new System.Drawing.Size(100, 20);
-            this.Txt_Type.TabIndex = 12;
             // 
             // label5
             // 
-            this.label5.AutoSize = true;
-            this.label5.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label5.Location = new System.Drawing.Point(484, 28);
+            resources.ApplyResources(this.label5, "label5");
+            this.errorProvider1.SetError(this.label5, resources.GetString("label5.Error"));
+            this.errorProvider1.SetIconAlignment(this.label5, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("label5.IconAlignment"))));
+            this.errorProvider1.SetIconPadding(this.label5, ((int)(resources.GetObject("label5.IconPadding"))));
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(62, 13);
-            this.label5.TabIndex = 11;
-            this.label5.Text = "Remainning";
             // 
             // Txt_Remaining
             // 
-            this.Txt_Remaining.Location = new System.Drawing.Point(487, 44);
+            resources.ApplyResources(this.Txt_Remaining, "Txt_Remaining");
+            this.errorProvider1.SetError(this.Txt_Remaining, resources.GetString("Txt_Remaining.Error"));
+            this.errorProvider1.SetIconAlignment(this.Txt_Remaining, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("Txt_Remaining.IconAlignment"))));
+            this.errorProvider1.SetIconPadding(this.Txt_Remaining, ((int)(resources.GetObject("Txt_Remaining.IconPadding"))));
             this.Txt_Remaining.Name = "Txt_Remaining";
             this.Txt_Remaining.ReadOnly = true;
-            this.Txt_Remaining.Size = new System.Drawing.Size(76, 20);
-            this.Txt_Remaining.TabIndex = 10;
             // 
             // label3
             // 
-            this.label3.AutoSize = true;
-            this.label3.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label3.Location = new System.Drawing.Point(279, 28);
+            resources.ApplyResources(this.label3, "label3");
+            this.errorProvider1.SetError(this.label3, resources.GetString("label3.Error"));
+            this.errorProvider1.SetIconAlignment(this.label3, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("label3.IconAlignment"))));
+            this.errorProvider1.SetIconPadding(this.label3, ((int)(resources.GetObject("label3.IconPadding"))));
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(46, 13);
-            this.label3.TabIndex = 7;
-            this.label3.Text = "Total Bill";
             // 
             // Txt_TotalBill
             // 
-            this.Txt_TotalBill.Location = new System.Drawing.Point(282, 44);
+            resources.ApplyResources(this.Txt_TotalBill, "Txt_TotalBill");
+            this.errorProvider1.SetError(this.Txt_TotalBill, resources.GetString("Txt_TotalBill.Error"));
+            this.errorProvider1.SetIconAlignment(this.Txt_TotalBill, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("Txt_TotalBill.IconAlignment"))));
+            this.errorProvider1.SetIconPadding(this.Txt_TotalBill, ((int)(resources.GetObject("Txt_TotalBill.IconPadding"))));
             this.Txt_TotalBill.Name = "Txt_TotalBill";
             this.Txt_TotalBill.ReadOnly = true;
-            this.Txt_TotalBill.Size = new System.Drawing.Size(81, 20);
-            this.Txt_TotalBill.TabIndex = 6;
             // 
             // label2
             // 
-            this.label2.AutoSize = true;
-            this.label2.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label2.Location = new System.Drawing.Point(394, 28);
+            resources.ApplyResources(this.label2, "label2");
+            this.errorProvider1.SetError(this.label2, resources.GetString("label2.Error"));
+            this.errorProvider1.SetIconAlignment(this.label2, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("label2.IconAlignment"))));
+            this.errorProvider1.SetIconPadding(this.label2, ((int)(resources.GetObject("label2.IconPadding"))));
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(27, 13);
-            this.label2.TabIndex = 5;
-            this.label2.Text = "Paid";
             // 
             // Txt_Paid
             // 
-            this.Txt_Paid.Location = new System.Drawing.Point(397, 44);
+            resources.ApplyResources(this.Txt_Paid, "Txt_Paid");
+            this.errorProvider1.SetError(this.Txt_Paid, resources.GetString("Txt_Paid.Error"));
+            this.errorProvider1.SetIconAlignment(this.Txt_Paid, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("Txt_Paid.IconAlignment"))));
+            this.errorProvider1.SetIconPadding(this.Txt_Paid, ((int)(resources.GetObject("Txt_Paid.IconPadding"))));
             this.Txt_Paid.Name = "Txt_Paid";
-            this.Txt_Paid.Size = new System.Drawing.Size(76, 20);
-            this.Txt_Paid.TabIndex = 4;
             this.Txt_Paid.TextChanged += new System.EventHandler(this.Txt_Paid_TextChanged);
             // 
             // label1
             // 
-            this.label1.AutoSize = true;
-            this.label1.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label1.Location = new System.Drawing.Point(6, 28);
+            resources.ApplyResources(this.label1, "label1");
+            this.errorProvider1.SetError(this.label1, resources.GetString("label1.Error"));
+            this.errorProvider1.SetIconAlignment(this.label1, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("label1.IconAlignment"))));
+            this.errorProvider1.SetIconPadding(this.label1, ((int)(resources.GetObject("label1.IconPadding"))));
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(33, 13);
-            this.label1.TabIndex = 3;
-            this.label1.Text = "Bill ID";
             // 
             // Txt_BillID
             // 
-            this.Txt_BillID.Location = new System.Drawing.Point(9, 44);
+            resources.ApplyResources(this.Txt_BillID, "Txt_BillID");
+            this.errorProvider1.SetError(this.Txt_BillID, resources.GetString("Txt_BillID.Error"));
+            this.errorProvider1.SetIconAlignment(this.Txt_BillID, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("Txt_BillID.IconAlignment"))));
+            this.errorProvider1.SetIconPadding(this.Txt_BillID, ((int)(resources.GetObject("Txt_BillID.IconPadding"))));
             this.Txt_BillID.Name = "Txt_BillID";
             this.Txt_BillID.ReadOnly = true;
-            this.Txt_BillID.Size = new System.Drawing.Size(53, 20);
-            this.Txt_BillID.TabIndex = 2;
             // 
             // label4
             // 
-            this.label4.AutoSize = true;
-            this.label4.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label4.Location = new System.Drawing.Point(70, 28);
+            resources.ApplyResources(this.label4, "label4");
+            this.errorProvider1.SetError(this.label4, resources.GetString("label4.Error"));
+            this.errorProvider1.SetIconAlignment(this.label4, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("label4.IconAlignment"))));
+            this.errorProvider1.SetIconPadding(this.label4, ((int)(resources.GetObject("label4.IconPadding"))));
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(81, 13);
-            this.label4.TabIndex = 9;
-            this.label4.Text = "Document Date";
             // 
             // dateTimePicker1
             // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(73, 43);
+            resources.ApplyResources(this.dateTimePicker1, "dateTimePicker1");
+            this.errorProvider1.SetError(this.dateTimePicker1, resources.GetString("dateTimePicker1.Error"));
+            this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.errorProvider1.SetIconAlignment(this.dateTimePicker1, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("dateTimePicker1.IconAlignment"))));
+            this.errorProvider1.SetIconPadding(this.dateTimePicker1, ((int)(resources.GetObject("dateTimePicker1.IconPadding"))));
             this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(200, 20);
-            this.dateTimePicker1.TabIndex = 8;
             // 
             // groupBox2
             // 
+            resources.ApplyResources(this.groupBox2, "groupBox2");
             this.groupBox2.Controls.Add(this.Btn_Update);
             this.groupBox2.Controls.Add(this.Btn_Add);
             this.groupBox2.Controls.Add(this.Txt_RowID);
@@ -320,162 +318,153 @@
             this.groupBox2.Controls.Add(this.label10);
             this.groupBox2.Controls.Add(this.label12);
             this.groupBox2.Controls.Add(this.Cmb_ItemName);
-            this.groupBox2.Font = new System.Drawing.Font("Arial", 9.75F);
-            this.groupBox2.Location = new System.Drawing.Point(12, 113);
+            this.errorProvider1.SetError(this.groupBox2, resources.GetString("groupBox2.Error"));
+            this.errorProvider1.SetIconAlignment(this.groupBox2, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("groupBox2.IconAlignment"))));
+            this.errorProvider1.SetIconPadding(this.groupBox2, ((int)(resources.GetObject("groupBox2.IconPadding"))));
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(882, 86);
-            this.groupBox2.TabIndex = 13;
             this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "Item";
             // 
             // Btn_Update
             // 
-            this.Btn_Update.Location = new System.Drawing.Point(752, 38);
+            resources.ApplyResources(this.Btn_Update, "Btn_Update");
+            this.errorProvider1.SetError(this.Btn_Update, resources.GetString("Btn_Update.Error"));
+            this.errorProvider1.SetIconAlignment(this.Btn_Update, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("Btn_Update.IconAlignment"))));
+            this.errorProvider1.SetIconPadding(this.Btn_Update, ((int)(resources.GetObject("Btn_Update.IconPadding"))));
             this.Btn_Update.Name = "Btn_Update";
-            this.Btn_Update.Size = new System.Drawing.Size(75, 23);
-            this.Btn_Update.TabIndex = 19;
-            this.Btn_Update.Text = "Update";
             this.Btn_Update.UseVisualStyleBackColor = true;
             this.Btn_Update.Click += new System.EventHandler(this.Btn_Update_Click);
             // 
             // Btn_Add
             // 
-            this.Btn_Add.Location = new System.Drawing.Point(833, 38);
+            resources.ApplyResources(this.Btn_Add, "Btn_Add");
+            this.errorProvider1.SetError(this.Btn_Add, resources.GetString("Btn_Add.Error"));
+            this.errorProvider1.SetIconAlignment(this.Btn_Add, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("Btn_Add.IconAlignment"))));
+            this.errorProvider1.SetIconPadding(this.Btn_Add, ((int)(resources.GetObject("Btn_Add.IconPadding"))));
             this.Btn_Add.Name = "Btn_Add";
-            this.Btn_Add.Size = new System.Drawing.Size(31, 23);
-            this.Btn_Add.TabIndex = 18;
-            this.Btn_Add.Text = "+";
             this.Btn_Add.UseVisualStyleBackColor = true;
             this.Btn_Add.Click += new System.EventHandler(this.Btn_Add_Click);
             // 
             // Txt_RowID
             // 
-            this.Txt_RowID.Location = new System.Drawing.Point(207, 40);
+            resources.ApplyResources(this.Txt_RowID, "Txt_RowID");
+            this.errorProvider1.SetError(this.Txt_RowID, resources.GetString("Txt_RowID.Error"));
+            this.errorProvider1.SetIconAlignment(this.Txt_RowID, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("Txt_RowID.IconAlignment"))));
+            this.errorProvider1.SetIconPadding(this.Txt_RowID, ((int)(resources.GetObject("Txt_RowID.IconPadding"))));
             this.Txt_RowID.Name = "Txt_RowID";
             this.Txt_RowID.ReadOnly = true;
-            this.Txt_RowID.Size = new System.Drawing.Size(58, 22);
-            this.Txt_RowID.TabIndex = 17;
             // 
             // label18
             // 
-            this.label18.AutoSize = true;
-            this.label18.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label18.Location = new System.Drawing.Point(204, 21);
+            resources.ApplyResources(this.label18, "label18");
+            this.errorProvider1.SetError(this.label18, resources.GetString("label18.Error"));
+            this.errorProvider1.SetIconAlignment(this.label18, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("label18.IconAlignment"))));
+            this.errorProvider1.SetIconPadding(this.label18, ((int)(resources.GetObject("label18.IconPadding"))));
             this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(49, 16);
-            this.label18.TabIndex = 16;
-            this.label18.Text = "Row ID";
             // 
             // Txt_Cost
             // 
-            this.Txt_Cost.Location = new System.Drawing.Point(442, 40);
+            resources.ApplyResources(this.Txt_Cost, "Txt_Cost");
+            this.errorProvider1.SetError(this.Txt_Cost, resources.GetString("Txt_Cost.Error"));
+            this.errorProvider1.SetIconAlignment(this.Txt_Cost, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("Txt_Cost.IconAlignment"))));
+            this.errorProvider1.SetIconPadding(this.Txt_Cost, ((int)(resources.GetObject("Txt_Cost.IconPadding"))));
             this.Txt_Cost.Name = "Txt_Cost";
             this.Txt_Cost.ReadOnly = true;
-            this.Txt_Cost.Size = new System.Drawing.Size(53, 22);
-            this.Txt_Cost.TabIndex = 15;
             // 
             // label11
             // 
-            this.label11.AutoSize = true;
-            this.label11.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label11.Location = new System.Drawing.Point(439, 21);
+            resources.ApplyResources(this.label11, "label11");
+            this.errorProvider1.SetError(this.label11, resources.GetString("label11.Error"));
+            this.errorProvider1.SetIconAlignment(this.label11, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("label11.IconAlignment"))));
+            this.errorProvider1.SetIconPadding(this.label11, ((int)(resources.GetObject("label11.IconPadding"))));
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(35, 16);
-            this.label11.TabIndex = 14;
-            this.label11.Text = "Cost";
             // 
             // Txt_ItemID
             // 
-            this.Txt_ItemID.Location = new System.Drawing.Point(282, 40);
+            resources.ApplyResources(this.Txt_ItemID, "Txt_ItemID");
+            this.errorProvider1.SetError(this.Txt_ItemID, resources.GetString("Txt_ItemID.Error"));
+            this.errorProvider1.SetIconAlignment(this.Txt_ItemID, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("Txt_ItemID.IconAlignment"))));
+            this.errorProvider1.SetIconPadding(this.Txt_ItemID, ((int)(resources.GetObject("Txt_ItemID.IconPadding"))));
             this.Txt_ItemID.Name = "Txt_ItemID";
             this.Txt_ItemID.ReadOnly = true;
-            this.Txt_ItemID.Size = new System.Drawing.Size(58, 22);
-            this.Txt_ItemID.TabIndex = 13;
             this.Txt_ItemID.TextChanged += new System.EventHandler(this.Txt_ItemID_TextChanged);
             // 
             // label8
             // 
-            this.label8.AutoSize = true;
-            this.label8.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label8.Location = new System.Drawing.Point(279, 21);
+            resources.ApplyResources(this.label8, "label8");
+            this.errorProvider1.SetError(this.label8, resources.GetString("label8.Error"));
+            this.errorProvider1.SetIconAlignment(this.label8, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("label8.IconAlignment"))));
+            this.errorProvider1.SetIconPadding(this.label8, ((int)(resources.GetObject("label8.IconPadding"))));
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(49, 16);
-            this.label8.TabIndex = 12;
-            this.label8.Text = "Item ID";
             // 
             // Txt_InStock
             // 
-            this.Txt_InStock.Location = new System.Drawing.Point(360, 40);
+            resources.ApplyResources(this.Txt_InStock, "Txt_InStock");
+            this.errorProvider1.SetError(this.Txt_InStock, resources.GetString("Txt_InStock.Error"));
+            this.errorProvider1.SetIconAlignment(this.Txt_InStock, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("Txt_InStock.IconAlignment"))));
+            this.errorProvider1.SetIconPadding(this.Txt_InStock, ((int)(resources.GetObject("Txt_InStock.IconPadding"))));
             this.Txt_InStock.Name = "Txt_InStock";
             this.Txt_InStock.ReadOnly = true;
-            this.Txt_InStock.Size = new System.Drawing.Size(62, 22);
-            this.Txt_InStock.TabIndex = 11;
             // 
             // label7
             // 
-            this.label7.AutoSize = true;
-            this.label7.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label7.Location = new System.Drawing.Point(357, 21);
+            resources.ApplyResources(this.label7, "label7");
+            this.errorProvider1.SetError(this.label7, resources.GetString("label7.Error"));
+            this.errorProvider1.SetIconAlignment(this.label7, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("label7.IconAlignment"))));
+            this.errorProvider1.SetIconPadding(this.label7, ((int)(resources.GetObject("label7.IconPadding"))));
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(56, 16);
-            this.label7.TabIndex = 10;
-            this.label7.Text = "In Stock";
             // 
             // Txt_Price
             // 
-            this.Txt_Price.Location = new System.Drawing.Point(608, 40);
+            resources.ApplyResources(this.Txt_Price, "Txt_Price");
+            this.errorProvider1.SetError(this.Txt_Price, resources.GetString("Txt_Price.Error"));
+            this.errorProvider1.SetIconAlignment(this.Txt_Price, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("Txt_Price.IconAlignment"))));
+            this.errorProvider1.SetIconPadding(this.Txt_Price, ((int)(resources.GetObject("Txt_Price.IconPadding"))));
             this.Txt_Price.Name = "Txt_Price";
-            this.Txt_Price.Size = new System.Drawing.Size(61, 22);
-            this.Txt_Price.TabIndex = 3;
             // 
             // label9
             // 
-            this.label9.AutoSize = true;
-            this.label9.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label9.Location = new System.Drawing.Point(605, 21);
+            resources.ApplyResources(this.label9, "label9");
+            this.errorProvider1.SetError(this.label9, resources.GetString("label9.Error"));
+            this.errorProvider1.SetIconAlignment(this.label9, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("label9.IconAlignment"))));
+            this.errorProvider1.SetIconPadding(this.label9, ((int)(resources.GetObject("label9.IconPadding"))));
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(38, 16);
-            this.label9.TabIndex = 8;
-            this.label9.Text = "Price";
             // 
             // Txt_Units
             // 
-            this.Txt_Units.Location = new System.Drawing.Point(520, 40);
+            resources.ApplyResources(this.Txt_Units, "Txt_Units");
+            this.errorProvider1.SetError(this.Txt_Units, resources.GetString("Txt_Units.Error"));
+            this.errorProvider1.SetIconAlignment(this.Txt_Units, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("Txt_Units.IconAlignment"))));
+            this.errorProvider1.SetIconPadding(this.Txt_Units, ((int)(resources.GetObject("Txt_Units.IconPadding"))));
             this.Txt_Units.Name = "Txt_Units";
-            this.Txt_Units.Size = new System.Drawing.Size(62, 22);
-            this.Txt_Units.TabIndex = 2;
             // 
             // label10
             // 
-            this.label10.AutoSize = true;
-            this.label10.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label10.Location = new System.Drawing.Point(517, 21);
+            resources.ApplyResources(this.label10, "label10");
+            this.errorProvider1.SetError(this.label10, resources.GetString("label10.Error"));
+            this.errorProvider1.SetIconAlignment(this.label10, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("label10.IconAlignment"))));
+            this.errorProvider1.SetIconPadding(this.label10, ((int)(resources.GetObject("label10.IconPadding"))));
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(38, 16);
-            this.label10.TabIndex = 6;
-            this.label10.Text = "Units";
             // 
             // label12
             // 
-            this.label12.AutoSize = true;
-            this.label12.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label12.Location = new System.Drawing.Point(9, 21);
+            resources.ApplyResources(this.label12, "label12");
+            this.errorProvider1.SetError(this.label12, resources.GetString("label12.Error"));
+            this.errorProvider1.SetIconAlignment(this.label12, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("label12.IconAlignment"))));
+            this.errorProvider1.SetIconPadding(this.label12, ((int)(resources.GetObject("label12.IconPadding"))));
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(71, 16);
-            this.label12.TabIndex = 5;
-            this.label12.Text = "Item Name";
             // 
             // Cmb_ItemName
             // 
+            resources.ApplyResources(this.Cmb_ItemName, "Cmb_ItemName");
             this.Cmb_ItemName.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
             this.Cmb_ItemName.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
             this.Cmb_ItemName.DataSource = this.itemsBindingSource;
             this.Cmb_ItemName.DisplayMember = "ItemName";
+            this.errorProvider1.SetError(this.Cmb_ItemName, resources.GetString("Cmb_ItemName.Error"));
             this.Cmb_ItemName.FormattingEnabled = true;
-            this.Cmb_ItemName.Location = new System.Drawing.Point(12, 38);
+            this.errorProvider1.SetIconAlignment(this.Cmb_ItemName, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("Cmb_ItemName.IconAlignment"))));
+            this.errorProvider1.SetIconPadding(this.Cmb_ItemName, ((int)(resources.GetObject("Cmb_ItemName.IconPadding"))));
             this.Cmb_ItemName.Name = "Cmb_ItemName";
-            this.Cmb_ItemName.Size = new System.Drawing.Size(178, 24);
-            this.Cmb_ItemName.TabIndex = 1;
             this.Cmb_ItemName.ValueMember = "ItemName";
             this.Cmb_ItemName.TextChanged += new System.EventHandler(this.Cmb_ItemName_TextChanged);
             // 
@@ -500,6 +489,7 @@
             // errorProvider1
             // 
             this.errorProvider1.ContainerControl = this;
+            resources.ApplyResources(this.errorProvider1, "errorProvider1");
             // 
             // salesitemsBindingSource
             // 
@@ -512,14 +502,12 @@
             // 
             // EditBills
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(906, 561);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.dataGridView1);
             this.Name = "EditBills";
-            this.Text = "EditBills";
             this.Load += new System.EventHandler(this.EditBills_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.allBillsBindingSource)).EndInit();

@@ -216,6 +216,9 @@
     <Compile Include="Vault.Designer.cs">
       <DependentUpon>Vault.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Editing\EditBills.ar.resx">
+      <DependentUpon>EditBills.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Editing\EditBills.resx">
       <DependentUpon>EditBills.cs</DependentUpon>
     </EmbeddedResource>
