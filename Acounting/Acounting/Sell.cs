@@ -357,12 +357,7 @@ namespace Acounting
             
         }
 
-       
-
-        private void groupBox3_Enter(object sender, EventArgs e)
-        {
-
-        }
+  
 
         private void Txt_Paid_TextChanged(object sender, EventArgs e)
         {
@@ -377,11 +372,7 @@ namespace Acounting
             remaining = totalbill - billpaid;
             Txt_Remaining.Text = remaining.ToString();
         }
-
-        private void Cmb_AgentName_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
+ 
 
         private void fillBy3ToolStripButton_Click(object sender, EventArgs e)
         {

@@ -43,6 +43,7 @@
             this.namesBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.namesTableAdapter = new Acounting.storeDataSetTableAdapters.namesTableAdapter();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.Btn_Save = new System.Windows.Forms.Button();
             this.label17 = new System.Windows.Forms.Label();
             this.Txt_Type = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
@@ -56,6 +57,8 @@
             this.label4 = new System.Windows.Forms.Label();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.Btn_Update = new System.Windows.Forms.Button();
+            this.Btn_Add = new System.Windows.Forms.Button();
             this.Txt_RowID = new System.Windows.Forms.TextBox();
             this.label18 = new System.Windows.Forms.Label();
             this.Txt_Cost = new System.Windows.Forms.TextBox();
@@ -77,9 +80,6 @@
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             this.salesitemsBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.salesitemsTableAdapter = new Acounting.storeDataSetTableAdapters.salesitemsTableAdapter();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.allBillsBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.storeDataSet)).BeginInit();
@@ -165,7 +165,7 @@
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.button1);
+            this.groupBox1.Controls.Add(this.Btn_Save);
             this.groupBox1.Controls.Add(this.label17);
             this.groupBox1.Controls.Add(this.Txt_Type);
             this.groupBox1.Controls.Add(this.label5);
@@ -185,6 +185,16 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Bill Details";
             // 
+            // Btn_Save
+            // 
+            this.Btn_Save.Location = new System.Drawing.Point(801, 19);
+            this.Btn_Save.Name = "Btn_Save";
+            this.Btn_Save.Size = new System.Drawing.Size(72, 37);
+            this.Btn_Save.TabIndex = 14;
+            this.Btn_Save.Text = "Save";
+            this.Btn_Save.UseVisualStyleBackColor = true;
+            this.Btn_Save.Click += new System.EventHandler(this.Btn_Save_Click);
+            // 
             // label17
             // 
             this.label17.AutoSize = true;
@@ -199,6 +209,7 @@
             // 
             this.Txt_Type.Location = new System.Drawing.Point(587, 43);
             this.Txt_Type.Name = "Txt_Type";
+            this.Txt_Type.ReadOnly = true;
             this.Txt_Type.Size = new System.Drawing.Size(100, 20);
             this.Txt_Type.TabIndex = 12;
             // 
@@ -216,6 +227,7 @@
             // 
             this.Txt_Remaining.Location = new System.Drawing.Point(487, 44);
             this.Txt_Remaining.Name = "Txt_Remaining";
+            this.Txt_Remaining.ReadOnly = true;
             this.Txt_Remaining.Size = new System.Drawing.Size(76, 20);
             this.Txt_Remaining.TabIndex = 10;
             // 
@@ -233,6 +245,7 @@
             // 
             this.Txt_TotalBill.Location = new System.Drawing.Point(282, 44);
             this.Txt_TotalBill.Name = "Txt_TotalBill";
+            this.Txt_TotalBill.ReadOnly = true;
             this.Txt_TotalBill.Size = new System.Drawing.Size(81, 20);
             this.Txt_TotalBill.TabIndex = 6;
             // 
@@ -252,6 +265,7 @@
             this.Txt_Paid.Name = "Txt_Paid";
             this.Txt_Paid.Size = new System.Drawing.Size(76, 20);
             this.Txt_Paid.TabIndex = 4;
+            this.Txt_Paid.TextChanged += new System.EventHandler(this.Txt_Paid_TextChanged);
             // 
             // label1
             // 
@@ -267,6 +281,7 @@
             // 
             this.Txt_BillID.Location = new System.Drawing.Point(9, 44);
             this.Txt_BillID.Name = "Txt_BillID";
+            this.Txt_BillID.ReadOnly = true;
             this.Txt_BillID.Size = new System.Drawing.Size(53, 20);
             this.Txt_BillID.TabIndex = 2;
             // 
@@ -289,8 +304,8 @@
             // 
             // groupBox2
             // 
-            this.groupBox2.Controls.Add(this.button3);
-            this.groupBox2.Controls.Add(this.button2);
+            this.groupBox2.Controls.Add(this.Btn_Update);
+            this.groupBox2.Controls.Add(this.Btn_Add);
             this.groupBox2.Controls.Add(this.Txt_RowID);
             this.groupBox2.Controls.Add(this.label18);
             this.groupBox2.Controls.Add(this.Txt_Cost);
@@ -312,6 +327,26 @@
             this.groupBox2.TabIndex = 13;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Item";
+            // 
+            // Btn_Update
+            // 
+            this.Btn_Update.Location = new System.Drawing.Point(752, 38);
+            this.Btn_Update.Name = "Btn_Update";
+            this.Btn_Update.Size = new System.Drawing.Size(75, 23);
+            this.Btn_Update.TabIndex = 19;
+            this.Btn_Update.Text = "Update";
+            this.Btn_Update.UseVisualStyleBackColor = true;
+            this.Btn_Update.Click += new System.EventHandler(this.Btn_Update_Click);
+            // 
+            // Btn_Add
+            // 
+            this.Btn_Add.Location = new System.Drawing.Point(833, 38);
+            this.Btn_Add.Name = "Btn_Add";
+            this.Btn_Add.Size = new System.Drawing.Size(31, 23);
+            this.Btn_Add.TabIndex = 18;
+            this.Btn_Add.Text = "+";
+            this.Btn_Add.UseVisualStyleBackColor = true;
+            this.Btn_Add.Click += new System.EventHandler(this.Btn_Add_Click);
             // 
             // Txt_RowID
             // 
@@ -475,34 +510,6 @@
             // 
             this.salesitemsTableAdapter.ClearBeforeFill = true;
             // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(801, 19);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(72, 37);
-            this.button1.TabIndex = 14;
-            this.button1.Text = "Save";
-            this.button1.UseVisualStyleBackColor = true;
-            // 
-            // button2
-            // 
-            this.button2.Location = new System.Drawing.Point(833, 38);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(31, 23);
-            this.button2.TabIndex = 18;
-            this.button2.Text = "+";
-            this.button2.UseVisualStyleBackColor = true;
-            // 
-            // button3
-            // 
-            this.button3.Location = new System.Drawing.Point(752, 38);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(75, 23);
-            this.button3.TabIndex = 19;
-            this.button3.Text = "Update";
-            this.button3.UseVisualStyleBackColor = true;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
-            // 
             // EditBills
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -584,8 +591,8 @@
         private System.Windows.Forms.TextBox Txt_Type;
         private System.Windows.Forms.TextBox Txt_RowID;
         private System.Windows.Forms.Label label18;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button Btn_Save;
+        private System.Windows.Forms.Button Btn_Update;
+        private System.Windows.Forms.Button Btn_Add;
     }
 }
