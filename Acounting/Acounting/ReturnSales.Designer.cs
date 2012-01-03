@@ -177,6 +177,7 @@
             this.errorProvider1.SetIconPadding(this.Txt_Remaining, ((int)(resources.GetObject("Txt_Remaining.IconPadding"))));
             this.Txt_Remaining.Name = "Txt_Remaining";
             this.Txt_Remaining.ReadOnly = true;
+            this.Txt_Remaining.TextChanged += new System.EventHandler(this.Txt_Remaining_TextChanged);
             // 
             // groupBox3
             // 

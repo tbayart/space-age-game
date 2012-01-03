@@ -20,6 +20,16 @@ namespace Acounting
 
         private void Vault_Load(object sender, EventArgs e)
         {
+            // TODO: This line of code loads data into the 'storeDataSet.TotalEarnings' table. You can move, or remove it, as needed.
+            this.totalEarningsTableAdapter.Fill(this.storeDataSet.TotalEarnings);
+            // TODO: This line of code loads data into the 'storeDataSet.TotalBillsReturn' table. You can move, or remove it, as needed.
+            this.totalBillsReturnTableAdapter.Fill(this.storeDataSet.TotalBillsReturn);
+            // TODO: This line of code loads data into the 'storeDataSet.TotalBills' table. You can move, or remove it, as needed.
+            this.totalBillsTableAdapter.Fill(this.storeDataSet.TotalBills);
+            // TODO: This line of code loads data into the 'storeDataSet.TotalPurchasesReturn' table. You can move, or remove it, as needed.
+            this.totalPurchasesReturnTableAdapter.Fill(this.storeDataSet.TotalPurchasesReturn);
+            // TODO: This line of code loads data into the 'storeDataSet.TotalPurchase' table. You can move, or remove it, as needed.
+            this.totalPurchaseTableAdapter.Fill(this.storeDataSet.TotalPurchase);
             // TODO: This line of code loads data into the 'storeDataSet.paid' table. You can move, or remove it, as needed.
             this.paidTableAdapter.Fill(this.storeDataSet.paid);
             // TODO: This line of code loads data into the 'storeDataSet.collected' table. You can move, or remove it, as needed.
@@ -56,6 +66,19 @@ namespace Acounting
                 }
             }
 
+            int totalbills, totalbillsreturn, totalpurchasebills, totalpurchasebillsreturn;
+            int.TryParse(Txt_totalbills.Text, out totalbills);
+            int.TryParse(Txt_totalbillsreturn.Text, out totalbillsreturn);
+            int.TryParse(Txt_totalpurchasebills.Text, out totalpurchasebills);
+            int.TryParse(Txt_totalpurchasebillsreturn.Text, out totalpurchasebillsreturn);
+
+            int netbills = totalbills - totalbillsreturn;
+            int netpurchasebills = totalpurchasebills - totalpurchasebillsreturn;
+
+
+            Txt_Nettotalbills.Text = netbills.ToString();
+
+            Txt_Nettotalpurchasebills.Text = netpurchasebills.ToString();
 
         }
 

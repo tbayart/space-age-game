@@ -243,7 +243,7 @@ namespace Acounting
 
             //  update parameters for bill
 
-            remaining = billpaid - totalbill ;
+            remaining = billpaid - totalbill;
 
             Txt_TotalBill.Text = totalbill.ToString();
             Txt_Remaining.Text = remaining.ToString();
