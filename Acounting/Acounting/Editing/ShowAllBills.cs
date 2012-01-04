@@ -11,8 +11,10 @@ namespace Acounting
 {
     public partial class ShowAllBills : Form
     {
-        public ShowAllBills()
+        Form main;
+        public ShowAllBills(Form Main)
         {
+            this.main = Main;
             InitializeComponent();
         }
         DataTable virtualtable;
@@ -132,6 +134,7 @@ namespace Acounting
               
 
                 EditBills edit = new EditBills(billID, date, totalbill, paid, remaining, type, name_id, name_name);
+                edit.MdiParent = main;
                 edit.Show();
             }
           

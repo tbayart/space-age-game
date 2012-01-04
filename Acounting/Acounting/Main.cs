@@ -266,7 +266,7 @@ namespace Acounting
 
         private void showAllBillsToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            ShowAllBills showall = new ShowAllBills();
+            ShowAllBills showall = new ShowAllBills(this);
             showall.MdiParent = this;
             showall.Show();
         }

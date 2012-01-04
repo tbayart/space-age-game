@@ -47,6 +47,7 @@
             this.vaultToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.returnBuyToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.returnSaleToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.showAllBillsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.reportsToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.agentDebtToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.كشفموردToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -61,7 +62,6 @@
             this.vaultTableAdapter = new Acounting.storeDataSetTableAdapters.vaultTableAdapter();
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
-            this.showAllBillsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.itemsBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.storeDataSet)).BeginInit();
             this.menuStrip1.SuspendLayout();
@@ -189,6 +189,12 @@
             this.returnSaleToolStripMenuItem.Name = "returnSaleToolStripMenuItem";
             this.returnSaleToolStripMenuItem.Click += new System.EventHandler(this.returnSaleToolStripMenuItem_Click);
             // 
+            // showAllBillsToolStripMenuItem
+            // 
+            resources.ApplyResources(this.showAllBillsToolStripMenuItem, "showAllBillsToolStripMenuItem");
+            this.showAllBillsToolStripMenuItem.Name = "showAllBillsToolStripMenuItem";
+            this.showAllBillsToolStripMenuItem.Click += new System.EventHandler(this.showAllBillsToolStripMenuItem_Click);
+            // 
             // reportsToolStripMenuItem1
             // 
             resources.ApplyResources(this.reportsToolStripMenuItem1, "reportsToolStripMenuItem1");
@@ -267,12 +273,6 @@
             // openFileDialog1
             // 
             resources.ApplyResources(this.openFileDialog1, "openFileDialog1");
-            // 
-            // showAllBillsToolStripMenuItem
-            // 
-            resources.ApplyResources(this.showAllBillsToolStripMenuItem, "showAllBillsToolStripMenuItem");
-            this.showAllBillsToolStripMenuItem.Name = "showAllBillsToolStripMenuItem";
-            this.showAllBillsToolStripMenuItem.Click += new System.EventHandler(this.showAllBillsToolStripMenuItem_Click);
             // 
             // Main
             // 

@@ -208,6 +208,9 @@
   <data name="Cmb_ItemName.Location" type="System.Drawing.Point, System.Drawing">
     <value>689, 38</value>
   </data>
+  <data name="groupBox2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>885, 86</value>
+  </data>
   <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="label6.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -317,6 +320,9 @@
   </data>
   <data name="dateTimePicker1.Size" type="System.Drawing.Size, System.Drawing">
     <value>110, 20</value>
+  </data>
+  <data name="groupBox1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>882, 92</value>
   </data>
   <data name="groupBox1.Text" xml:space="preserve">
     <value>الفاتورة</value>
