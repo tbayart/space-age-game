@@ -81,6 +81,10 @@
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             this.salesitemsBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.salesitemsTableAdapter = new Acounting.storeDataSetTableAdapters.salesitemsTableAdapter();
+            this.salesitemsreturnBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.salesitemsreturnTableAdapter = new Acounting.storeDataSetTableAdapters.salesitemsreturnTableAdapter();
+            this.purchasesitemsBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.purchasesitemsTableAdapter = new Acounting.storeDataSetTableAdapters.purchasesitemsTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.allBillsBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.storeDataSet)).BeginInit();
@@ -95,6 +99,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.vaultBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.salesitemsBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.salesitemsreturnBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.purchasesitemsBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // dataGridView1
@@ -500,6 +506,24 @@
             // 
             this.salesitemsTableAdapter.ClearBeforeFill = true;
             // 
+            // salesitemsreturnBindingSource
+            // 
+            this.salesitemsreturnBindingSource.DataMember = "salesitemsreturn";
+            this.salesitemsreturnBindingSource.DataSource = this.storeDataSet;
+            // 
+            // salesitemsreturnTableAdapter
+            // 
+            this.salesitemsreturnTableAdapter.ClearBeforeFill = true;
+            // 
+            // purchasesitemsBindingSource
+            // 
+            this.purchasesitemsBindingSource.DataMember = "purchasesitems";
+            this.purchasesitemsBindingSource.DataSource = this.storeDataSet;
+            // 
+            // purchasesitemsTableAdapter
+            // 
+            this.purchasesitemsTableAdapter.ClearBeforeFill = true;
+            // 
             // EditBills
             // 
             resources.ApplyResources(this, "$this");
@@ -525,6 +549,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.vaultBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.salesitemsBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.salesitemsreturnBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.purchasesitemsBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -582,5 +608,9 @@
         private System.Windows.Forms.Button Btn_Save;
         private System.Windows.Forms.Button Btn_Update;
         private System.Windows.Forms.Button Btn_Add;
+        private System.Windows.Forms.BindingSource salesitemsreturnBindingSource;
+        private storeDataSetTableAdapters.salesitemsreturnTableAdapter salesitemsreturnTableAdapter;
+        private System.Windows.Forms.BindingSource purchasesitemsBindingSource;
+        private storeDataSetTableAdapters.purchasesitemsTableAdapter purchasesitemsTableAdapter;
     }
 }
