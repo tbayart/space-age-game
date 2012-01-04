@@ -279,7 +279,7 @@ namespace Acounting
         private void button2_Click(object sender, EventArgs e)
         {
 
-            {
+            
                 //show dialoge 
 
                 DialogResult result = MessageBox.Show("Do you want to save ?", "Accounting", MessageBoxButtons.YesNo);
@@ -356,7 +356,7 @@ namespace Acounting
                     reset_back();
                 }
 
-            }
+            
         }
 
    

@@ -158,29 +158,33 @@ namespace Acounting
 
         private void EditBills_Load(object sender, EventArgs e)
         {
-            // TODO: This line of code loads data into the 'storeDataSet.purchasesitemsreturn' table. You can move, or remove it, as needed.
-            this.purchasesitemsreturnTableAdapter.Fill(this.storeDataSet.purchasesitemsreturn);
-            // TODO: This line of code loads data into the 'storeDataSet.purchasesitems' table. You can move, or remove it, as needed.
-            this.purchasesitemsTableAdapter.Fill(this.storeDataSet.purchasesitems);
-            // TODO: This line of code loads data into the 'storeDataSet.salesitemsreturn' table. You can move, or remove it, as needed.
-            this.salesitemsreturnTableAdapter.Fill(this.storeDataSet.salesitemsreturn);
-            // TODO: This line of code loads data into the 'storeDataSet.salesitems' table. You can move, or remove it, as needed.
+            this.billsTableAdapter.Fill(this.storeDataSet.bills);
             this.salesitemsTableAdapter.Fill(this.storeDataSet.salesitems);
+
+
+            this.billsreturnTableAdapter.Fill(this.storeDataSet.billsreturn);
+            this.salesitemsreturnTableAdapter.Fill(this.storeDataSet.salesitemsreturn);
+
+            this.purchasebillsTableAdapter.Fill(this.storeDataSet.purchasebills);
+            this.purchasesitemsTableAdapter.Fill(this.storeDataSet.purchasesitems);
+
+
+            this.purchasesitemsreturnTableAdapter.Fill(this.storeDataSet.purchasesitemsreturn);
+            this.purchasebillsreturnTableAdapter.Fill(this.storeDataSet.purchasebillsreturn);
+
             this.vaultTableAdapter.Fill(this.storeDataSet.vault);          
             this.itemsTableAdapter.Fill(this.storeDataSet.items);
             this.namesTableAdapter.Fill(this.storeDataSet.names);
-            this.vaultTableAdapter.Fill(this.storeDataSet.vault);
-            this.purchasebillsTableAdapter.Fill(this.storeDataSet.purchasebills);
-            this.itemsTableAdapter.Fill(this.storeDataSet.items);
-            this.salesitemsTableAdapter.Fill(this.storeDataSet.salesitems);
-            this.billsTableAdapter.Fill(this.storeDataSet.bills);
-            billsreturnTableAdapter.Fill(storeDataSet.billsreturn);
 
+
+           
             Txt_BillID.Text = billID.ToString();
             Txt_Paid.Text = paid.ToString();
             Txt_Remaining.Text = remaining.ToString();
             Txt_TotalBill.Text = totalbill.ToString();
             Txt_Type.Text = type;
+            Txt_Name.Text = name_name;
+            dateTimePicker1.Value = date;
 
             if (type == Properties.Settings.Default.type1)
             {
@@ -581,7 +585,7 @@ namespace Acounting
                 Cmb_ItemName_TextChanged(null, null);
 
                 #endregion
-                
+                UpdateTotalBill();
             }
             #endregion
 
@@ -697,7 +701,7 @@ namespace Acounting
                 Cmb_ItemName_TextChanged(null, null);
  
                 #endregion
-
+                UpdateTotalBill();
             }
             #endregion
 
@@ -793,7 +797,7 @@ namespace Acounting
                 Cmb_ItemName_TextChanged(null, null);
 
                 #endregion
-
+                UpdateTotalBill2();
             }
             #endregion
 
@@ -889,7 +893,7 @@ namespace Acounting
                 Cmb_ItemName_TextChanged(null, null);
 
                 #endregion
-
+                UpdateTotalBill2();
             }
             #endregion
 
@@ -920,7 +924,7 @@ namespace Acounting
                     Txt_Paid_TextChanged(null, null);
 
                     //add bill
-                    DataRow billrow = storeDataSet.billsreturn.FindByBillID(billID);
+                    DataRow billrow = storeDataSet.bills.FindByBillID(billID);
 
                     billrow[0] = billID;
                     billrow[1] = date;
@@ -928,6 +932,8 @@ namespace Acounting
                     billrow[3] = paid;
                     billrow[4] = remaining;
                     billrow[5] = name_id;
+
+
                     
                     // get vault row for manipulation
                     DataRow vaultrow = storeDataSet.vault.FindByidVault(0);
@@ -1069,7 +1075,7 @@ namespace Acounting
                     double.TryParse(vaultrow["In_Hand"].ToString(), out oldvalue);
 
                     Console.WriteLine(oldvalue);
-                    newvalue = oldvalue - paid;
+                    newvalue = oldvalue - (paid - oldpaid);
                     Console.WriteLine(newvalue);
                     vaultrow["In_Hand"] = newvalue;
 
@@ -1088,6 +1094,74 @@ namespace Acounting
                     #endregion
 
                     this.Close();
+                }
+            }
+            #endregion
+
+
+            #region if type4
+
+            if (type == Properties.Settings.Default.type4)
+            {
+                //show dialoge 
+
+                DialogResult result = MessageBox.Show("Do you want to save ?", "Accounting", MessageBoxButtons.YesNo);
+
+
+                if (result == System.Windows.Forms.DialogResult.Yes)
+                {
+                    #region save
+
+
+                    // find paid ammount  
+                    double paid;
+
+                    double.TryParse(Txt_Paid.Text, out paid);
+
+
+                    //make sure paid is right
+                    Txt_Paid_TextChanged(null, null);
+
+                    //add bill
+                    DataRow billrow = storeDataSet.purchasebillsreturn.FindByBillID(billID);
+
+                    billrow[0] = billID;
+                    billrow[1] = date;
+                    billrow[2] = totalbill;
+                    billrow[3] = paid;
+                    billrow[4] = remaining;
+                    billrow[5] = name_id;
+
+                    // get vault row for manipulation
+                    DataRow vaultrow = storeDataSet.vault.FindByidVault(0);
+
+                    double oldvalue, newvalue;
+                    double.TryParse(vaultrow["In_Hand"].ToString(), out oldvalue);
+
+                    Console.WriteLine(oldvalue);
+                    newvalue = oldvalue + (paid - oldpaid);
+
+                    Console.WriteLine(newvalue);
+                    vaultrow["In_Hand"] = newvalue;
+
+
+                    //find old debt
+                    double debt;
+                    DataRow dealerrow = storeDataSet.names.FindByID(name_id);
+                    double.TryParse(dealerrow["Debt"].ToString(), out debt);
+
+                    double newdebt = debt - (remaining - oldremaining);
+
+                    //add newdebt to agent
+                    dealerrow["Debt"] = newdebt;
+
+                    // update alll
+                    updatedataset4();
+
+                    this.Close();
+                    #endregion
+
+
                 }
             }
             #endregion
@@ -1283,6 +1357,11 @@ namespace Acounting
             #endregion
 
  
+        }
+
+        private void dateTimePicker1_ValueChanged(object sender, EventArgs e)
+        {
+            date = dateTimePicker1.Value;
         }
 
  

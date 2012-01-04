@@ -120,8 +120,8 @@
   <data name="&gt;&gt;remainingDataGridViewTextBoxColumn.Name" xml:space="preserve">
     <value>remainingDataGridViewTextBoxColumn</value>
   </data>
-  <data name="&gt;&gt;namesIDDataGridViewTextBoxColumn.Name" xml:space="preserve">
-    <value>namesIDDataGridViewTextBoxColumn</value>
+  <data name="&gt;&gt;namesNameDataGridViewTextBoxColumn.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;storeDataSet.Type" xml:space="preserve">
     <value>Acounting.storeDataSet, storeDataSet.Designer.cs, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null</value>
@@ -142,14 +142,8 @@
   <data name="&gt;&gt;purchasebillsreturnTableAdapter.Name" xml:space="preserve">
     <value>purchasebillsreturnTableAdapter</value>
   </data>
-  <data name="Column8.HeaderText" xml:space="preserve">
-    <value>اسم العميل/المورد</value>
-  </data>
   <data name="&gt;&gt;allBillsBindingSource.Name" xml:space="preserve">
     <value>allBillsBindingSource</value>
-  </data>
-  <data name="&gt;&gt;dataGridView1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.DataGridView, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;$this.Name" xml:space="preserve">
     <value>ShowAllBills</value>
@@ -160,12 +154,18 @@
   <data name="&gt;&gt;namesTableAdapter.Name" xml:space="preserve">
     <value>namesTableAdapter</value>
   </data>
+  <data name="&gt;&gt;purchasebillsTableAdapter.Type" xml:space="preserve">
+    <value>Acounting.storeDataSetTableAdapters.purchasebillsTableAdapter, storeDataSet.Designer.cs, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
   <data name="&gt;&gt;totalBillDataGridViewTextBoxColumn.Type" xml:space="preserve">
     <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="dataGridView1.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
+  </data>
+  <data name="&gt;&gt;namesNameDataGridViewTextBoxColumn.Name" xml:space="preserve">
+    <value>namesNameDataGridViewTextBoxColumn</value>
   </data>
   <data name="groupBox1.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Fill</value>
@@ -195,6 +195,9 @@
   <data name="&gt;&gt;docDateDataGridViewTextBoxColumn.Name" xml:space="preserve">
     <value>docDateDataGridViewTextBoxColumn</value>
   </data>
+  <data name="&gt;&gt;billsreturnBindingSource.Type" xml:space="preserve">
+    <value>System.Windows.Forms.BindingSource, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
   <data name="docDateDataGridViewTextBoxColumn.HeaderText" xml:space="preserve">
     <value>DocDate</value>
   </data>
@@ -213,11 +216,14 @@
   <data name="remainingDataGridViewTextBoxColumn.HeaderText" xml:space="preserve">
     <value>Remaining</value>
   </data>
+  <data name="&gt;&gt;billIDDataGridViewTextBoxColumn.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
   <data name="&gt;&gt;Column7.Name" xml:space="preserve">
     <value>Column7</value>
   </data>
-  <data name="&gt;&gt;typeDataGridViewTextBoxColumn.Type" xml:space="preserve">
-    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="&gt;&gt;billsBindingSource.Name" xml:space="preserve">
+    <value>billsBindingSource</value>
   </data>
   <data name="&gt;&gt;billsTableAdapter.Type" xml:space="preserve">
     <value>Acounting.storeDataSetTableAdapters.billsTableAdapter, storeDataSet.Designer.cs, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null</value>
@@ -225,8 +231,11 @@
   <data name="&gt;&gt;namesBindingSource.Type" xml:space="preserve">
     <value>System.Windows.Forms.BindingSource, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;namesNameDataGridViewTextBoxColumn.Type" xml:space="preserve">
-    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="&gt;&gt;groupBox1.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;dataGridView1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridView, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;billsreturnBindingSource.Name" xml:space="preserve">
     <value>billsreturnBindingSource</value>
@@ -249,15 +258,6 @@
   <data name="dataGridView1.Size" type="System.Drawing.Size, System.Drawing">
     <value>827, 494</value>
   </data>
-  <data name="&gt;&gt;billsBindingSource.Name" xml:space="preserve">
-    <value>billsBindingSource</value>
-  </data>
-  <data name="&gt;&gt;groupBox1.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="Column4.HeaderText" xml:space="preserve">
-    <value>المدفوع</value>
-  </data>
   <data name="&gt;&gt;remainingDataGridViewTextBoxColumn.Type" xml:space="preserve">
     <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
@@ -266,12 +266,6 @@
   </data>
   <data name="&gt;&gt;dataGridView1.Name" xml:space="preserve">
     <value>dataGridView1</value>
-  </data>
-  <data name="Column1.HeaderText" xml:space="preserve">
-    <value>#</value>
-  </data>
-  <data name="&gt;&gt;Column8.Type" xml:space="preserve">
-    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="groupBox1.Location" type="System.Drawing.Point, System.Drawing">
     <value>0, 0</value>
@@ -294,14 +288,20 @@
   <data name="&gt;&gt;billsTableAdapter.Name" xml:space="preserve">
     <value>billsTableAdapter</value>
   </data>
-  <data name="&gt;&gt;billsBindingSource.Type" xml:space="preserve">
-    <value>System.Windows.Forms.BindingSource, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="&gt;&gt;purchasebillsBindingSource.Name" xml:space="preserve">
+    <value>purchasebillsBindingSource</value>
+  </data>
+  <data name="&gt;&gt;Column8.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="Column5.HeaderText" xml:space="preserve">
     <value>الباقي</value>
   </data>
   <data name="groupBox1.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
+  </data>
+  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
+    <value>833, 513</value>
   </data>
   <data name="&gt;&gt;Column1.Name" xml:space="preserve">
     <value>Column1</value>
@@ -318,8 +318,8 @@
   <data name="&gt;&gt;groupBox1.Type" xml:space="preserve">
     <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;purchasebillsTableAdapter.Type" xml:space="preserve">
-    <value>Acounting.storeDataSetTableAdapters.purchasebillsTableAdapter, storeDataSet.Designer.cs, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  <data name="Column8.HeaderText" xml:space="preserve">
+    <value>اسم العميل/المورد</value>
   </data>
   <data name="&gt;&gt;billIDDataGridViewTextBoxColumn.Name" xml:space="preserve">
     <value>billIDDataGridViewTextBoxColumn</value>
@@ -336,14 +336,14 @@
   <data name="&gt;&gt;Column7.Type" xml:space="preserve">
     <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;billsreturnBindingSource.Type" xml:space="preserve">
-    <value>System.Windows.Forms.BindingSource, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="Column1.HeaderText" xml:space="preserve">
+    <value>#</value>
   </data>
   <data name="Column3.HeaderText" xml:space="preserve">
     <value>اجمالي الفاتورة</value>
   </data>
-  <data name="&gt;&gt;billIDDataGridViewTextBoxColumn.Type" xml:space="preserve">
-    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="&gt;&gt;billsBindingSource.Type" xml:space="preserve">
+    <value>System.Windows.Forms.BindingSource, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;namesIDDataGridViewTextBoxColumn.Type" xml:space="preserve">
     <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
@@ -375,17 +375,17 @@
   <data name="&gt;&gt;billsreturnTableAdapter.Type" xml:space="preserve">
     <value>Acounting.storeDataSetTableAdapters.billsreturnTableAdapter, storeDataSet.Designer.cs, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
-  <data name="&gt;&gt;namesNameDataGridViewTextBoxColumn.Name" xml:space="preserve">
-    <value>namesNameDataGridViewTextBoxColumn</value>
+  <data name="&gt;&gt;typeDataGridViewTextBoxColumn.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
-    <value>833, 513</value>
+  <data name="&gt;&gt;namesIDDataGridViewTextBoxColumn.Name" xml:space="preserve">
+    <value>namesIDDataGridViewTextBoxColumn</value>
   </data>
-  <data name="&gt;&gt;groupBox1.ZOrder" xml:space="preserve">
-    <value>0</value>
+  <data name="Column4.HeaderText" xml:space="preserve">
+    <value>المدفوع</value>
   </data>
-  <data name="&gt;&gt;$this.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Form, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="&gt;&gt;groupBox1.Parent" xml:space="preserve">
+    <value>$this</value>
   </data>
   <data name="&gt;&gt;storeDataSet.Name" xml:space="preserve">
     <value>storeDataSet</value>
@@ -396,10 +396,10 @@
   <data name="&gt;&gt;Column3.Name" xml:space="preserve">
     <value>Column3</value>
   </data>
-  <data name="&gt;&gt;purchasebillsBindingSource.Name" xml:space="preserve">
-    <value>purchasebillsBindingSource</value>
+  <data name="&gt;&gt;$this.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Form, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <metadata name="Column7.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+  <metadata name="Column4.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
   <metadata name="billsreturnTableAdapter.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
@@ -417,11 +417,11 @@
   <metadata name="$this.Language" type="System.Globalization.CultureInfo, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>ar</value>
   </metadata>
+  <metadata name="storeDataSet.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
   <metadata name="purchasebillsTableAdapter.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>487, 55</value>
-  </metadata>
-  <metadata name="purchasebillsreturnTableAdapter.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>451, 18</value>
   </metadata>
   <metadata name="namesBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>58, 93</value>
@@ -438,7 +438,10 @@
   <metadata name="$this.TrayHeight" type="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>161</value>
   </metadata>
-  <metadata name="Column4.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+  <metadata name="billsTableAdapter.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>804, 18</value>
+  </metadata>
+  <metadata name="Column7.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
   <metadata name="billsreturnBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
@@ -453,17 +456,14 @@
   <metadata name="Column2.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
-  <metadata name="Column8.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
   <metadata name="purchasebillsreturnBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>669, 55</value>
   </metadata>
-  <metadata name="billsTableAdapter.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>804, 18</value>
+  <metadata name="purchasebillsreturnTableAdapter.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>451, 18</value>
   </metadata>
-  <metadata name="storeDataSet.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>17, 17</value>
+  <metadata name="Column8.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
   </metadata>
   <metadata name="Column3.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
