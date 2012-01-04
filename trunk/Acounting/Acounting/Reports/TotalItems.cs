@@ -22,7 +22,6 @@ namespace Acounting
             this.itemsTableAdapter.Fill(this.storeDataSet.items);
 
             this.reportViewer1.RefreshReport();
-            this.reportViewer1.RefreshReport();
         }
     }
 }

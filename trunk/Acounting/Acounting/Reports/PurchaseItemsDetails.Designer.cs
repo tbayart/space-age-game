@@ -1,6 +1,6 @@
-﻿namespace Acounting 
+﻿namespace Acounting
 {
-    partial class TotalItems
+    partial class PurchaseItemsDetails
     {
         /// <summary>
         /// Required designer variable.
@@ -29,20 +29,20 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(TotalItems));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(PurchaseItemsDetails));
             Microsoft.Reporting.WinForms.ReportDataSource reportDataSource1 = new Microsoft.Reporting.WinForms.ReportDataSource();
-            this.itemsBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.purchaseItemsDetailsBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.storeDataSet = new Acounting.storeDataSet();
             this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
-            this.itemsTableAdapter = new Acounting.storeDataSetTableAdapters.itemsTableAdapter();
-            ((System.ComponentModel.ISupportInitialize)(this.itemsBindingSource)).BeginInit();
+            this.purchaseItemsDetailsTableAdapter = new Acounting.storeDataSetTableAdapters.PurchaseItemsDetailsTableAdapter();
+            ((System.ComponentModel.ISupportInitialize)(this.purchaseItemsDetailsBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.storeDataSet)).BeginInit();
             this.SuspendLayout();
             // 
-            // itemsBindingSource
+            // purchaseItemsDetailsBindingSource
             // 
-            this.itemsBindingSource.DataMember = "items";
-            this.itemsBindingSource.DataSource = this.storeDataSet;
+            this.purchaseItemsDetailsBindingSource.DataMember = "PurchaseItemsDetails";
+            this.purchaseItemsDetailsBindingSource.DataSource = this.storeDataSet;
             // 
             // storeDataSet
             // 
@@ -53,27 +53,25 @@
             // 
             resources.ApplyResources(this.reportViewer1, "reportViewer1");
             reportDataSource1.Name = "DataSet1";
-            reportDataSource1.Value = this.itemsBindingSource;
+            reportDataSource1.Value = this.purchaseItemsDetailsBindingSource;
             this.reportViewer1.LocalReport.DataSources.Add(reportDataSource1);
-            this.reportViewer1.LocalReport.EnableExternalImages = true;
-            this.reportViewer1.LocalReport.EnableHyperlinks = true;
             this.reportViewer1.LocalReport.ReportEmbeddedResource = "";
-            this.reportViewer1.LocalReport.ReportPath = "Reports\\TotalItemsAr.rdlc";
+            this.reportViewer1.LocalReport.ReportPath = "Reports\\PurchaseItemsDetailsAR.rdlc";
             this.reportViewer1.Name = "reportViewer1";
             this.reportViewer1.ZoomMode = Microsoft.Reporting.WinForms.ZoomMode.PageWidth;
             // 
-            // itemsTableAdapter
+            // purchaseItemsDetailsTableAdapter
             // 
-            this.itemsTableAdapter.ClearBeforeFill = true;
+            this.purchaseItemsDetailsTableAdapter.ClearBeforeFill = true;
             // 
-            // TotalItems
+            // PurchaseItemsDetails
             // 
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.reportViewer1);
-            this.Name = "TotalItems";
-            this.Load += new System.EventHandler(this.TotalItems_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.itemsBindingSource)).EndInit();
+            this.Name = "PurchaseItemsDetails";
+            this.Load += new System.EventHandler(this.PurchaseItemsDetails_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.purchaseItemsDetailsBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.storeDataSet)).EndInit();
             this.ResumeLayout(false);
 
@@ -83,8 +81,7 @@
 
         private Microsoft.Reporting.WinForms.ReportViewer reportViewer1;
         private storeDataSet storeDataSet;
-        private System.Windows.Forms.BindingSource itemsBindingSource;
-        private storeDataSetTableAdapters.itemsTableAdapter itemsTableAdapter;
-
+        private System.Windows.Forms.BindingSource purchaseItemsDetailsBindingSource;
+        private storeDataSetTableAdapters.PurchaseItemsDetailsTableAdapter purchaseItemsDetailsTableAdapter;
     }
 }

@@ -199,9 +199,9 @@
             // 
             resources.ApplyResources(this.reportsToolStripMenuItem1, "reportsToolStripMenuItem1");
             this.reportsToolStripMenuItem1.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.agentDebtToolStripMenuItem,
             this.كشفموردToolStripMenuItem,
             this.اجمالياصنافToolStripMenuItem,
+            this.agentDebtToolStripMenuItem,
             this.itemsSalesDetailsToolStripMenuItem});
             this.reportsToolStripMenuItem1.Name = "reportsToolStripMenuItem1";
             // 
@@ -209,21 +209,25 @@
             // 
             resources.ApplyResources(this.agentDebtToolStripMenuItem, "agentDebtToolStripMenuItem");
             this.agentDebtToolStripMenuItem.Name = "agentDebtToolStripMenuItem";
+            this.agentDebtToolStripMenuItem.Click += new System.EventHandler(this.agentDebtToolStripMenuItem_Click);
             // 
             // كشفموردToolStripMenuItem
             // 
             resources.ApplyResources(this.كشفموردToolStripMenuItem, "كشفموردToolStripMenuItem");
             this.كشفموردToolStripMenuItem.Name = "كشفموردToolStripMenuItem";
+            this.كشفموردToolStripMenuItem.Click += new System.EventHandler(this.كشفموردToolStripMenuItem_Click);
             // 
             // اجمالياصنافToolStripMenuItem
             // 
             resources.ApplyResources(this.اجمالياصنافToolStripMenuItem, "اجمالياصنافToolStripMenuItem");
             this.اجمالياصنافToolStripMenuItem.Name = "اجمالياصنافToolStripMenuItem";
+            this.اجمالياصنافToolStripMenuItem.Click += new System.EventHandler(this.اجمالياصنافToolStripMenuItem_Click);
             // 
             // itemsSalesDetailsToolStripMenuItem
             // 
             resources.ApplyResources(this.itemsSalesDetailsToolStripMenuItem, "itemsSalesDetailsToolStripMenuItem");
             this.itemsSalesDetailsToolStripMenuItem.Name = "itemsSalesDetailsToolStripMenuItem";
+            this.itemsSalesDetailsToolStripMenuItem.Click += new System.EventHandler(this.itemsSalesDetailsToolStripMenuItem_Click);
             // 
             // عربيToolStripMenuItem
             // 
