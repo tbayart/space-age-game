@@ -5,12 +5,12 @@ USE `store`;
 -- Host: localhost    Database: store
 -- ------------------------------------------------------
 -- Server version	5.5.19
-
+ 
 --
 -- Table structure for table `moves`
 --
 
-DROP TABLE IF EXISTS `moves`;
+DROP TABLE IF EXISTS `moves`; 
 CREATE TABLE `moves` (
   `idMoves` int(11) NOT NULL,
   `Date` date NOT NULL,
@@ -19,5 +19,6 @@ CREATE TABLE `moves` (
   `MoveData2` varchar(45) DEFAULT NULL,
   PRIMARY KEY (`idMoves`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+ 
 
--- Dump completed on 2011-12-28  6:57:29
+-- Dump completed on 2012-01-04 11:06:22

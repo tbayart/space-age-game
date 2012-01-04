@@ -5,12 +5,13 @@ USE `store`;
 -- Host: localhost    Database: store
 -- ------------------------------------------------------
 -- Server version	5.5.19
+ 
 
 --
 -- Table structure for table `staticassests`
 --
 
-DROP TABLE IF EXISTS `staticassests`;
+DROP TABLE IF EXISTS `staticassests`; 
 CREATE TABLE `staticassests` (
   `Id` int(11) NOT NULL,
   `ItemName` varchar(45) NOT NULL,
@@ -19,5 +20,6 @@ CREATE TABLE `staticassests` (
   `TotalCost` varchar(45) DEFAULT NULL,
   PRIMARY KEY (`Id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+ 
 
--- Dump completed on 2011-12-28  6:57:28
+-- Dump completed on 2012-01-04 11:06:22

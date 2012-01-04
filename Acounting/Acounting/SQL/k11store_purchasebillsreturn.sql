@@ -5,23 +5,24 @@ USE `store`;
 -- Host: localhost    Database: store
 -- ------------------------------------------------------
 -- Server version	5.5.19
-
+  
 
 --
 -- Table structure for table `purchasebillsreturn`
 --
 
-DROP TABLE IF EXISTS `purchasebillsreturn`;
+DROP TABLE IF EXISTS `purchasebillsreturn`; 
 CREATE TABLE `purchasebillsreturn` (
   `BillID` int(11) NOT NULL,
-  `Dealers_DealerID` int(11) NOT NULL,
   `DocDate` date NOT NULL,
   `TotalBill` double NOT NULL,
   `Paid` double NOT NULL,
   `Remaining` double NOT NULL,
+  `Names_ID` int(11) NOT NULL,
   PRIMARY KEY (`BillID`),
-  KEY `fk_PurchaseBills_Dealers1` (`Dealers_DealerID`),
-  CONSTRAINT `fk_PurchaseBills_Dealers10` FOREIGN KEY (`Dealers_DealerID`) REFERENCES `dealers` (`DealerID`) ON DELETE NO ACTION ON UPDATE NO ACTION
+  KEY `fk_PurchaseBillsreturn_Names1` (`Names_ID`),
+  CONSTRAINT `fk_PurchaseBillsreturn_Names1` FOREIGN KEY (`Names_ID`) REFERENCES `names` (`ID`) ON DELETE NO ACTION ON UPDATE NO ACTION
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+ 
 
--- Dump completed on 2011-12-28  6:57:30
+-- Dump completed on 2012-01-04 11:06:23

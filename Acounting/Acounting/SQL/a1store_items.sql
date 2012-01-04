@@ -6,12 +6,12 @@ USE `store`;
 -- ------------------------------------------------------
 -- Server version	5.5.19
 
-
 --
 -- Table structure for table `items`
 --
 
 DROP TABLE IF EXISTS `items`;
+
 CREATE TABLE `items` (
   `ItemID` int(11) NOT NULL DEFAULT '0',
   `ItemName` varchar(255) CHARACTER SET utf8 NOT NULL,
@@ -19,7 +19,6 @@ CREATE TABLE `items` (
   `Qty` double NOT NULL,
   `TotalCost` double NOT NULL,
   PRIMARY KEY (`ItemID`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_general_ci CHECKSUM=1 DELAY_KEY_WRITE=1 ROW_FORMAT=DYNAMIC;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci CHECKSUM=1 DELAY_KEY_WRITE=1 ROW_FORMAT=DYNAMIC;
 
-
--- Dump completed on 2011-12-28  6:57:30
+-- Dump completed on 2012-01-04 11:06:23

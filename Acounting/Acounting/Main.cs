@@ -224,18 +224,22 @@ namespace Acounting
             try
             {
 
+                DialogResult dr = MessageBox.Show("هل تريد  حذف قاعدة  البيانات؟؟", "", MessageBoxButtons.YesNo);
+                if (dr == System.Windows.Forms.DialogResult.Yes)
+                {
+                    MySqlCommand command;
+                    // Create a connection string without passing a database 
+                    string ConnectionString =
+                                    "server=localhost;User Id=root";
+
+                    MySqlConnection Connection = new MySqlConnection(ConnectionString);
+                    Connection.Open();
+                    string line = "drop schema store";
+                    command = new MySqlCommand(line, Connection);
+                    command.ExecuteNonQuery();
+                }
 
 
-                MySqlCommand command;
-                // Create a connection string without passing a database 
-                string ConnectionString =
-                                "server=localhost;User Id=root";
-
-                MySqlConnection Connection = new MySqlConnection(ConnectionString);
-                Connection.Open();
-                string line = "drop schema store";
-                command = new MySqlCommand(line, Connection);
-                command.ExecuteNonQuery();
             }
 
             catch (Exception ee)
