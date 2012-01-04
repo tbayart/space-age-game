@@ -160,7 +160,7 @@ namespace Acounting
             int itemid;
             if (!int.TryParse(Txt_ItemID.Text, out itemid))
             {
-                errorProvider1.SetError(Txt_DealerID, rm.GetString("DealerIDerr", Program.cul));
+                errorProvider1.SetError(Txt_ItemID, rm.GetString("DealerIDerr", Program.cul));
                 return;
             }
 

@@ -125,6 +125,8 @@ namespace Acounting
 
         private void button1_Click(object sender, EventArgs e)
         {
+  
+            
             #region check and make sure everything ok
             errorProvider1.Clear();
             // check data not empty
