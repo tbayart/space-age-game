@@ -85,6 +85,8 @@
             this.salesitemsreturnTableAdapter = new Acounting.storeDataSetTableAdapters.salesitemsreturnTableAdapter();
             this.purchasesitemsBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.purchasesitemsTableAdapter = new Acounting.storeDataSetTableAdapters.purchasesitemsTableAdapter();
+            this.purchasesitemsreturnBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.purchasesitemsreturnTableAdapter = new Acounting.storeDataSetTableAdapters.purchasesitemsreturnTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.allBillsBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.storeDataSet)).BeginInit();
@@ -101,6 +103,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.salesitemsBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.salesitemsreturnBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.purchasesitemsBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.purchasesitemsreturnBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // dataGridView1
@@ -524,6 +527,15 @@
             // 
             this.purchasesitemsTableAdapter.ClearBeforeFill = true;
             // 
+            // purchasesitemsreturnBindingSource
+            // 
+            this.purchasesitemsreturnBindingSource.DataMember = "purchasesitemsreturn";
+            this.purchasesitemsreturnBindingSource.DataSource = this.storeDataSet;
+            // 
+            // purchasesitemsreturnTableAdapter
+            // 
+            this.purchasesitemsreturnTableAdapter.ClearBeforeFill = true;
+            // 
             // EditBills
             // 
             resources.ApplyResources(this, "$this");
@@ -551,6 +563,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.salesitemsBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.salesitemsreturnBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.purchasesitemsBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.purchasesitemsreturnBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -612,5 +625,7 @@
         private storeDataSetTableAdapters.salesitemsreturnTableAdapter salesitemsreturnTableAdapter;
         private System.Windows.Forms.BindingSource purchasesitemsBindingSource;
         private storeDataSetTableAdapters.purchasesitemsTableAdapter purchasesitemsTableAdapter;
+        private System.Windows.Forms.BindingSource purchasesitemsreturnBindingSource;
+        private storeDataSetTableAdapters.purchasesitemsreturnTableAdapter purchasesitemsreturnTableAdapter;
     }
 }
