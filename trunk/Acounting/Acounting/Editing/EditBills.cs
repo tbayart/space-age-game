@@ -132,10 +132,21 @@ namespace Acounting
             namesTableAdapter.Update(storeDataSet);
             vaultTableAdapter.Update(storeDataSet);
         }
+
+
         private void updatedataset3()
         {
             purchasebillsTableAdapter.Update(storeDataSet);
             purchasesitemsTableAdapter.Update(storeDataSet);
+            itemsTableAdapter.Update(storeDataSet);
+            namesTableAdapter.Update(storeDataSet);
+            vaultTableAdapter.Update(storeDataSet);
+        }
+
+        private void updatedataset4()
+        {
+            purchasebillsreturnTableAdapter.Update(storeDataSet);
+            purchasesitemsreturnTableAdapter.Update(storeDataSet);
             itemsTableAdapter.Update(storeDataSet);
             namesTableAdapter.Update(storeDataSet);
             vaultTableAdapter.Update(storeDataSet);
@@ -147,6 +158,8 @@ namespace Acounting
 
         private void EditBills_Load(object sender, EventArgs e)
         {
+            // TODO: This line of code loads data into the 'storeDataSet.purchasesitemsreturn' table. You can move, or remove it, as needed.
+            this.purchasesitemsreturnTableAdapter.Fill(this.storeDataSet.purchasesitemsreturn);
             // TODO: This line of code loads data into the 'storeDataSet.purchasesitems' table. You can move, or remove it, as needed.
             this.purchasesitemsTableAdapter.Fill(this.storeDataSet.purchasesitems);
             // TODO: This line of code loads data into the 'storeDataSet.salesitemsreturn' table. You can move, or remove it, as needed.
@@ -190,7 +203,14 @@ namespace Acounting
                 purchasesitemsBindingSource.Filter = "PurchaseBills_BillID = '" + billID + "'";
 
             }
-             
+
+            if (type == Properties.Settings.Default.type4)
+            {
+                dataGridView1.DataSource = purchasesitemsreturnBindingSource;
+
+                purchasesitemsreturnBindingSource.Filter = "PurchaseBillsreturn_BillID = '" + billID + "'";
+
+            }
         }
  
         private void Btn_Update_Click(object sender, EventArgs e)
@@ -249,7 +269,6 @@ namespace Acounting
 
                     row["Qty"] = newqty;
                     row["SellPrice"] = sellprice;
-                    row["Cost"] = cost;
                     row["TotalPrice"] = sellprice * newqty;
                     row["Earnings"] = (sellprice - cost) * newqty;
 
@@ -310,7 +329,6 @@ namespace Acounting
 
                     row["Qty"] = newqty;
                     row["SellPrice"] = sellprice;
-                    row["Cost"] = cost;
                     row["TotalPrice"] = sellprice * newqty;
 
                     Txt_ItemID_TextChanged(null, null);
@@ -371,6 +389,65 @@ namespace Acounting
 
                     row["Qty"] = newqty;
                     row["Cost"] = sellprice;
+                    row["Total"] = sellprice * newqty;
+
+                    Txt_ItemID_TextChanged(null, null);
+                    UpdateTotalBill2();
+                }
+
+                #endregion
+
+
+                #region if type4
+
+                if (type == Properties.Settings.Default.type4)
+                {
+                    int qty;
+                    int sellprice;
+                    int cost;
+                    int itemid;
+                    //sales items 
+
+                    int newqty;
+
+                    if (!int.TryParse(Txt_Units.Text, out newqty))
+                    {
+                        errorProvider1.SetError(Txt_Units, "Error With Buy Unit");
+                        return;
+                    }
+
+
+                    if (!int.TryParse(Txt_Price.Text, out sellprice))
+                    {
+                        errorProvider1.SetError(Txt_Price, "Error With Buy Price");
+                        return;
+                    }
+
+                    int.TryParse(Txt_ItemID.Text, out itemid);
+
+                    DataRow itemrow = storeDataSet.items.FindByItemID(itemid);
+                    DataRow row = storeDataSet.purchasesitemsreturn.FindByID((uint)selected_row);
+
+
+                    int itemqty;
+                    int.TryParse(itemrow["Qty"].ToString(), out itemqty);
+                    int.TryParse(itemrow["Cost"].ToString(), out cost);
+
+
+                    int.TryParse(row["Qty"].ToString(), out qty);
+
+                    itemrow["Qty"] = itemqty + qty;
+
+
+
+                    int.TryParse(itemrow["Qty"].ToString(), out itemqty);
+
+                    itemqty -= newqty;
+                    itemrow["Qty"] = itemqty;
+                    itemrow["TotalCost"] = itemqty * cost;
+
+
+                    row["Qty"] = newqty;
                     row["Total"] = sellprice * newqty;
 
                     Txt_ItemID_TextChanged(null, null);
@@ -511,9 +588,6 @@ namespace Acounting
             #region if type2
             if (type == Properties.Settings.Default.type2)
             {
-
-
-
                 #region check and make sure everything ok
                 errorProvider1.Clear();
                 // check data not empty
@@ -636,7 +710,7 @@ namespace Acounting
                 // check data not empty
 
                 int purchaseID;
-                DataRow lastsalesrow = storeDataSet.salesitemsreturn.Last();
+                DataRow lastsalesrow = storeDataSet.purchasesitems.Last();
                 int.TryParse(lastsalesrow["ID"].ToString(), out purchaseID);
                 purchaseID++;
 
@@ -693,6 +767,9 @@ namespace Acounting
                 newrow[4] = buyprice;
                 newrow[5] = totalprice;
 
+                storeDataSet.purchasesitems.Rows.Add(newrow);
+
+
                 totalbill += totalprice;
 
                 //  update parameters for bill
@@ -709,6 +786,102 @@ namespace Acounting
                 double newqty = originalqty + buyqty;
                 itemrow["Qty"] = newqty;
                 itemrow["Cost"] = buyprice;
+                double totalcost = buyprice * newqty;
+                itemrow["TotalCost"] = totalcost;
+
+
+                Cmb_ItemName_TextChanged(null, null);
+
+                #endregion
+
+            }
+            #endregion
+
+            #region if type4
+            if (type == Properties.Settings.Default.type4)
+            {
+
+                #region check and make sure everything ok
+                errorProvider1.Clear();
+                // check data not empty
+
+                int purchaseID;
+                DataRow lastsalesrow = storeDataSet.purchasesitemsreturn.Last();
+                int.TryParse(lastsalesrow["ID"].ToString(), out purchaseID);
+                purchaseID++;
+
+
+                int itemid;
+                if (!int.TryParse(Txt_ItemID.Text, out itemid))
+                {
+                    errorProvider1.SetError(Txt_ItemID, "error with itemid");
+                    return;
+                }
+
+                //find current itemrow
+                DataRow itemrow = storeDataSet.items.FindByItemID(itemid);
+
+                //items check
+
+                double buyqty;
+
+                if (!double.TryParse(Txt_Units.Text, out buyqty))
+                {
+                    errorProvider1.SetError(Txt_Units, "Error With Quantity");
+                    return;
+                }
+                else if (buyqty <= 0)
+                {
+                    errorProvider1.SetError(Txt_Units, "Less Than 0 ITEM ?????!!");
+                    return;
+                }
+                double buyprice;
+
+                if (!double.TryParse(Txt_Price.Text, out buyprice))
+                {
+                    errorProvider1.SetError(Txt_Price, "Error with Price!");
+                    return;
+                }
+
+                double originalqty;
+                double.TryParse(itemrow["Qty"].ToString(), out originalqty);
+
+
+                double totalprice = buyprice * buyqty;
+
+                #endregion
+
+
+                #region add items sales
+
+                // add items sales  
+                DataRow newrow = storeDataSet.purchasesitemsreturn.NewRow();
+                newrow[0] = purchaseID;
+                newrow[1] = billID;
+                newrow[2] = itemid;
+                newrow[3] = buyqty;
+                newrow[4] = buyprice;
+                newrow[5] = totalprice;
+
+
+                storeDataSet.purchasesitemsreturn.Rows.Add(newrow);
+
+
+                totalbill += totalprice;
+
+                //  update parameters for bill
+
+                Txt_TotalBill.Text = totalbill.ToString();
+                Txt_Remaining.Text = remaining.ToString();
+
+
+
+                // update items to add items qty
+
+                itemrow = storeDataSet.items.FindByItemID(itemid);
+                double.TryParse(itemrow["Qty"].ToString(), out originalqty);
+                double newqty = originalqty - buyqty;
+                itemrow["Qty"] = newqty;
                 double totalcost = buyprice * newqty;
                 itemrow["TotalCost"] = totalcost;
 
@@ -1035,6 +1208,43 @@ namespace Acounting
             }
             #endregion
 
+            #region type4
+
+            if (type == Properties.Settings.Default.type4)
+            {
+
+                //get information
+                int id;
+                double qty;
+                double sellprice;
+                int itemid;
+                //if its an item or not
+                if (e.RowIndex < 0)
+                {
+                    return;
+                }
+
+
+
+                if (int.TryParse(dataGridView1.Rows[e.RowIndex].Cells[0].Value.ToString(), out id))
+                {
+
+                    int.TryParse(dataGridView1.Rows[e.RowIndex].Cells[2].Value.ToString(), out itemid);
+                    double.TryParse(dataGridView1.Rows[e.RowIndex].Cells[3].Value.ToString(), out qty);
+                    double.TryParse(dataGridView1.Rows[e.RowIndex].Cells[4].Value.ToString(), out sellprice);
+
+
+                    Txt_RowID.Text = id.ToString();
+                    Txt_Units.Text = qty.ToString();
+                    Txt_Price.Text = sellprice.ToString();
+                    Txt_ItemID.Text = itemid.ToString();
+                }
+
+                selected_row = id;
+
+            }
+            #endregion
+
         }
 
         private void Txt_Paid_TextChanged(object sender, EventArgs e)
@@ -1074,6 +1284,8 @@ namespace Acounting
 
  
         }
+
+ 
 
     }
 }
