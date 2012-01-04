@@ -20,6 +20,16 @@ namespace Acounting
 
         private void Vault_Load(object sender, EventArgs e)
         {
+            // TODO: This line of code loads data into the 'storeDataSet.TotalSpendings' table. You can move, or remove it, as needed.
+            this.totalSpendingsTableAdapter.Fill(this.storeDataSet.TotalSpendings);
+            // TODO: This line of code loads data into the 'storeDataSet1.TotalPurchasereturnRemaining' table. You can move, or remove it, as needed.
+            this.totalPurchasereturnRemainingTableAdapter.Fill(this.storeDataSet1.TotalPurchasereturnRemaining);
+            // TODO: This line of code loads data into the 'storeDataSet1.TotalBillsreturnRemaining' table. You can move, or remove it, as needed.
+            this.totalBillsreturnRemainingTableAdapter.Fill(this.storeDataSet1.TotalBillsreturnRemaining);
+            // TODO: This line of code loads data into the 'storeDataSet1.TotalBillsRemaining' table. You can move, or remove it, as needed.
+            this.totalBillsRemainingTableAdapter.Fill(this.storeDataSet1.TotalBillsRemaining);
+            // TODO: This line of code loads data into the 'storeDataSet1.TotalPruchaseRemaining' table. You can move, or remove it, as needed.
+            this.totalPruchaseRemainingTableAdapter.Fill(this.storeDataSet1.TotalPruchaseRemaining);
             // TODO: This line of code loads data into the 'storeDataSet.TotalEarnings' table. You can move, or remove it, as needed.
             this.totalEarningsTableAdapter.Fill(this.storeDataSet.TotalEarnings);
             // TODO: This line of code loads data into the 'storeDataSet.TotalBillsReturn' table. You can move, or remove it, as needed.
@@ -76,8 +86,23 @@ namespace Acounting
             int netpurchasebills = totalpurchasebills - totalpurchasebillsreturn;
 
 
-            Txt_Nettotalbills.Text = netbills.ToString();
+            int dealerdebt, totalpurchaseremaining, totalpurchasereturnremaining, agentdebt, totalbillremaining, totalbillreturnremaing;
 
+
+            int.TryParse(storeDataSet1.TotalPruchaseRemaining.Rows[0][0].ToString(), out totalpurchaseremaining);
+            int.TryParse(storeDataSet1.TotalPurchasereturnRemaining.Rows[0][0].ToString(), out totalpurchasereturnremaining);
+
+            int.TryParse(storeDataSet1.TotalBillsRemaining.Rows[0][0].ToString(), out totalbillremaining);
+            int.TryParse(storeDataSet1.TotalBillsreturnRemaining.Rows[0][0].ToString(), out totalbillreturnremaing);
+
+            dealerdebt = totalpurchaseremaining - totalpurchasereturnremaining;
+            agentdebt = totalbillremaining - totalbillreturnremaing;
+
+            Txt_DealerDebt.Text = dealerdebt.ToString();
+            Txt_AgentDebt.Text = agentdebt.ToString();
+
+
+            Txt_Nettotalbills.Text = netbills.ToString();
             Txt_Nettotalpurchasebills.Text = netpurchasebills.ToString();
 
         }

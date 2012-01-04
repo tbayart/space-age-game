@@ -7,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 
-namespace Acounting 
+namespace Acounting
 {
     public partial class SalesItemsDetails : Form
     {
@@ -18,8 +18,8 @@ namespace Acounting
 
         private void SalesItemsDetails_Load(object sender, EventArgs e)
         {
-            // TODO: This line of code loads data into the 'storeDataSet.SalesDetailsٌReport' table. You can move, or remove it, as needed.
-            this.salesDetailsٌReportTableAdapter.Fill(this.storeDataSet.SalesDetailsٌReport);
+            // TODO: This line of code loads data into the 'storeDataSet.SalesItemsDetails' table. You can move, or remove it, as needed.
+            this.salesItemsDetailsTableAdapter.Fill(this.storeDataSet.SalesItemsDetails);
 
             this.reportViewer1.RefreshReport();
         }

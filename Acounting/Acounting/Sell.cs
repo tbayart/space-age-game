@@ -373,20 +373,6 @@ namespace Acounting
             Txt_Remaining.Text = remaining.ToString();
         }
  
-
-        private void fillBy3ToolStripButton_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                this.namesTableAdapter.FillBy3(this.storeDataSet.names);
-            }
-            catch (System.Exception ex)
-            {
-                System.Windows.Forms.MessageBox.Show(ex.Message);
-            }
-
-        }
-
  
  
     }

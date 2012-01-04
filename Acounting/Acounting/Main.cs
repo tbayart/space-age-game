@@ -277,6 +277,34 @@ namespace Acounting
             showall.Show();
         }
 
+        private void اجمالياصنافToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            TotalItems totalitems = new TotalItems();
+            totalitems.MdiParent = this;
+            totalitems.Show();
+        }
+
+        private void itemsSalesDetailsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            SalesItemsDetails salesitem = new SalesItemsDetails();
+            salesitem.MdiParent = this;
+            salesitem.Show();
+        }
+
+        private void كشفموردToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            DealersDebt dealersdebt = new DealersDebt();
+            dealersdebt.MdiParent = this;
+            dealersdebt.Show();
+        }
+
+        private void agentDebtToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            PurchaseItemsDetails purchaseitemsdetails = new PurchaseItemsDetails();
+            purchaseitemsdetails.MdiParent = this;
+            purchaseitemsdetails.Show();
+        }
+
 
 
         /*

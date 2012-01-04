@@ -181,6 +181,30 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Reports\DealersDebt.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reports\DealersDebt.Designer.cs">
+      <DependentUpon>DealersDebt.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\PurchaseItemsDetails.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reports\PurchaseItemsDetails.Designer.cs">
+      <DependentUpon>PurchaseItemsDetails.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\SalesItemsDetails.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reports\SalesItemsDetails.Designer.cs">
+      <DependentUpon>SalesItemsDetails.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\TotalItems.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reports\TotalItems.Designer.cs">
+      <DependentUpon>TotalItems.cs</DependentUpon>
+    </Compile>
     <Compile Include="ReturnBuy.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -270,6 +294,43 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Reports\DealersDebt.ar.resx">
+      <DependentUpon>DealersDebt.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\DealersDebt.resx">
+      <DependentUpon>DealersDebt.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\DealersDebtAr.rdlc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\PurchaseItemsDetails.ar.resx">
+      <DependentUpon>PurchaseItemsDetails.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\PurchaseItemsDetails.resx">
+      <DependentUpon>PurchaseItemsDetails.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\PurchaseItemsDetailsAR.rdlc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\SalesItemsDetails.ar.resx">
+      <DependentUpon>SalesItemsDetails.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\SalesItemsDetails.resx">
+      <DependentUpon>SalesItemsDetails.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\SalesItemsDetailsAr.rdlc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\TotalItems.ar.resx">
+      <DependentUpon>TotalItems.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\TotalItems.resx">
+      <DependentUpon>TotalItems.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\TotalItemsAr.rdlc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
     <EmbeddedResource Include="ReturnBuy.ar.resx">
       <DependentUpon>ReturnBuy.cs</DependentUpon>
     </EmbeddedResource>

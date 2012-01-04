@@ -18,6 +18,16 @@ namespace Acounting
 
         private void DealersDebt_Load(object sender, EventArgs e)
         {
+            // TODO: This line of code loads data into the 'storeDataSet.names' table. You can move, or remove it, as needed.
+            this.namesTableAdapter.Fill(this.storeDataSet.names);
+            // TODO: This line of code loads data into the 'storeDataSet.bills' table. You can move, or remove it, as needed.
+            this.billsTableAdapter.Fill(this.storeDataSet.bills);
+            // TODO: This line of code loads data into the 'storeDataSet.billsreturn' table. You can move, or remove it, as needed.
+            this.billsreturnTableAdapter.Fill(this.storeDataSet.billsreturn);
+            // TODO: This line of code loads data into the 'storeDataSet.payments' table. You can move, or remove it, as needed.
+            this.paymentsTableAdapter.Fill(this.storeDataSet.payments);
+            // TODO: This line of code loads data into the 'storeDataSet.Dealers' table. You can move, or remove it, as needed.
+
             // TODO: This line of code loads data into the 'storeDataSet.purchasebills' table. You can move, or remove it, as needed.
             this.purchasebillsTableAdapter.Fill(this.storeDataSet.purchasebills);
             // TODO: This line of code loads data into the 'storeDataSet.purchasebillsreturn' table. You can move, or remove it, as needed.
@@ -25,7 +35,7 @@ namespace Acounting
             // TODO: This line of code loads data into the 'storeDataSet.dealerpayments' table. You can move, or remove it, as needed.
             this.dealerpaymentsTableAdapter.Fill(this.storeDataSet.dealerpayments);
             // TODO: This line of code loads data into the 'storeDataSet.dealers' table. You can move, or remove it, as needed.
-            this.dealersTableAdapter.Fill(this.storeDataSet.dealers);
+
 
             this.reportViewer1.RefreshReport();
         }
@@ -38,23 +48,55 @@ namespace Acounting
                 //get agentid
                 int dealerid = 0;
 
-                DataRow filterrow = storeDataSet.dealers.AsEnumerable().Where(i => i.Field<string>("DealerName") == comboBox1.Text).FirstOrDefault();
+                DataRow filterrow = storeDataSet.names.AsEnumerable().Where(i => i.Field<string>("Name") == comboBox1.Text).FirstOrDefault();
 
-                if (!int.TryParse(filterrow["DealerID"].ToString(), out dealerid))
+                if (filterrow == null)
+                {
+                    return;
+                }
+                if (!int.TryParse(filterrow["ID"].ToString(), out dealerid))
                 {
                     return;
                 }
                 //filter the data
-                purchasebillsBindingSource.Filter = "Dealers_DealerID = '" + dealerid.ToString() + "'";
-                dealersBindingSource.Filter = "DealerName = '" + comboBox1.Text + "'";
-                purchasebillsreturnBindingSource.Filter = "Dealers_DealerID = '" + dealerid.ToString() + "'";
-                dealerpaymentsBindingSource.Filter = "Dealers_DealerID = '" + dealerid.ToString() + "'";
+                purchasebillsBindingSource.Filter = "Names_ID = '" + dealerid.ToString() + "'";
+                purchasebillsreturnBindingSource.Filter = "Names_ID = '" + dealerid.ToString() + "'";
+                billsBindingSource.Filter = "Names_ID = '" + dealerid.ToString() + "'";
+                billsreturnBindingSource.Filter = "Names_ID = '" + dealerid.ToString() + "'";
+
+                namesBindingSource.Filter = "ID = '" + dealerid.ToString() + "'";
+                paymentsBindingSource.Filter = "Names_ID = '" + dealerid.ToString() + "'";
+                dealerpaymentsBindingSource.Filter = "Names_ID = '" + dealerid.ToString() + "'";
                 //refresh the report
                 reportViewer1.RefreshReport();
             }
             catch (Exception ee)
             {
                 MessageBox.Show(ee.Message);
+            }
+        }
+
+
+
+        private void checkBox1_CheckedChanged(object sender, EventArgs e)
+        {
+            if (checkBox1.Checked)
+            {
+                purchasebillsBindingSource.RemoveFilter();
+                purchasebillsreturnBindingSource.RemoveFilter();
+                billsBindingSource.RemoveFilter();
+                billsreturnBindingSource.RemoveFilter();  
+
+                namesBindingSource.RemoveFilter(); 
+                paymentsBindingSource.RemoveFilter(); 
+                dealerpaymentsBindingSource.RemoveFilter();
+                reportViewer1.RefreshReport();
+                comboBox1.Enabled = false;
+            }
+            else
+            {
+                comboBox1.Enabled = true;
+
             }
         }
     }
