@@ -207,11 +207,8 @@
   <data name="returnSaleToolStripMenuItem.Text" xml:space="preserve">
     <value>مرجع مبيعات</value>
   </data>
-  <data name="showAllBillsToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>152, 22</value>
-  </data>
   <data name="showAllBillsToolStripMenuItem.Text" xml:space="preserve">
-    <value>Show All Bills</value>
+    <value>كافة الفواتير</value>
   </data>
   <data name="storageToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
     <value>51, 20</value>
