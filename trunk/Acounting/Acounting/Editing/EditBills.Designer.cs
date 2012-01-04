@@ -87,6 +87,8 @@
             this.purchasesitemsTableAdapter = new Acounting.storeDataSetTableAdapters.purchasesitemsTableAdapter();
             this.purchasesitemsreturnBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.purchasesitemsreturnTableAdapter = new Acounting.storeDataSetTableAdapters.purchasesitemsreturnTableAdapter();
+            this.label6 = new System.Windows.Forms.Label();
+            this.Txt_Name = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.allBillsBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.storeDataSet)).BeginInit();
@@ -177,6 +179,8 @@
             // groupBox1
             // 
             resources.ApplyResources(this.groupBox1, "groupBox1");
+            this.groupBox1.Controls.Add(this.label6);
+            this.groupBox1.Controls.Add(this.Txt_Name);
             this.groupBox1.Controls.Add(this.Btn_Save);
             this.groupBox1.Controls.Add(this.label17);
             this.groupBox1.Controls.Add(this.Txt_Type);
@@ -307,6 +311,7 @@
             this.errorProvider1.SetIconAlignment(this.dateTimePicker1, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("dateTimePicker1.IconAlignment"))));
             this.errorProvider1.SetIconPadding(this.dateTimePicker1, ((int)(resources.GetObject("dateTimePicker1.IconPadding"))));
             this.dateTimePicker1.Name = "dateTimePicker1";
+            this.dateTimePicker1.ValueChanged += new System.EventHandler(this.dateTimePicker1_ValueChanged);
             // 
             // groupBox2
             // 
@@ -536,6 +541,23 @@
             // 
             this.purchasesitemsreturnTableAdapter.ClearBeforeFill = true;
             // 
+            // label6
+            // 
+            resources.ApplyResources(this.label6, "label6");
+            this.errorProvider1.SetError(this.label6, resources.GetString("label6.Error"));
+            this.errorProvider1.SetIconAlignment(this.label6, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("label6.IconAlignment"))));
+            this.errorProvider1.SetIconPadding(this.label6, ((int)(resources.GetObject("label6.IconPadding"))));
+            this.label6.Name = "label6";
+            // 
+            // Txt_Name
+            // 
+            resources.ApplyResources(this.Txt_Name, "Txt_Name");
+            this.errorProvider1.SetError(this.Txt_Name, resources.GetString("Txt_Name.Error"));
+            this.errorProvider1.SetIconAlignment(this.Txt_Name, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("Txt_Name.IconAlignment"))));
+            this.errorProvider1.SetIconPadding(this.Txt_Name, ((int)(resources.GetObject("Txt_Name.IconPadding"))));
+            this.Txt_Name.Name = "Txt_Name";
+            this.Txt_Name.ReadOnly = true;
+            // 
             // EditBills
             // 
             resources.ApplyResources(this, "$this");
@@ -627,5 +649,7 @@
         private storeDataSetTableAdapters.purchasesitemsTableAdapter purchasesitemsTableAdapter;
         private System.Windows.Forms.BindingSource purchasesitemsreturnBindingSource;
         private storeDataSetTableAdapters.purchasesitemsreturnTableAdapter purchasesitemsreturnTableAdapter;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.TextBox Txt_Name;
     }
 }

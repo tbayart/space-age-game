@@ -131,10 +131,16 @@
     <value>Cmb_ItemName</value>
   </data>
   <data name="&gt;&gt;label4.ZOrder" xml:space="preserve">
-    <value>11</value>
+    <value>13</value>
+  </data>
+  <data name="textBox1.Error" xml:space="preserve">
+    <value />
   </data>
   <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="label3.IconPadding" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;label6.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
   <data name="&gt;&gt;groupBox1.ZOrder" xml:space="preserve">
@@ -150,7 +156,7 @@
     <value>In Stock</value>
   </data>
   <data name="&gt;&gt;label5.ZOrder" xml:space="preserve">
-    <value>3</value>
+    <value>5</value>
   </data>
   <data name="Btn_Save.Error" xml:space="preserve">
     <value />
@@ -195,6 +201,9 @@
   <data name="Txt_Paid.Error" xml:space="preserve">
     <value />
   </data>
+  <data name="label6.Error" xml:space="preserve">
+    <value />
+  </data>
   <data name="&gt;&gt;Txt_TotalBill.Type" xml:space="preserve">
     <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
@@ -221,6 +230,9 @@
   </data>
   <data name="&gt;&gt;Cmb_ItemName.Type" xml:space="preserve">
     <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Txt_Cost.ZOrder" xml:space="preserve">
+    <value>4</value>
   </data>
   <data name="label11.TabIndex" type="System.Int32, mscorlib">
     <value>14</value>
@@ -336,6 +348,9 @@
   <data name="&gt;&gt;Cmb_ItemName.ZOrder" xml:space="preserve">
     <value>15</value>
   </data>
+  <data name="label5.TabIndex" type="System.Int32, mscorlib">
+    <value>11</value>
+  </data>
   <data name="&gt;&gt;purchasebillsTableAdapter.Name" xml:space="preserve">
     <value>purchasebillsTableAdapter</value>
   </data>
@@ -347,9 +362,6 @@
   </data>
   <data name="Txt_Units.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
     <value>MiddleRight</value>
-  </data>
-  <data name="label3.Error" xml:space="preserve">
-    <value />
   </data>
   <data name="&gt;&gt;label7.Type" xml:space="preserve">
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
@@ -378,11 +390,14 @@
   <data name="Btn_Save.TabIndex" type="System.Int32, mscorlib">
     <value>14</value>
   </data>
-  <data name="Txt_BillID.Location" type="System.Drawing.Point, System.Drawing">
-    <value>9, 44</value>
+  <data name="label8.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="textBox1.TabIndex" type="System.Int32, mscorlib">
+    <value>15</value>
   </data>
   <data name="&gt;&gt;dateTimePicker1.ZOrder" xml:space="preserve">
-    <value>12</value>
+    <value>14</value>
   </data>
   <data name="Txt_InStock.IconPadding" type="System.Int32, mscorlib">
     <value>0</value>
@@ -390,20 +405,29 @@
   <data name="Cmb_ItemName.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
   </data>
+  <data name="&gt;&gt;label6.Parent" xml:space="preserve">
+    <value>groupBox1</value>
+  </data>
   <data name="&gt;&gt;Txt_Remaining.Parent" xml:space="preserve">
     <value>groupBox1</value>
   </data>
   <data name="label2.Size" type="System.Drawing.Size, System.Drawing">
     <value>27, 13</value>
   </data>
+  <data name="&gt;&gt;label2.Parent" xml:space="preserve">
+    <value>groupBox1</value>
+  </data>
   <data name="&gt;&gt;Txt_Type.Type" xml:space="preserve">
     <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;label2.ZOrder" xml:space="preserve">
-    <value>7</value>
+    <value>9</value>
   </data>
   <data name="&gt;&gt;Cmb_ItemName.Parent" xml:space="preserve">
     <value>groupBox2</value>
+  </data>
+  <data name="Cmb_ItemName.Location" type="System.Drawing.Point, System.Drawing">
+    <value>12, 38</value>
   </data>
   <data name="&gt;&gt;label12.Parent" xml:space="preserve">
     <value>groupBox2</value>
@@ -423,8 +447,8 @@
   <data name="label9.TabIndex" type="System.Int32, mscorlib">
     <value>8</value>
   </data>
-  <data name="&gt;&gt;label17.Name" xml:space="preserve">
-    <value>label17</value>
+  <data name="&gt;&gt;Txt_Name.Name" xml:space="preserve">
+    <value>Txt_Name</value>
   </data>
   <data name="&gt;&gt;Btn_Update.Name" xml:space="preserve">
     <value>Btn_Update</value>
@@ -435,8 +459,8 @@
   <data name="&gt;&gt;itemsTableAdapter.Type" xml:space="preserve">
     <value>Acounting.storeDataSetTableAdapters.itemsTableAdapter, storeDataSet.Designer.cs, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
-  <data name="&gt;&gt;purchasesitemsTableAdapter.Type" xml:space="preserve">
-    <value>Acounting.storeDataSetTableAdapters.purchasesitemsTableAdapter, storeDataSet.Designer.cs, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  <data name="textBox1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>547, 43</value>
   </data>
   <data name="&gt;&gt;Txt_InStock.Parent" xml:space="preserve">
     <value>groupBox2</value>
@@ -471,6 +495,9 @@
   <data name="dataGridView1.Size" type="System.Drawing.Size, System.Drawing">
     <value>882, 344</value>
   </data>
+  <data name="Txt_Name.Error" xml:space="preserve">
+    <value />
+  </data>
   <data name="Txt_ItemID.Error" xml:space="preserve">
     <value />
   </data>
@@ -495,9 +522,6 @@
   <data name="label9.Location" type="System.Drawing.Point, System.Drawing">
     <value>605, 21</value>
   </data>
-  <data name="&gt;&gt;label18.Parent" xml:space="preserve">
-    <value>groupBox2</value>
-  </data>
   <data name="&gt;&gt;label17.Type" xml:space="preserve">
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
@@ -509,6 +533,9 @@
   </data>
   <data name="Txt_BillID.Error" xml:space="preserve">
     <value />
+  </data>
+  <data name="&gt;&gt;billsreturnBindingSource1.Name" xml:space="preserve">
+    <value>billsreturnBindingSource1</value>
   </data>
   <data name="&gt;&gt;groupBox1.Name" xml:space="preserve">
     <value>groupBox1</value>
@@ -543,8 +570,8 @@
   <data name="label4.Text" xml:space="preserve">
     <value>Document Date</value>
   </data>
-  <data name="label8.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
+  <data name="Txt_Name.TabIndex" type="System.Int32, mscorlib">
+    <value>15</value>
   </data>
   <data name="label12.Location" type="System.Drawing.Point, System.Drawing">
     <value>9, 21</value>
@@ -561,8 +588,11 @@
   <data name="&gt;&gt;label1.Parent" xml:space="preserve">
     <value>groupBox1</value>
   </data>
-  <data name="label11.Location" type="System.Drawing.Point, System.Drawing">
-    <value>439, 21</value>
+  <data name="label9.IconPadding" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="label2.IconPadding" type="System.Int32, mscorlib">
+    <value>0</value>
   </data>
   <data name="Txt_Paid.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
     <value>MiddleRight</value>
@@ -579,6 +609,9 @@
   <data name="&gt;&gt;salesitemsreturnTableAdapter.Name" xml:space="preserve">
     <value>salesitemsreturnTableAdapter</value>
   </data>
+  <data name="&gt;&gt;dataGridView1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridView, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
   <data name="&gt;&gt;Btn_Update.Parent" xml:space="preserve">
     <value>groupBox2</value>
   </data>
@@ -588,14 +621,14 @@
   <data name="&gt;&gt;label8.Name" xml:space="preserve">
     <value>label8</value>
   </data>
+  <data name="&gt;&gt;label7.Name" xml:space="preserve">
+    <value>label7</value>
+  </data>
   <data name="&gt;&gt;Btn_Update.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
   <data name="&gt;&gt;Txt_RowID.Name" xml:space="preserve">
     <value>Txt_RowID</value>
-  </data>
-  <data name="Txt_RowID.Error" xml:space="preserve">
-    <value />
   </data>
   <data name="Btn_Update.Error" xml:space="preserve">
     <value />
@@ -612,11 +645,14 @@
   <data name="Btn_Update.Text" xml:space="preserve">
     <value>Update</value>
   </data>
+  <data name="&gt;&gt;label17.Name" xml:space="preserve">
+    <value>label17</value>
+  </data>
   <data name="label12.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
     <value>MiddleRight</value>
   </data>
-  <data name="&gt;&gt;label18.Name" xml:space="preserve">
-    <value>label18</value>
+  <data name="&gt;&gt;namesBindingSource.Name" xml:space="preserve">
+    <value>namesBindingSource</value>
   </data>
   <data name="Txt_Type.Error" xml:space="preserve">
     <value />
@@ -672,6 +708,9 @@
   <data name="label2.Error" xml:space="preserve">
     <value />
   </data>
+  <data name="&gt;&gt;Txt_Name.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
   <data name="&gt;&gt;Txt_RowID.Type" xml:space="preserve">
     <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
@@ -703,7 +742,7 @@
     <value>Acounting.storeDataSet, storeDataSet.Designer.cs, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;Txt_Paid.ZOrder" xml:space="preserve">
-    <value>8</value>
+    <value>10</value>
   </data>
   <data name="&gt;&gt;dataGridView1.Name" xml:space="preserve">
     <value>dataGridView1</value>
@@ -721,10 +760,13 @@
     <value>purchasebillsreturnTableAdapter</value>
   </data>
   <data name="&gt;&gt;Txt_Type.ZOrder" xml:space="preserve">
-    <value>2</value>
+    <value>4</value>
   </data>
   <data name="label4.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
+  </data>
+  <data name="Txt_Name.IconPadding" type="System.Int32, mscorlib">
+    <value>0</value>
   </data>
   <data name="label3.Size" type="System.Drawing.Size, System.Drawing">
     <value>46, 13</value>
@@ -759,9 +801,6 @@
   <data name="label8.Size" type="System.Drawing.Size, System.Drawing">
     <value>49, 16</value>
   </data>
-  <data name="&gt;&gt;label12.Name" xml:space="preserve">
-    <value>label12</value>
-  </data>
   <data name="&gt;&gt;billsBindingSource.Name" xml:space="preserve">
     <value>billsBindingSource</value>
   </data>
@@ -777,14 +816,17 @@
   <data name="&gt;&gt;Txt_TotalBill.Parent" xml:space="preserve">
     <value>groupBox1</value>
   </data>
-  <data name="Txt_Paid.Location" type="System.Drawing.Point, System.Drawing">
-    <value>397, 44</value>
+  <data name="label4.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
+    <value>MiddleRight</value>
   </data>
   <data name="Txt_TotalBill.Size" type="System.Drawing.Size, System.Drawing">
     <value>81, 20</value>
   </data>
-  <data name="label5.TabIndex" type="System.Int32, mscorlib">
-    <value>11</value>
+  <data name="&gt;&gt;Txt_Name.Parent" xml:space="preserve">
+    <value>groupBox1</value>
+  </data>
+  <data name="Txt_Name.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
+    <value>MiddleRight</value>
   </data>
   <data name="&gt;&gt;billsreturnTableAdapter.Type" xml:space="preserve">
     <value>Acounting.storeDataSetTableAdapters.billsreturnTableAdapter, storeDataSet.Designer.cs, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null</value>
@@ -852,14 +894,20 @@
   <data name="&gt;&gt;groupBox2.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
+  <data name="&gt;&gt;textBox1.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
   <data name="label4.TabIndex" type="System.Int32, mscorlib">
     <value>9</value>
+  </data>
+  <data name="&gt;&gt;textBox1.Name" xml:space="preserve">
+    <value>textBox1</value>
   </data>
   <data name="Txt_ItemID.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
     <value>MiddleRight</value>
   </data>
-  <data name="label2.IconPadding" type="System.Int32, mscorlib">
-    <value>0</value>
+  <data name="Txt_Cost.Size" type="System.Drawing.Size, System.Drawing">
+    <value>53, 22</value>
   </data>
   <data name="&gt;&gt;billsreturnBindingSource.Name" xml:space="preserve">
     <value>billsreturnBindingSource</value>
@@ -868,16 +916,13 @@
     <value>0</value>
   </data>
   <data name="&gt;&gt;label17.ZOrder" xml:space="preserve">
-    <value>1</value>
+    <value>3</value>
   </data>
   <data name="Btn_Save.Text" xml:space="preserve">
     <value>Save</value>
   </data>
   <data name="label1.Error" xml:space="preserve">
     <value />
-  </data>
-  <data name="&gt;&gt;namesBindingSource.Name" xml:space="preserve">
-    <value>namesBindingSource</value>
   </data>
   <data name="label5.Size" type="System.Drawing.Size, System.Drawing">
     <value>62, 13</value>
@@ -933,6 +978,9 @@
   <data name="Txt_Units.Error" xml:space="preserve">
     <value />
   </data>
+  <data name="textBox1.IconPadding" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
   <data name="label10.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
@@ -945,8 +993,8 @@
   <data name="&gt;&gt;purchasesitemsreturnTableAdapter.Name" xml:space="preserve">
     <value>purchasesitemsreturnTableAdapter</value>
   </data>
-  <data name="label9.IconPadding" type="System.Int32, mscorlib">
-    <value>0</value>
+  <data name="Txt_RowID.Error" xml:space="preserve">
+    <value />
   </data>
   <data name="&gt;&gt;Txt_BillID.Type" xml:space="preserve">
     <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
@@ -1017,23 +1065,23 @@
   <data name="&gt;&gt;Txt_Units.Name" xml:space="preserve">
     <value>Txt_Units</value>
   </data>
-  <data name="&gt;&gt;label9.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="&gt;&gt;Txt_Paid.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="Txt_TotalBill.Location" type="System.Drawing.Point, System.Drawing">
-    <value>282, 44</value>
+  <data name="label3.Error" xml:space="preserve">
+    <value />
   </data>
   <data name="label7.Size" type="System.Drawing.Size, System.Drawing">
     <value>56, 16</value>
   </data>
   <data name="&gt;&gt;label1.ZOrder" xml:space="preserve">
-    <value>9</value>
+    <value>11</value>
   </data>
   <data name="groupBox2.Text" xml:space="preserve">
     <value>Item</value>
   </data>
-  <data name="&gt;&gt;billsreturnBindingSource1.Name" xml:space="preserve">
-    <value>billsreturnBindingSource1</value>
+  <data name="&gt;&gt;label18.Parent" xml:space="preserve">
+    <value>groupBox2</value>
   </data>
   <data name="Txt_Price.IconPadding" type="System.Int32, mscorlib">
     <value>0</value>
@@ -1047,8 +1095,11 @@
   <data name="Txt_Price.TabIndex" type="System.Int32, mscorlib">
     <value>3</value>
   </data>
-  <data name="&gt;&gt;label3.ZOrder" xml:space="preserve">
-    <value>5</value>
+  <data name="&gt;&gt;label9.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="Txt_TotalBill.Location" type="System.Drawing.Point, System.Drawing">
+    <value>282, 44</value>
   </data>
   <data name="&gt;&gt;salesitemsreturnTableAdapter.Type" xml:space="preserve">
     <value>Acounting.storeDataSetTableAdapters.salesitemsreturnTableAdapter, storeDataSet.Designer.cs, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null</value>
@@ -1060,10 +1111,13 @@
     <value>MiddleRight</value>
   </data>
   <data name="&gt;&gt;Txt_Remaining.ZOrder" xml:space="preserve">
-    <value>4</value>
+    <value>6</value>
   </data>
   <data name="&gt;&gt;purchasebillsreturnTableAdapter.Type" xml:space="preserve">
     <value>Acounting.storeDataSetTableAdapters.purchasebillsreturnTableAdapter, storeDataSet.Designer.cs, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;textBox1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="Txt_ItemID.Size" type="System.Drawing.Size, System.Drawing">
     <value>58, 22</value>
@@ -1083,9 +1137,6 @@
   <data name="Txt_Remaining.Location" type="System.Drawing.Point, System.Drawing">
     <value>487, 44</value>
   </data>
-  <data name="Txt_Type.Size" type="System.Drawing.Size, System.Drawing">
-    <value>100, 20</value>
-  </data>
   <data name="&gt;&gt;errorProvider1.Name" xml:space="preserve">
     <value>errorProvider1</value>
   </data>
@@ -1095,8 +1146,8 @@
   <data name="&gt;&gt;allBillsBindingSource.Name" xml:space="preserve">
     <value>allBillsBindingSource</value>
   </data>
-  <data name="label18.Location" type="System.Drawing.Point, System.Drawing">
-    <value>204, 21</value>
+  <data name="Txt_Paid.Location" type="System.Drawing.Point, System.Drawing">
+    <value>397, 44</value>
   </data>
   <data name="Txt_Remaining.Error" xml:space="preserve">
     <value />
@@ -1108,7 +1159,7 @@
     <value>groupBox2</value>
   </data>
   <data name="&gt;&gt;Txt_TotalBill.ZOrder" xml:space="preserve">
-    <value>6</value>
+    <value>8</value>
   </data>
   <data name="&gt;&gt;salesitemsTableAdapter.Name" xml:space="preserve">
     <value>salesitemsTableAdapter</value>
@@ -1188,11 +1239,14 @@
   <data name="&gt;&gt;Txt_Price.Name" xml:space="preserve">
     <value>Txt_Price</value>
   </data>
+  <data name="Txt_Name.Location" type="System.Drawing.Point, System.Drawing">
+    <value>547, 43</value>
+  </data>
   <data name="&gt;&gt;storeDataSet.Name" xml:space="preserve">
     <value>storeDataSet</value>
   </data>
-  <data name="&gt;&gt;label2.Parent" xml:space="preserve">
-    <value>groupBox1</value>
+  <data name="Txt_Type.Size" type="System.Drawing.Size, System.Drawing">
+    <value>100, 20</value>
   </data>
   <data name="groupBox1.Error" xml:space="preserve">
     <value />
@@ -1211,6 +1265,9 @@
   </data>
   <data name="&gt;&gt;billsTableAdapter.Name" xml:space="preserve">
     <value>billsTableAdapter</value>
+  </data>
+  <data name="&gt;&gt;label6.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="label17.Location" type="System.Drawing.Point, System.Drawing">
     <value>584, 28</value>
@@ -1233,11 +1290,17 @@
   <data name="label9.Text" xml:space="preserve">
     <value>Price</value>
   </data>
+  <data name="label11.Location" type="System.Drawing.Point, System.Drawing">
+    <value>439, 21</value>
+  </data>
   <data name="&gt;&gt;Txt_InStock.Name" xml:space="preserve">
     <value>Txt_InStock</value>
   </data>
-  <data name="&gt;&gt;label7.Name" xml:space="preserve">
-    <value>label7</value>
+  <data name="label6.IconPadding" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="label18.Location" type="System.Drawing.Point, System.Drawing">
+    <value>204, 21</value>
   </data>
   <data name="label11.IconPadding" type="System.Int32, mscorlib">
     <value>0</value>
@@ -1263,14 +1326,20 @@
   <data name="&gt;&gt;label8.Parent" xml:space="preserve">
     <value>groupBox2</value>
   </data>
-  <data name="Txt_Cost.Size" type="System.Drawing.Size, System.Drawing">
-    <value>53, 22</value>
+  <data name="&gt;&gt;purchasesitemsTableAdapter.Type" xml:space="preserve">
+    <value>Acounting.storeDataSetTableAdapters.purchasesitemsTableAdapter, storeDataSet.Designer.cs, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
-  <data name="&gt;&gt;Txt_Paid.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="&gt;&gt;Txt_Name.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;textBox1.Parent" xml:space="preserve">
+    <value>groupBox1</value>
+  </data>
+  <data name="&gt;&gt;label12.Name" xml:space="preserve">
+    <value>label12</value>
   </data>
   <data name="&gt;&gt;Btn_Save.ZOrder" xml:space="preserve">
-    <value>0</value>
+    <value>2</value>
   </data>
   <data name="label18.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
     <value>MiddleRight</value>
@@ -1281,8 +1350,14 @@
   <data name="&gt;&gt;label9.Parent" xml:space="preserve">
     <value>groupBox2</value>
   </data>
+  <data name="Txt_BillID.Location" type="System.Drawing.Point, System.Drawing">
+    <value>9, 44</value>
+  </data>
   <data name="Txt_Units.Size" type="System.Drawing.Size, System.Drawing">
     <value>62, 22</value>
+  </data>
+  <data name="label6.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
+    <value>MiddleRight</value>
   </data>
   <data name="label7.Error" xml:space="preserve">
     <value />
@@ -1311,11 +1386,14 @@
   <data name="Txt_Price.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
     <value>MiddleRight</value>
   </data>
+  <data name="&gt;&gt;Txt_Price.Parent" xml:space="preserve">
+    <value>groupBox2</value>
+  </data>
   <data name="label12.Text" xml:space="preserve">
     <value>Item Name</value>
   </data>
-  <data name="&gt;&gt;Txt_Price.Parent" xml:space="preserve">
-    <value>groupBox2</value>
+  <data name="textBox1.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
+    <value>MiddleRight</value>
   </data>
   <data name="dataGridView1.Error" xml:space="preserve">
     <value />
@@ -1332,14 +1410,11 @@
   <data name="&gt;&gt;label3.Type" xml:space="preserve">
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;dataGridView1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.DataGridView, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="label6.Location" type="System.Drawing.Point, System.Drawing">
+    <value>636, 28</value>
   </data>
   <data name="Btn_Save.Size" type="System.Drawing.Size, System.Drawing">
     <value>72, 37</value>
-  </data>
-  <data name="label4.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
-    <value>MiddleRight</value>
   </data>
   <data name="&gt;&gt;Txt_ItemID.Type" xml:space="preserve">
     <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
@@ -1357,7 +1432,7 @@
     <value>31, 13</value>
   </data>
   <data name="&gt;&gt;Txt_BillID.ZOrder" xml:space="preserve">
-    <value>10</value>
+    <value>12</value>
   </data>
   <data name="Txt_Remaining.Size" type="System.Drawing.Size, System.Drawing">
     <value>76, 20</value>
@@ -1371,20 +1446,26 @@
   <data name="&gt;&gt;namesTableAdapter.Type" xml:space="preserve">
     <value>Acounting.storeDataSetTableAdapters.namesTableAdapter, storeDataSet.Designer.cs, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
+  <data name="&gt;&gt;label6.Name" xml:space="preserve">
+    <value>label6</value>
+  </data>
   <data name="Txt_Type.IconPadding" type="System.Int32, mscorlib">
     <value>0</value>
   </data>
   <data name="label18.Size" type="System.Drawing.Size, System.Drawing">
     <value>49, 16</value>
   </data>
-  <data name="Cmb_ItemName.Location" type="System.Drawing.Point, System.Drawing">
-    <value>12, 38</value>
+  <data name="&gt;&gt;label18.Name" xml:space="preserve">
+    <value>label18</value>
   </data>
-  <data name="&gt;&gt;Txt_Cost.ZOrder" xml:space="preserve">
-    <value>4</value>
+  <data name="label6.TabIndex" type="System.Int32, mscorlib">
+    <value>16</value>
   </data>
   <data name="Txt_RowID.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
     <value>MiddleRight</value>
+  </data>
+  <data name="&gt;&gt;label3.ZOrder" xml:space="preserve">
+    <value>7</value>
   </data>
   <metadata name="purchasesitemsreturnTableAdapter.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>247, 204</value>
@@ -1441,7 +1522,7 @@
     <value>17, 167</value>
   </metadata>
   <metadata name="$this.TrayHeight" type="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>209</value>
+    <value>156</value>
   </metadata>
   <metadata name="salesitemsTableAdapter.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>641, 130</value>
