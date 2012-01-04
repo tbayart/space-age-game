@@ -91,6 +91,9 @@
             // Cmd_Add
             // 
             resources.ApplyResources(this.Cmd_Add, "Cmd_Add");
+            this.errorProvider1.SetError(this.Cmd_Add, resources.GetString("Cmd_Add.Error"));
+            this.errorProvider1.SetIconAlignment(this.Cmd_Add, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("Cmd_Add.IconAlignment"))));
+            this.errorProvider1.SetIconPadding(this.Cmd_Add, ((int)(resources.GetObject("Cmd_Add.IconPadding"))));
             this.Cmd_Add.Name = "Cmd_Add";
             this.Cmd_Add.UseVisualStyleBackColor = true;
             this.Cmd_Add.Click += new System.EventHandler(this.Cmd_Add_Click);
@@ -98,6 +101,9 @@
             // Txt_AddOpenning
             // 
             resources.ApplyResources(this.Txt_AddOpenning, "Txt_AddOpenning");
+            this.errorProvider1.SetError(this.Txt_AddOpenning, resources.GetString("Txt_AddOpenning.Error"));
+            this.errorProvider1.SetIconAlignment(this.Txt_AddOpenning, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("Txt_AddOpenning.IconAlignment"))));
+            this.errorProvider1.SetIconPadding(this.Txt_AddOpenning, ((int)(resources.GetObject("Txt_AddOpenning.IconPadding"))));
             this.Txt_AddOpenning.Name = "Txt_AddOpenning";
             // 
             // vaultBindingSource
@@ -117,34 +123,52 @@
             // label1
             // 
             resources.ApplyResources(this.label1, "label1");
+            this.errorProvider1.SetError(this.label1, resources.GetString("label1.Error"));
+            this.errorProvider1.SetIconAlignment(this.label1, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("label1.IconAlignment"))));
+            this.errorProvider1.SetIconPadding(this.label1, ((int)(resources.GetObject("label1.IconPadding"))));
             this.label1.Name = "label1";
             // 
             // label2
             // 
             resources.ApplyResources(this.label2, "label2");
+            this.errorProvider1.SetError(this.label2, resources.GetString("label2.Error"));
+            this.errorProvider1.SetIconAlignment(this.label2, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("label2.IconAlignment"))));
+            this.errorProvider1.SetIconPadding(this.label2, ((int)(resources.GetObject("label2.IconPadding"))));
             this.label2.Name = "label2";
             // 
             // label3
             // 
             resources.ApplyResources(this.label3, "label3");
+            this.errorProvider1.SetError(this.label3, resources.GetString("label3.Error"));
+            this.errorProvider1.SetIconAlignment(this.label3, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("label3.IconAlignment"))));
+            this.errorProvider1.SetIconPadding(this.label3, ((int)(resources.GetObject("label3.IconPadding"))));
             this.label3.Name = "label3";
             // 
             // label4
             // 
             resources.ApplyResources(this.label4, "label4");
+            this.errorProvider1.SetError(this.label4, resources.GetString("label4.Error"));
+            this.errorProvider1.SetIconAlignment(this.label4, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("label4.IconAlignment"))));
+            this.errorProvider1.SetIconPadding(this.label4, ((int)(resources.GetObject("label4.IconPadding"))));
             this.label4.Name = "label4";
             // 
             // textBox1
             // 
-            this.textBox1.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.vaultBindingSource, "Opennings", true));
             resources.ApplyResources(this.textBox1, "textBox1");
+            this.textBox1.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.vaultBindingSource, "Opennings", true));
+            this.errorProvider1.SetError(this.textBox1, resources.GetString("textBox1.Error"));
+            this.errorProvider1.SetIconAlignment(this.textBox1, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("textBox1.IconAlignment"))));
+            this.errorProvider1.SetIconPadding(this.textBox1, ((int)(resources.GetObject("textBox1.IconPadding"))));
             this.textBox1.Name = "textBox1";
             this.textBox1.ReadOnly = true;
             // 
             // textBox2
             // 
-            this.textBox2.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.collectedBindingSource, "CollectedTotal", true));
             resources.ApplyResources(this.textBox2, "textBox2");
+            this.textBox2.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.collectedBindingSource, "CollectedTotal", true));
+            this.errorProvider1.SetError(this.textBox2, resources.GetString("textBox2.Error"));
+            this.errorProvider1.SetIconAlignment(this.textBox2, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("textBox2.IconAlignment"))));
+            this.errorProvider1.SetIconPadding(this.textBox2, ((int)(resources.GetObject("textBox2.IconPadding"))));
             this.textBox2.Name = "textBox2";
             this.textBox2.ReadOnly = true;
             // 
@@ -155,8 +179,11 @@
             // 
             // textBox3
             // 
-            this.textBox3.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.paidBindingSource, "PaidTotal", true));
             resources.ApplyResources(this.textBox3, "textBox3");
+            this.textBox3.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.paidBindingSource, "PaidTotal", true));
+            this.errorProvider1.SetError(this.textBox3, resources.GetString("textBox3.Error"));
+            this.errorProvider1.SetIconAlignment(this.textBox3, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("textBox3.IconAlignment"))));
+            this.errorProvider1.SetIconPadding(this.textBox3, ((int)(resources.GetObject("textBox3.IconPadding"))));
             this.textBox3.Name = "textBox3";
             this.textBox3.ReadOnly = true;
             // 
@@ -167,8 +194,11 @@
             // 
             // textBox4
             // 
-            this.textBox4.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.vaultBindingSource, "In_Hand", true));
             resources.ApplyResources(this.textBox4, "textBox4");
+            this.textBox4.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.vaultBindingSource, "In_Hand", true));
+            this.errorProvider1.SetError(this.textBox4, resources.GetString("textBox4.Error"));
+            this.errorProvider1.SetIconAlignment(this.textBox4, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("textBox4.IconAlignment"))));
+            this.errorProvider1.SetIconPadding(this.textBox4, ((int)(resources.GetObject("textBox4.IconPadding"))));
             this.textBox4.Name = "textBox4";
             this.textBox4.ReadOnly = true;
             // 
@@ -183,18 +213,25 @@
             // errorProvider1
             // 
             this.errorProvider1.ContainerControl = this;
+            resources.ApplyResources(this.errorProvider1, "errorProvider1");
             // 
             // textBox5
             // 
-            this.textBox5.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.vaultBindingSource, "In_Hand", true));
             resources.ApplyResources(this.textBox5, "textBox5");
+            this.textBox5.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.vaultBindingSource, "In_Hand", true));
+            this.errorProvider1.SetError(this.textBox5, resources.GetString("textBox5.Error"));
+            this.errorProvider1.SetIconAlignment(this.textBox5, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("textBox5.IconAlignment"))));
+            this.errorProvider1.SetIconPadding(this.textBox5, ((int)(resources.GetObject("textBox5.IconPadding"))));
             this.textBox5.Name = "textBox5";
             this.textBox5.ReadOnly = true;
             // 
             // Txt_totalpurchasebillsreturn
             // 
-            this.Txt_totalpurchasebillsreturn.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.totalPurchasesReturnBindingSource, "Expr1", true));
             resources.ApplyResources(this.Txt_totalpurchasebillsreturn, "Txt_totalpurchasebillsreturn");
+            this.Txt_totalpurchasebillsreturn.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.totalPurchasesReturnBindingSource, "Expr1", true));
+            this.errorProvider1.SetError(this.Txt_totalpurchasebillsreturn, resources.GetString("Txt_totalpurchasebillsreturn.Error"));
+            this.errorProvider1.SetIconAlignment(this.Txt_totalpurchasebillsreturn, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("Txt_totalpurchasebillsreturn.IconAlignment"))));
+            this.errorProvider1.SetIconPadding(this.Txt_totalpurchasebillsreturn, ((int)(resources.GetObject("Txt_totalpurchasebillsreturn.IconPadding"))));
             this.Txt_totalpurchasebillsreturn.Name = "Txt_totalpurchasebillsreturn";
             this.Txt_totalpurchasebillsreturn.ReadOnly = true;
             // 
@@ -205,15 +242,21 @@
             // 
             // textBox7
             // 
-            this.textBox7.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.collectedBindingSource, "CollectedTotal", true));
             resources.ApplyResources(this.textBox7, "textBox7");
+            this.textBox7.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.collectedBindingSource, "CollectedTotal", true));
+            this.errorProvider1.SetError(this.textBox7, resources.GetString("textBox7.Error"));
+            this.errorProvider1.SetIconAlignment(this.textBox7, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("textBox7.IconAlignment"))));
+            this.errorProvider1.SetIconPadding(this.textBox7, ((int)(resources.GetObject("textBox7.IconPadding"))));
             this.textBox7.Name = "textBox7";
             this.textBox7.ReadOnly = true;
             // 
             // Txt_totalpurchasebills
             // 
-            this.Txt_totalpurchasebills.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.totalPurchaseBindingSource, "TotalPurchase", true));
             resources.ApplyResources(this.Txt_totalpurchasebills, "Txt_totalpurchasebills");
+            this.Txt_totalpurchasebills.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.totalPurchaseBindingSource, "TotalPurchase", true));
+            this.errorProvider1.SetError(this.Txt_totalpurchasebills, resources.GetString("Txt_totalpurchasebills.Error"));
+            this.errorProvider1.SetIconAlignment(this.Txt_totalpurchasebills, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("Txt_totalpurchasebills.IconAlignment"))));
+            this.errorProvider1.SetIconPadding(this.Txt_totalpurchasebills, ((int)(resources.GetObject("Txt_totalpurchasebills.IconPadding"))));
             this.Txt_totalpurchasebills.Name = "Txt_totalpurchasebills";
             this.Txt_totalpurchasebills.ReadOnly = true;
             // 
@@ -225,49 +268,76 @@
             // label5
             // 
             resources.ApplyResources(this.label5, "label5");
+            this.errorProvider1.SetError(this.label5, resources.GetString("label5.Error"));
+            this.errorProvider1.SetIconAlignment(this.label5, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("label5.IconAlignment"))));
+            this.errorProvider1.SetIconPadding(this.label5, ((int)(resources.GetObject("label5.IconPadding"))));
             this.label5.Name = "label5";
             // 
             // label6
             // 
             resources.ApplyResources(this.label6, "label6");
+            this.errorProvider1.SetError(this.label6, resources.GetString("label6.Error"));
+            this.errorProvider1.SetIconAlignment(this.label6, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("label6.IconAlignment"))));
+            this.errorProvider1.SetIconPadding(this.label6, ((int)(resources.GetObject("label6.IconPadding"))));
             this.label6.Name = "label6";
             // 
             // label7
             // 
             resources.ApplyResources(this.label7, "label7");
+            this.errorProvider1.SetError(this.label7, resources.GetString("label7.Error"));
+            this.errorProvider1.SetIconAlignment(this.label7, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("label7.IconAlignment"))));
+            this.errorProvider1.SetIconPadding(this.label7, ((int)(resources.GetObject("label7.IconPadding"))));
             this.label7.Name = "label7";
             // 
             // label8
             // 
             resources.ApplyResources(this.label8, "label8");
+            this.errorProvider1.SetError(this.label8, resources.GetString("label8.Error"));
+            this.errorProvider1.SetIconAlignment(this.label8, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("label8.IconAlignment"))));
+            this.errorProvider1.SetIconPadding(this.label8, ((int)(resources.GetObject("label8.IconPadding"))));
             this.label8.Name = "label8";
             // 
             // Txt_Nettotalpurchasebills
             // 
             resources.ApplyResources(this.Txt_Nettotalpurchasebills, "Txt_Nettotalpurchasebills");
+            this.errorProvider1.SetError(this.Txt_Nettotalpurchasebills, resources.GetString("Txt_Nettotalpurchasebills.Error"));
+            this.errorProvider1.SetIconAlignment(this.Txt_Nettotalpurchasebills, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("Txt_Nettotalpurchasebills.IconAlignment"))));
+            this.errorProvider1.SetIconPadding(this.Txt_Nettotalpurchasebills, ((int)(resources.GetObject("Txt_Nettotalpurchasebills.IconPadding"))));
             this.Txt_Nettotalpurchasebills.Name = "Txt_Nettotalpurchasebills";
             this.Txt_Nettotalpurchasebills.ReadOnly = true;
             // 
             // label9
             // 
             resources.ApplyResources(this.label9, "label9");
+            this.errorProvider1.SetError(this.label9, resources.GetString("label9.Error"));
+            this.errorProvider1.SetIconAlignment(this.label9, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("label9.IconAlignment"))));
+            this.errorProvider1.SetIconPadding(this.label9, ((int)(resources.GetObject("label9.IconPadding"))));
             this.label9.Name = "label9";
             // 
             // Txt_Nettotalbills
             // 
             resources.ApplyResources(this.Txt_Nettotalbills, "Txt_Nettotalbills");
+            this.errorProvider1.SetError(this.Txt_Nettotalbills, resources.GetString("Txt_Nettotalbills.Error"));
+            this.errorProvider1.SetIconAlignment(this.Txt_Nettotalbills, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("Txt_Nettotalbills.IconAlignment"))));
+            this.errorProvider1.SetIconPadding(this.Txt_Nettotalbills, ((int)(resources.GetObject("Txt_Nettotalbills.IconPadding"))));
             this.Txt_Nettotalbills.Name = "Txt_Nettotalbills";
             this.Txt_Nettotalbills.ReadOnly = true;
             // 
             // label10
             // 
             resources.ApplyResources(this.label10, "label10");
+            this.errorProvider1.SetError(this.label10, resources.GetString("label10.Error"));
+            this.errorProvider1.SetIconAlignment(this.label10, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("label10.IconAlignment"))));
+            this.errorProvider1.SetIconPadding(this.label10, ((int)(resources.GetObject("label10.IconPadding"))));
             this.label10.Name = "label10";
             // 
             // Txt_totalbillsreturn
             // 
-            this.Txt_totalbillsreturn.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.totalBillsReturnBindingSource, "Expr1", true));
             resources.ApplyResources(this.Txt_totalbillsreturn, "Txt_totalbillsreturn");
+            this.Txt_totalbillsreturn.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.totalBillsReturnBindingSource, "Expr1", true));
+            this.errorProvider1.SetError(this.Txt_totalbillsreturn, resources.GetString("Txt_totalbillsreturn.Error"));
+            this.errorProvider1.SetIconAlignment(this.Txt_totalbillsreturn, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("Txt_totalbillsreturn.IconAlignment"))));
+            this.errorProvider1.SetIconPadding(this.Txt_totalbillsreturn, ((int)(resources.GetObject("Txt_totalbillsreturn.IconPadding"))));
             this.Txt_totalbillsreturn.Name = "Txt_totalbillsreturn";
             this.Txt_totalbillsreturn.ReadOnly = true;
             // 
@@ -278,8 +348,11 @@
             // 
             // Txt_totalbills
             // 
-            this.Txt_totalbills.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.totalBillsBindingSource, "TotalToalBills", true));
             resources.ApplyResources(this.Txt_totalbills, "Txt_totalbills");
+            this.Txt_totalbills.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.totalBillsBindingSource, "TotalToalBills", true));
+            this.errorProvider1.SetError(this.Txt_totalbills, resources.GetString("Txt_totalbills.Error"));
+            this.errorProvider1.SetIconAlignment(this.Txt_totalbills, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("Txt_totalbills.IconAlignment"))));
+            this.errorProvider1.SetIconPadding(this.Txt_totalbills, ((int)(resources.GetObject("Txt_totalbills.IconPadding"))));
             this.Txt_totalbills.Name = "Txt_totalbills";
             this.Txt_totalbills.ReadOnly = true;
             // 
@@ -291,17 +364,26 @@
             // label11
             // 
             resources.ApplyResources(this.label11, "label11");
+            this.errorProvider1.SetError(this.label11, resources.GetString("label11.Error"));
+            this.errorProvider1.SetIconAlignment(this.label11, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("label11.IconAlignment"))));
+            this.errorProvider1.SetIconPadding(this.label11, ((int)(resources.GetObject("label11.IconPadding"))));
             this.label11.Name = "label11";
             // 
             // label12
             // 
             resources.ApplyResources(this.label12, "label12");
+            this.errorProvider1.SetError(this.label12, resources.GetString("label12.Error"));
+            this.errorProvider1.SetIconAlignment(this.label12, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("label12.IconAlignment"))));
+            this.errorProvider1.SetIconPadding(this.label12, ((int)(resources.GetObject("label12.IconPadding"))));
             this.label12.Name = "label12";
             // 
             // textBox6
             // 
-            this.textBox6.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.totalEarningsBindingSource, "TotalEarnings", true));
             resources.ApplyResources(this.textBox6, "textBox6");
+            this.textBox6.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.totalEarningsBindingSource, "TotalEarnings", true));
+            this.errorProvider1.SetError(this.textBox6, resources.GetString("textBox6.Error"));
+            this.errorProvider1.SetIconAlignment(this.textBox6, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("textBox6.IconAlignment"))));
+            this.errorProvider1.SetIconPadding(this.textBox6, ((int)(resources.GetObject("textBox6.IconPadding"))));
             this.textBox6.Name = "textBox6";
             this.textBox6.ReadOnly = true;
             // 
@@ -313,6 +395,9 @@
             // label13
             // 
             resources.ApplyResources(this.label13, "label13");
+            this.errorProvider1.SetError(this.label13, resources.GetString("label13.Error"));
+            this.errorProvider1.SetIconAlignment(this.label13, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("label13.IconAlignment"))));
+            this.errorProvider1.SetIconPadding(this.label13, ((int)(resources.GetObject("label13.IconPadding"))));
             this.label13.Name = "label13";
             // 
             // totalPurchaseTableAdapter

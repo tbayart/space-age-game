@@ -237,6 +237,8 @@ namespace Acounting
                     string line = "drop schema store";
                     command = new MySqlCommand(line, Connection);
                     command.ExecuteNonQuery();
+
+                    Application.Restart();
                 }
 
 
