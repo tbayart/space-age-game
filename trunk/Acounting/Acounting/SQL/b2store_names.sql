@@ -6,20 +6,23 @@ USE `store`;
 -- ------------------------------------------------------
 -- Server version	5.5.19
 
-
+ 
 --
--- Table structure for table `dealers`
+-- Table structure for table `names`
 --
 
-DROP TABLE IF EXISTS `dealers`;
-CREATE TABLE `dealers` (
-  `DealerID` int(11) NOT NULL,
-  `DealerName` varchar(45) NOT NULL,
-  `Adress` varchar(45) DEFAULT NULL,
+DROP TABLE IF EXISTS `names`; 
+CREATE TABLE `names` (
+  `ID` int(11) NOT NULL,
+  `Name` varchar(255) CHARACTER SET utf8 NOT NULL,
+  `Address` varchar(45) DEFAULT NULL,
   `Telephone` varchar(45) DEFAULT NULL,
   `Debt` double NOT NULL,
   `InitialDebt` double NOT NULL,
   `InitialDate` date NOT NULL,
-  PRIMARY KEY (`DealerID`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
--- Dump completed on 2011-12-28  6:57:30
+  `TypeAgent` tinyint(1) NOT NULL,
+  `TypeDealer` tinyint(1) NOT NULL,
+  PRIMARY KEY (`ID`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci; 
+
+-- Dump completed on 2012-01-04 11:06:22

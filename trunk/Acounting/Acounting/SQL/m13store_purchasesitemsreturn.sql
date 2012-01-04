@@ -6,11 +6,12 @@ USE `store`;
 -- ------------------------------------------------------
 -- Server version	5.5.19
 
+ 
 --
 -- Table structure for table `purchasesitemsreturn`
 --
 
-DROP TABLE IF EXISTS `purchasesitemsreturn`;
+DROP TABLE IF EXISTS `purchasesitemsreturn`; 
 CREATE TABLE `purchasesitemsreturn` (
   `ID` int(11) unsigned NOT NULL DEFAULT '0',
   `PurchaseBillsreturn_BillID` int(11) NOT NULL,
@@ -23,7 +24,6 @@ CREATE TABLE `purchasesitemsreturn` (
   KEY `fk_purchasesitemsreturn_PurchaseBillsreturn1` (`PurchaseBillsreturn_BillID`),
   CONSTRAINT `fk_purchasesitems_items10` FOREIGN KEY (`ItemID`) REFERENCES `items` (`ItemID`) ON DELETE NO ACTION ON UPDATE NO ACTION,
   CONSTRAINT `fk_purchasesitemsreturn_PurchaseBillsreturn1` FOREIGN KEY (`PurchaseBillsreturn_BillID`) REFERENCES `purchasebillsreturn` (`BillID`) ON DELETE NO ACTION ON UPDATE NO ACTION
-) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_general_ci CHECKSUM=1 DELAY_KEY_WRITE=1 ROW_FORMAT=DYNAMIC;
-
-
--- Dump completed on 2011-12-28  6:57:28
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci CHECKSUM=1 DELAY_KEY_WRITE=1 ROW_FORMAT=DYNAMIC;
+ 
+-- Dump completed on 2012-01-04 11:06:22

@@ -5,13 +5,13 @@ USE `store`;
 -- Host: localhost    Database: store
 -- ------------------------------------------------------
 -- Server version	5.5.19
-
+ 
 
 --
 -- Table structure for table `purchasesitems`
 --
 
-DROP TABLE IF EXISTS `purchasesitems`;
+DROP TABLE IF EXISTS `purchasesitems`; 
 CREATE TABLE `purchasesitems` (
   `ID` int(11) unsigned NOT NULL DEFAULT '0',
   `PurchaseBills_BillID` int(11) NOT NULL,
@@ -24,7 +24,7 @@ CREATE TABLE `purchasesitems` (
   KEY `fk_purchasesitems_PurchaseBills1` (`PurchaseBills_BillID`),
   CONSTRAINT `fk_purchasesitems_items1` FOREIGN KEY (`ItemID`) REFERENCES `items` (`ItemID`) ON DELETE NO ACTION ON UPDATE NO ACTION,
   CONSTRAINT `fk_purchasesitems_PurchaseBills1` FOREIGN KEY (`PurchaseBills_BillID`) REFERENCES `purchasebills` (`BillID`) ON DELETE NO ACTION ON UPDATE NO ACTION
-) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_general_ci CHECKSUM=1 DELAY_KEY_WRITE=1 ROW_FORMAT=DYNAMIC;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci CHECKSUM=1 DELAY_KEY_WRITE=1 ROW_FORMAT=DYNAMIC;
+ 
 
-
--- Dump completed on 2011-12-28  6:57:31
+-- Dump completed on 2012-01-04 11:06:23

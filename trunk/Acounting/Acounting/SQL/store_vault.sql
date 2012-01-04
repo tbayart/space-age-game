@@ -5,18 +5,18 @@ USE `store`;
 -- Host: localhost    Database: store
 -- ------------------------------------------------------
 -- Server version	5.5.19
-
-
+ 
 --
 -- Table structure for table `vault`
 --
 
-DROP TABLE IF EXISTS `vault`;
+DROP TABLE IF EXISTS `vault`; 
 CREATE TABLE `vault` (
   `idVault` int(11) NOT NULL,
   `In_Hand` double NOT NULL,
   `Opennings` double NOT NULL,
   PRIMARY KEY (`idVault`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+ 
 
--- Dump completed on 2011-12-28  6:57:32
+-- Dump completed on 2012-01-04 11:06:25
