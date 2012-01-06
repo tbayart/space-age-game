@@ -11,7 +11,7 @@ namespace Acounting
     static class Program
     {   
         static public CultureInfo cul;
-
+        public static myLogger mylog = new myLogger();
         /// <summary>
         /// The main entry point for the application.
         /// </summary>
@@ -38,7 +38,7 @@ namespace Acounting
             Application.SetCompatibleTextRenderingDefault(false);
             ExceptionLogger exl = new ExceptionLogger();
             exl.NotificationType = NotificationType.Silent;
-            myLogger mylog =new myLogger();
+           
             exl.AddLogger(mylog);
 
             Application.Run(new Main());
