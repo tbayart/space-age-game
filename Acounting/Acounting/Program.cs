@@ -4,6 +4,7 @@ using System.Linq;
 using System.Windows.Forms;
 using System.Globalization;
 using System.Threading;
+using System.IO;
 
 namespace Acounting
 {
@@ -35,10 +36,23 @@ namespace Acounting
 
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
+            ExceptionLogger exl = new ExceptionLogger();
+            exl.NotificationType = NotificationType.Silent;
+            myLogger mylog =new myLogger();
+            exl.AddLogger(mylog);
+
             Application.Run(new Main());
             
 
  
+        }
+        public class myLogger : LoggerImplementation
+        {
+            public override void LogError(string error)
+            {
+                StreamWriter file = new StreamWriter(Application.StartupPath + "\\log.log",true);
+                file.Write(error); 
+            }
         }
     }
 }

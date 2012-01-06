@@ -155,6 +155,7 @@
     <Compile Include="Editing\ShowAllBills.Designer.cs">
       <DependentUpon>ShowAllBills.cs</DependentUpon>
     </Compile>
+    <Compile Include="ExceptionLogger.cs" />
     <Compile Include="Names.cs">
       <SubType>Form</SubType>
     </Compile>
