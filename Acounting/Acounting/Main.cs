@@ -100,8 +100,7 @@ namespace Acounting
             backgroundWorker1.RunWorkerAsync();
 
 
-            int b = 1 - 1;
-            int a = 1 / b;
+
         }
         
         
@@ -315,18 +314,20 @@ namespace Acounting
         bool continuecheck;
         private void backgroundWorker1_DoWork(object sender, DoWorkEventArgs e)
         {
+            Console.WriteLine("1");
             try
             {
                 Download("http://dl.dropbox.com/u/33013204/update.ver", "update.ver");
                 while (true)
                 {
+                    Console.WriteLine("2");
                     if (continuecheck)
                     {
                         break;
                     }
 
                 }
- 
+                Console.WriteLine("3");
                 if (File.Exists(Application.StartupPath+"\\update.ver"))
                 {
                     int currentver;
@@ -334,9 +335,9 @@ namespace Acounting
                     string currentvers = "";
                     string newvers = "";
 
-
+                    Console.WriteLine("4");
                     StreamReader file = new StreamReader(Application.StartupPath + "\\update.ver");
-                    if (File.Exists("\\current.ver"))
+                    if (File.Exists(Application.StartupPath + "\\current.ver"))
                     {
                          StreamReader file2 = new StreamReader(Application.StartupPath + "\\current.ver");
                         
@@ -347,7 +348,7 @@ namespace Acounting
                     
                     int.TryParse(newvers, out newver);
                     int.TryParse(currentvers, out currentver);
-
+                    Console.WriteLine(newver);
                     if (newver > currentver)
                     {
                         DialogResult ar = MessageBox.Show("Do u want to update?", "Update", MessageBoxButtons.YesNo);
