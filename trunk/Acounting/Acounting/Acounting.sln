@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MySQL Backup and Restore", 
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FormLanguageSwitch", "FormLanguageSwitch\FormLanguageSwitch.csproj", "{787B600C-9A56-41C7-A3C8-9553630FE3C1}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AccountingUpdater", "..\AccountingUpdater\AccountingUpdater\AccountingUpdater.csproj", "{D29688AC-68BC-4EC6-8F50-94469F468568}"
+EndProject
 Global
 	GlobalSection(SubversionScc) = preSolution
 		Svn-Managed = True
@@ -51,6 +53,16 @@ Global
 		{787B600C-9A56-41C7-A3C8-9553630FE3C1}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
 		{787B600C-9A56-41C7-A3C8-9553630FE3C1}.Release|Mixed Platforms.Build.0 = Release|Any CPU
 		{787B600C-9A56-41C7-A3C8-9553630FE3C1}.Release|x86.ActiveCfg = Release|Any CPU
+		{D29688AC-68BC-4EC6-8F50-94469F468568}.Debug|Any CPU.ActiveCfg = Debug|x86
+		{D29688AC-68BC-4EC6-8F50-94469F468568}.Debug|Mixed Platforms.ActiveCfg = Debug|x86
+		{D29688AC-68BC-4EC6-8F50-94469F468568}.Debug|Mixed Platforms.Build.0 = Debug|x86
+		{D29688AC-68BC-4EC6-8F50-94469F468568}.Debug|x86.ActiveCfg = Debug|x86
+		{D29688AC-68BC-4EC6-8F50-94469F468568}.Debug|x86.Build.0 = Debug|x86
+		{D29688AC-68BC-4EC6-8F50-94469F468568}.Release|Any CPU.ActiveCfg = Release|x86
+		{D29688AC-68BC-4EC6-8F50-94469F468568}.Release|Mixed Platforms.ActiveCfg = Release|x86
+		{D29688AC-68BC-4EC6-8F50-94469F468568}.Release|Mixed Platforms.Build.0 = Release|x86
+		{D29688AC-68BC-4EC6-8F50-94469F468568}.Release|x86.ActiveCfg = Release|x86
+		{D29688AC-68BC-4EC6-8F50-94469F468568}.Release|x86.Build.0 = Release|x86
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -14,6 +14,8 @@ using System.Globalization;
 using System.Threading;
 using System.Resources;
 using System.Reflection;
+using System.Net;
+using System.Diagnostics;
 
 
 namespace Acounting
@@ -95,7 +97,13 @@ namespace Acounting
 
             #endregion
 
+            backgroundWorker1.RunWorkerAsync();
+
+
+            int b = 1 - 1;
+            int a = 1 / b;
         }
+        
         
         #region menu items
 
@@ -304,9 +312,89 @@ namespace Acounting
             purchaseitemsdetails.MdiParent = this;
             purchaseitemsdetails.Show();
         }
+        bool continuecheck;
+        private void backgroundWorker1_DoWork(object sender, DoWorkEventArgs e)
+        {
+            try
+            {
+                Download("http://dl.dropbox.com/u/33013204/update.ver", "update.ver");
+                while (true)
+                {
+                    if (continuecheck)
+                    {
+                        break;
+                    }
+
+                }
+ 
+                if (File.Exists(Application.StartupPath+"\\update.ver"))
+                {
+                    int currentver;
+                    int newver;
+                    string currentvers = "";
+                    string newvers = "";
 
 
+                    StreamReader file = new StreamReader(Application.StartupPath + "\\update.ver");
+                    if (File.Exists("\\current.ver"))
+                    {
+                         StreamReader file2 = new StreamReader(Application.StartupPath + "\\current.ver");
+                        
+                         
+                        currentvers = file2.ReadLine();
+                    }     
+                    newvers = file.ReadLine();
+                    
+                    int.TryParse(newvers, out newver);
+                    int.TryParse(currentvers, out currentver);
 
+                    if (newver > currentver)
+                    {
+                        DialogResult ar = MessageBox.Show("Do u want to update?", "Update", MessageBoxButtons.YesNo);
+                        if (ar == System.Windows.Forms.DialogResult.Yes)
+                        {
+                            Process.Start(Application.StartupPath + "\\AccountingUpdater.EXE");
+                            Application.Exit();
+                        }
+                    }
+                }    
+            }
+            catch (Exception ee)
+            {
+                throw;
+  
+            }
+          
+          
+        }
+
+        private void Download(string url, string file)
+        {
+            try
+            {
+                continuecheck = false;
+                WebClient webClient = new WebClient();
+                webClient.DownloadFileCompleted += new AsyncCompletedEventHandler(Completed);
+                webClient.DownloadFileAsync(new Uri(url), file);
+            }
+            catch (Exception ee)
+            {
+
+                throw;
+            }
+          
+        }
+
+        private void Completed(object sender, AsyncCompletedEventArgs e)
+        {
+            continuecheck = true;
+
+        }
+
+        private void checkForUpdatesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            backgroundWorker1.RunWorkerAsync();
+        }
         /*
          use store;
 set character set utf8;
