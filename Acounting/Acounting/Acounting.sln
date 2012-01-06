@@ -7,7 +7,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MySQL Backup and Restore", 
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FormLanguageSwitch", "FormLanguageSwitch\FormLanguageSwitch.csproj", "{787B600C-9A56-41C7-A3C8-9553630FE3C1}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AccountingUpdater", "..\AccountingUpdater\AccountingUpdater\AccountingUpdater.csproj", "{D29688AC-68BC-4EC6-8F50-94469F468568}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AccountingUpdater", "AccountingUpdater\AccountingUpdater.csproj", "{D29688AC-68BC-4EC6-8F50-94469F468568}"
 EndProject
 Global
 	GlobalSection(SubversionScc) = preSolution
