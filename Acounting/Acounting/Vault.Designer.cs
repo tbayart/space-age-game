@@ -71,6 +71,9 @@
             this.textBox6 = new System.Windows.Forms.TextBox();
             this.totalEarningsBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.label13 = new System.Windows.Forms.Label();
+            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.totalSpendingsBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.label14 = new System.Windows.Forms.Label();
             this.totalPurchaseTableAdapter = new Acounting.storeDataSetTableAdapters.TotalPurchaseTableAdapter();
             this.totalPurchasesReturnTableAdapter = new Acounting.storeDataSetTableAdapters.TotalPurchasesReturnTableAdapter();
             this.totalBillsTableAdapter = new Acounting.storeDataSetTableAdapters.TotalBillsTableAdapter();
@@ -86,10 +89,9 @@
             this.totalBillsreturnRemainingTableAdapter = new Acounting.storeDataSetTableAdapters.TotalBillsreturnRemainingTableAdapter();
             this.totalPurchasereturnRemainingBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.totalPurchasereturnRemainingTableAdapter = new Acounting.storeDataSetTableAdapters.TotalPurchasereturnRemainingTableAdapter();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.label14 = new System.Windows.Forms.Label();
-            this.totalSpendingsBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.totalSpendingsTableAdapter = new Acounting.storeDataSetTableAdapters.TotalSpendingsTableAdapter();
+            this.namesBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.namesTableAdapter = new Acounting.storeDataSetTableAdapters.namesTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.vaultBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.storeDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.collectedBindingSource)).BeginInit();
@@ -100,13 +102,14 @@
             ((System.ComponentModel.ISupportInitialize)(this.totalBillsReturnBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.totalBillsBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.totalEarningsBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.totalSpendingsBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.storeDataSet1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.totalPruchaseRemainingBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.totalPruchaseRemainingBindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.totalBillsRemainingBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.totalBillsreturnRemainingBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.totalPurchasereturnRemainingBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.totalSpendingsBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.namesBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // Cmd_Add
@@ -419,6 +422,29 @@
             this.errorProvider1.SetIconPadding(this.label13, ((int)(resources.GetObject("label13.IconPadding"))));
             this.label13.Name = "label13";
             // 
+            // textBox5
+            // 
+            resources.ApplyResources(this.textBox5, "textBox5");
+            this.textBox5.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.totalSpendingsBindingSource, "Expr1", true));
+            this.errorProvider1.SetError(this.textBox5, resources.GetString("textBox5.Error"));
+            this.errorProvider1.SetIconAlignment(this.textBox5, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("textBox5.IconAlignment"))));
+            this.errorProvider1.SetIconPadding(this.textBox5, ((int)(resources.GetObject("textBox5.IconPadding"))));
+            this.textBox5.Name = "textBox5";
+            this.textBox5.ReadOnly = true;
+            // 
+            // totalSpendingsBindingSource
+            // 
+            this.totalSpendingsBindingSource.DataMember = "TotalSpendings";
+            this.totalSpendingsBindingSource.DataSource = this.storeDataSet;
+            // 
+            // label14
+            // 
+            resources.ApplyResources(this.label14, "label14");
+            this.errorProvider1.SetError(this.label14, resources.GetString("label14.Error"));
+            this.errorProvider1.SetIconAlignment(this.label14, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("label14.IconAlignment"))));
+            this.errorProvider1.SetIconPadding(this.label14, ((int)(resources.GetObject("label14.IconPadding"))));
+            this.label14.Name = "label14";
+            // 
             // totalPurchaseTableAdapter
             // 
             this.totalPurchaseTableAdapter.ClearBeforeFill = true;
@@ -485,32 +511,18 @@
             // 
             this.totalPurchasereturnRemainingTableAdapter.ClearBeforeFill = true;
             // 
-            // textBox5
-            // 
-            resources.ApplyResources(this.textBox5, "textBox5");
-            this.textBox5.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.totalSpendingsBindingSource, "Expr1", true));
-            this.errorProvider1.SetError(this.textBox5, resources.GetString("textBox5.Error"));
-            this.errorProvider1.SetIconAlignment(this.textBox5, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("textBox5.IconAlignment"))));
-            this.errorProvider1.SetIconPadding(this.textBox5, ((int)(resources.GetObject("textBox5.IconPadding"))));
-            this.textBox5.Name = "textBox5";
-            this.textBox5.ReadOnly = true;
-            // 
-            // label14
-            // 
-            resources.ApplyResources(this.label14, "label14");
-            this.errorProvider1.SetError(this.label14, resources.GetString("label14.Error"));
-            this.errorProvider1.SetIconAlignment(this.label14, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("label14.IconAlignment"))));
-            this.errorProvider1.SetIconPadding(this.label14, ((int)(resources.GetObject("label14.IconPadding"))));
-            this.label14.Name = "label14";
-            // 
-            // totalSpendingsBindingSource
-            // 
-            this.totalSpendingsBindingSource.DataMember = "TotalSpendings";
-            this.totalSpendingsBindingSource.DataSource = this.storeDataSet;
-            // 
             // totalSpendingsTableAdapter
             // 
             this.totalSpendingsTableAdapter.ClearBeforeFill = true;
+            // 
+            // namesBindingSource
+            // 
+            this.namesBindingSource.DataMember = "names";
+            this.namesBindingSource.DataSource = this.storeDataSet;
+            // 
+            // namesTableAdapter
+            // 
+            this.namesTableAdapter.ClearBeforeFill = true;
             // 
             // Vault
             // 
@@ -558,13 +570,14 @@
             ((System.ComponentModel.ISupportInitialize)(this.totalBillsReturnBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.totalBillsBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.totalEarningsBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.totalSpendingsBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.storeDataSet1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.totalPruchaseRemainingBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.totalPruchaseRemainingBindingSource1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.totalBillsRemainingBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.totalBillsreturnRemainingBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.totalPurchasereturnRemainingBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.totalSpendingsBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.namesBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -632,5 +645,7 @@
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.BindingSource totalSpendingsBindingSource;
         private storeDataSetTableAdapters.TotalSpendingsTableAdapter totalSpendingsTableAdapter;
+        private System.Windows.Forms.BindingSource namesBindingSource;
+        private storeDataSetTableAdapters.namesTableAdapter namesTableAdapter;
     }
 }

@@ -231,14 +231,17 @@
   <data name="label9.Text" xml:space="preserve">
     <value>صافي المشتريات</value>
   </data>
+  <data name="Txt_DealerDebt.Location" type="System.Drawing.Point, System.Drawing">
+    <value>14, 200</value>
+  </data>
   <data name="Txt_DealerDebt.Size" type="System.Drawing.Size, System.Drawing">
-    <value>67, 20</value>
+    <value>107, 20</value>
   </data>
   <data name="Txt_totalpurchasebillsreturn.Size" type="System.Drawing.Size, System.Drawing">
     <value>77, 20</value>
   </data>
   <data name="Txt_AgentDebt.Size" type="System.Drawing.Size, System.Drawing">
-    <value>77, 20</value>
+    <value>116, 20</value>
   </data>
   <data name="Txt_totalpurchasebills.Location" type="System.Drawing.Point, System.Drawing">
     <value>218, 76</value>

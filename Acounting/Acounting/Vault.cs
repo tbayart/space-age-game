@@ -20,6 +20,8 @@ namespace Acounting
 
         private void Vault_Load(object sender, EventArgs e)
         {
+            // TODO: This line of code loads data into the 'storeDataSet.names' table. You can move, or remove it, as needed.
+            this.namesTableAdapter.Fill(this.storeDataSet.names);
             // TODO: This line of code loads data into the 'storeDataSet.TotalSpendings' table. You can move, or remove it, as needed.
             this.totalSpendingsTableAdapter.Fill(this.storeDataSet.TotalSpendings);
             // TODO: This line of code loads data into the 'storeDataSet1.TotalPurchasereturnRemaining' table. You can move, or remove it, as needed.
@@ -98,6 +100,12 @@ namespace Acounting
             dealerdebt = totalpurchaseremaining - totalpurchasereturnremaining;
             agentdebt = totalbillremaining - totalbillreturnremaing;
 
+            gettotal();
+
+            dealerdebt += totaldealer;
+            agentdebt += totalagent;
+
+
             Txt_DealerDebt.Text = dealerdebt.ToString();
             Txt_AgentDebt.Text = agentdebt.ToString();
 
@@ -105,6 +113,29 @@ namespace Acounting
             Txt_Nettotalbills.Text = netbills.ToString();
             Txt_Nettotalpurchasebills.Text = netpurchasebills.ToString();
 
+
+            
+
+
+        }
+        int totalagent = 0;
+        int totaldealer = 0;
+        public void gettotal()
+        {
+
+            int current = 0;
+            foreach (DataRow item in storeDataSet.names)
+            {
+                int.TryParse(item["InitialDebt"].ToString(), out current);
+                if (current >0)
+                {
+                    totalagent += current;
+                }
+                else if(current<0)
+                {
+                    totaldealer += current;
+                }
+            }
         }
 
         private void Cmd_Add_Click(object sender, EventArgs e)
