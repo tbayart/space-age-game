@@ -116,9 +116,11 @@ namespace Acounting
 
         private void itemToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Items items = new Items();
+            Items items = Items.GetForm();
             items.MdiParent = this;
             items.Show();
+            items.Focus();
+
         }
 
 
@@ -128,59 +130,73 @@ namespace Acounting
 
         private void buyToolStripMenuItem1_Click(object sender, EventArgs e)
         {
-            Buy buy = new Buy();
+            Buy buy = Buy.GetForm();
             buy.MdiParent = this;
             buy.Show();
+            buy.Focus();
         }
 
         private void paymentsToolStripMenuItem1_Click(object sender, EventArgs e)
-        {
-            Payments payments = new Payments();
+        {  
+            Payments payments = Payments.GetForm();
             payments.MdiParent = this;
             payments.Show();
+            payments.Focus();            
         }
 
         private void vaultToolStripMenuItem1_Click(object sender, EventArgs e)
         {
-            Vault vault = new Vault();
+            Vault vault = Vault.GetForm();
             vault.MdiParent = this;
             vault.Show();
+            vault.Focus();  
         }
 
         private void sellToolStripMenuItem1_Click(object sender, EventArgs e)
         {
-            Sell sell = new Sell();
+            Sell sell = Sell.GetForm();
             sell.MdiParent = this;
             sell.Show();
+            sell.Focus();  
+
         }
 
      
         private void agentsToolStripMenuItem1_Click(object sender, EventArgs e)
         {
-            Names names = new Names();
+
+            Names names = Names.GetForm();
             names.MdiParent = this;
             names.Show();
+            names.Focus();  
+
         }
 
         private void staticAssetsToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            StaticAssets staticassets = new StaticAssets();
+ 
+            StaticAssets staticassets = StaticAssets.GetForm();
             staticassets.MdiParent = this;
             staticassets.Show();
+            staticassets.Focus();  
+
         }
 
         private void returnBuyToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            ReturnBuy returnbuy = new ReturnBuy();
+            ReturnBuy returnbuy = ReturnBuy.GetForm();
             returnbuy.MdiParent = this;
             returnbuy.Show();
+            returnbuy.Focus(); 
+
         }
 
         private void returnSaleToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            ReturnSales returnsales = new ReturnSales();
+            ReturnSales returnsales = ReturnSales.GetForm();
             returnsales.MdiParent = this;
             returnsales.Show();
+            returnsales.Focus();
         }
 
 
@@ -211,7 +227,7 @@ namespace Acounting
 
             FormLanguageSwitchSingleton.Instance.ChangeCurrentThreadUICulture(Program.cul);
             FormLanguageSwitchSingleton.Instance.ChangeLanguage(this);
-
+            
         }
 
         private void englshToolStripMenuItem_Click(object sender, EventArgs e)
@@ -279,37 +295,45 @@ namespace Acounting
 
         private void showAllBillsToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            ShowAllBills showall = new ShowAllBills(this);
+            ShowAllBills showall = ShowAllBills.GetForm(this);
             showall.MdiParent = this;
             showall.Show();
+            showall.Focus();
+
         }
 
         private void اجمالياصنافToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            TotalItems totalitems = new TotalItems();
+            TotalItems totalitems = TotalItems.GetForm();
             totalitems.MdiParent = this;
             totalitems.Show();
+            totalitems.Focus();
         }
 
         private void itemsSalesDetailsToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            SalesItemsDetails salesitem = new SalesItemsDetails();
+            SalesItemsDetails salesitem = SalesItemsDetails.GetForm();
             salesitem.MdiParent = this;
             salesitem.Show();
+            salesitem.Focus();
+
         }
 
         private void كشفموردToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            DealersDebt dealersdebt = new DealersDebt();
+            DealersDebt dealersdebt = DealersDebt.GetForm();
             dealersdebt.MdiParent = this;
             dealersdebt.Show();
+            dealersdebt.Focus();
+
         }
 
         private void agentDebtToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            PurchaseItemsDetails purchaseitemsdetails = new PurchaseItemsDetails();
+            PurchaseItemsDetails purchaseitemsdetails = PurchaseItemsDetails.GetForm();
             purchaseitemsdetails.MdiParent = this;
             purchaseitemsdetails.Show();
+            purchaseitemsdetails.Focus();
         }
         bool continuecheck;
         private void backgroundWorker1_DoWork(object sender, DoWorkEventArgs e)
@@ -362,7 +386,7 @@ namespace Acounting
             }
             catch (Exception ee)
             {
-                throw;
+                Program.mylog.LogError(ee.Message + Environment.NewLine);
   
             }
           
@@ -381,7 +405,7 @@ namespace Acounting
             catch (Exception ee)
             {
 
-                throw;
+                Program.mylog.LogError(ee.Message + Environment.NewLine);
             }
           
         }

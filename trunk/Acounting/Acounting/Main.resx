@@ -128,19 +128,19 @@
   </metadata>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="itemToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>151, 22</value>
+    <value>157, 22</value>
   </data>
   <data name="itemToolStripMenuItem.Text" xml:space="preserve">
     <value>Items</value>
   </data>
   <data name="agentsToolStripMenuItem1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>151, 22</value>
+    <value>157, 22</value>
   </data>
   <data name="agentsToolStripMenuItem1.Text" xml:space="preserve">
     <value>Agents</value>
   </data>
   <data name="staticAssetsToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>151, 22</value>
+    <value>157, 22</value>
   </data>
   <data name="staticAssetsToolStripMenuItem.Text" xml:space="preserve">
     <value>Static Assets</value>
@@ -150,124 +150,127 @@
     <value>False</value>
   </data>
   <data name="حفظاسترجعToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>151, 22</value>
+    <value>157, 22</value>
   </data>
   <data name="حفظاسترجعToolStripMenuItem.Text" xml:space="preserve">
     <value>Backup/Restore</value>
   </data>
   <data name="toolStripMenuItem1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>151, 22</value>
+    <value>157, 22</value>
   </data>
   <data name="toolStripMenuItem1.Text" xml:space="preserve">
     <value>Reset Database</value>
   </data>
   <data name="exitToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>151, 22</value>
+    <value>157, 22</value>
   </data>
   <data name="exitToolStripMenuItem.Text" xml:space="preserve">
     <value>Exit</value>
   </data>
   <data name="dataToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>42, 20</value>
+    <value>43, 20</value>
   </data>
   <data name="dataToolStripMenuItem.Text" xml:space="preserve">
     <value>Data</value>
   </data>
   <data name="buyToolStripMenuItem1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>130, 22</value>
+    <value>152, 22</value>
   </data>
   <data name="buyToolStripMenuItem1.Text" xml:space="preserve">
     <value>Buy</value>
   </data>
   <data name="sellToolStripMenuItem1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>130, 22</value>
+    <value>152, 22</value>
   </data>
   <data name="sellToolStripMenuItem1.Text" xml:space="preserve">
     <value>Sell</value>
   </data>
   <data name="paymentsToolStripMenuItem1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>130, 22</value>
+    <value>152, 22</value>
   </data>
   <data name="paymentsToolStripMenuItem1.Text" xml:space="preserve">
     <value>Payments</value>
   </data>
   <data name="vaultToolStripMenuItem1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>130, 22</value>
+    <value>152, 22</value>
   </data>
   <data name="vaultToolStripMenuItem1.Text" xml:space="preserve">
     <value>Vault</value>
   </data>
   <data name="returnBuyToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>130, 22</value>
+    <value>152, 22</value>
   </data>
   <data name="returnBuyToolStripMenuItem.Text" xml:space="preserve">
     <value>Return Buy</value>
   </data>
   <data name="returnSaleToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>130, 22</value>
+    <value>152, 22</value>
   </data>
   <data name="returnSaleToolStripMenuItem.Text" xml:space="preserve">
     <value>Return Sale</value>
   </data>
   <data name="showAllBillsToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>130, 22</value>
+    <value>152, 22</value>
+  </data>
+  <data name="showAllBillsToolStripMenuItem.Text" xml:space="preserve">
+    <value>All Bills</value>
   </data>
   <data name="storageToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>57, 20</value>
+    <value>59, 20</value>
   </data>
   <data name="storageToolStripMenuItem.Text" xml:space="preserve">
     <value>Storage</value>
   </data>
   <data name="كشفموردToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>164, 22</value>
+    <value>170, 22</value>
   </data>
   <data name="كشفموردToolStripMenuItem.Text" xml:space="preserve">
     <value>Dealer Debt</value>
   </data>
   <data name="اجمالياصنافToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>164, 22</value>
+    <value>170, 22</value>
   </data>
   <data name="اجمالياصنافToolStripMenuItem.Text" xml:space="preserve">
     <value>Total Items</value>
   </data>
   <data name="agentDebtToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>164, 22</value>
+    <value>170, 22</value>
   </data>
   <data name="agentDebtToolStripMenuItem.Text" xml:space="preserve">
     <value>Agent Debt</value>
   </data>
   <data name="itemsSalesDetailsToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>164, 22</value>
+    <value>170, 22</value>
   </data>
   <data name="itemsSalesDetailsToolStripMenuItem.Text" xml:space="preserve">
     <value>Items Sales Details</value>
   </data>
   <data name="reportsToolStripMenuItem1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>57, 20</value>
+    <value>59, 20</value>
   </data>
   <data name="reportsToolStripMenuItem1.Text" xml:space="preserve">
     <value>Reports</value>
   </data>
   <data name="عربيToolStripMenuItem1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>165, 22</value>
+    <value>173, 22</value>
   </data>
   <data name="عربيToolStripMenuItem1.Text" xml:space="preserve">
     <value>عربي</value>
   </data>
   <data name="englshToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>165, 22</value>
+    <value>173, 22</value>
   </data>
   <data name="englshToolStripMenuItem.Text" xml:space="preserve">
     <value>English</value>
   </data>
   <data name="checkForUpdatesToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>165, 22</value>
+    <value>173, 22</value>
   </data>
   <data name="checkForUpdatesToolStripMenuItem.Text" xml:space="preserve">
     <value>Check For Updates</value>
   </data>
   <data name="عربيToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>66, 20</value>
+    <value>71, 20</value>
   </data>
   <data name="عربيToolStripMenuItem.Text" xml:space="preserve">
     <value>Language</value>

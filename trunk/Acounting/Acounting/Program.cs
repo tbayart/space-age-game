@@ -41,17 +41,24 @@ namespace Acounting
            
             exl.AddLogger(mylog);
 
+            Program.mylog.LogError(Environment.NewLine + DateTime.Now.ToString() + "  Starting APP" + Environment.NewLine);
+            Application.ApplicationExit += new EventHandler(Application_ApplicationExit);
             Application.Run(new Main());
-            
 
- 
+        }
+
+        static void Application_ApplicationExit(object sender, EventArgs e)
+        {
+            Program.mylog.LogError(Environment.NewLine + DateTime.Now.ToString() + "  Existing APP" + Environment.NewLine);
         }
         public class myLogger : LoggerImplementation
         {
             public override void LogError(string error)
             {
                 StreamWriter file = new StreamWriter(Application.StartupPath + "\\log.log",true);
-                file.Write(error); 
+                file.Write(error);
+                file.Flush();
+                file.Close();
             }
         }
     }
