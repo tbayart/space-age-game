@@ -11,6 +11,32 @@ namespace Acounting
 {
     public partial class Payments : Form
     {
+        // Stores the instance of the current form.
+        private static Payments form;
+
+        public static Payments GetForm()
+        {
+            // If the form is null, create it here.
+            if (form == null)
+            {
+                // Create it here.
+                form = new Payments();
+
+                // Handle the closed event, when closed, set the form to null.
+                // This syntax is for .NET 2.0. You can just create a delegate and
+                //add that
+                // to the form for previous versions.
+                form.Closed += delegate
+                {
+                    // Set form to null.
+                    form = null;
+                };
+            }
+
+            // Return the form.
+            return form;
+        }
+
         int selectedagentid=0;
         int selectedDealerID=0;
         public Payments()
