@@ -137,6 +137,12 @@
     <Compile Include="Buy.Designer.cs">
       <DependentUpon>Buy.cs</DependentUpon>
     </Compile>
+    <Compile Include="CompanyDetails.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CompanyDetails.Designer.cs">
+      <DependentUpon>CompanyDetails.cs</DependentUpon>
+    </Compile>
     <Compile Include="CreateDB.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -241,6 +247,12 @@
     <Compile Include="Vault.Designer.cs">
       <DependentUpon>Vault.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="CompanyDetails.ar.resx">
+      <DependentUpon>CompanyDetails.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CompanyDetails.resx">
+      <DependentUpon>CompanyDetails.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Editing\EditBills.ar.resx">
       <DependentUpon>EditBills.cs</DependentUpon>
     </EmbeddedResource>

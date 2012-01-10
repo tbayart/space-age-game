@@ -38,6 +38,7 @@
             this.agentsToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.staticAssetsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.حفظاسترجعToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.storageToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -82,64 +83,75 @@
             // 
             // menuStrip1
             // 
+            resources.ApplyResources(this.menuStrip1, "menuStrip1");
+            this.errorProvider1.SetError(this.menuStrip1, resources.GetString("menuStrip1.Error"));
+            this.errorProvider1.SetIconAlignment(this.menuStrip1, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("menuStrip1.IconAlignment"))));
+            this.errorProvider1.SetIconPadding(this.menuStrip1, ((int)(resources.GetObject("menuStrip1.IconPadding"))));
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.dataToolStripMenuItem,
             this.storageToolStripMenuItem,
             this.reportsToolStripMenuItem1,
             this.عربيToolStripMenuItem});
-            resources.ApplyResources(this.menuStrip1, "menuStrip1");
             this.menuStrip1.Name = "menuStrip1";
             // 
             // dataToolStripMenuItem
             // 
+            resources.ApplyResources(this.dataToolStripMenuItem, "dataToolStripMenuItem");
             this.dataToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.itemToolStripMenuItem,
             this.agentsToolStripMenuItem1,
             this.staticAssetsToolStripMenuItem,
             this.حفظاسترجعToolStripMenuItem,
+            this.toolStripMenuItem2,
             this.toolStripMenuItem1,
             this.exitToolStripMenuItem});
             this.dataToolStripMenuItem.Name = "dataToolStripMenuItem";
-            resources.ApplyResources(this.dataToolStripMenuItem, "dataToolStripMenuItem");
             // 
             // itemToolStripMenuItem
             // 
-            this.itemToolStripMenuItem.Name = "itemToolStripMenuItem";
             resources.ApplyResources(this.itemToolStripMenuItem, "itemToolStripMenuItem");
+            this.itemToolStripMenuItem.Name = "itemToolStripMenuItem";
             this.itemToolStripMenuItem.Click += new System.EventHandler(this.itemToolStripMenuItem_Click);
             // 
             // agentsToolStripMenuItem1
             // 
-            this.agentsToolStripMenuItem1.Name = "agentsToolStripMenuItem1";
             resources.ApplyResources(this.agentsToolStripMenuItem1, "agentsToolStripMenuItem1");
+            this.agentsToolStripMenuItem1.Name = "agentsToolStripMenuItem1";
             this.agentsToolStripMenuItem1.Click += new System.EventHandler(this.agentsToolStripMenuItem1_Click);
             // 
             // staticAssetsToolStripMenuItem
             // 
-            this.staticAssetsToolStripMenuItem.Name = "staticAssetsToolStripMenuItem";
             resources.ApplyResources(this.staticAssetsToolStripMenuItem, "staticAssetsToolStripMenuItem");
+            this.staticAssetsToolStripMenuItem.Name = "staticAssetsToolStripMenuItem";
             this.staticAssetsToolStripMenuItem.Click += new System.EventHandler(this.staticAssetsToolStripMenuItem_Click);
             // 
             // حفظاسترجعToolStripMenuItem
             // 
-            this.حفظاسترجعToolStripMenuItem.Name = "حفظاسترجعToolStripMenuItem";
             resources.ApplyResources(this.حفظاسترجعToolStripMenuItem, "حفظاسترجعToolStripMenuItem");
+            this.حفظاسترجعToolStripMenuItem.Name = "حفظاسترجعToolStripMenuItem";
             this.حفظاسترجعToolStripMenuItem.Click += new System.EventHandler(this.حفظاسترجعToolStripMenuItem_Click);
+            // 
+            // toolStripMenuItem2
+            // 
+            resources.ApplyResources(this.toolStripMenuItem2, "toolStripMenuItem2");
+            this.toolStripMenuItem2.Name = "toolStripMenuItem2";
+            this.toolStripMenuItem2.Click += new System.EventHandler(this.toolStripMenuItem2_Click);
             // 
             // toolStripMenuItem1
             // 
-            this.toolStripMenuItem1.Name = "toolStripMenuItem1";
             resources.ApplyResources(this.toolStripMenuItem1, "toolStripMenuItem1");
+            this.toolStripMenuItem1.Name = "toolStripMenuItem1";
             this.toolStripMenuItem1.Click += new System.EventHandler(this.toolStripMenuItem1_Click);
             // 
             // exitToolStripMenuItem
             // 
-            this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
             resources.ApplyResources(this.exitToolStripMenuItem, "exitToolStripMenuItem");
+            this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
             this.exitToolStripMenuItem.Click += new System.EventHandler(this.exitToolStripMenuItem_Click);
             // 
             // storageToolStripMenuItem
             // 
+            resources.ApplyResources(this.storageToolStripMenuItem, "storageToolStripMenuItem");
             this.storageToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.buyToolStripMenuItem1,
             this.sellToolStripMenuItem1,
@@ -149,109 +161,108 @@
             this.returnSaleToolStripMenuItem,
             this.showAllBillsToolStripMenuItem});
             this.storageToolStripMenuItem.Name = "storageToolStripMenuItem";
-            resources.ApplyResources(this.storageToolStripMenuItem, "storageToolStripMenuItem");
             // 
             // buyToolStripMenuItem1
             // 
-            this.buyToolStripMenuItem1.Name = "buyToolStripMenuItem1";
             resources.ApplyResources(this.buyToolStripMenuItem1, "buyToolStripMenuItem1");
+            this.buyToolStripMenuItem1.Name = "buyToolStripMenuItem1";
             this.buyToolStripMenuItem1.Click += new System.EventHandler(this.buyToolStripMenuItem1_Click);
             // 
             // sellToolStripMenuItem1
             // 
-            this.sellToolStripMenuItem1.Name = "sellToolStripMenuItem1";
             resources.ApplyResources(this.sellToolStripMenuItem1, "sellToolStripMenuItem1");
+            this.sellToolStripMenuItem1.Name = "sellToolStripMenuItem1";
             this.sellToolStripMenuItem1.Click += new System.EventHandler(this.sellToolStripMenuItem1_Click);
             // 
             // paymentsToolStripMenuItem1
             // 
-            this.paymentsToolStripMenuItem1.Name = "paymentsToolStripMenuItem1";
             resources.ApplyResources(this.paymentsToolStripMenuItem1, "paymentsToolStripMenuItem1");
+            this.paymentsToolStripMenuItem1.Name = "paymentsToolStripMenuItem1";
             this.paymentsToolStripMenuItem1.Click += new System.EventHandler(this.paymentsToolStripMenuItem1_Click);
             // 
             // vaultToolStripMenuItem1
             // 
-            this.vaultToolStripMenuItem1.Name = "vaultToolStripMenuItem1";
             resources.ApplyResources(this.vaultToolStripMenuItem1, "vaultToolStripMenuItem1");
+            this.vaultToolStripMenuItem1.Name = "vaultToolStripMenuItem1";
             this.vaultToolStripMenuItem1.Click += new System.EventHandler(this.vaultToolStripMenuItem1_Click);
             // 
             // returnBuyToolStripMenuItem
             // 
-            this.returnBuyToolStripMenuItem.Name = "returnBuyToolStripMenuItem";
             resources.ApplyResources(this.returnBuyToolStripMenuItem, "returnBuyToolStripMenuItem");
+            this.returnBuyToolStripMenuItem.Name = "returnBuyToolStripMenuItem";
             this.returnBuyToolStripMenuItem.Click += new System.EventHandler(this.returnBuyToolStripMenuItem_Click);
             // 
             // returnSaleToolStripMenuItem
             // 
-            this.returnSaleToolStripMenuItem.Name = "returnSaleToolStripMenuItem";
             resources.ApplyResources(this.returnSaleToolStripMenuItem, "returnSaleToolStripMenuItem");
+            this.returnSaleToolStripMenuItem.Name = "returnSaleToolStripMenuItem";
             this.returnSaleToolStripMenuItem.Click += new System.EventHandler(this.returnSaleToolStripMenuItem_Click);
             // 
             // showAllBillsToolStripMenuItem
             // 
-            this.showAllBillsToolStripMenuItem.Name = "showAllBillsToolStripMenuItem";
             resources.ApplyResources(this.showAllBillsToolStripMenuItem, "showAllBillsToolStripMenuItem");
+            this.showAllBillsToolStripMenuItem.Name = "showAllBillsToolStripMenuItem";
             this.showAllBillsToolStripMenuItem.Click += new System.EventHandler(this.showAllBillsToolStripMenuItem_Click);
             // 
             // reportsToolStripMenuItem1
             // 
+            resources.ApplyResources(this.reportsToolStripMenuItem1, "reportsToolStripMenuItem1");
             this.reportsToolStripMenuItem1.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.كشفموردToolStripMenuItem,
             this.اجمالياصنافToolStripMenuItem,
             this.agentDebtToolStripMenuItem,
             this.itemsSalesDetailsToolStripMenuItem});
             this.reportsToolStripMenuItem1.Name = "reportsToolStripMenuItem1";
-            resources.ApplyResources(this.reportsToolStripMenuItem1, "reportsToolStripMenuItem1");
             // 
             // كشفموردToolStripMenuItem
             // 
-            this.كشفموردToolStripMenuItem.Name = "كشفموردToolStripMenuItem";
             resources.ApplyResources(this.كشفموردToolStripMenuItem, "كشفموردToolStripMenuItem");
+            this.كشفموردToolStripMenuItem.Name = "كشفموردToolStripMenuItem";
             this.كشفموردToolStripMenuItem.Click += new System.EventHandler(this.كشفموردToolStripMenuItem_Click);
             // 
             // اجمالياصنافToolStripMenuItem
             // 
-            this.اجمالياصنافToolStripMenuItem.Name = "اجمالياصنافToolStripMenuItem";
             resources.ApplyResources(this.اجمالياصنافToolStripMenuItem, "اجمالياصنافToolStripMenuItem");
+            this.اجمالياصنافToolStripMenuItem.Name = "اجمالياصنافToolStripMenuItem";
             this.اجمالياصنافToolStripMenuItem.Click += new System.EventHandler(this.اجمالياصنافToolStripMenuItem_Click);
             // 
             // agentDebtToolStripMenuItem
             // 
-            this.agentDebtToolStripMenuItem.Name = "agentDebtToolStripMenuItem";
             resources.ApplyResources(this.agentDebtToolStripMenuItem, "agentDebtToolStripMenuItem");
+            this.agentDebtToolStripMenuItem.Name = "agentDebtToolStripMenuItem";
             this.agentDebtToolStripMenuItem.Click += new System.EventHandler(this.agentDebtToolStripMenuItem_Click);
             // 
             // itemsSalesDetailsToolStripMenuItem
             // 
-            this.itemsSalesDetailsToolStripMenuItem.Name = "itemsSalesDetailsToolStripMenuItem";
             resources.ApplyResources(this.itemsSalesDetailsToolStripMenuItem, "itemsSalesDetailsToolStripMenuItem");
+            this.itemsSalesDetailsToolStripMenuItem.Name = "itemsSalesDetailsToolStripMenuItem";
             this.itemsSalesDetailsToolStripMenuItem.Click += new System.EventHandler(this.itemsSalesDetailsToolStripMenuItem_Click);
             // 
             // عربيToolStripMenuItem
             // 
+            resources.ApplyResources(this.عربيToolStripMenuItem, "عربيToolStripMenuItem");
             this.عربيToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.عربيToolStripMenuItem1,
             this.englshToolStripMenuItem,
             this.checkForUpdatesToolStripMenuItem});
             this.عربيToolStripMenuItem.Name = "عربيToolStripMenuItem";
-            resources.ApplyResources(this.عربيToolStripMenuItem, "عربيToolStripMenuItem");
             // 
             // عربيToolStripMenuItem1
             // 
-            this.عربيToolStripMenuItem1.Name = "عربيToolStripMenuItem1";
             resources.ApplyResources(this.عربيToolStripMenuItem1, "عربيToolStripMenuItem1");
+            this.عربيToolStripMenuItem1.Name = "عربيToolStripMenuItem1";
             this.عربيToolStripMenuItem1.Click += new System.EventHandler(this.عربيToolStripMenuItem1_Click);
             // 
             // englshToolStripMenuItem
             // 
-            this.englshToolStripMenuItem.Name = "englshToolStripMenuItem";
             resources.ApplyResources(this.englshToolStripMenuItem, "englshToolStripMenuItem");
+            this.englshToolStripMenuItem.Name = "englshToolStripMenuItem";
             this.englshToolStripMenuItem.Click += new System.EventHandler(this.englshToolStripMenuItem_Click);
             // 
             // checkForUpdatesToolStripMenuItem
             // 
-            this.checkForUpdatesToolStripMenuItem.Name = "checkForUpdatesToolStripMenuItem";
             resources.ApplyResources(this.checkForUpdatesToolStripMenuItem, "checkForUpdatesToolStripMenuItem");
+            this.checkForUpdatesToolStripMenuItem.Name = "checkForUpdatesToolStripMenuItem";
             this.checkForUpdatesToolStripMenuItem.Click += new System.EventHandler(this.checkForUpdatesToolStripMenuItem_Click);
             // 
             // itemsTableAdapter
@@ -270,6 +281,7 @@
             // errorProvider1
             // 
             this.errorProvider1.ContainerControl = this;
+            resources.ApplyResources(this.errorProvider1, "errorProvider1");
             // 
             // openFileDialog1
             // 
@@ -335,6 +347,7 @@
         private System.Windows.Forms.ToolStripMenuItem showAllBillsToolStripMenuItem;
         private System.ComponentModel.BackgroundWorker backgroundWorker1;
         private System.Windows.Forms.ToolStripMenuItem checkForUpdatesToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem2;
     }
 }
 

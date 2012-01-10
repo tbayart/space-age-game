@@ -707,8 +707,8 @@
           </TablixMembers>
         </TablixRowHierarchy>
         <DataSetName>Names</DataSetName>
-        <Top>2.29577cm</Top>
-        <Left>0.01998cm</Left>
+        <Top>0.17639cm</Top>
+        <Left>0.0799cm</Left>
         <Height>2.12606cm</Height>
         <Width>16.53281cm</Width>
         <Style>
@@ -718,148 +718,6 @@
           <TextAlign>Right</TextAlign>
         </Style>
       </Tablix>
-      <Textbox Name="ExecutionTime">
-        <CanGrow>true</CanGrow>
-        <KeepTogether>true</KeepTogether>
-        <Paragraphs>
-          <Paragraph>
-            <TextRuns>
-              <TextRun>
-                <Value>=Now()</Value>
-                <Style>
-                  <FontFamily>Tahoma</FontFamily>
-                  <FontSize>11pt</FontSize>
-                  <Format>d</Format>
-                </Style>
-              </TextRun>
-            </TextRuns>
-            <Style>
-              <TextAlign>Right</TextAlign>
-            </Style>
-          </Paragraph>
-        </Paragraphs>
-        <rd:DefaultName>ExecutionTime</rd:DefaultName>
-        <Top>1.12315cm</Top>
-        <Left>8.55966cm</Left>
-        <Height>0.6cm</Height>
-        <Width>4.405cm</Width>
-        <ZIndex>1</ZIndex>
-        <Style>
-          <Border>
-            <Style>None</Style>
-          </Border>
-          <PaddingLeft>2pt</PaddingLeft>
-          <PaddingRight>2pt</PaddingRight>
-          <PaddingTop>2pt</PaddingTop>
-          <PaddingBottom>2pt</PaddingBottom>
-        </Style>
-      </Textbox>
-      <Textbox Name="Textbox14">
-        <CanGrow>true</CanGrow>
-        <KeepTogether>true</KeepTogether>
-        <Paragraphs>
-          <Paragraph>
-            <TextRuns>
-              <TextRun>
-                <Value>أسم التقرير</Value>
-                <Style>
-                  <FontSize>11pt</FontSize>
-                  <FontWeight>Bold</FontWeight>
-                </Style>
-              </TextRun>
-            </TextRuns>
-            <Style>
-              <TextAlign>Right</TextAlign>
-            </Style>
-          </Paragraph>
-        </Paragraphs>
-        <rd:DefaultName>Textbox14</rd:DefaultName>
-        <Top>0.22356cm</Top>
-        <Left>13.42658cm</Left>
-        <Height>0.6cm</Height>
-        <Width>2.5cm</Width>
-        <ZIndex>2</ZIndex>
-        <Style>
-          <Border>
-            <Style>None</Style>
-          </Border>
-          <PaddingLeft>2pt</PaddingLeft>
-          <PaddingRight>2pt</PaddingRight>
-          <PaddingTop>2pt</PaddingTop>
-          <PaddingBottom>2pt</PaddingBottom>
-        </Style>
-      </Textbox>
-      <Textbox Name="Textbox15">
-        <CanGrow>true</CanGrow>
-        <KeepTogether>true</KeepTogether>
-        <Paragraphs>
-          <Paragraph>
-            <TextRuns>
-              <TextRun>
-                <Value>التاريخ</Value>
-                <Style>
-                  <FontSize>11pt</FontSize>
-                  <FontWeight>Bold</FontWeight>
-                </Style>
-              </TextRun>
-            </TextRuns>
-            <Style>
-              <TextAlign>Right</TextAlign>
-            </Style>
-          </Paragraph>
-        </Paragraphs>
-        <rd:DefaultName>Textbox15</rd:DefaultName>
-        <Top>1.12315cm</Top>
-        <Left>13.42658cm</Left>
-        <Height>0.6cm</Height>
-        <Width>2.5cm</Width>
-        <ZIndex>3</ZIndex>
-        <Style>
-          <Border>
-            <Style>None</Style>
-          </Border>
-          <PaddingLeft>2pt</PaddingLeft>
-          <PaddingRight>2pt</PaddingRight>
-          <PaddingTop>2pt</PaddingTop>
-          <PaddingBottom>2pt</PaddingBottom>
-        </Style>
-      </Textbox>
-      <Textbox Name="Textbox16">
-        <CanGrow>true</CanGrow>
-        <KeepTogether>true</KeepTogether>
-        <Paragraphs>
-          <Paragraph>
-            <TextRuns>
-              <TextRun>
-                <Value>كشف المورد /عميل</Value>
-                <Style>
-                  <FontFamily>Tahoma</FontFamily>
-                  <FontSize>11pt</FontSize>
-                  <FontWeight>Bold</FontWeight>
-                </Style>
-              </TextRun>
-            </TextRuns>
-            <Style>
-              <TextAlign>Right</TextAlign>
-            </Style>
-          </Paragraph>
-        </Paragraphs>
-        <rd:DefaultName>Textbox16</rd:DefaultName>
-        <Top>0.22356cm</Top>
-        <Left>8.55966cm</Left>
-        <Height>0.7232cm</Height>
-        <Width>4.405cm</Width>
-        <ZIndex>4</ZIndex>
-        <Style>
-          <Border>
-            <Style>None</Style>
-          </Border>
-          <PaddingLeft>2pt</PaddingLeft>
-          <PaddingRight>2pt</PaddingRight>
-          <PaddingTop>2pt</PaddingTop>
-          <PaddingBottom>2pt</PaddingBottom>
-        </Style>
-      </Textbox>
       <Tablix Name="Tablix2">
         <TablixBody>
           <TablixColumns>
@@ -1480,11 +1338,11 @@
           </TablixMembers>
         </TablixRowHierarchy>
         <DataSetName>Purchasebills</DataSetName>
-        <Top>4.94218cm</Top>
-        <Left>0.01998cm</Left>
+        <Top>2.8228cm</Top>
+        <Left>0.0799cm</Left>
         <Height>3.22021cm</Height>
         <Width>16.49286cm</Width>
-        <ZIndex>5</ZIndex>
+        <ZIndex>1</ZIndex>
         <Visibility>
           <Hidden>=Sum(Fields!BillID.Value, "Purchasebills")=0</Hidden>
         </Visibility>
@@ -2122,11 +1980,11 @@
           </TablixMembers>
         </TablixRowHierarchy>
         <DataSetName>Purchasebillsreturn</DataSetName>
-        <Top>8.65804cm</Top>
-        <Left>0.01998cm</Left>
+        <Top>6.53866cm</Top>
+        <Left>0.0799cm</Left>
         <Height>2.74394cm</Height>
         <Width>16.49286cm</Width>
-        <ZIndex>6</ZIndex>
+        <ZIndex>2</ZIndex>
         <Visibility>
           <Hidden>=Sum(Fields!BillID.Value, "Purchasebillsreturn")=0</Hidden>
         </Visibility>
@@ -2527,11 +2385,11 @@
           </TablixMembers>
         </TablixRowHierarchy>
         <DataSetName>Dealerpayments</DataSetName>
-        <Top>19.08818cm</Top>
-        <Left>0.01998cm</Left>
+        <Top>16.9688cm</Top>
+        <Left>0.0799cm</Left>
         <Height>2.65575cm</Height>
         <Width>16.49285cm</Width>
-        <ZIndex>7</ZIndex>
+        <ZIndex>3</ZIndex>
         <Visibility>
           <Hidden>= Sum(Fields!PaymentID.Value, "Dealerpayments")=0</Hidden>
         </Visibility>
@@ -3162,11 +3020,11 @@
           </TablixMembers>
         </TablixRowHierarchy>
         <DataSetName>Bills</DataSetName>
-        <Top>11.94286cm</Top>
-        <Left>0.00002cm</Left>
+        <Top>9.82348cm</Top>
+        <Left>0.05994cm</Left>
         <Height>3.22021cm</Height>
         <Width>16.49286cm</Width>
-        <ZIndex>8</ZIndex>
+        <ZIndex>4</ZIndex>
         <Visibility>
           <Hidden>= Sum(Fields!BillID.Value, "Bills")=0</Hidden>
         </Visibility>
@@ -3804,10 +3662,11 @@
           </TablixMembers>
         </TablixRowHierarchy>
         <DataSetName>Billsreturn</DataSetName>
-        <Top>15.77514cm</Top>
+        <Top>13.65576cm</Top>
+        <Left>0.05992cm</Left>
         <Height>2.7704cm</Height>
         <Width>16.49286cm</Width>
-        <ZIndex>9</ZIndex>
+        <ZIndex>5</ZIndex>
         <Visibility>
           <Hidden>= Sum(Fields!BillID.Value, "Billsreturn")=0</Hidden>
         </Visibility>
@@ -4208,11 +4067,11 @@
           </TablixMembers>
         </TablixRowHierarchy>
         <DataSetName>Payments</DataSetName>
-        <Top>22.27297cm</Top>
-        <Left>0.00002cm</Left>
+        <Top>20.15359cm</Top>
+        <Left>0.05994cm</Left>
         <Height>2.65575cm</Height>
         <Width>16.49285cm</Width>
-        <ZIndex>10</ZIndex>
+        <ZIndex>6</ZIndex>
         <Visibility>
           <Hidden>= Sum(Fields!ID.Value, "Payments")=0</Hidden>
         </Visibility>
@@ -4224,11 +4083,269 @@
         </Style>
       </Tablix>
     </ReportItems>
-    <Height>10.5in</Height>
+    <Height>9.32292in</Height>
     <Style />
   </Body>
-  <Width>6.51685in</Width>
+  <ReportParameters>
+    <ReportParameter Name="CompanyName">
+      <DataType>String</DataType>
+      <AllowBlank>true</AllowBlank>
+      <Prompt>ReportParameter1</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="ImageUrl">
+      <DataType>String</DataType>
+      <AllowBlank>true</AllowBlank>
+      <Prompt>ReportParameter1</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="ShowImage">
+      <DataType>Boolean</DataType>
+      <Prompt>ReportParameter1</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="ReportParameter1">
+      <DataType>String</DataType>
+      <AllowBlank>true</AllowBlank>
+      <Prompt>ReportParameter1</Prompt>
+      <MultiValue>true</MultiValue>
+    </ReportParameter>
+  </ReportParameters>
+  <Width>6.54044in</Width>
   <Page>
+    <PageHeader>
+      <Height>7.88836cm</Height>
+      <PrintOnFirstPage>true</PrintOnFirstPage>
+      <PrintOnLastPage>true</PrintOnLastPage>
+      <ReportItems>
+        <Textbox Name="ExecutionTime">
+          <CanGrow>true</CanGrow>
+          <KeepTogether>true</KeepTogether>
+          <Paragraphs>
+            <Paragraph>
+              <TextRuns>
+                <TextRun>
+                  <Value>=Now()</Value>
+                  <Style>
+                    <FontFamily>Tahoma</FontFamily>
+                    <FontSize>11pt</FontSize>
+                    <Format>d</Format>
+                  </Style>
+                </TextRun>
+              </TextRuns>
+              <Style>
+                <TextAlign>Right</TextAlign>
+              </Style>
+            </Paragraph>
+          </Paragraphs>
+          <rd:DefaultName>ExecutionTime</rd:DefaultName>
+          <Top>2.94919cm</Top>
+          <Left>9.47139cm</Left>
+          <Height>0.6cm</Height>
+          <Width>4.405cm</Width>
+          <Style>
+            <Border>
+              <Style>None</Style>
+            </Border>
+            <PaddingLeft>2pt</PaddingLeft>
+            <PaddingRight>2pt</PaddingRight>
+            <PaddingTop>2pt</PaddingTop>
+            <PaddingBottom>2pt</PaddingBottom>
+          </Style>
+        </Textbox>
+        <Textbox Name="Textbox15">
+          <CanGrow>true</CanGrow>
+          <KeepTogether>true</KeepTogether>
+          <Paragraphs>
+            <Paragraph>
+              <TextRuns>
+                <TextRun>
+                  <Value>التاريخ</Value>
+                  <Style>
+                    <FontSize>11pt</FontSize>
+                    <FontWeight>Bold</FontWeight>
+                  </Style>
+                </TextRun>
+              </TextRuns>
+              <Style>
+                <TextAlign>Right</TextAlign>
+              </Style>
+            </Paragraph>
+          </Paragraphs>
+          <rd:DefaultName>Textbox15</rd:DefaultName>
+          <Top>2.94919cm</Top>
+          <Left>14.05277cm</Left>
+          <Height>0.6cm</Height>
+          <Width>2.5cm</Width>
+          <ZIndex>1</ZIndex>
+          <Style>
+            <Border>
+              <Style>None</Style>
+            </Border>
+            <PaddingLeft>2pt</PaddingLeft>
+            <PaddingRight>2pt</PaddingRight>
+            <PaddingTop>2pt</PaddingTop>
+            <PaddingBottom>2pt</PaddingBottom>
+          </Style>
+        </Textbox>
+        <Textbox Name="Textbox16">
+          <CanGrow>true</CanGrow>
+          <KeepTogether>true</KeepTogether>
+          <Paragraphs>
+            <Paragraph>
+              <TextRuns>
+                <TextRun>
+                  <Value>كشف المورد /عميل</Value>
+                  <Style>
+                    <FontFamily>Tahoma</FontFamily>
+                    <FontSize>11pt</FontSize>
+                    <FontWeight>Bold</FontWeight>
+                  </Style>
+                </TextRun>
+              </TextRuns>
+              <Style>
+                <TextAlign>Right</TextAlign>
+              </Style>
+            </Paragraph>
+          </Paragraphs>
+          <rd:DefaultName>Textbox16</rd:DefaultName>
+          <Top>0.5146cm</Top>
+          <Left>6.48892cm</Left>
+          <Height>0.7232cm</Height>
+          <Width>3.95521cm</Width>
+          <ZIndex>2</ZIndex>
+          <Style>
+            <Border>
+              <Style>None</Style>
+            </Border>
+            <PaddingLeft>2pt</PaddingLeft>
+            <PaddingRight>2pt</PaddingRight>
+            <PaddingTop>2pt</PaddingTop>
+            <PaddingBottom>2pt</PaddingBottom>
+          </Style>
+        </Textbox>
+        <Textbox Name="CompanyName">
+          <CanGrow>true</CanGrow>
+          <KeepTogether>true</KeepTogether>
+          <Paragraphs>
+            <Paragraph>
+              <TextRuns>
+                <TextRun>
+                  <Value>=Parameters!CompanyName.Value</Value>
+                  <Style />
+                </TextRun>
+              </TextRuns>
+              <Style />
+            </Paragraph>
+          </Paragraphs>
+          <rd:DefaultName>CompanyName</rd:DefaultName>
+          <Top>0.6378cm</Top>
+          <Left>0.36787cm</Left>
+          <Height>0.6cm</Height>
+          <Width>5.07318cm</Width>
+          <ZIndex>3</ZIndex>
+          <Style>
+            <Border>
+              <Style>None</Style>
+            </Border>
+            <PaddingLeft>2pt</PaddingLeft>
+            <PaddingRight>2pt</PaddingRight>
+            <PaddingTop>2pt</PaddingTop>
+            <PaddingBottom>2pt</PaddingBottom>
+          </Style>
+        </Textbox>
+        <Image Name="Image2">
+          <Source>External</Source>
+          <Value>=Parameters!ImageUrl.Value</Value>
+          <Top>1.41419cm</Top>
+          <Left>0.36787cm</Left>
+          <Height>1.5cm</Height>
+          <Width>1.5cm</Width>
+          <ZIndex>4</ZIndex>
+          <Visibility>
+            <Hidden>=Parameters!ShowImage.Value = "False"</Hidden>
+          </Visibility>
+          <Style>
+            <Border>
+              <Style>None</Style>
+            </Border>
+          </Style>
+        </Image>
+      </ReportItems>
+      <Style>
+        <Border>
+          <Style>None</Style>
+        </Border>
+      </Style>
+    </PageHeader>
+    <PageFooter>
+      <Height>1.48167cm</Height>
+      <PrintOnFirstPage>true</PrintOnFirstPage>
+      <PrintOnLastPage>true</PrintOnLastPage>
+      <ReportItems>
+        <Textbox Name="Textbox18">
+          <CanGrow>true</CanGrow>
+          <KeepTogether>true</KeepTogether>
+          <Paragraphs>
+            <Paragraph>
+              <TextRuns>
+                <TextRun>
+                  <Value>asdasdasd</Value>
+                  <Style />
+                </TextRun>
+              </TextRuns>
+              <Style />
+            </Paragraph>
+          </Paragraphs>
+          <rd:DefaultName>Textbox18</rd:DefaultName>
+          <Top>0.49424cm</Top>
+          <Left>0.36787cm</Left>
+          <Height>0.6cm</Height>
+          <Width>2.5cm</Width>
+          <Style>
+            <Border>
+              <Style>None</Style>
+            </Border>
+            <PaddingLeft>2pt</PaddingLeft>
+            <PaddingRight>2pt</PaddingRight>
+            <PaddingTop>2pt</PaddingTop>
+            <PaddingBottom>2pt</PaddingBottom>
+          </Style>
+        </Textbox>
+        <Textbox Name="Textbox24">
+          <CanGrow>true</CanGrow>
+          <KeepTogether>true</KeepTogether>
+          <Paragraphs>
+            <Paragraph>
+              <TextRuns>
+                <TextRun>
+                  <Value>asasdasdadghh</Value>
+                  <Style />
+                </TextRun>
+              </TextRuns>
+              <Style />
+            </Paragraph>
+          </Paragraphs>
+          <rd:DefaultName>Textbox24</rd:DefaultName>
+          <Top>0.49424cm</Top>
+          <Left>3.186cm</Left>
+          <Height>0.6cm</Height>
+          <Width>2.5cm</Width>
+          <ZIndex>1</ZIndex>
+          <Style>
+            <Border>
+              <Style>None</Style>
+            </Border>
+            <PaddingLeft>2pt</PaddingLeft>
+            <PaddingRight>2pt</PaddingRight>
+            <PaddingTop>2pt</PaddingTop>
+            <PaddingBottom>2pt</PaddingBottom>
+          </Style>
+        </Textbox>
+      </ReportItems>
+      <Style>
+        <Border>
+          <Style>None</Style>
+        </Border>
+      </Style>
+    </PageFooter>
     <PageHeight>29.7cm</PageHeight>
     <PageWidth>21cm</PageWidth>
     <LeftMargin>2cm</LeftMargin>

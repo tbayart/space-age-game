@@ -409,6 +409,13 @@ namespace Acounting
             MySQL_Backup_and_Restore.BackupAr backup = new MySQL_Backup_and_Restore.BackupAr();
             backup.Show();
         }
+
+        private void toolStripMenuItem2_Click(object sender, EventArgs e)
+        {
+            CompanyDetails cmp = new CompanyDetails();
+            cmp.MdiParent = this;
+            cmp.Show();
+        }
         /*
          use store;
 set character set utf8;
