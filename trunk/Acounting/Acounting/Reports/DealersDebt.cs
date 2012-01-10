@@ -65,7 +65,28 @@ namespace Acounting
             // TODO: This line of code loads data into the 'storeDataSet.dealers' table. You can move, or remove it, as needed.
 
 
-            setreportparameters("مركز كليك للكمبيوتر", "",true);
+
+            string imgurl="",cName = "", cMobile1 = "", cMobile2 = "", cTelephone = "", cDetail = "", cAddress = "";
+            Boolean showimg = false;
+            try
+            {
+                cName = Application.UserAppDataRegistry.GetValue("cName").ToString();
+                cMobile1 = Application.UserAppDataRegistry.GetValue("cMobile1").ToString();
+                cMobile2 = Application.UserAppDataRegistry.GetValue("cMobile2").ToString();
+                cTelephone = Application.UserAppDataRegistry.GetValue("cTelephone").ToString();
+                cDetail = Application.UserAppDataRegistry.GetValue("cDetail").ToString();
+                cAddress = Application.UserAppDataRegistry.GetValue("cAddress").ToString();
+
+            }
+            catch (Exception ee)
+            {
+
+                Program.mylog.LogError(Environment.NewLine + ee.Message + Environment.NewLine);
+
+            }
+
+
+             
         }
 
         private void comboBox1_TextChanged(object sender, EventArgs e)
