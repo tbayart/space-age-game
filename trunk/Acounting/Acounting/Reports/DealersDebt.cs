@@ -6,6 +6,7 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Windows.Forms;
+using Microsoft.Reporting.WinForms;
 
 namespace Acounting
 {
@@ -64,7 +65,7 @@ namespace Acounting
             // TODO: This line of code loads data into the 'storeDataSet.dealers' table. You can move, or remove it, as needed.
 
 
-            this.reportViewer1.RefreshReport();
+            setreportparameters("مركز كليك للكمبيوتر", "",true);
         }
 
         private void comboBox1_TextChanged(object sender, EventArgs e)
@@ -101,6 +102,22 @@ namespace Acounting
             {
                 MessageBox.Show(ee.Message);
             }
+        }
+
+
+        private void setreportparameters(string companyname, string imgurl,Boolean showimg)
+        {
+
+            ReportParameter p1 = new ReportParameter("CompanyName", companyname);
+
+            ReportParameter p2 = new ReportParameter("ImageUrl", imgurl);
+
+            ReportParameter p3 = new ReportParameter("ShowImage",showimg.ToString());
+
+            this.reportViewer1.LocalReport.SetParameters(new ReportParameter[] { p1,p2,p3 });
+
+            this.reportViewer1.RefreshReport();
+
         }
 
 
