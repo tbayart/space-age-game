@@ -41,6 +41,7 @@
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.checkBox_ConstructSQLIn1Line = new System.Windows.Forms.CheckBox();
             this.checkBox_DeleteTable = new System.Windows.Forms.CheckBox();
+            this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
             this.groupBox4.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -215,5 +216,6 @@
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.CheckBox checkBox_ConstructSQLIn1Line;
         private System.Windows.Forms.CheckBox checkBox_DeleteTable;
+        private System.Windows.Forms.SaveFileDialog saveFileDialog1;
     }
 }

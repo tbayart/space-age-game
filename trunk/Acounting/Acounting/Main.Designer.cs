@@ -122,8 +122,8 @@
             // 
             // حفظاسترجعToolStripMenuItem
             // 
-            resources.ApplyResources(this.حفظاسترجعToolStripMenuItem, "حفظاسترجعToolStripMenuItem");
             this.حفظاسترجعToolStripMenuItem.Name = "حفظاسترجعToolStripMenuItem";
+            resources.ApplyResources(this.حفظاسترجعToolStripMenuItem, "حفظاسترجعToolStripMenuItem");
             this.حفظاسترجعToolStripMenuItem.Click += new System.EventHandler(this.حفظاسترجعToolStripMenuItem_Click);
             // 
             // toolStripMenuItem1

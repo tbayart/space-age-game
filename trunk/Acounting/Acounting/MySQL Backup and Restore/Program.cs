@@ -14,7 +14,7 @@ namespace MySQL_Backup_and_Restore
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new BackupAr(args));
+            Application.Run(new BackupAr());
         }
     }
 }
