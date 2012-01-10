@@ -200,24 +200,7 @@ namespace Acounting
         }
 
 
-        private void حفظاسترجعToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            if (Program.cul.Name == "")
-            {
-                MySQL_Backup_and_Restore.Form1 form1 = new MySQL_Backup_and_Restore.Form1(null);
-                form1.MdiParent = this;
-                form1.Show();
-            }
-            else
-            {
-                MySQL_Backup_and_Restore.BackupAr barab = new MySQL_Backup_and_Restore.BackupAr(null);
-                barab.MdiParent = this;
-                barab.Show();
-            }
-        }
-
-
-
+     
         private void عربيToolStripMenuItem1_Click(object sender, EventArgs e)
         {
 
@@ -419,6 +402,12 @@ namespace Acounting
         private void checkForUpdatesToolStripMenuItem_Click(object sender, EventArgs e)
         {
             backgroundWorker1.RunWorkerAsync();
+        }
+
+        private void حفظاسترجعToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            MySQL_Backup_and_Restore.BackupAr backup = new MySQL_Backup_and_Restore.BackupAr();
+            backup.Show();
         }
         /*
          use store;

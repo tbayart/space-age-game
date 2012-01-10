@@ -105,24 +105,24 @@ namespace Acounting
                 }
             }
 
-            int totalbills, totalbillsreturn, totalpurchasebills, totalpurchasebillsreturn;
-            int.TryParse(Txt_totalbills.Text, out totalbills);
-            int.TryParse(Txt_totalbillsreturn.Text, out totalbillsreturn);
-            int.TryParse(Txt_totalpurchasebills.Text, out totalpurchasebills);
-            int.TryParse(Txt_totalpurchasebillsreturn.Text, out totalpurchasebillsreturn);
+            double totalbills, totalbillsreturn, totalpurchasebills, totalpurchasebillsreturn;
+            double.TryParse(Txt_totalbills.Text, out totalbills);
+            double.TryParse(Txt_totalbillsreturn.Text, out totalbillsreturn);
+            double.TryParse(Txt_totalpurchasebills.Text, out totalpurchasebills);
+            double.TryParse(Txt_totalpurchasebillsreturn.Text, out totalpurchasebillsreturn);
 
-            int netbills = totalbills - totalbillsreturn;
-            int netpurchasebills = totalpurchasebills - totalpurchasebillsreturn;
-
-
-            int dealerdebt, totalpurchaseremaining, totalpurchasereturnremaining, agentdebt, totalbillremaining, totalbillreturnremaing;
+            double netbills = totalbills - totalbillsreturn;
+            double netpurchasebills = totalpurchasebills - totalpurchasebillsreturn;
 
 
-            int.TryParse(storeDataSet1.TotalPruchaseRemaining.Rows[0][0].ToString(), out totalpurchaseremaining);
-            int.TryParse(storeDataSet1.TotalPurchasereturnRemaining.Rows[0][0].ToString(), out totalpurchasereturnremaining);
+            double dealerdebt, totalpurchaseremaining, totalpurchasereturnremaining, agentdebt, totalbillremaining, totalbillreturnremaing;
 
-            int.TryParse(storeDataSet1.TotalBillsRemaining.Rows[0][0].ToString(), out totalbillremaining);
-            int.TryParse(storeDataSet1.TotalBillsreturnRemaining.Rows[0][0].ToString(), out totalbillreturnremaing);
+
+            double.TryParse(storeDataSet1.TotalPruchaseRemaining.Rows[0][0].ToString(), out totalpurchaseremaining);
+            double.TryParse(storeDataSet1.TotalPurchasereturnRemaining.Rows[0][0].ToString(), out totalpurchasereturnremaining);
+
+            double.TryParse(storeDataSet1.TotalBillsRemaining.Rows[0][0].ToString(), out totalbillremaining);
+            double.TryParse(storeDataSet1.TotalBillsreturnRemaining.Rows[0][0].ToString(), out totalbillreturnremaing);
 
             dealerdebt = totalpurchaseremaining - totalpurchasereturnremaining;
             agentdebt = totalbillremaining - totalbillreturnremaing;
@@ -145,15 +145,15 @@ namespace Acounting
 
 
         }
-        int totalagent = 0;
-        int totaldealer = 0;
+        double totalagent = 0;
+        double totaldealer = 0;
         public void gettotal()
         {
 
-            int current = 0;
+            double current = 0;
             foreach (DataRow item in storeDataSet.names)
             {
-                int.TryParse(item["InitialDebt"].ToString(), out current);
+                double.TryParse(item["InitialDebt"].ToString(), out current);
                 if (current >0)
                 {
                     totalagent += current;
