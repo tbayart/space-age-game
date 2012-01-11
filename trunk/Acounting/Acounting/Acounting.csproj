@@ -42,14 +42,14 @@
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
     <PlatformTarget>x86</PlatformTarget>
-    <DebugType>pdbonly</DebugType>
+    <DebugType>none</DebugType>
     <Optimize>true</Optimize>
     <OutputPath>bin\Release\</OutputPath>
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
     <UseVSHostingProcess>false</UseVSHostingProcess>
-    <DebugSymbols>true</DebugSymbols>
+    <DebugSymbols>false</DebugSymbols>
   </PropertyGroup>
   <PropertyGroup>
     <StartupObject>Acounting.Program</StartupObject>
@@ -81,10 +81,10 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Microsoft.ReportViewer.Common, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-      <Private>True</Private>
+      <Private>False</Private>
     </Reference>
     <Reference Include="Microsoft.ReportViewer.WinForms, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
-      <Private>True</Private>
+      <Private>False</Private>
     </Reference>
     <Reference Include="MySql.Data, Version=6.4.4.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
       <Private>True</Private>
@@ -136,41 +136,41 @@
     <Reference Include="WindowsFormsIntegration" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Buy.cs">
+    <Compile Include="Bills\Buy.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Buy.Designer.cs">
+    <Compile Include="Bills\Buy.Designer.cs">
       <DependentUpon>Buy.cs</DependentUpon>
     </Compile>
-    <Compile Include="CompanyDetails.cs">
+    <Compile Include="BasicData\CompanyDetails.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="CompanyDetails.Designer.cs">
+    <Compile Include="BasicData\CompanyDetails.Designer.cs">
       <DependentUpon>CompanyDetails.cs</DependentUpon>
     </Compile>
-    <Compile Include="CreateDB.cs">
+    <Compile Include="BasicData\CreateDB.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="CreateDB.Designer.cs">
+    <Compile Include="BasicData\CreateDB.Designer.cs">
       <DependentUpon>CreateDB.cs</DependentUpon>
     </Compile>
-    <Compile Include="Editing\EditBills.cs">
+    <Compile Include="Bills\Editing\EditBills.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Editing\EditBills.Designer.cs">
+    <Compile Include="Bills\Editing\EditBills.Designer.cs">
       <DependentUpon>EditBills.cs</DependentUpon>
     </Compile>
-    <Compile Include="Editing\ShowAllBills.cs">
+    <Compile Include="Bills\Editing\ShowAllBills.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Editing\ShowAllBills.Designer.cs">
+    <Compile Include="Bills\Editing\ShowAllBills.Designer.cs">
       <DependentUpon>ShowAllBills.cs</DependentUpon>
     </Compile>
     <Compile Include="ExceptionLogger.cs" />
-    <Compile Include="Names.cs">
+    <Compile Include="BasicData\Names.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Names.Designer.cs">
+    <Compile Include="BasicData\Names.Designer.cs">
       <DependentUpon>Names.cs</DependentUpon>
     </Compile>
     <Compile Include="Main.cs">
@@ -179,16 +179,16 @@
     <Compile Include="Main.Designer.cs">
       <DependentUpon>Main.cs</DependentUpon>
     </Compile>
-    <Compile Include="Items.cs">
+    <Compile Include="BasicData\Items.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Items.Designer.cs">
+    <Compile Include="BasicData\Items.Designer.cs">
       <DependentUpon>Items.cs</DependentUpon>
     </Compile>
-    <Compile Include="Payments.cs">
+    <Compile Include="Bills\Payments.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Payments.Designer.cs">
+    <Compile Include="Bills\Payments.Designer.cs">
       <DependentUpon>Payments.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
@@ -217,28 +217,28 @@
     <Compile Include="Reports\TotalItems.Designer.cs">
       <DependentUpon>TotalItems.cs</DependentUpon>
     </Compile>
-    <Compile Include="ReturnBuy.cs">
+    <Compile Include="Bills\ReturnBuy.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ReturnBuy.Designer.cs">
+    <Compile Include="Bills\ReturnBuy.Designer.cs">
       <DependentUpon>ReturnBuy.cs</DependentUpon>
     </Compile>
-    <Compile Include="ReturnSales.cs">
+    <Compile Include="Bills\ReturnSales.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ReturnSales.Designer.cs">
+    <Compile Include="Bills\ReturnSales.Designer.cs">
       <DependentUpon>ReturnSales.cs</DependentUpon>
     </Compile>
-    <Compile Include="Sell.cs">
+    <Compile Include="Bills\Sell.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Sell.Designer.cs">
+    <Compile Include="Bills\Sell.Designer.cs">
       <DependentUpon>Sell.cs</DependentUpon>
     </Compile>
-    <Compile Include="StaticAssets.cs">
+    <Compile Include="BasicData\StaticAssets.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="StaticAssets.Designer.cs">
+    <Compile Include="BasicData\StaticAssets.Designer.cs">
       <DependentUpon>StaticAssets.cs</DependentUpon>
     </Compile>
     <Compile Include="storeDataSet.Designer.cs">
@@ -246,46 +246,46 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>storeDataSet.xsd</DependentUpon>
     </Compile>
-    <Compile Include="Vault.cs">
+    <Compile Include="BasicData\Vault.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Vault.Designer.cs">
+    <Compile Include="BasicData\Vault.Designer.cs">
       <DependentUpon>Vault.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="CompanyDetails.ar.resx">
+    <EmbeddedResource Include="BasicData\CompanyDetails.ar.resx">
       <DependentUpon>CompanyDetails.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="CompanyDetails.resx">
+    <EmbeddedResource Include="BasicData\CompanyDetails.resx">
       <DependentUpon>CompanyDetails.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Editing\EditBills.ar.resx">
+    <EmbeddedResource Include="Bills\Editing\EditBills.ar.resx">
       <DependentUpon>EditBills.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Editing\EditBills.resx">
+    <EmbeddedResource Include="Bills\Editing\EditBills.resx">
       <DependentUpon>EditBills.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Editing\ShowAllBills.ar.resx">
+    <EmbeddedResource Include="Bills\Editing\ShowAllBills.ar.resx">
       <DependentUpon>ShowAllBills.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Editing\ShowAllBills.resx">
+    <EmbeddedResource Include="Bills\Editing\ShowAllBills.resx">
       <DependentUpon>ShowAllBills.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Names.ar.resx">
+    <EmbeddedResource Include="BasicData\Names.ar.resx">
       <DependentUpon>Names.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Names.resx">
+    <EmbeddedResource Include="BasicData\Names.resx">
       <DependentUpon>Names.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Buy.ar.resx">
+    <EmbeddedResource Include="Bills\Buy.ar.resx">
       <DependentUpon>Buy.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Buy.resx">
+    <EmbeddedResource Include="Bills\Buy.resx">
       <DependentUpon>Buy.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="CreateDB.resx">
+    <EmbeddedResource Include="BasicData\CreateDB.resx">
       <DependentUpon>CreateDB.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Items.ar.resx">
+    <EmbeddedResource Include="BasicData\Items.ar.resx">
       <DependentUpon>Items.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Main.ar.resx">
@@ -294,13 +294,13 @@
     <EmbeddedResource Include="Main.resx">
       <DependentUpon>Main.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Items.resx">
+    <EmbeddedResource Include="BasicData\Items.resx">
       <DependentUpon>Items.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Payments.ar.resx">
+    <EmbeddedResource Include="Bills\Payments.ar.resx">
       <DependentUpon>Payments.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Payments.resx">
+    <EmbeddedResource Include="Bills\Payments.resx">
       <DependentUpon>Payments.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -349,34 +349,34 @@
     <EmbeddedResource Include="Reports\TotalItemsAr.rdlc">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </EmbeddedResource>
-    <EmbeddedResource Include="ReturnBuy.ar.resx">
+    <EmbeddedResource Include="Bills\ReturnBuy.ar.resx">
       <DependentUpon>ReturnBuy.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ReturnBuy.resx">
+    <EmbeddedResource Include="Bills\ReturnBuy.resx">
       <DependentUpon>ReturnBuy.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ReturnSales.ar.resx">
+    <EmbeddedResource Include="Bills\ReturnSales.ar.resx">
       <DependentUpon>ReturnSales.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ReturnSales.resx">
+    <EmbeddedResource Include="Bills\ReturnSales.resx">
       <DependentUpon>ReturnSales.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Sell.ar.resx">
+    <EmbeddedResource Include="Bills\Sell.ar.resx">
       <DependentUpon>Sell.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Sell.resx">
+    <EmbeddedResource Include="Bills\Sell.resx">
       <DependentUpon>Sell.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="StaticAssets.ar.resx">
+    <EmbeddedResource Include="BasicData\StaticAssets.ar.resx">
       <DependentUpon>StaticAssets.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="StaticAssets.resx">
+    <EmbeddedResource Include="BasicData\StaticAssets.resx">
       <DependentUpon>StaticAssets.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Vault.ar.resx">
+    <EmbeddedResource Include="BasicData\Vault.ar.resx">
       <DependentUpon>Vault.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Vault.resx">
+    <EmbeddedResource Include="BasicData\Vault.resx">
       <DependentUpon>Vault.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="app.config">
@@ -491,6 +491,7 @@
       <Name>Backup</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
