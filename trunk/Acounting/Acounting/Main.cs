@@ -340,6 +340,7 @@ namespace Acounting
             try
             {
                 Download("http://dl.dropbox.com/u/33013204/update.ver", "update.ver");
+         
                 while (true)
                 {
                     Console.WriteLine("2");

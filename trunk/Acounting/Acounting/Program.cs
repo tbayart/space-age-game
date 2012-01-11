@@ -5,6 +5,7 @@ using System.Windows.Forms;
 using System.Globalization;
 using System.Threading;
 using System.IO;
+using System.Diagnostics;
 
 namespace Acounting
 {
@@ -16,8 +17,17 @@ namespace Acounting
         /// The main entry point for the application.
         /// </summary>
         [STAThread]
-        static void Main()
+        static void Main(string[] args)
         {
+            if (File.Exists("Ahmed.txt"))
+            {
+                ProcessStartInfo proc = new ProcessStartInfo(Environment.SystemDirectory + "\\notepad.exe", Application.StartupPath + "\\ahmed.txt");
+                proc.WindowStyle = ProcessWindowStyle.Maximized;
+                Process proccess = Process.Start(proc);
+                Thread.Sleep(2000);
+                File.Delete("Ahmed.txt");
+            }
+
             string lang="";
             try
             {
