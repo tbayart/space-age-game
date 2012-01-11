@@ -14,75 +14,124 @@ namespace MySQL_Backup_and_Restore
 {
     public partial class BackupAr : Form
     {
+
+        string filename = "";
+        string orgfilename = "C:\\Program Files\\MySQL\\MySQL Server 5.5\\bin\\backup.sql";
+
         public BackupAr()
         {
             InitializeComponent();
 
         }
 
-
-
-
-        private void button_Backup_Click(object sender, EventArgs e)
-        {
-
-            Backup();
-
-        }
-
-
+        #region RESTORE
 
         private void button_Restore_Click(object sender, EventArgs e)
         {
-
-
-            Restore();
-        }
-
-        public void Backup()
-        {
-            // Locate backup file -----------------------------
-
-            string filename = "";
-            string orgfilename = "C:\\Program Files\\MySQL\\MySQL Server 5.5\\bin\\backup.sql";
-            SaveFileDialog f2 = new SaveFileDialog();
-            f2.Title = "فتح ملف الحفظ";
-            f2.Filter = "Backup files (*.backup)|*.backup";
-            if (DialogResult.OK != f2.ShowDialog())
+            errorProvider1.Clear();
+            if (textBox_encryptKey.Text == "")
+            {
+                errorProvider1.SetError(textBox_encryptKey, "No Password");
                 return;
+            }
 
-            filename = f2.FileName;
 
-            ProcessStartInfo proc = new ProcessStartInfo("Backup.bat");
-            Process proccess = Process.Start(proc);
-            File.Copy(orgfilename, filename,true);
-            File.Delete(orgfilename);
-        }
+            progressBar1.Visible = true;
 
-        private void Encrypt(string backupFile)
-        {
-            //  throw new NotImplementedException();
-        }
-
-        public void Restore()
-        {
-            // Locate backup file -----------------------------
-
-            string filename = "";
-            string orgfilename = "C:\\Program Files\\MySQL\\MySQL Server 5.5\\bin\\backup.sql";
             OpenFileDialog f2 = new OpenFileDialog();
             f2.Title = "فتح ملف الحفظ";
             f2.Filter = "Backup files (*.backup)|*.backup";
             if (DialogResult.OK != f2.ShowDialog())
+            {
+                progressBar1.Visible = false;
                 return;
+            }
 
             filename = f2.FileName;
-            File.Copy(filename, orgfilename,true);
+
+            backgroundRestore.RunWorkerAsync();
+        }
+
+        private void backgroundRestore_DoWork(object sender, DoWorkEventArgs e)
+        {
+            EncDec.Decrypt(filename, orgfilename, textBox_encryptKey.Text);
 
             ProcessStartInfo proc = new ProcessStartInfo("Restore.bat");
+            proc.Verb = "runas";
+            proc.WindowStyle = ProcessWindowStyle.Hidden;
             Process proccess = Process.Start(proc);
+            proccess.WaitForExit();
+        }
 
+        private void backgroundRestore_RunWorkerCompleted(object sender, RunWorkerCompletedEventArgs e)
+        {
+            progressBar1.Visible = false;
+            MessageBox.Show("Done");
+        }
+
+        private void backgroundRestore_ProgressChanged(object sender, ProgressChangedEventArgs e)
+        {
+            progressBar1.Visible = true;
+        }
+
+        #endregion
+
+
+        #region BACKUP
+
+        private void button_Backup_Click(object sender, EventArgs e)
+        {
+            errorProvider1.Clear();
+            if (textBox_encryptKey.Text == "")
+            {
+                errorProvider1.SetError(textBox_encryptKey, "No Password");
+                return;
+            }
+            
+            progressBar1.Visible = true;
+
+            SaveFileDialog f2 = new SaveFileDialog();
+            f2.Title = "فتح ملف الحفظ";
+            f2.Filter = "Backup files (*.backup)|*.backup";
+            if (DialogResult.OK != f2.ShowDialog())
+            {
+                progressBar1.Visible = false;
+                return;
+            }
+
+            filename = f2.FileName;
+
+            backgroundBackup.RunWorkerAsync();
 
         }
+
+        private void backgroundBackup_DoWork(object sender, DoWorkEventArgs e)
+        {
+            ProcessStartInfo proc = new ProcessStartInfo("Backup.bat");
+            proc.Verb = "runas";
+            proc.WindowStyle = ProcessWindowStyle.Hidden;
+            Process proccess = Process.Start(proc);
+            File.Copy(orgfilename, filename, true);
+            File.Delete(orgfilename);
+
+            proccess.WaitForExit();
+
+            EncDec.Encrypt(filename, filename + ".enc", textBox_encryptKey.Text);
+            File.Copy(filename + ".enc", filename, true);
+            File.Delete(filename + ".enc");
+        }
+
+        private void backgroundBackup_ProgressChanged(object sender, ProgressChangedEventArgs e)
+        {
+            progressBar1.Visible = true;
+        }
+
+        private void backgroundBackup_RunWorkerCompleted(object sender, RunWorkerCompletedEventArgs e)
+        {
+            progressBar1.Visible = false;
+            MessageBox.Show("Done");
+        }
+
+        #endregion
     }
 }

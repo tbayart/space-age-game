@@ -106,6 +106,61 @@ namespace Acounting
         
         #region menu items
 
+        private void حفظاسترجعToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ProcessStartInfo proc = new ProcessStartInfo("Backup.exe",Program.cul.Name);
+            Process proccess = Process.Start(proc);
+        }
+
+        private void toolStripMenuItem2_Click(object sender, EventArgs e)
+        {
+            CompanyDetails cmp = new CompanyDetails();
+            cmp.MdiParent = this;
+            cmp.Show();
+        }
+
+        private void showAllBillsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ShowAllBills showall = ShowAllBills.GetForm(this);
+            showall.MdiParent = this;
+            showall.Show();
+            showall.Focus();
+
+        }
+
+        private void اجمالياصنافToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            TotalItems totalitems = TotalItems.GetForm();
+            totalitems.MdiParent = this;
+            totalitems.Show();
+            totalitems.Focus();
+        }
+
+        private void itemsSalesDetailsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            SalesItemsDetails salesitem = SalesItemsDetails.GetForm();
+            salesitem.MdiParent = this;
+            salesitem.Show();
+            salesitem.Focus();
+
+        }
+
+        private void كشفموردToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            DealersDebt dealersdebt = DealersDebt.GetForm();
+            dealersdebt.MdiParent = this;
+            dealersdebt.Show();
+            dealersdebt.Focus();
+
+        }
+
+        private void agentDebtToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            PurchaseItemsDetails purchaseitemsdetails = PurchaseItemsDetails.GetForm();
+            purchaseitemsdetails.MdiParent = this;
+            purchaseitemsdetails.Show();
+            purchaseitemsdetails.Focus();
+        }
 
         private void exitToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -276,49 +331,9 @@ namespace Acounting
            
         }
 
-        private void showAllBillsToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            ShowAllBills showall = ShowAllBills.GetForm(this);
-            showall.MdiParent = this;
-            showall.Show();
-            showall.Focus();
-
-        }
-
-        private void اجمالياصنافToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            TotalItems totalitems = TotalItems.GetForm();
-            totalitems.MdiParent = this;
-            totalitems.Show();
-            totalitems.Focus();
-        }
-
-        private void itemsSalesDetailsToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            SalesItemsDetails salesitem = SalesItemsDetails.GetForm();
-            salesitem.MdiParent = this;
-            salesitem.Show();
-            salesitem.Focus();
-
-        }
-
-        private void كشفموردToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            DealersDebt dealersdebt = DealersDebt.GetForm();
-            dealersdebt.MdiParent = this;
-            dealersdebt.Show();
-            dealersdebt.Focus();
-
-        }
-
-        private void agentDebtToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            PurchaseItemsDetails purchaseitemsdetails = PurchaseItemsDetails.GetForm();
-            purchaseitemsdetails.MdiParent = this;
-            purchaseitemsdetails.Show();
-            purchaseitemsdetails.Focus();
-        }
         bool continuecheck;
+
+        #region UPDATE
         private void backgroundWorker1_DoWork(object sender, DoWorkEventArgs e)
         {
             Console.WriteLine("1");
@@ -401,21 +416,12 @@ namespace Acounting
 
         private void checkForUpdatesToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            backgroundWorker1.CancelAsync();
             backgroundWorker1.RunWorkerAsync();
         }
 
-        private void حفظاسترجعToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            MySQL_Backup_and_Restore.BackupAr backup = new MySQL_Backup_and_Restore.BackupAr();
-            backup.Show();
-        }
+        #endregion
 
-        private void toolStripMenuItem2_Click(object sender, EventArgs e)
-        {
-            CompanyDetails cmp = new CompanyDetails();
-            cmp.MdiParent = this;
-            cmp.Show();
-        }
         /*
          use store;
 set character set utf8;
