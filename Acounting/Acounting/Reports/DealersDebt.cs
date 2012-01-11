@@ -66,7 +66,7 @@ namespace Acounting
 
 
 
-            string imgurl="",cName = "", cMobile1 = "", cMobile2 = "", cTelephone = "", cDetail = "", cAddress = "";
+            string imgurl="",cName = "", cMobile1 = "", cMobile2 = "", cTelephone = "", cAddress = "";
             Boolean showimg = false;
             try
             {
@@ -74,20 +74,39 @@ namespace Acounting
                 cMobile1 = Application.UserAppDataRegistry.GetValue("cMobile1").ToString();
                 cMobile2 = Application.UserAppDataRegistry.GetValue("cMobile2").ToString();
                 cTelephone = Application.UserAppDataRegistry.GetValue("cTelephone").ToString();
-                cDetail = Application.UserAppDataRegistry.GetValue("cDetail").ToString();
                 cAddress = Application.UserAppDataRegistry.GetValue("cAddress").ToString();
 
             }
             catch (Exception ee)
             {
-
                 Program.mylog.LogError(Environment.NewLine + ee.Message + Environment.NewLine);
-
             }
 
 
-             
+            setreportparameters(cName, imgurl, showimg, 
+                cMobile1, cMobile2, cAddress,cTelephone);
+
         }
+
+        private void setreportparameters(string CName,string imgurl, Boolean showimg,
+            string CMobile1,string CMobile2,string CAddress,string CTelephone)
+        {
+
+            ReportParameter p1 = new ReportParameter("CName", CName);
+            ReportParameter p5 = new ReportParameter("CMobile1", CMobile1);
+            ReportParameter p6 = new ReportParameter("CMobile2", CMobile2);
+            ReportParameter p7 = new ReportParameter("CAddress", CAddress);
+            ReportParameter p8 = new ReportParameter("CTelephone", CTelephone);
+
+            this.reportViewer1.LocalReport.SetParameters(new ReportParameter[] { p1,p5,p6,p7,p8 });
+
+            this.reportViewer1.RefreshReport();
+
+        }
+
+
+
+
 
         private void comboBox1_TextChanged(object sender, EventArgs e)
         {
@@ -124,24 +143,6 @@ namespace Acounting
                 MessageBox.Show(ee.Message);
             }
         }
-
-
-        private void setreportparameters(string companyname, string imgurl,Boolean showimg)
-        {
-
-            ReportParameter p1 = new ReportParameter("CompanyName", companyname);
-
-            ReportParameter p2 = new ReportParameter("ImageUrl", imgurl);
-
-            ReportParameter p3 = new ReportParameter("ShowImage",showimg.ToString());
-
-            this.reportViewer1.LocalReport.SetParameters(new ReportParameter[] { p1,p2,p3 });
-
-            this.reportViewer1.RefreshReport();
-
-        }
-
-
 
         private void checkBox1_CheckedChanged(object sender, EventArgs e)
         {

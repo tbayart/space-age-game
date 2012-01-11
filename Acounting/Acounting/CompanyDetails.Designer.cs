@@ -30,9 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CompanyDetails));
             this.label1 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
             this.Txt_CName = new System.Windows.Forms.TextBox();
-            this.Txt_CDetail = new System.Windows.Forms.TextBox();
             this.Txt_CTelephone = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.Txt_CMobile1 = new System.Windows.Forms.TextBox();
@@ -54,20 +52,10 @@
             resources.ApplyResources(this.label1, "label1");
             this.label1.Name = "label1";
             // 
-            // label3
-            // 
-            resources.ApplyResources(this.label3, "label3");
-            this.label3.Name = "label3";
-            // 
             // Txt_CName
             // 
             resources.ApplyResources(this.Txt_CName, "Txt_CName");
             this.Txt_CName.Name = "Txt_CName";
-            // 
-            // Txt_CDetail
-            // 
-            resources.ApplyResources(this.Txt_CDetail, "Txt_CDetail");
-            this.Txt_CDetail.Name = "Txt_CDetail";
             // 
             // Txt_CTelephone
             // 
@@ -127,8 +115,6 @@
             // 
             resources.ApplyResources(this.groupBox2, "groupBox2");
             this.groupBox2.Controls.Add(this.label1);
-            this.groupBox2.Controls.Add(this.label3);
-            this.groupBox2.Controls.Add(this.Txt_CDetail);
             this.groupBox2.Controls.Add(this.Txt_CName);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.TabStop = false;
@@ -172,9 +158,7 @@
         #endregion
 
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox Txt_CName;
-        private System.Windows.Forms.TextBox Txt_CDetail;
         private System.Windows.Forms.TextBox Txt_CTelephone;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox Txt_CMobile1;
