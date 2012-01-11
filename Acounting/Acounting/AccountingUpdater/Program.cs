@@ -9,8 +9,6 @@ namespace AccountingUpdater
 {
     static class Program
     {   
-        static public CultureInfo cul;
-
         /// <summary>
         /// The main entry point for the application.
         /// </summary>

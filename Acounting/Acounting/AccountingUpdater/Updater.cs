@@ -10,6 +10,8 @@ using System.IO;
 using System.Net;
 using System.Diagnostics;
 using System.Threading;
+
+
 namespace AccountingUpdater
 {
     public partial class Updater : Form
@@ -22,6 +24,8 @@ namespace AccountingUpdater
 
         private void Updater_Load(object sender, EventArgs e)
         {
+ 
+
             Thread.Sleep(3000);
             backgroundWorker1.RunWorkerAsync();
         }
