@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 11.00
 # Visual Studio 2010
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Acounting", "Acounting.csproj", "{36F32678-D7C3-45A6-856A-DC942895A727}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MySQL Backup and Restore", "MySQL Backup and Restore\MySQL Backup and Restore.csproj", "{64DD89FF-55A5-47D1-BBC4-48EFF6916087}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Backup", "MySQL Backup and Restore\Backup.csproj", "{64DD89FF-55A5-47D1-BBC4-48EFF6916087}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FormLanguageSwitch", "FormLanguageSwitch\FormLanguageSwitch.csproj", "{787B600C-9A56-41C7-A3C8-9553630FE3C1}"
 EndProject
