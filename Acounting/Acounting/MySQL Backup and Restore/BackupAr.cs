@@ -17,6 +17,8 @@ namespace MySQL_Backup_and_Restore
 
         string filename = "";
         string orgfilename = "C:\\Program Files\\MySQL\\MySQL Server 5.5\\bin\\backup.sql";
+        const  string password = "56t3DjAvsWxs60rk3cj5omoiGWh2Lp";
+
 
         public BackupAr()
         {
@@ -28,13 +30,6 @@ namespace MySQL_Backup_and_Restore
 
         private void button_Restore_Click(object sender, EventArgs e)
         {
-            errorProvider1.Clear();
-            if (textBox_encryptKey.Text == "")
-            {
-                errorProvider1.SetError(textBox_encryptKey, "No Password");
-                return;
-            }
-
 
             progressBar1.Visible = true;
 
@@ -54,13 +49,17 @@ namespace MySQL_Backup_and_Restore
 
         private void backgroundRestore_DoWork(object sender, DoWorkEventArgs e)
         {
-            EncDec.Decrypt(filename, orgfilename, textBox_encryptKey.Text);
+            File.Delete(orgfilename);
 
+            EncDec.Decrypt(filename, orgfilename, password);
+            
             ProcessStartInfo proc = new ProcessStartInfo("Restore.bat");
             proc.Verb = "runas";
             proc.WindowStyle = ProcessWindowStyle.Hidden;
             Process proccess = Process.Start(proc);
             proccess.WaitForExit();
+            File.Delete(orgfilename);
+
         }
 
         private void backgroundRestore_RunWorkerCompleted(object sender, RunWorkerCompletedEventArgs e)
@@ -81,13 +80,7 @@ namespace MySQL_Backup_and_Restore
 
         private void button_Backup_Click(object sender, EventArgs e)
         {
-            errorProvider1.Clear();
-            if (textBox_encryptKey.Text == "")
-            {
-                errorProvider1.SetError(textBox_encryptKey, "No Password");
-                return;
-            }
-            
+
             progressBar1.Visible = true;
 
             SaveFileDialog f2 = new SaveFileDialog();
@@ -116,7 +109,7 @@ namespace MySQL_Backup_and_Restore
 
             proccess.WaitForExit();
 
-            EncDec.Encrypt(filename, filename + ".enc", textBox_encryptKey.Text);
+            EncDec.Encrypt(filename, filename + ".enc", password);
             File.Copy(filename + ".enc", filename, true);
             File.Delete(filename + ".enc");
         }
@@ -133,5 +126,10 @@ namespace MySQL_Backup_and_Restore
         }
 
         #endregion
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }
