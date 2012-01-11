@@ -60,7 +60,6 @@
             this.reportViewer1.LocalReport.ReportEmbeddedResource = "";
             this.reportViewer1.LocalReport.ReportPath = "Reports\\TotalItemsAr.rdlc";
             this.reportViewer1.Name = "reportViewer1";
-            this.reportViewer1.ZoomMode = Microsoft.Reporting.WinForms.ZoomMode.PageWidth;
             // 
             // itemsTableAdapter
             // 

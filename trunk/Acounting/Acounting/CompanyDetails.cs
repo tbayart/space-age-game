@@ -18,14 +18,13 @@ namespace Acounting
 
         private void CompanyDetails_Load(object sender, EventArgs e)
         {
-            string cName = "", cMobile1 = "", cMobile2 = "", cTelephone = "", cDetail = "", cAddress = "";
+            string cName = "", cMobile1 = "", cMobile2 = "", cTelephone = "", cAddress = "";
             try
             {
                 cName = Application.UserAppDataRegistry.GetValue("cName").ToString();
                 cMobile1 = Application.UserAppDataRegistry.GetValue("cMobile1").ToString();
                 cMobile2 = Application.UserAppDataRegistry.GetValue("cMobile2").ToString();
                 cTelephone = Application.UserAppDataRegistry.GetValue("cTelephone").ToString();
-                cDetail = Application.UserAppDataRegistry.GetValue("cDetail").ToString();
                 cAddress = Application.UserAppDataRegistry.GetValue("cAddress").ToString();
 
             }
@@ -37,7 +36,6 @@ namespace Acounting
             }
            
             Txt_CAddress.Text = cAddress;
-            Txt_CDetail.Text = cDetail;
             Txt_CMobile1.Text = cMobile1;
             Txt_CMobile2.Text = cMobile2;
             Txt_CName.Text = cName;
@@ -48,11 +46,10 @@ namespace Acounting
 
         private void Btn_Save_Click(object sender, EventArgs e)
         {
-            string cName, cMobile1, cMobile2, cTelephone, cDetail, cAddress;
+            string cName, cMobile1, cMobile2, cTelephone, cAddress;
 
 
             cAddress = Txt_CAddress.Text;
-            cDetail = Txt_CDetail.Text;
             cMobile1 = Txt_CMobile1.Text;
             cMobile2 = Txt_CMobile2.Text;
             cName = Txt_CName.Text;
@@ -65,7 +62,6 @@ namespace Acounting
                 Application.UserAppDataRegistry.SetValue("cMobile1", cMobile1);
                 Application.UserAppDataRegistry.SetValue("cMobile2", cMobile2);
                 Application.UserAppDataRegistry.SetValue("cTelephone", cTelephone);
-                Application.UserAppDataRegistry.SetValue("cDetail", cDetail);
                 Application.UserAppDataRegistry.SetValue("cAddress", cAddress);
 
             }
