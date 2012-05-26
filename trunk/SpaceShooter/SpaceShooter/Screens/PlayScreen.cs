@@ -213,8 +213,8 @@ namespace SpaceShooter
             Texture2D debugPixel = ScreenManager.Content.Load<Texture2D>("Sprites/debugPixel");
 
 
-            spriteBatch.Begin(SpriteSortMode.Deferred, BlendState.AlphaBlend, null, null, null, null, camera.Transform);
-          //  spriteBatch.Begin();
+          //  spriteBatch.Begin(SpriteSortMode.Deferred, BlendState.AlphaBlend, null, null, null, null, camera.Transform);
+            spriteBatch.Begin();
             for (int i = 0; i < gameObjects.Count; i++)
             {
                 gameObjects[i].Draw(gameTime, spriteBatch);
@@ -227,11 +227,11 @@ namespace SpaceShooter
             }
             
             DrawStrings(spriteBatch,gameTime);
-            spriteBatch.Draw(stars, new Vector2(0, 0),Color.WhiteSmoke);
+            spriteBatch.Draw(stars, new Vector2(0, 0),Color.White);
             if (ScreenState == ScreenState.Frozen)
                 FadeScreen(spriteBatch, fadeTexture, Color.PeachPuff, 0.6f);
             // draw particles
-
+            
             spriteBatch.End();
 
             
