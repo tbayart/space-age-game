@@ -38,7 +38,7 @@ namespace SpaceShooter
 
         protected override void Initialize()
         {
-            screenManager.AddScreen(new LogoScreen3());
+            screenManager.AddScreen(new LogoScreen1());
            base.Initialize();
         }
 
